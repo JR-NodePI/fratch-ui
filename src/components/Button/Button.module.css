@@ -1,0 +1,104 @@
+:root {
+  --ft-button-default-font-family: "Montserrat", sans-serif;
+  --ft-button-default-font-size: 16px;
+  --ft-button-default-font-weight: bold;
+  --ft-button-default-letter-spacing: 0.5px;
+
+  --ft-button-default-background-color: #ccc;
+  --ft-button-default-color: #000;
+  --ft-button-default-border-radius: 6px;
+  --ft-button-default-padding-y: 12px;
+  --ft-button-default-padding-x: 24px;
+
+  --ft-primary-default-background-color: #0d00ff;
+  --ft-primary-default-color: #fff;
+  --ft-primary-hover-background-color: #0900b2;
+  --ft-primary-hover-color: #c2f6ff;
+
+  --ft-secondary-default-background-color: #c6005c;
+  --ft-secondary-default-color: #fff;
+  --ft-secondary-hover-background-color: #b2004a;
+  --ft-secondary-hover-color: #ffe1fb;
+
+  --ft-tertiary-default-background-color: #00740c;
+  --ft-tertiary-default-color: #fff;
+  --ft-tertiary-hover-background-color: #005008;
+  --ft-tertiary-hover-color: #d2ffd8;
+
+  --ft-button-small-font-size: 12px;
+  --ft-button-small-padding-y: 12px;
+  --ft-button-small-padding-x: 20px;
+
+  --ft-button-medium-font-size: 16px;
+  --ft-button-medium-padding-y: 16px;
+  --ft-button-medium-padding-x: 24px;
+
+  --ft-button-large-font-size: 18px;
+  --ft-button-large-padding-y: 16px;
+  --ft-button-large-padding-x: 36px;
+}
+
+.default {
+  background-color: var(--ft-button-default-background-color);
+  border-radius: var(--ft-button-default-border-radius);
+  border: none;
+  color: var(--ft-button-default-color);
+  letter-spacing: var(--ft-button-default-letter-spacing);
+  font-family: var(--ft-button-default-font-family);
+  font-size: var(--ft-button-default-font-size);
+  font-weight: var(--ft-button-default-font-weight);
+  max-width: 100%;
+  overflow: hidden;
+  padding: var(--ft-button-default-padding-y) var(--ft-button-default-padding-x);
+  text-overflow: ellipsis;
+  transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+  white-space: nowrap;
+}
+
+.primary {
+  background-color: var(--ft-primary-default-background-color);
+  color: var(--ft-primary-hover-color);
+}
+
+.primary:hover {
+  background-color: var(--ft-primary-hover-background-color);
+  box-shadow: 0 1px 10px 0 var(--ft-primary-default-background-color);
+  color: var(--ft-primary-default-color);
+}
+
+.secondary {
+  background-color: var(--ft-secondary-default-background-color);
+  color: var(--ft-secondary-hover-color);
+}
+
+.secondary:hover {
+  background-color: var(--ft-secondary-hover-background-color);
+  box-shadow: 0 1px 10px 0 var(--ft-secondary-default-background-color);
+  color: var(--ft-secondary-default-color);
+}
+
+.tertiary {
+  background-color: var(--ft-tertiary-default-background-color);
+  color: var(--ft-tertiary-hover-color);
+}
+
+.tertiary:hover {
+  background-color: var(--ft-tertiary-hover-background-color);
+  box-shadow: 0 1px 10px 0 var(--ft-tertiary-default-background-color);
+  color: var(--ft-tertiary-default-color);
+}
+
+.small {
+  font-size: var(--ft-button-small-font-size);
+  padding: var(--ft-button-small-padding-y) var(--ft-button-small-padding-x);
+}
+
+.medium {
+  font-size: var(--ft-button-medium-font-size);
+  padding: var(--ft-button-medium-padding-y) var(--ft-button-medium-padding-x);
+}
+
+.large {
+  font-size: var(--ft-button-large-font-size);
+  padding: var(--ft-button-large-padding-y) var(--ft-button-large-padding-x);
+}
