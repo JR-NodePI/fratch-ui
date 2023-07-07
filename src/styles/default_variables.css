@@ -1,5 +1,7 @@
 :root {
-  --ft-button-default-font-family: "Montserrat", sans-serif;
+  --ft-font-family: sans-serif;
+  --ft-button-default-font-family: var(--ft-font-family);
+
   --ft-button-default-font-size: 16px;
   --ft-button-default-font-weight: bold;
   --ft-button-default-letter-spacing: 0.5px;

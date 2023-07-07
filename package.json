@@ -1,7 +1,7 @@
 {
   "name": "FratchUI",
   "version": "1.0.0",
-  "main": "index.js",
+  "module": "dist/**/*.mjs",
   "repository": "git@github.com:JorgeRojo/FratchUI.git",
   "author": "JorgeRojo",
   "license": "MIT",
@@ -34,11 +34,13 @@
     "storybook": "^7.0.26",
     "typescript": "^5.0.2",
     "typescript-plugin-css-modules": "^5.0.1",
-    "vite": "4.3.9"
+    "vite": "4.3.9",
+    "vite-plugin-dts": "^3.1.0"
   },
   "scripts": {
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o ./dist/storybook/",
-    "preview-storybook": "yarn build-storybook && vite preview --outDir ./dist/storybook/ --open / "
+    "start": "storybook dev -p 6006",
+    "build": "rm -rf ./dist && tsc && vite build --config vite.build.config.ts",
+    "storybook:build": "storybook build",
+    "storybook:preview": "yarn storybook:build && vite preview --outDir ./dist/storybook/ --open / "
   }
 }
