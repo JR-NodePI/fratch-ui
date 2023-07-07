@@ -1,0 +1,64 @@
+.default {
+  background-color: var(--ft-button-default-background-color);
+  border-radius: var(--ft-button-default-border-radius);
+  border: none;
+  color: var(--ft-button-default-color);
+  letter-spacing: var(--ft-button-default-letter-spacing);
+  font-family: var(--ft-button-default-font-family);
+  font-size: var(--ft-button-default-font-size);
+  font-weight: var(--ft-button-default-font-weight);
+  max-width: 100%;
+  overflow: hidden;
+  padding: var(--ft-button-default-padding-y) var(--ft-button-default-padding-x);
+  text-overflow: ellipsis;
+  transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+  white-space: nowrap;
+}
+
+.primary {
+  background-color: var(--ft-primary-default-background-color);
+  color: var(--ft-primary-hover-color);
+}
+
+.primary:hover {
+  background-color: var(--ft-primary-hover-background-color);
+  box-shadow: 0 1px 10px 0 var(--ft-primary-default-background-color);
+  color: var(--ft-primary-default-color);
+}
+
+.secondary {
+  background-color: var(--ft-secondary-default-background-color);
+  color: var(--ft-secondary-hover-color);
+}
+
+.secondary:hover {
+  background-color: var(--ft-secondary-hover-background-color);
+  box-shadow: 0 1px 10px 0 var(--ft-secondary-default-background-color);
+  color: var(--ft-secondary-default-color);
+}
+
+.tertiary {
+  background-color: var(--ft-tertiary-default-background-color);
+  color: var(--ft-tertiary-hover-color);
+}
+
+.tertiary:hover {
+  background-color: var(--ft-tertiary-hover-background-color);
+  box-shadow: 0 1px 10px 0 var(--ft-tertiary-default-background-color);
+  color: var(--ft-tertiary-default-color);
+}
+
+.small {
+  font-size: var(--ft-button-small-font-size);
+  padding: var(--ft-button-small-padding-y) var(--ft-button-small-padding-x);
+}
+
+.medium {
+  font-size: var(--ft-button-medium-font-size);
+  padding: var(--ft-button-medium-padding-y) var(--ft-button-medium-padding-x);
+}
+
+.large {
+  font-size: var(--ft-button-large-font-size);
+  padding: var(--ft-button-large-padding-y) var(--ft-button-large-padding-x);
+}
