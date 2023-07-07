@@ -6,22 +6,26 @@ import path from "node:path";
 import react from "@vitejs/plugin-react-swc";
 import type { PluginOptions } from "vite-plugin-dts";
 
-const srcDir = "src";
-const outDir = "dist";
-const srcComponentsDir = srcDir + "/components";
-const outComponentsDir = outDir + "/components";
+const srcDir = "./src";
+const outDir = "./dist";
 
 const buildComponent = (file) => {
-  const fileName = path.relative(
-    srcComponentsDir,
-    file.slice(0, file.indexOf(path.extname(file)))
-  );
+  const fileName = path
+    .basename(file)
+    .slice(0, path.basename(file).indexOf(path.extname(file)));
+
+  const moduleDir = `${outDir}/${path.relative(srcDir, path.dirname(file))}`;
+
+  const dtsOptions = (dts as (ops?: PluginOptions) => any)({
+    entryRoot: file,
+    outDir,
+  });
 
   return build({
     publicDir: false,
-    plugins: [(dts as (options?: PluginOptions) => any)({ outDir }), react()],
+    plugins: [dtsOptions, react()],
     build: {
-      outDir: outComponentsDir,
+      outDir: moduleDir,
       emptyOutDir: false,
       minify: false,
       sourcemap: true,
@@ -31,7 +35,12 @@ const buildComponent = (file) => {
         formats: ["es", "cjs"],
       },
       rollupOptions: {
-        external: ["react", "react-dom", "react/jsx-runtime"],
+        external: [
+          "react",
+          "react-dom",
+          "react/jsx-runtime",
+          new RegExp("\\./[./\\w]+$"),
+        ],
         output: {
           assetFileNames: (assetInfo) => {
             if (assetInfo.name.endsWith(".css")) return `${fileName}.css`;
@@ -45,7 +54,7 @@ const buildComponent = (file) => {
 
 const combineCssFiles = () => {
   const cssMainFilesPattern = `${outDir}/assets/*.css`;
-  const cssFilesPattern = `${outComponentsDir}/**/*.css`;
+  const cssFilesPattern = `${outDir}/components/**/*.css`;
   const cssMainFiles = glob.sync(cssMainFilesPattern);
   const cssFiles = glob.sync(cssFilesPattern, {
     ignore: cssMainFilesPattern,
@@ -57,9 +66,11 @@ const combineCssFiles = () => {
 };
 
 const buildComponentsOnCloseBundle = () => ({
-  name: "buildOnCloseBundle",
+  name: "buildComponentsOnCloseBundle",
   async closeBundle() {
-    const componentFiles = glob.sync(`${srcComponentsDir}/**/*.tsx`);
+    const componentFiles = glob.sync(`${srcDir}/**/*.{tsx,ts}`, {
+      ignore: `${srcDir}/**/*.{stories,d}.{tsx,ts}`,
+    });
     await Promise.allSettled(componentFiles.map(buildComponent));
     combineCssFiles();
   },

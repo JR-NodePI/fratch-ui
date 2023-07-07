@@ -131,3 +131,5 @@ dist
 
 /dist
 /storybook-static
+*.tgz
+.DS_Store

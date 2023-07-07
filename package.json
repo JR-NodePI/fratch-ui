@@ -1,10 +1,12 @@
 {
-  "name": "FratchUI",
-  "version": "1.0.0",
-  "module": "dist/**/*.mjs",
-  "repository": "git@github.com:JorgeRojo/FratchUI.git",
-  "author": "JorgeRojo",
+  "name": "fratch-ui",
+  "version": "1.0.13",
+  "repository": "git@github.com:JorgeRojo/fratch-ui.git",
+  "author": "JorgeRojo <jorge.rojodiseno@gmail.com>",
   "license": "MIT",
+  "private": false,
+  "main": "components/index.js",
+  "type": "module",
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -41,6 +43,7 @@
     "start": "storybook dev -p 6006",
     "build": "rm -rf ./dist && tsc && vite build --config vite.build.config.ts",
     "storybook:build": "storybook build",
-    "storybook:preview": "yarn storybook:build && vite preview --outDir ./dist/storybook/ --open / "
+    "storybook:preview": "yarn storybook:build && vite preview --outDir ./dist/storybook/ --open / ",
+    "dist": "yarn build && cp ./{package.json,LICENSE,README.md} ./dist/ && yarn pack --cwd ./dist/ && yarn publish ./dist/*.tgz"
   }
 }
