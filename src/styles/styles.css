@@ -3,6 +3,19 @@
 body {
   margin: 0;
   padding: 0;
+  color: var(--ft-color-primary);
   font-family: var(--ft-font-family);
-  font-size: 14px;
+  font-size: var(--ft-font-size);
+  font-weight: var(--ft-font-weight-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-weight: var(--ft-font-weight-bold);
 }

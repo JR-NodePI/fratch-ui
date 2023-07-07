@@ -1,27 +1,20 @@
-import { c } from "../../helpers/classNameHelpers";
+import { c } from '../../helpers/classNameHelpers';
 
-import styles from "./Button.module.css";
-import { ButtonSizes, ButtonTypes } from "./ButtonProps";
-import type { ButtonProps } from "./ButtonProps";
+import { ButtonSize, ButtonType } from './ButtonProps';
+import type { ButtonProps } from './ButtonProps';
 
-const Button = ({ label, type, size, onClick }: ButtonProps): JSX.Element => {
-  const classNameByType =
-    type === ButtonTypes.SECONDARY
-      ? styles.secondary
-      : type === ButtonTypes.TERTIARY
-      ? styles.tertiary
-      : styles.primary;
+import styles from './Button.module.css';
 
-  const classNameBySize =
-    size === ButtonSizes.LARGE
-      ? styles.large
-      : size === ButtonSizes.SMALL
-      ? styles.small
-      : styles.medium;
-
+const Button = ({
+  className,
+  label,
+  onClick,
+  size = ButtonSize.MEDIUM,
+  type = ButtonType.PRIMARY,
+}: ButtonProps): JSX.Element => {
   return (
     <button
-      className={c([styles.default, classNameByType, classNameBySize])}
+      className={c(styles.default, styles[type], styles[size], className)}
       onClick={onClick}
     >
       {label}

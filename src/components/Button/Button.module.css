@@ -1,5 +1,5 @@
 .default {
-  background-color: var(--ft-button-default-background-color);
+  background-color: var(--ft-button-default-bg-color);
   border-radius: var(--ft-button-default-border-radius);
   border: none;
   color: var(--ft-button-default-color);
@@ -16,35 +16,35 @@
 }
 
 .primary {
-  background-color: var(--ft-primary-default-background-color);
+  background-color: var(--ft-primary-default-bg-color);
   color: var(--ft-primary-hover-color);
 }
 
 .primary:hover {
-  background-color: var(--ft-primary-hover-background-color);
-  box-shadow: 0 1px 10px 0 var(--ft-primary-default-background-color);
+  background-color: var(--ft-primary-hover-bg-color);
+  box-shadow: 0 1px 10px 0 var(--ft-primary-default-bg-color);
   color: var(--ft-primary-default-color);
 }
 
 .secondary {
-  background-color: var(--ft-secondary-default-background-color);
+  background-color: var(--ft-secondary-default-bg-color);
   color: var(--ft-secondary-hover-color);
 }
 
 .secondary:hover {
-  background-color: var(--ft-secondary-hover-background-color);
-  box-shadow: 0 1px 10px 0 var(--ft-secondary-default-background-color);
+  background-color: var(--ft-secondary-hover-bg-color);
+  box-shadow: 0 1px 10px 0 var(--ft-secondary-default-bg-color);
   color: var(--ft-secondary-default-color);
 }
 
 .tertiary {
-  background-color: var(--ft-tertiary-default-background-color);
+  background-color: var(--ft-tertiary-default-bg-color);
   color: var(--ft-tertiary-hover-color);
 }
 
 .tertiary:hover {
-  background-color: var(--ft-tertiary-hover-background-color);
-  box-shadow: 0 1px 10px 0 var(--ft-tertiary-default-background-color);
+  background-color: var(--ft-tertiary-hover-bg-color);
+  box-shadow: 0 1px 10px 0 var(--ft-tertiary-default-bg-color);
   color: var(--ft-tertiary-default-color);
 }
 

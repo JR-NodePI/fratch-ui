@@ -1,22 +1,19 @@
-export const ButtonTypes = Object.freeze({
-  PRIMARY: "primary",
-  SECONDARY: "secondary",
-  TERTIARY: "tertiary",
+export const ButtonType = Object.freeze({
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  TERTIARY: 'tertiary',
 });
 
-export const ButtonSizes = Object.freeze({
-  SMALL: "small",
-  MEDIUM: "medium",
-  LARGE: "large",
+export const ButtonSize = Object.freeze({
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
 });
-
-export type ButtonType = (typeof ButtonTypes)[keyof typeof ButtonTypes];
-
-export type ButtonSize = (typeof ButtonSizes)[keyof typeof ButtonSizes];
 
 export interface ButtonProps {
-  type?: ButtonType;
-  size?: ButtonSize;
+  className?: string;
   label: string;
   onClick?: () => void;
+  size?: (typeof ButtonSize)[keyof typeof ButtonSize];
+  type?: (typeof ButtonType)[keyof typeof ButtonType];
 }

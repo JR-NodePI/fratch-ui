@@ -1,6 +1,6 @@
-import { c } from "../../helpers/classNameHelpers";
+import { c } from '../../helpers/classNameHelpers';
 
-import styles from "./Spinner.module.css";
+import styles from './Spinner.module.css';
 
 const Spinner = (): JSX.Element => {
   return (
@@ -11,7 +11,7 @@ const Spinner = (): JSX.Element => {
         cy="25"
         r="20"
         fill="none"
-        stroke-width="5"
+        strokeWidth="5"
       ></circle>
     </svg>
   );

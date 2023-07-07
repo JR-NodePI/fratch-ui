@@ -1,31 +1,42 @@
 :root {
   --ft-font-family: sans-serif;
+  --ft-font-weight-light: light;
+  --ft-font-weight-normal: normal;
+  --ft-font-weight-bold: bold;
+  --ft-font-size: 16px;
+
+  --ft-color-white: #fff;
+  --ft-color-primary: #0f1813;
+
+  --ft-max-z-index: 2147483647;
+  --ft-transition-duration: 0.2s;
+
   --ft-button-default-font-family: var(--ft-font-family);
 
   --ft-button-default-font-size: 16px;
-  --ft-button-default-font-weight: bold;
+  --ft-button-default-font-weight: var(--ft-font-weight-bold);
   --ft-button-default-letter-spacing: 0.5px;
 
-  --ft-button-default-background-color: #ccc;
-  --ft-button-default-color: #000;
+  --ft-button-default-bg-color: #ccc;
+  --ft-button-default-color: #5a626a;
   --ft-button-default-border-radius: 6px;
   --ft-button-default-padding-y: 12px;
   --ft-button-default-padding-x: 24px;
 
-  --ft-primary-default-background-color: #0d00ff;
-  --ft-primary-default-color: #fff;
-  --ft-primary-hover-background-color: #0900b2;
+  --ft-primary-default-bg-color: #0d00ff;
+  --ft-primary-default-color: var(--ft-color-white);
+  --ft-primary-hover-bg-color: #0900b2;
   --ft-primary-hover-color: #c2f6ff;
 
-  --ft-secondary-default-background-color: #c6005c;
+  --ft-secondary-default-bg-color: #c6005c;
   --ft-secondary-default-color: #fff;
-  --ft-secondary-hover-background-color: #b2004a;
+  --ft-secondary-hover-bg-color: #b2004a;
   --ft-secondary-hover-color: #ffe1fb;
 
-  --ft-tertiary-default-background-color: #00740c;
-  --ft-tertiary-default-color: #fff;
-  --ft-tertiary-hover-background-color: #005008;
-  --ft-tertiary-hover-color: #d2ffd8;
+  --ft-tertiary-default-bg-color: #007390;
+  --ft-tertiary-default-color: #c8f5ff;
+  --ft-tertiary-hover-bg-color: #004d61;
+  --ft-tertiary-hover-color: #ffffff;
 
   --ft-button-small-font-size: 12px;
   --ft-button-small-padding-y: 12px;
@@ -39,5 +50,31 @@
   --ft-button-large-padding-y: 16px;
   --ft-button-large-padding-x: 36px;
 
-  --ft-spinner-default-color: #0d00ff;
+  --ft-spinner-default-color: #c8f5ff;
+
+  --ft-form-item-border-radius: 4px;
+  --ft-form-item-padding-y: 8px;
+  --ft-form-item-padding-x: 12px;
+  --ft-form-item-border-wight: 1px;
+  --ft-form-item-border-color: rgb(197, 197, 197);
+  --ft-form-item-border: var(--ft-form-item-border-wight) solid
+    var(--ft-form-item-border-color);
+  --ft-form-item-bg-color: rgb(240, 240, 240);
+
+  --ft-select-default-font-family: var(--ft-font-family);
+  --ft-select-default-font-size: var(--ft-font-size);
+  --ft-select-list-item-bg-color-hover: rgb(238, 255, 250);
+  --ft-select-list-item-bg-color-active: rgb(177, 253, 228);
+  --ft-select-list-item-selected-text-color: rgb(0, 15, 13);
+
+  --ft-icon-primary-color: var(--ft-color-primary);
+  --ft-icon-secondary-color: #c6005c;
+  --ft-icon-tertiary-color: #007390;
+  --ft-icon-error-color: #ff0000;
+  --ft-icon-info-color: #0000ff;
+  --ft-icon-success-color: #00a700;
+  --ft-icon-warning-color: #ff8800;
+
+  --ft-box-shadow-1: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  --ft-box-shadow-2: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }

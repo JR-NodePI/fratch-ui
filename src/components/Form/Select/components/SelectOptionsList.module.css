@@ -1,0 +1,87 @@
+.select_list {
+  position: fixed;
+  overflow: auto;
+  z-index: var(--ft-max-z-index);
+  background-color: var(--ft-form-item-bg-color);
+  border-radius: var(--ft-form-item-border-radius);
+  box-shadow: var(--ft-box-shadow-2);
+  border: var(--ft-form-item-border);
+  box-sizing: border-box;
+}
+.select_list ul {
+  margin: 0;
+  padding: 0;
+}
+.select_list ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 1em;
+  box-sizing: border-box;
+  box-shadow: inset 0 -1px 0 0 var(--ft-form-item-border-color);
+  padding-bottom: 1px;
+}
+.select_list ul li:last-child {
+  box-shadow: none;
+}
+
+.select_list ul li > span,
+.select_list ul li > a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  padding: var(--ft-form-item-padding-y) var(--ft-form-item-padding-x);
+  margin: 0;
+  text-decoration: none;
+  outline: none;
+  cursor: default;
+}
+.select_list ul li > span {
+  color: var(--ft-form-item-border-color);
+  background-color: var(--ft-primary-default-color);
+}
+.select_list ul li > a {
+  color: var(--ft-button-default-color);
+  background-color: var(--ft-form-item-bg-color);
+}
+
+.select_list ul li > a b {
+  font-weight: normal;
+  color: var(--ft-select-list-item-selected-text-color);
+}
+.select_list ul li > a * {
+  pointer-events: none;
+}
+
+.select_list ul li > a:focus,
+.select_list ul li > a:hover {
+  outline: none;
+  background-color: var(--ft-select-list-item-bg-color-hover);
+}
+
+.select_list ul li > a:active,
+.select_list ul li.selected > a {
+  outline: none;
+  background-color: var(--ft-select-list-item-bg-color-active);
+}
+.select_list.hidden {
+  opacity: 0;
+  transition: opacity var(--ft-transition-duration) ease-out,
+    top 0s linear var(--ft-transition-duration),
+    left 0s linear var(--ft-transition-duration),
+    width 0s linear var(--ft-transition-duration),
+    height 0s linear var(--ft-transition-duration),
+    max-height 0s linear var(--ft-transition-duration);
+}
+.select_list.visible {
+  opacity: 1;
+  transition: opacity var(--ft-transition-duration) ease-out;
+}

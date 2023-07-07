@@ -1,0 +1,105 @@
+.icon {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  display: block;
+  height: auto;
+}
+
+.primary [fill] {
+  fill: var(--ft-icon-primary-color);
+}
+.primary [stroke] {
+  stroke: var(--ft-icon-primary-color);
+}
+.primary [fill='none'] {
+  fill: transparent;
+}
+.primary [stroke='none'] {
+  stroke: transparent;
+}
+
+.secondary [fill] {
+  fill: var(--ft-icon-secondary-color);
+}
+.secondary [stroke] {
+  stroke: var(--ft-icon-secondary-color);
+}
+.secondary [fill='none'] {
+  fill: transparent;
+}
+.secondary [stroke='none'] {
+  stroke: transparent;
+}
+
+.tertiary [fill] {
+  fill: var(--ft-icon-tertiary-color);
+}
+.tertiary [stroke] {
+  stroke: var(--ft-icon-tertiary-color);
+}
+.tertiary [fill='none'] {
+  fill: transparent;
+}
+.tertiary [stroke='none'] {
+  stroke: transparent;
+}
+
+.error [fill] {
+  fill: var(--ft-icon-error-color);
+}
+.error [stroke] {
+  stroke: var(--ft-icon-error-color);
+}
+.error [fill='none'] {
+  fill: transparent;
+}
+.error [stroke='none'] {
+  stroke: transparent;
+}
+
+.info [fill] {
+  fill: var(--ft-icon-info-color);
+}
+.info [stroke] {
+  stroke: var(--ft-icon-info-color);
+}
+.info [fill='none'] {
+  fill: transparent;
+}
+.info [stroke='none'] {
+  stroke: transparent;
+}
+
+.success [fill] {
+  fill: var(--ft-icon-success-color);
+}
+.success [stroke] {
+  stroke: var(--ft-icon-success-color);
+}
+.success [fill='none'] {
+  fill: transparent;
+}
+.success [stroke='none'] {
+  stroke: transparent;
+}
+
+.warning [fill] {
+  fill: var(--ft-icon-warning-color);
+}
+.warning [stroke] {
+  stroke: var(--ft-icon-warning-color);
+}
+.warning [fill='none'] {
+  fill: transparent;
+}
+.warning [stroke='none'] {
+  stroke: transparent;
+}
