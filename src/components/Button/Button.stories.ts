@@ -14,8 +14,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: 'DEFAULT',
-    type: ButtonType.PRIMARY,
+    label: 'Default',
+    type: ButtonType.DEFAULT,
     size: ButtonSize.MEDIUM,
   },
 };

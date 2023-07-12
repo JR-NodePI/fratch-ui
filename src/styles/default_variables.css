@@ -6,7 +6,9 @@
   --ft-font-size: 16px;
 
   --ft-color-white: #fff;
-  --ft-color-primary: #0f1813;
+  --ft-color-primary: #30042f;
+  --ft-color-link: rgb(0, 77, 97);
+  --ft-color-black: #0d000d;
 
   --ft-max-z-index: 2147483647;
   --ft-transition-duration: 0.2s;
@@ -17,63 +19,77 @@
   --ft-button-default-font-weight: var(--ft-font-weight-bold);
   --ft-button-default-letter-spacing: 0.5px;
 
-  --ft-button-default-bg-color: #ccc;
-  --ft-button-default-color: #5a626a;
+  --ft-button-default-bg-color: #e7e7e7;
+  --ft-button-default-color: var(--ft-color-primary);
+  --ft-button-hover-bg-color: #ffffff;
+  --ft-button-active-bg-color: #d6d6d6;
+  --ft-button-hover-color: var(--ft-color-black);
   --ft-button-default-border-radius: 6px;
   --ft-button-default-padding-y: 12px;
   --ft-button-default-padding-x: 24px;
 
-  --ft-primary-default-bg-color: #0d00ff;
-  --ft-primary-default-color: var(--ft-color-white);
-  --ft-primary-hover-bg-color: #0900b2;
-  --ft-primary-hover-color: #c2f6ff;
+  --ft-primary-default-bg-color: rgb(74, 45, 255);
+  --ft-primary-default-color: #ede3fb;
+  --ft-primary-hover-bg-color: rgb(38, 15, 183);
+  --ft-primary-active-bg-color: rgb(27, 14, 100);
+  --ft-primary-shadow-color: rgba(5, 4, 46, 0.567);
+  --ft-primary-hover-shadow-color: rgba(74, 45, 255, 0.567);
+  --ft-primary-hover-color: var(--ft-color-white);
 
-  --ft-secondary-default-bg-color: #c6005c;
-  --ft-secondary-default-color: #fff;
-  --ft-secondary-hover-bg-color: #b2004a;
-  --ft-secondary-hover-color: #ffe1fb;
+  --ft-secondary-default-bg-color: rgb(215, 0, 101);
+  --ft-secondary-default-color: #ffe8f4;
+  --ft-secondary-hover-bg-color: rgb(169, 1, 71);
+  --ft-secondary-active-bg-color: rgb(86, 14, 44);
+  --ft-secondary-shadow-color: rgba(80, 7, 37, 0.567);
+  --ft-secondary-hover-shadow-color: rgba(215, 0, 101, 0.567);
+  --ft-secondary-hover-color: var(--ft-color-white);
 
-  --ft-tertiary-default-bg-color: #007390;
+  --ft-tertiary-default-bg-color: rgb(0, 115, 144);
   --ft-tertiary-default-color: #c8f5ff;
-  --ft-tertiary-hover-bg-color: #004d61;
+  --ft-tertiary-hover-bg-color: rgb(0, 77, 97);
+  --ft-tertiary-active-bg-color: rgb(0, 48, 60);
+  --ft-tertiary-shadow-color: rgba(1, 30, 38, 0.567);
+  --ft-tertiary-hover-shadow-color: rgba(0, 164, 205, 0.56);
   --ft-tertiary-hover-color: #ffffff;
 
-  --ft-button-small-font-size: 12px;
-  --ft-button-small-padding-y: 12px;
+  --ft-button-small-font-size: 13px;
+  --ft-button-small-padding-y: 9px;
   --ft-button-small-padding-x: 20px;
 
   --ft-button-medium-font-size: 16px;
-  --ft-button-medium-padding-y: 16px;
+  --ft-button-medium-padding-y: 14px;
   --ft-button-medium-padding-x: 24px;
 
   --ft-button-large-font-size: 18px;
   --ft-button-large-padding-y: 16px;
-  --ft-button-large-padding-x: 36px;
+  --ft-button-large-padding-x: 32px;
 
-  --ft-spinner-default-color: #c8f5ff;
+  --ft-spinner-default-color: var(--ft-color-link);
 
   --ft-form-item-border-radius: 4px;
   --ft-form-item-padding-y: 8px;
   --ft-form-item-padding-x: 12px;
   --ft-form-item-border-wight: 1px;
-  --ft-form-item-border-color: rgb(197, 197, 197);
+  --ft-form-item-border-color: rgb(171, 158, 179);
+  --ft-form-item-border-color-light: rgb(209, 204, 213);
   --ft-form-item-border: var(--ft-form-item-border-wight) solid
     var(--ft-form-item-border-color);
-  --ft-form-item-bg-color: rgb(240, 240, 240);
+  --ft-form-item-bg-color: rgb(246, 255, 255);
 
   --ft-select-default-font-family: var(--ft-font-family);
   --ft-select-default-font-size: var(--ft-font-size);
-  --ft-select-list-item-bg-color-hover: rgb(238, 255, 250);
-  --ft-select-list-item-bg-color-active: rgb(177, 253, 228);
-  --ft-select-list-item-selected-text-color: rgb(0, 15, 13);
+  --ft-select-default-line-height: 22px;
+  --ft-select-list-item-bg-color-hover: #e4d5ff;
+  --ft-select-list-item-bg-color-active: #b5fdfb;
+  --ft-select-list-item-selected-text-color: var(--ft-color-primary);
 
   --ft-icon-primary-color: var(--ft-color-primary);
-  --ft-icon-secondary-color: #c6005c;
+  --ft-icon-secondary-color: #d70065;
   --ft-icon-tertiary-color: #007390;
-  --ft-icon-error-color: #ff0000;
-  --ft-icon-info-color: #0000ff;
-  --ft-icon-success-color: #00a700;
-  --ft-icon-warning-color: #ff8800;
+  --ft-icon-error-color: #ff004c;
+  --ft-icon-info-color: #4a2dff;
+  --ft-icon-success-color: #3ba93b;
+  --ft-icon-warning-color: #ffa600;
 
   --ft-box-shadow-1: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   --ft-box-shadow-2: 0 4px 8px 0 rgba(0, 0, 0, 0.1);

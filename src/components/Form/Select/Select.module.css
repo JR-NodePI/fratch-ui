@@ -22,7 +22,34 @@
   margin: 0;
   padding: var(--ft-form-item-padding-y) var(--ft-form-item-padding-x);
   border-left: none;
+  transition: background-color 0.2s ease-out;
+  background-color: var(--ft-button-default-bg-color);
 }
+.cleaner:hover {
+  background-color: var(--ft-button-hover-bg-color);
+}
+.cleaner:active {
+  background-color: var(--ft-button-active-bg-color);
+}
+.cleaner_icon [fill] {
+  fill: var(--ft-button-default-color);
+}
+.cleaner_icon [stroke] {
+  stroke: var(--ft-button-default-color);
+}
+.cleaner:hover .cleaner_icon [fill] {
+  fill: var(--ft-button-hover-color);
+}
+.cleaner:hover .cleaner_icon [stroke] {
+  stroke: var(--ft-button-hover-color);
+}
+.cleaner_icon [fill='none'] {
+  fill: transparent !important;
+}
+.cleaner_icon [stroke='none'] {
+  stroke: transparent !important;
+}
+
 .trigger_icon,
 .cleaner_icon {
   --inc: 8px;
@@ -39,7 +66,7 @@
   right: var(--ft-form-item-padding-x);
 }
 .trigger {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .cleanable .trigger {
   border-radius: var(--ft-form-item-border-radius) 0 0
@@ -48,15 +75,22 @@
 .cleanable .trigger_container .trigger_icon {
   right: calc(calc(var(--ft-form-item-padding-x) * 2) + var(--size));
 }
+
 .trigger_icon [fill] {
   fill: var(--ft-form-item-border-color);
 }
 .trigger_icon [stroke] {
   stroke: var(--ft-form-item-border-color);
 }
+.trigger:hover ~ .trigger_icon [fill] {
+  fill: var(--ft-color-primary);
+}
+.trigger:hover ~ .trigger_icon [stroke] {
+  stroke: var(--ft-color-primary);
+}
 .trigger_icon [fill='none'] {
-  fill: transparent;
+  fill: transparent !important;
 }
 .trigger_icon [stroke='none'] {
-  stroke: transparent;
+  stroke: transparent !important;
 }

@@ -55,7 +55,7 @@ const buildComponent = file => {
 };
 
 const combineCssFiles = () => {
-  const cssMainFilesPattern = `${outDir}/**/*.css`;
+  const cssMainFilesPattern = `${outDir}/*_styles.css`;
   const cssFilesPattern = `${outDir}/components/**/*.css`;
   const cssMainFiles = glob.sync(cssMainFilesPattern);
   const cssFiles = glob.sync(cssFilesPattern, {

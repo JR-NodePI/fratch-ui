@@ -13,42 +13,63 @@
   text-overflow: ellipsis;
   transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
   white-space: nowrap;
+  box-shadow: inset 0 0 0 1px var(--ft-form-item-border-color);
+}
+.default:hover {
+  background-color: var(--ft-button-hover-bg-color);
+  color: var(--ft-button-hover-color);
+}
+.default:active {
+  background-color: var(--ft-button-active-bg-color);
 }
 
 .primary {
   background-color: var(--ft-primary-default-bg-color);
-  color: var(--ft-primary-hover-color);
+  color: var(--ft-primary-default-color);
+  box-shadow: 0 1px 4px 0 var(--ft-primary-shadow-color);
 }
-
 .primary:hover {
   background-color: var(--ft-primary-hover-bg-color);
-  box-shadow: 0 1px 10px 0 var(--ft-primary-default-bg-color);
+  color: var(--ft-primary-hover-color);
+  box-shadow: 0 3px 16px 0 var(--ft-primary-hover-shadow-color);
+}
+.primary:active {
+  background-color: var(--ft-primary-active-bg-color);
   color: var(--ft-primary-default-color);
 }
 
 .secondary {
   background-color: var(--ft-secondary-default-bg-color);
-  color: var(--ft-secondary-hover-color);
+  color: var(--ft-secondary-default-color);
+  box-shadow: 0 1px 4px 0 var(--ft-secondary-shadow-color);
 }
-
 .secondary:hover {
   background-color: var(--ft-secondary-hover-bg-color);
-  box-shadow: 0 1px 10px 0 var(--ft-secondary-default-bg-color);
+  color: var(--ft-secondary-hover-color);
+  box-shadow: 0 3px 16px 0 var(--ft-secondary-hover-shadow-color);
+}
+.secondary:active {
+  background-color: var(--ft-secondary-active-bg-color);
   color: var(--ft-secondary-default-color);
 }
 
 .tertiary {
   background-color: var(--ft-tertiary-default-bg-color);
-  color: var(--ft-tertiary-hover-color);
+  color: var(--ft-tertiary-default-color);
+  box-shadow: 0 1px 4px 0 var(--ft-tertiary-shadow-color);
 }
-
 .tertiary:hover {
   background-color: var(--ft-tertiary-hover-bg-color);
-  box-shadow: 0 1px 10px 0 var(--ft-tertiary-default-bg-color);
+  color: var(--ft-tertiary-hover-color);
+  box-shadow: 0 3px 16px 0 var(--ft-tertiary-hover-shadow-color);
+}
+.tertiary:active {
+  background-color: var(--ft-tertiary-active-bg-color);
   color: var(--ft-tertiary-default-color);
 }
 
 .small {
+  line-height: var(--ft-select-default-line-height);
   font-size: var(--ft-button-small-font-size);
   padding: var(--ft-button-small-padding-y) var(--ft-button-small-padding-x);
 }

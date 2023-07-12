@@ -1,4 +1,5 @@
 export const ButtonType = Object.freeze({
+  DEFAULT: 'default',
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
   TERTIARY: 'tertiary',

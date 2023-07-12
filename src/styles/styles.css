@@ -19,3 +19,7 @@ b,
 strong {
   font-weight: var(--ft-font-weight-bold);
 }
+
+a {
+  color: var(--ft-color-link);
+}

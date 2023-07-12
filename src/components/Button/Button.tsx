@@ -10,7 +10,7 @@ const Button = ({
   label,
   onClick,
   size = ButtonSize.MEDIUM,
-  type = ButtonType.PRIMARY,
+  type = ButtonType.DEFAULT,
 }: ButtonProps): JSX.Element => {
   return (
     <button

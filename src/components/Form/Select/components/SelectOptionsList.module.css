@@ -21,7 +21,7 @@
   flex-wrap: nowrap;
   min-width: 1em;
   box-sizing: border-box;
-  box-shadow: inset 0 -1px 0 0 var(--ft-form-item-border-color);
+  box-shadow: inset 0 -1px 0 0 var(--ft-form-item-border-color-light);
   padding-bottom: 1px;
 }
 .select_list ul li:last-child {
