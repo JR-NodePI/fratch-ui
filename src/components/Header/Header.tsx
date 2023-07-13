@@ -1,10 +1,9 @@
 import { c } from '../../helpers/classNameHelpers';
 import styles from './Header.module.css';
-import logo from '../../assets/logo.png';
 
 function Header({
   title,
-  iconSrc = logo,
+  iconSrc,
 }: {
   title: string;
   iconSrc?: string;
@@ -12,7 +11,9 @@ function Header({
   return (
     <div className={c(styles.header)}>
       <h1>
-        <img className={c(styles.icon)} src={iconSrc} alt={title} />
+        {iconSrc && (
+          <img className={c(styles.icon)} src={iconSrc} alt={title} />
+        )}
         {title}
       </h1>
     </div>
