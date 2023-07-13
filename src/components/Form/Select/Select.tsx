@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import IconArrowDown from '../../Icon/IconArrowDown';
 import IconClose from '../../Icon/IconClose';
 import SelectOptionsList from './components/SelectOptionsList';
+import { createPortal } from 'react-dom';
 
 import styles from './Select.module.css';
 import Input from '../Imput/Input';
@@ -106,7 +107,7 @@ function Select<T>({
   placeholder = '',
   searchable = false,
   value,
-}: SelectProps<T>): JSX.Element {
+}: SelectProps<T>): any {
   const triggerRef = useRef<HTMLInputElement>(null);
   const [selectedLabel, setSelectedLabel] = useState<string>('');
   const [selectedIndex, setSelectedIndex] = useState<number>();
@@ -222,14 +223,18 @@ function Select<T>({
           </button>
         )}
       </div>
-      <SelectOptionsList
-        noResultsElement={noResultsElement}
-        onChange={handleOnChange}
-        options={filteredOptions}
-        selectedIndex={selectedIndex}
-        triggerDOMRect={triggerDOMRect}
-        visible={visible}
-      />
+
+      {createPortal(
+        <SelectOptionsList
+          noResultsElement={noResultsElement}
+          onChange={handleOnChange}
+          options={filteredOptions}
+          selectedIndex={selectedIndex}
+          triggerDOMRect={triggerDOMRect}
+          visible={visible}
+        />,
+        document.body
+      )}
     </div>
   );
 }

@@ -1,4 +1,6 @@
 :root {
+  --ft-header-height: 36px;
+
   --ft-font-family: sans-serif;
   --ft-font-weight-light: light;
   --ft-font-weight-normal: normal;
@@ -7,9 +9,10 @@
 
   --ft-color-white: #fff;
   --ft-color-primary: #30042f;
+  --ft-color-light: #00ffb7;
   --ft-color-link: rgb(0, 77, 97);
   --ft-color-black: #0d000d;
-  --ft-header-bg-color: #dabfff;
+  --ft-header-bg-color: #7979ff;
 
   --ft-max-z-index: 2147483647;
   --ft-transition-duration: 0.2s;
@@ -29,7 +32,7 @@
   --ft-button-default-padding-y: 12px;
   --ft-button-default-padding-x: 24px;
 
-  --ft-primary-default-bg-color: rgb(74, 45, 255);
+  --ft-primary-default-bg-color: #4a2dff;
   --ft-primary-default-color: #ede3fb;
   --ft-primary-hover-bg-color: rgb(38, 15, 183);
   --ft-primary-active-bg-color: rgb(27, 14, 100);
