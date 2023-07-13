@@ -9,6 +9,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       className,
       disabled,
       onBlur,
+      onFocus,
       onChange,
       onClick,
       placeholder,
@@ -24,6 +25,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       disabled={disabled}
       onChange={onChange}
       onBlur={onBlur}
+      onFocus={onFocus}
       onClick={onClick}
       placeholder={placeholder}
       readOnly={readOnly}

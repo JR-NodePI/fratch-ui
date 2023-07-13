@@ -6,9 +6,12 @@ import IconArrowDown from '../../Icon/IconArrowDown';
 import IconClose from '../../Icon/IconClose';
 import SelectOptionsList from './components/SelectOptionsList';
 import { createPortal } from 'react-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 import styles from './Select.module.css';
 import Input from '../Imput/Input';
+
+const selectInstances = new Map();
 
 function filterOptionByText<T>(text: string) {
   return (option: SelectOption<T>): SelectOption<T> => {
@@ -73,8 +76,7 @@ const useHideOnTriggerDOMRectChange = ({
   useEffect(() => {
     if (visible && triggerDOMRect && triggerRef.current) {
       const intervalId = setInterval(() => {
-        const newTriggerDOMRect =
-          triggerRef.current && triggerRef.current.getBoundingClientRect();
+        const newTriggerDOMRect = triggerRef.current && triggerRef.current.getBoundingClientRect();
 
         if (
           visible &&
@@ -108,13 +110,22 @@ function Select<T>({
   searchable = false,
   value,
 }: SelectProps<T>): any {
+  const [id] = useState<string>(uuidv4());
   const triggerRef = useRef<HTMLInputElement>(null);
   const [selectedLabel, setSelectedLabel] = useState<string>('');
   const [selectedIndex, setSelectedIndex] = useState<number>();
   const [visible, setVisible] = useState<boolean>(false);
   const [triggerDOMRect, setTriggerDOMRect] = useState<DOMRect>();
-  const [filteredOptions, setFilteredOptions] =
-    useState<SelectOption<T>[]>(options);
+  const [filteredOptions, setFilteredOptions] = useState<SelectOption<T>[]>(options);
+
+  useEffect(() => {
+    selectInstances.set(id, {
+      setVisible,
+    });
+    return () => {
+      selectInstances.delete(id);
+    };
+  }, [id]);
 
   // set filtered options when options changes
   useEffect(() => {
@@ -149,9 +160,7 @@ function Select<T>({
     }
   };
 
-  const handleOnInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ): void => {
+  const handleOnInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const text = event.target.value ?? '';
     setSelectedLabel(text);
     setSelectedIndex(undefined);
@@ -174,6 +183,14 @@ function Select<T>({
   const handleOnInputClick = (event: React.MouseEvent<HTMLInputElement>) => {
     if (!disabled && triggerRef.current) {
       event.stopPropagation();
+
+      // hide other select instances
+      selectInstances.forEach((instance, key) => {
+        if (key !== id) {
+          instance.setVisible(false);
+        }
+      });
+
       setVisible(true);
       setTriggerDOMRect(triggerRef.current.getBoundingClientRect());
     }
@@ -233,7 +250,8 @@ function Select<T>({
           triggerDOMRect={triggerDOMRect}
           visible={visible}
         />,
-        document.body
+        document.body,
+        id
       )}
     </div>
   );
