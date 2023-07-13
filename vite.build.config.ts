@@ -12,9 +12,7 @@ const outDir = './dist';
 const excludePattern = './**/*.{stories,test,d}.{tsx,ts}';
 
 const buildComponent = file => {
-  const fileName = path
-    .basename(file)
-    .slice(0, path.basename(file).indexOf(path.extname(file)));
+  const fileName = path.basename(file).slice(0, path.basename(file).indexOf(path.extname(file)));
 
   const moduleOutDir = `${outDir}/${path.relative(srcDir, path.dirname(file))}`;
 
@@ -37,12 +35,7 @@ const buildComponent = file => {
         formats: ['es', 'cjs'],
       },
       rollupOptions: {
-        external: [
-          'react',
-          'react-dom',
-          'react/jsx-runtime',
-          new RegExp('\\./[./\\w]+$'),
-        ],
+        external: ['uuid', 'lodash', 'react', 'react-dom', 'react/jsx-runtime', new RegExp('\\./[./\\w]+$')],
         output: {
           assetFileNames: assetInfo => {
             if (assetInfo.name.endsWith('.css')) return `${fileName}.css`;

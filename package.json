@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "repository": "git@github.com:JorgeRojo/fratch-ui.git",
   "author": "JorgeRojo <jorge.rojodiseno@gmail.com>",
   "license": "MIT",
@@ -10,7 +10,8 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.26",
