@@ -125,6 +125,10 @@ function useKeyboardNavigation<T>({
   }, [filteredOptions]);
 
   const handleOnInputKeyDownCapture = (event: React.KeyboardEvent<HTMLInputElement>): void => {
+    if (event.code === 'ArrowDown' || event.code === 'ArrowUp' || event.code === 'Enter') {
+      event.preventDefault();
+    }
+
     if (visible) {
       const focusedIndex = focusedItemIndex ?? selectedIndex ?? -1;
 
@@ -132,7 +136,6 @@ function useKeyboardNavigation<T>({
         ({ visible }, index) => visible !== false && index > focusedIndex
       );
       if (event.code === 'ArrowDown' && nextIndex >= 0) {
-        event.preventDefault();
         setFocusedItemIndex(nextIndex);
       }
 
@@ -143,17 +146,14 @@ function useKeyboardNavigation<T>({
         return lastIndex;
       }, -1);
       if (event.code === 'ArrowUp' && prevIndex >= 0) {
-        event.preventDefault();
         setFocusedItemIndex(prevIndex);
       }
 
       if (event.code === 'Enter' && focusedItemIndex != null) {
-        event.preventDefault();
         handleOnChange(focusedItemIndex);
       }
     } else {
       if (event.code === 'Enter' || event.code === 'ArrowDown') {
-        event.preventDefault();
         handleOnInputClick(event as any);
       }
     }
