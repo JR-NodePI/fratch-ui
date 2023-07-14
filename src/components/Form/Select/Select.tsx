@@ -99,6 +99,58 @@ const useHideOnTriggerDOMRectChange = ({
   }, [setVisible, triggerDOMRect, triggerRef, visible]);
 };
 
+function useKeyboardNavigation<T>({
+  visible,
+  filteredOptions,
+  handleOnChange,
+  handleOnInputClick,
+}: {
+  visible: boolean;
+  filteredOptions: SelectOption<T>[];
+  handleOnChange: (index: number) => void;
+  handleOnInputClick: (event: React.MouseEvent<HTMLInputElement>) => void;
+}) {
+  const [focusedItemIndex, setFocusedItemIndex] = useState<number>();
+
+  useEffect(() => {
+    if (!visible) {
+      setFocusedItemIndex(undefined);
+    }
+  }, [visible]);
+
+  const handleOnInputKeyDownCapture = (event: React.KeyboardEvent<HTMLInputElement>): void => {
+    if (visible) {
+      const focusedIndex = focusedItemIndex ?? -1;
+
+      const visibleItems = filteredOptions.filter(({ visible }) => visible !== false);
+      const isPossibleFocusListItem = focusedIndex < visibleItems.length - 1;
+      if (event.code === 'ArrowDown' && isPossibleFocusListItem) {
+        event.preventDefault();
+        const nextVisibleItem = visibleItems[focusedIndex + 1];
+        setFocusedItemIndex(filteredOptions.indexOf(nextVisibleItem));
+      }
+
+      if (event.code === 'ArrowUp' && focusedIndex > 0) {
+        event.preventDefault();
+        const prevVisibleItem = visibleItems[focusedIndex - 1];
+        setFocusedItemIndex(filteredOptions.indexOf(prevVisibleItem));
+      }
+
+      if (event.code === 'Enter' && focusedItemIndex != null) {
+        event.preventDefault();
+        handleOnChange(focusedItemIndex);
+      }
+    } else {
+      if (event.code === 'Enter' || event.code === 'ArrowDown') {
+        event.preventDefault();
+        handleOnInputClick(event as any);
+      }
+    }
+  };
+
+  return { handleOnInputKeyDownCapture, focusedItemIndex, setFocusedItemIndex };
+}
+
 function Select<T>({
   className = '',
   cleanable = false,
@@ -109,9 +161,10 @@ function Select<T>({
   placeholder = '',
   searchable = false,
   value,
+  triggerElementRef,
 }: SelectProps<T>): any {
   const [id] = useState<string>(uuidv4());
-  const triggerRef = useRef<HTMLInputElement>(null);
+  const triggerRef = useRef<HTMLInputElement>(triggerElementRef?.current ?? null);
   const [selectedLabel, setSelectedLabel] = useState<string>('');
   const [selectedIndex, setSelectedIndex] = useState<number>();
   const [visible, setVisible] = useState<boolean>(false);
@@ -196,6 +249,14 @@ function Select<T>({
     }
   };
 
+  const { focusedItemIndex, setFocusedItemIndex, handleOnInputKeyDownCapture } =
+    useKeyboardNavigation({
+      visible,
+      filteredOptions,
+      handleOnChange,
+      handleOnInputClick,
+    });
+
   // hide options list when disabled
   useEffect(() => {
     if (disabled) {
@@ -228,6 +289,7 @@ function Select<T>({
           disabled={disabled}
           onChange={handleOnInputChange}
           onBlur={handleOnInputBlur}
+          onKeyDownCapture={handleOnInputKeyDownCapture}
           onClick={handleOnInputClick}
           placeholder={placeholder}
           readOnly={!searchable}
@@ -247,6 +309,8 @@ function Select<T>({
           onChange={handleOnChange}
           options={filteredOptions}
           selectedIndex={selectedIndex}
+          focusedIndex={focusedItemIndex}
+          setFocusedItemIndex={setFocusedItemIndex}
           triggerDOMRect={triggerDOMRect}
           visible={visible}
         />,

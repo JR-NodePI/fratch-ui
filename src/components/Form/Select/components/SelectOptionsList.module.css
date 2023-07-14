@@ -23,6 +23,7 @@
   box-sizing: border-box;
   box-shadow: inset 0 -1px 0 0 var(--ft-form-item-border-color-light);
   padding-bottom: 1px;
+  overflow: hidden;
 }
 .select_list ul li:last-child {
   box-shadow: none;
@@ -61,24 +62,26 @@
   pointer-events: none;
 }
 
-.select_list ul li > a:focus,
-.select_list ul li > a:hover {
-  outline: none;
-  background-color: var(--ft-select-list-item-bg-color-hover);
-}
-
 .select_list ul li > a:active,
 .select_list ul li.selected > a {
   outline: none;
   background-color: var(--ft-select-list-item-bg-color-active);
 }
+.select_list ul li > a:focus,
+.select_list ul li.focused > a {
+  outline: none;
+  background-color: var(--ft-select-list-item-bg-color-hover);
+}
+
+.select_list ul li.selected.focused > a {
+  background-color: var(--ft-select-list-item-bg-color-hover-active);
+}
+
 .select_list.hidden {
   opacity: 0;
   transition: opacity var(--ft-transition-duration) ease-out,
-    top 0s linear var(--ft-transition-duration),
-    left 0s linear var(--ft-transition-duration),
-    width 0s linear var(--ft-transition-duration),
-    height 0s linear var(--ft-transition-duration),
+    top 0s linear var(--ft-transition-duration), left 0s linear var(--ft-transition-duration),
+    width 0s linear var(--ft-transition-duration), height 0s linear var(--ft-transition-duration),
     max-height 0s linear var(--ft-transition-duration);
 }
 .select_list.visible {

@@ -9,9 +9,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       className,
       disabled,
       onBlur,
-      onFocus,
       onChange,
       onClick,
+      onFocus,
+      onKeyDownCapture,
       placeholder,
       readOnly,
       type = 'text',
@@ -20,15 +21,16 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => (
     <input
-      ref={ref}
       className={c(styles.input, className)}
       disabled={disabled}
-      onChange={onChange}
       onBlur={onBlur}
-      onFocus={onFocus}
+      onChange={onChange}
       onClick={onClick}
+      onFocus={onFocus}
+      onKeyDownCapture={onKeyDownCapture}
       placeholder={placeholder}
       readOnly={readOnly}
+      ref={ref}
       type={type}
       value={value}
     />

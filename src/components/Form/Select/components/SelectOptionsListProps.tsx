@@ -5,6 +5,8 @@ export type SelectOptionsListProps<T> = {
   onChange?: (value: number) => void;
   options: SelectOption<T>[];
   selectedIndex?: number;
+  focusedIndex?: number;
+  setFocusedItemIndex: (index: number) => void;
   triggerDOMRect?: DOMRect;
   visible?: boolean;
 };

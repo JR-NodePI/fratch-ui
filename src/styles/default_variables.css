@@ -76,15 +76,15 @@
   --ft-form-item-border-wight: 1px;
   --ft-form-item-border-color: rgb(171, 158, 179);
   --ft-form-item-border-color-light: rgb(209, 204, 213);
-  --ft-form-item-border: var(--ft-form-item-border-wight) solid
-    var(--ft-form-item-border-color);
+  --ft-form-item-border: var(--ft-form-item-border-wight) solid var(--ft-form-item-border-color);
   --ft-form-item-bg-color: rgb(246, 255, 255);
 
   --ft-select-default-font-family: var(--ft-font-family);
   --ft-select-default-font-size: var(--ft-font-size);
   --ft-select-default-line-height: 22px;
-  --ft-select-list-item-bg-color-hover: #e4d5ff;
+  --ft-select-list-item-bg-color-hover: #e6d9fe;
   --ft-select-list-item-bg-color-active: #b5fdfb;
+  --ft-select-list-item-bg-color-hover-active: #bbebff;
   --ft-select-list-item-selected-text-color: var(--ft-color-primary);
 
   --ft-icon-primary-color: var(--ft-color-primary);

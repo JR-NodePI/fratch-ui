@@ -19,7 +19,6 @@ const getVisibilityStyles = ({
   if (visible && triggerDOMRect && itemHeight) {
     const { top, height, width, left } = triggerDOMRect;
     const elementTop = top + height + LIST_VERTICAL_MARGIN;
-
     const maxMaxHeight = itemHeight * MAX_VISIBLE_ITEMS;
 
     let maxHeight = window.innerHeight - elementTop - LIST_VERTICAL_MARGIN * 2;
@@ -48,6 +47,8 @@ function SelectOptionsList<T>({
   onChange,
   options = [],
   selectedIndex,
+  focusedIndex,
+  setFocusedItemIndex,
   triggerDOMRect,
   visible,
 }: SelectOptionsListProps<T>): JSX.Element {
@@ -76,10 +77,26 @@ function SelectOptionsList<T>({
     }
   };
 
+  const handleItemMouseEnter = (event: React.MouseEvent<HTMLAnchorElement>): void => {
+    const element = event.target;
+    const index = Number((element as any).dataset?.index);
+    if (!isNaN(index)) {
+      setFocusedItemIndex(index);
+    }
+  };
+
   const [itemHeight, setItemHeight] = useState<number>();
   const handleItemRef = (current: HTMLLIElement): void => {
-    if (current && !itemHeight) {
-      setItemHeight(current.offsetHeight);
+    if (current) {
+      const itemRectHeight = current.getBoundingClientRect().height;
+      if (itemRectHeight > (itemHeight ?? 0)) {
+        setItemHeight(itemRectHeight);
+      }
+
+      const index = Number(current.dataset.index);
+      if (index === focusedIndex) {
+        current.scrollIntoView({ block: 'nearest' });
+      }
     }
   };
 
@@ -89,10 +106,7 @@ function SelectOptionsList<T>({
     itemHeight,
   });
 
-  const classNames = [
-    styles.select_list,
-    visible ? styles.visible : styles.hidden,
-  ];
+  const classNames = [styles.select_list, visible ? styles.visible : styles.hidden];
 
   const hasSomeVisibleOption = options.some(({ visible }) => visible !== false);
 
@@ -104,15 +118,20 @@ function SelectOptionsList<T>({
             (option, index) =>
               option.visible !== false && (
                 <li
-                  ref={handleItemRef}
+                  className={c(
+                    selectedIndex === index ? styles.selected : '',
+                    focusedIndex === index ? styles.focused : ''
+                  )}
+                  data-index={index}
                   key={index}
-                  className={c(selectedIndex === index ? styles.selected : '')}
+                  ref={handleItemRef}
                 >
                   <a
                     href="#"
                     title={option.label}
                     data-index={index}
                     onClick={handleItemClick}
+                    onMouseEnter={handleItemMouseEnter}
                   >
                     {option.labelElement ?? option.label}
                   </a>
