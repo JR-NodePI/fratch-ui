@@ -19,7 +19,6 @@
 
   --ft-button-default-font-family: var(--ft-font-family);
 
-  --ft-button-default-font-size: 16px;
   --ft-button-default-font-weight: var(--ft-font-weight-bold);
   --ft-button-default-letter-spacing: 0.5px;
 
@@ -29,8 +28,6 @@
   --ft-button-active-bg-color: #d6d6d6;
   --ft-button-hover-color: var(--ft-color-black);
   --ft-button-default-border-radius: 6px;
-  --ft-button-default-padding-y: 12px;
-  --ft-button-default-padding-x: 24px;
 
   --ft-primary-default-bg-color: #4a2dff;
   --ft-primary-default-color: #ede3fb;
@@ -57,15 +54,18 @@
   --ft-tertiary-hover-color: #ffffff;
 
   --ft-button-small-font-size: 13px;
-  --ft-button-small-padding-y: 9px;
-  --ft-button-small-padding-x: 20px;
-
-  --ft-button-medium-font-size: 16px;
-  --ft-button-medium-padding-y: 14px;
-  --ft-button-medium-padding-x: 24px;
-
+  --ft-button-default-font-size: 16px;
+  --ft-button-medium-font-size: var(--ft-button-default-font-size);
   --ft-button-large-font-size: 18px;
-  --ft-button-large-padding-y: 16px;
+
+  --ft-button-small-height: 40px;
+  --ft-button-default-height: 52px;
+  --ft-button-medium-height: var(--ft-button-default-height);
+  --ft-button-large-height: 60px;
+
+  --ft-button-small-padding-x: 16px;
+  --ft-button-default-padding-x: 24px;
+  --ft-button-medium-padding-x: var(--ft-button-default-padding-x);
   --ft-button-large-padding-x: 32px;
 
   --ft-spinner-default-color: var(--ft-color-link);

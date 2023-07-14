@@ -100,17 +100,19 @@ const useHideOnTriggerDOMRectChange = ({
 };
 
 function useKeyboardNavigation<T>({
-  visible,
-  selectedIndex,
   filteredOptions,
   handleOnChange,
   handleOnInputClick,
+  selectedIndex,
+  setVisible,
+  visible,
 }: {
   visible: boolean;
   selectedIndex?: number;
   filteredOptions: SelectOption<T>[];
   handleOnChange: (index: number) => void;
   handleOnInputClick: (event: React.MouseEvent<HTMLInputElement>) => void;
+  setVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const [focusedItemIndex, setFocusedItemIndex] = useState<number>();
 
@@ -125,7 +127,12 @@ function useKeyboardNavigation<T>({
   }, [filteredOptions]);
 
   const handleOnInputKeyDownCapture = (event: React.KeyboardEvent<HTMLInputElement>): void => {
-    if (event.code === 'ArrowDown' || event.code === 'ArrowUp' || event.code === 'Enter') {
+    if (
+      event.code === 'ArrowDown' ||
+      event.code === 'ArrowUp' ||
+      event.code === 'Enter' ||
+      event.code === 'Escape'
+    ) {
       event.preventDefault();
     }
 
@@ -151,6 +158,10 @@ function useKeyboardNavigation<T>({
 
       if (event.code === 'Enter' && focusedItemIndex != null) {
         handleOnChange(focusedItemIndex);
+      }
+
+      if (event.code === 'Escape') {
+        setVisible(false);
       }
     } else {
       if (event.code === 'Enter' || event.code === 'ArrowDown') {
@@ -267,11 +278,12 @@ function Select<T>({
 
   const { focusedItemIndex, setFocusedItemIndex, handleOnInputKeyDownCapture } =
     useKeyboardNavigation({
-      visible,
-      selectedIndex,
       filteredOptions,
       handleOnChange,
       handleOnInputClick,
+      selectedIndex,
+      setVisible,
+      visible,
     });
 
   // hide options list when disabled

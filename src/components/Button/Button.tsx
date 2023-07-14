@@ -1,5 +1,4 @@
 import { c } from '../../helpers/classNameHelpers';
-
 import { ButtonSize, ButtonType } from './ButtonProps';
 import type { ButtonProps } from './ButtonProps';
 
@@ -11,13 +10,23 @@ const Button = ({
   onClick,
   size = ButtonSize.MEDIUM,
   type = ButtonType.DEFAULT,
+  isRound,
+  Icon,
 }: ButtonProps): JSX.Element => {
   return (
     <button
-      className={c(styles.default, styles[type], styles[size], className)}
+      className={c(
+        styles.button,
+        styles[type],
+        styles[size],
+        isRound ? styles.only_icon : '',
+        className
+      )}
       onClick={onClick}
+      title={isRound ? label : ''}
     >
-      {label}
+      {Icon != null && <Icon type="error" className={styles.icon} />}
+      {!isRound && <span>{label}</span>}
     </button>
   );
 };

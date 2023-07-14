@@ -2,7 +2,6 @@
   font-family: var(--ft-select-default-font-family);
   font-size: var(--ft-select-default-font-size);
   box-shadow: var(--ft-box-shadow-1);
-  background-color: Red;
   border-radius: var(--ft-form-item-border-radius);
 }
 .select * {
@@ -50,10 +49,10 @@
 
 .trigger_icon,
 .cleaner_icon {
-  --inc: 8px;
-  --size: calc(var(--ft-select-default-font-size) + var(--inc));
-  margin: calc(calc(var(--inc) / 2) * -1);
-  font-size: calc(var(--size)) !important;
+  font-size: var(--ft-button-default-font-size);
+  margin: -0.1em;
+  font-size: 1.1em;
+  min-width: 1.1em;
 }
 
 .controls {

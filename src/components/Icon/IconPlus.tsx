@@ -1,7 +1,7 @@
 import { IconProps } from './components/IconProps';
 import ContainerIcon from './components/Icon';
 
-const IconClose = ({ type, className }: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
+const IconPlus = ({ type, className }: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
   return (
     <ContainerIcon
       className={className}
@@ -10,14 +10,14 @@ const IconClose = ({ type, className }: Pick<IconProps, 'type' | 'className'>): 
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="-2 -2 18 18"
+          viewBox="-2 -2 22 22"
         >
           <path
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="2"
-            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            strokeWidth="2.5"
+            d="M9 1v16M1 9h16"
           />
         </svg>
       }
@@ -26,4 +26,4 @@ const IconClose = ({ type, className }: Pick<IconProps, 'type' | 'className'>): 
   );
 };
 
-export default IconClose;
+export default IconPlus;
