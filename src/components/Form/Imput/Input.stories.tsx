@@ -11,7 +11,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Input>;
 
-export const Default: Story = {
+export const Docs: Story = {
   args: {
     type: 'text',
     value: 'Input value',

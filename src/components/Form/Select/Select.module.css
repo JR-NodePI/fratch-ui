@@ -2,6 +2,8 @@
   font-family: var(--ft-select-default-font-family);
   font-size: var(--ft-select-default-font-size);
   box-shadow: var(--ft-box-shadow-1);
+  background-color: Red;
+  border-radius: var(--ft-form-item-border-radius);
 }
 .select * {
   font-family: var(--ft-select-default-font-family);
@@ -11,13 +13,9 @@
   pointer-events: none;
   filter: saturate(0) brightness(115%) contrast(75%);
 }
-.trigger_container {
-  display: flex;
-  position: relative;
-}
+
 .cleaner {
-  border-radius: 0 var(--ft-form-item-border-radius)
-    var(--ft-form-item-border-radius) 0;
+  border-radius: 0 var(--ft-form-item-border-radius) var(--ft-form-item-border-radius) 0;
   border: var(--ft-form-item-border);
   margin: 0;
   padding: var(--ft-form-item-padding-y) var(--ft-form-item-padding-x);
@@ -57,7 +55,17 @@
   margin: calc(calc(var(--inc) / 2) * -1);
   font-size: calc(var(--size)) !important;
 }
-.trigger_container .trigger_icon {
+
+.controls {
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+}
+.controls > *:first-child {
+  width: 100%;
+  position: relative;
+}
+.controls .trigger_icon {
   margin-top: 0;
   position: absolute;
   top: 50%;
@@ -65,15 +73,11 @@
   pointer-events: none;
   right: var(--ft-form-item-padding-x);
 }
-.trigger {
-  box-shadow: none !important;
+.controls .trigger {
+  box-shadow: none;
 }
 .cleanable .trigger {
-  border-radius: var(--ft-form-item-border-radius) 0 0
-    var(--ft-form-item-border-radius);
-}
-.cleanable .trigger_container .trigger_icon {
-  right: calc(calc(var(--ft-form-item-padding-x) * 2) + var(--size));
+  border-radius: var(--ft-form-item-border-radius) 0 0 var(--ft-form-item-border-radius);
 }
 
 .trigger_icon [fill] {

@@ -7,6 +7,33 @@ import styles from './SelectOptionsList.module.css';
 const MAX_VISIBLE_ITEMS = 8;
 const LIST_VERTICAL_MARGIN = 2;
 
+const usePersistLastScroll = ({
+  visible,
+  selectedIndex,
+}: {
+  visible?: boolean;
+  selectedIndex?: number;
+}) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [lastScroll, setLastScroll] = useState<number>(0);
+
+  useEffect(() => {
+    if (visible && containerRef.current) {
+      containerRef.current.scrollTop = lastScroll;
+    }
+  }, [visible, lastScroll]);
+
+  useEffect(() => {
+    if (!selectedIndex) {
+      setLastScroll(0);
+    } else {
+      setLastScroll(containerRef?.current?.scrollTop ?? 0);
+    }
+  }, [selectedIndex]);
+
+  return { containerRef };
+};
+
 const getVisibilityStyles = ({
   visible,
   triggerDOMRect,
@@ -52,20 +79,7 @@ function SelectOptionsList<T>({
   triggerDOMRect,
   visible,
 }: SelectOptionsListProps<T>): JSX.Element {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [lastScroll, setLastScroll] = useState<number>(0);
-
-  useEffect(() => {
-    if (visible && containerRef.current) {
-      containerRef.current.scrollTop = lastScroll;
-    }
-  }, [visible, lastScroll]);
-
-  useEffect(() => {
-    if (!selectedIndex) {
-      setLastScroll(0);
-    }
-  }, [selectedIndex]);
+  const { containerRef } = usePersistLastScroll({ visible, selectedIndex });
 
   const handleItemClick = (event: any): void => {
     event.preventDefault();
@@ -73,15 +87,19 @@ function SelectOptionsList<T>({
     const index = Number(element.dataset.index);
     if (!isNaN(index)) {
       onChange && onChange(index);
-      setLastScroll(containerRef?.current?.scrollTop ?? 0);
     }
   };
 
+  const [mouseEnterItemIndex, setMouseEnterItemIndex] = useState<number>();
+  useEffect(() => {
+    setMouseEnterItemIndex(undefined);
+  }, [visible]);
   const handleItemMouseEnter = (event: React.MouseEvent<HTMLAnchorElement>): void => {
     const element = event.target;
     const index = Number((element as any).dataset?.index);
     if (!isNaN(index)) {
       setFocusedItemIndex(index);
+      setMouseEnterItemIndex(index);
     }
   };
 
@@ -94,7 +112,8 @@ function SelectOptionsList<T>({
       }
 
       const index = Number(current.dataset.index);
-      if (index === focusedIndex) {
+      const mustScrollIntoView = index === focusedIndex && mouseEnterItemIndex !== focusedIndex;
+      if (mustScrollIntoView) {
         current.scrollIntoView({ block: 'nearest' });
       }
     }

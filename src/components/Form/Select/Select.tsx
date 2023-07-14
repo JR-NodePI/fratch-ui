@@ -101,11 +101,13 @@ const useHideOnTriggerDOMRectChange = ({
 
 function useKeyboardNavigation<T>({
   visible,
+  selectedIndex,
   filteredOptions,
   handleOnChange,
   handleOnInputClick,
 }: {
   visible: boolean;
+  selectedIndex?: number;
   filteredOptions: SelectOption<T>[];
   handleOnChange: (index: number) => void;
   handleOnInputClick: (event: React.MouseEvent<HTMLInputElement>) => void;
@@ -118,22 +120,31 @@ function useKeyboardNavigation<T>({
     }
   }, [visible]);
 
+  useEffect(() => {
+    setFocusedItemIndex(undefined);
+  }, [filteredOptions]);
+
   const handleOnInputKeyDownCapture = (event: React.KeyboardEvent<HTMLInputElement>): void => {
     if (visible) {
-      const focusedIndex = focusedItemIndex ?? -1;
+      const focusedIndex = focusedItemIndex ?? selectedIndex ?? -1;
 
-      const visibleItems = filteredOptions.filter(({ visible }) => visible !== false);
-      const isPossibleFocusListItem = focusedIndex < visibleItems.length - 1;
-      if (event.code === 'ArrowDown' && isPossibleFocusListItem) {
+      const nextIndex = filteredOptions.findIndex(
+        ({ visible }, index) => visible !== false && index > focusedIndex
+      );
+      if (event.code === 'ArrowDown' && nextIndex >= 0) {
         event.preventDefault();
-        const nextVisibleItem = visibleItems[focusedIndex + 1];
-        setFocusedItemIndex(filteredOptions.indexOf(nextVisibleItem));
+        setFocusedItemIndex(nextIndex);
       }
 
-      if (event.code === 'ArrowUp' && focusedIndex > 0) {
+      const prevIndex = filteredOptions.reduce((lastIndex, { visible }, index) => {
+        if (visible !== false && index < focusedIndex && lastIndex < index) {
+          return index;
+        }
+        return lastIndex;
+      }, -1);
+      if (event.code === 'ArrowUp' && prevIndex >= 0) {
         event.preventDefault();
-        const prevVisibleItem = visibleItems[focusedIndex - 1];
-        setFocusedItemIndex(filteredOptions.indexOf(prevVisibleItem));
+        setFocusedItemIndex(prevIndex);
       }
 
       if (event.code === 'Enter' && focusedItemIndex != null) {
@@ -162,7 +173,7 @@ function Select<T>({
   searchable = false,
   value,
   triggerElementRef,
-}: SelectProps<T>): any {
+}: SelectProps<T>): JSX.Element {
   const [id] = useState<string>(uuidv4());
   const triggerRef = useRef<HTMLInputElement>(triggerElementRef?.current ?? null);
   const [selectedLabel, setSelectedLabel] = useState<string>('');
@@ -199,7 +210,12 @@ function Select<T>({
     const { value, label } = options[index];
     setSelectedLabel(label);
     setSelectedIndex(index);
+    setVisible(false);
     onChange && onChange(value);
+
+    setTimeout(() => {
+      setFilteredOptions(options);
+    }, 1000);
   };
 
   const handleOnClean = (): void => {
@@ -207,9 +223,7 @@ function Select<T>({
       setSelectedLabel('');
       setSelectedIndex(undefined);
       onChange && onChange(undefined);
-      setTimeout(() => {
-        setFilteredOptions(options);
-      }, 1000);
+      setFilteredOptions(options);
     }
   };
 
@@ -223,6 +237,7 @@ function Select<T>({
     } else {
       const data = options.map(filterOptionByText<T>(text));
       setFilteredOptions(data);
+      setVisible(true);
     }
   };
 
@@ -252,6 +267,7 @@ function Select<T>({
   const { focusedItemIndex, setFocusedItemIndex, handleOnInputKeyDownCapture } =
     useKeyboardNavigation({
       visible,
+      selectedIndex,
       filteredOptions,
       handleOnChange,
       handleOnInputClick,
@@ -282,20 +298,22 @@ function Select<T>({
         cleanable ? styles.cleanable : ''
       )}
     >
-      <div className={c(styles.trigger_container)}>
-        <Input
-          ref={triggerRef}
-          className={c(styles.trigger)}
-          disabled={disabled}
-          onChange={handleOnInputChange}
-          onBlur={handleOnInputBlur}
-          onKeyDownCapture={handleOnInputKeyDownCapture}
-          onClick={handleOnInputClick}
-          placeholder={placeholder}
-          readOnly={!searchable}
-          value={selectedLabel}
-        />
-        <IconArrowDown className={c(styles.trigger_icon)} />
+      <div className={c(styles.controls)}>
+        <div>
+          <Input
+            ref={triggerRef}
+            className={c(styles.trigger)}
+            disabled={disabled}
+            onChange={handleOnInputChange}
+            onBlur={handleOnInputBlur}
+            onKeyDownCapture={handleOnInputKeyDownCapture}
+            onClick={handleOnInputClick}
+            placeholder={placeholder}
+            readOnly={!searchable}
+            value={selectedLabel}
+          />
+          <IconArrowDown className={c(styles.trigger_icon)} />
+        </div>
         {cleanable && (
           <button className={c(styles.cleaner)} onClick={handleOnClean}>
             <IconClose className={c(styles.cleaner_icon)} />
