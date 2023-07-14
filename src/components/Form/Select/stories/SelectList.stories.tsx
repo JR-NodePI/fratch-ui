@@ -1,7 +1,14 @@
+import { useEffect, useRef } from 'react';
 import Select from '../Select';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const SelectListTest = ({ numberSelects }: { numberSelects: number }): JSX.Element => {
+  const refFirstSelectInput = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    console.log('refFirstSelectInput', refFirstSelectInput);
+  }, [refFirstSelectInput]);
+
   return (
     <>
       <h1>Select component list</h1>
@@ -14,6 +21,7 @@ const SelectListTest = ({ numberSelects }: { numberSelects: number }): JSX.Eleme
         return (
           <div key={index} style={{ width: `${(100 / numberSelects) * (index + 1)}%` }}>
             <Select
+              triggerElementRef={index === 0 ? refFirstSelectInput : undefined}
               placeholder={`Instance ${index + 1}...`}
               options={Array.from(Array(25).keys()).map(i => ({
                 label: `Option ${index + 1} - ${i + 1} label`,

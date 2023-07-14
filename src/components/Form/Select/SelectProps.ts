@@ -15,5 +15,5 @@ export interface SelectProps<T> {
   placeholder?: string;
   searchable?: boolean;
   value?: T;
-  triggerElementRef?: React.MutableRefObject<HTMLInputElement>;
+  triggerElementRef?: React.RefObject<HTMLInputElement>;
 }

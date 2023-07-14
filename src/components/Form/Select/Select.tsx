@@ -175,7 +175,8 @@ function Select<T>({
   triggerElementRef,
 }: SelectProps<T>): JSX.Element {
   const [id] = useState<string>(uuidv4());
-  const triggerRef = useRef<HTMLInputElement>(triggerElementRef?.current ?? null);
+  const newTriggerRef = useRef<HTMLInputElement>(null);
+  const triggerRef = triggerElementRef ?? newTriggerRef;
   const [selectedLabel, setSelectedLabel] = useState<string>('');
   const [selectedIndex, setSelectedIndex] = useState<number>();
   const [visible, setVisible] = useState<boolean>(false);
