@@ -13,6 +13,7 @@
   filter: saturate(0) brightness(115%) contrast(75%);
 }
 
+/*** cleaner ***/
 .cleaner {
   border-radius: 0 var(--ft-form-item-border-radius) var(--ft-form-item-border-radius) 0;
   border: var(--ft-form-item-border);
@@ -31,24 +32,24 @@
 .cleaner_icon [fill] {
   fill: var(--ft-button-default-color);
 }
-.cleaner_icon [stroke] {
+.cleaner .cleaner_icon [stroke] {
   stroke: var(--ft-button-default-color);
 }
-.cleaner:hover .cleaner_icon [fill] {
+.cleaner .cleaner:hover .cleaner_icon [fill] {
   fill: var(--ft-button-hover-color);
 }
 .cleaner:hover .cleaner_icon [stroke] {
   stroke: var(--ft-button-hover-color);
 }
-.cleaner_icon [fill='none'] {
+.cleaner .cleaner_icon [fill='none'] {
   fill: transparent !important;
 }
-.cleaner_icon [stroke='none'] {
+.cleaner .cleaner_icon [stroke='none'] {
   stroke: transparent !important;
 }
 
-.trigger_icon,
-.cleaner_icon {
+.controls .trigger_icon,
+.cleaner .cleaner_icon {
   font-size: var(--ft-button-default-font-size);
   margin: -0.1em;
   font-size: 1.1em;
@@ -79,21 +80,21 @@
   border-radius: var(--ft-form-item-border-radius) 0 0 var(--ft-form-item-border-radius);
 }
 
-.trigger_icon [fill] {
+.controls .trigger_icon [fill] {
   fill: var(--ft-form-item-border-color);
 }
-.trigger_icon [stroke] {
+.controls .trigger_icon [stroke] {
   stroke: var(--ft-form-item-border-color);
 }
-.trigger:hover ~ .trigger_icon [fill] {
+.controls .trigger:hover ~ .trigger_icon [fill] {
   fill: var(--ft-color-primary);
 }
-.trigger:hover ~ .trigger_icon [stroke] {
+.controls .trigger:hover ~ .trigger_icon [stroke] {
   stroke: var(--ft-color-primary);
 }
-.trigger_icon [fill='none'] {
+.controls .trigger_icon [fill='none'] {
   fill: transparent !important;
 }
-.trigger_icon [stroke='none'] {
+.controls .trigger_icon [stroke='none'] {
   stroke: transparent !important;
 }
