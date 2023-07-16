@@ -6,12 +6,13 @@ import styles from './Button.module.css';
 
 const Button = ({
   className,
+  Icon,
+  isRound,
   label,
   onClick,
   size = ButtonSize.MEDIUM,
+  stretch = false,
   type = ButtonType.DEFAULT,
-  isRound,
-  Icon,
 }: ButtonProps): JSX.Element => {
   return (
     <button
@@ -19,6 +20,7 @@ const Button = ({
         styles.button,
         styles[type],
         styles[size],
+        stretch ? styles.stretch : '',
         isRound ? styles.only_icon : '',
         className
       )}

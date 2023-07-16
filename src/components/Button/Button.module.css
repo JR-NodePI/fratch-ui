@@ -20,6 +20,9 @@
   color: var(--ft-button-default-color);
   height: var(--ft-button-default-height);
 }
+.button.stretch {
+  width: 100%;
+}
 .button.only_icon {
   border-radius: 100%;
   padding: 0;
@@ -30,6 +33,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 100%;
 }
 .button:hover {
   background-color: var(--ft-button-hover-bg-color);
