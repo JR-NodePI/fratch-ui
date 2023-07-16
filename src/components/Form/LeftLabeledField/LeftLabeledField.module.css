@@ -17,8 +17,12 @@
   box-shadow: var(--ft-box-shadow-1);
   position: relative;
   margin-right: -3px;
+  z-index: 1;
+  align-items: center;
+  display: flex;
 }
 .wrapper .field_container {
   min-width: 200px;
   width: 100%;
+  z-index: 2;
 }

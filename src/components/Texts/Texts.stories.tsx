@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import styles from './Texts.module.css';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 function Texts({ content = '' }: { content: string }): JSX.Element {
   return (
@@ -15,13 +15,13 @@ function Texts({ content = '' }: { content: string }): JSX.Element {
         { tag: 'a', title: 'link', attrs: { href: '#' } },
         { tag: 'strong', title: 'bold' },
         { tag: 'i', title: 'italic' },
-      ].map(({ tag, title, attrs }) => (
-        <>
+      ].map(({ tag, title, attrs }, index) => (
+        <Fragment key={index}>
           <span className={styles.miniTitle}>{title}</span>
           <div className={styles.wrapper}>
             {React.createElement(tag, (attrs ?? {}) as any, content)}
           </div>
-        </>
+        </Fragment>
       ))}
     </>
   );
