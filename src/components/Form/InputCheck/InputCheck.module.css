@@ -16,6 +16,7 @@
   border: 1px solid var(--ft-form-item-border-color);
   border-radius: 3px;
   box-shadow: var(--ft-box-shadow-1);
+  background-color: var(--ft-color-white);
 }
 
 .checkbox input:checked {
@@ -23,5 +24,14 @@
 }
 
 .checkbox input:checked::before {
-  content: url('data:image/svg+xml;utf8,<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-2 -4 20 20"><path stroke="rgb(0, 77, 97)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M1 5.917 5.724 10.5 15 1.5"/></svg>');
+  content: '';
+  position: relative;
+  display: block;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--ft-color-link);
+  border-radius: 2px;
 }
