@@ -10,7 +10,6 @@
 }
 .select.disabled * {
   pointer-events: none;
-  filter: saturate(0) brightness(115%) contrast(75%);
 }
 
 /*** cleaner ***/

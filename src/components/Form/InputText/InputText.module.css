@@ -11,6 +11,7 @@
   border: var(--ft-form-item-border);
   color: var(--ft-color-primary);
   text-overflow: ellipsis;
+  background-color: var(--ft-form-item-bg-color);
 }
 .input:focus {
   outline: var(--ft-select-list-item-bg-color-active) solid 2px;
@@ -18,4 +19,9 @@
 .input:read-only {
   cursor: default;
   outline: none;
+}
+.input:disabled {
+  background-color: var(--ft-form-item-bg-color);
+  pointer-events: none;
+  filter: saturate(0) brightness(115%) contrast(90%);
 }
