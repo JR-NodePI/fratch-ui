@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  position: relative;
+  margin-bottom: 8px;
+}
+.wrapper .label_container {
+  display: block;
+  background-color: var(--ft-form-item-bg-color);
+  border-left: var(--ft-form-item-border);
+  border-top: var(--ft-form-item-border);
+  border-bottom: var(--ft-form-item-border);
+  padding: var(--ft-form-item-padding-y);
+  white-space: nowrap;
+  border-radius: var(--ft-form-item-border-radius) 0 0 var(--ft-form-item-border-radius);
+  box-shadow: var(--ft-box-shadow-1);
+  position: relative;
+  margin-right: -3px;
+}
+.wrapper .field_container {
+  min-width: 200px;
+  width: 100%;
+}
