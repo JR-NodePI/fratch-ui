@@ -1,4 +1,4 @@
-export interface InputProps {
+export interface InputTextProps {
   className?: string;
   disabled?: boolean;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;

@@ -9,7 +9,7 @@ import { createPortal } from 'react-dom';
 import { v4 as uuidv4 } from 'uuid';
 
 import styles from './Select.module.css';
-import Input from '../Imput/Input';
+import InputText from '../InputText/InputText';
 
 const selectInstances = new Map();
 
@@ -313,7 +313,7 @@ function Select<T>({
     >
       <div className={c(styles.controls)}>
         <div>
-          <Input
+          <InputText
             ref={triggerRef}
             className={c(styles.trigger)}
             disabled={disabled}

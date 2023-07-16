@@ -1,0 +1,27 @@
+.checkbox {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 32px;
+}
+
+.checkbox input {
+  width: 24px;
+  height: 24px;
+}
+
+.checkbox input {
+  appearance: none;
+  border: 1px solid var(--ft-form-item-border-color);
+  border-radius: 3px;
+  box-shadow: var(--ft-box-shadow-1);
+}
+
+.checkbox input:checked {
+  box-shadow: var(--ft-box-shadow-2);
+}
+
+.checkbox input:checked::before {
+  content: url('data:image/svg+xml;utf8,<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-2 -4 20 20"><path stroke="rgb(0, 77, 97)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M1 5.917 5.724 10.5 15 1.5"/></svg>');
+}

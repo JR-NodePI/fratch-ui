@@ -1,15 +1,15 @@
-import Input from './Input';
+import InputText from './InputText';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Example/Form/Imput',
-  component: Input,
+  title: 'Example/Form/InputText',
+  component: InputText,
   tags: ['autodocs'],
   argTypes: { onChange: { action: 'onChange' } },
-} satisfies Meta<typeof Input>;
+} satisfies Meta<typeof InputText>;
 
 export default meta;
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<typeof InputText>;
 
 export const Docs: Story = {
   args: {
