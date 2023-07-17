@@ -9,10 +9,10 @@
 
   --ft-color-white: #fff;
   --ft-color-primary: #30042f;
-  --ft-color-link: rgb(38, 15, 183);
+  --ft-color-link: #5858f0;
   --ft-color-black: #0d000d;
   --ft-color-light: #00ffb7;
-  --ft-header-bg-color: #7979ff;
+  --ft-header-bg-color: #5858f0;
   --ft-item-bg-color: #e6fffc;
 
   --ft-max-z-index: 2147483647;
@@ -30,10 +30,10 @@
   --ft-button-hover-color: var(--ft-color-black);
   --ft-button-default-border-radius: 6px;
 
-  --ft-tertiary-default-bg-color: #4a2dff;
+  --ft-tertiary-default-bg-color: #5858f0;
   --ft-tertiary-default-color: #ede3fb;
-  --ft-tertiary-hover-bg-color: rgb(38, 15, 183);
-  --ft-tertiary-active-bg-color: rgb(27, 14, 100);
+  --ft-tertiary-hover-bg-color: #2929ae;
+  --ft-tertiary-active-bg-color: #181865;
   --ft-tertiary-shadow-color: rgba(5, 4, 46, 0.567);
   --ft-tertiary-hover-shadow-color: rgba(74, 45, 255, 0.567);
   --ft-tertiary-hover-color: var(--ft-color-white);
