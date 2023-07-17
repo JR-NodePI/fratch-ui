@@ -9,9 +9,9 @@
 
   --ft-color-white: #fff;
   --ft-color-primary: #30042f;
-  --ft-color-light: #00ffb7;
-  --ft-color-link: rgb(0, 77, 97);
+  --ft-color-link: rgb(38, 15, 183);
   --ft-color-black: #0d000d;
+  --ft-color-light: #00ffb7;
   --ft-header-bg-color: #7979ff;
   --ft-item-bg-color: #e6fffc;
 
@@ -30,13 +30,13 @@
   --ft-button-hover-color: var(--ft-color-black);
   --ft-button-default-border-radius: 6px;
 
-  --ft-primary-default-bg-color: #4a2dff;
-  --ft-primary-default-color: #ede3fb;
-  --ft-primary-hover-bg-color: rgb(38, 15, 183);
-  --ft-primary-active-bg-color: rgb(27, 14, 100);
-  --ft-primary-shadow-color: rgba(5, 4, 46, 0.567);
-  --ft-primary-hover-shadow-color: rgba(74, 45, 255, 0.567);
-  --ft-primary-hover-color: var(--ft-color-white);
+  --ft-tertiary-default-bg-color: #4a2dff;
+  --ft-tertiary-default-color: #ede3fb;
+  --ft-tertiary-hover-bg-color: rgb(38, 15, 183);
+  --ft-tertiary-active-bg-color: rgb(27, 14, 100);
+  --ft-tertiary-shadow-color: rgba(5, 4, 46, 0.567);
+  --ft-tertiary-hover-shadow-color: rgba(74, 45, 255, 0.567);
+  --ft-tertiary-hover-color: var(--ft-color-white);
 
   --ft-secondary-default-bg-color: rgb(215, 0, 101);
   --ft-secondary-default-color: #ffe8f4;
@@ -46,13 +46,13 @@
   --ft-secondary-hover-shadow-color: rgba(215, 0, 101, 0.567);
   --ft-secondary-hover-color: var(--ft-color-white);
 
-  --ft-tertiary-default-bg-color: rgb(0, 115, 144);
-  --ft-tertiary-default-color: #c8f5ff;
-  --ft-tertiary-hover-bg-color: rgb(0, 77, 97);
-  --ft-tertiary-active-bg-color: rgb(0, 48, 60);
-  --ft-tertiary-shadow-color: rgba(1, 30, 38, 0.567);
-  --ft-tertiary-hover-shadow-color: rgba(0, 164, 205, 0.56);
-  --ft-tertiary-hover-color: #ffffff;
+  --ft-primary-default-bg-color: rgb(0, 115, 144);
+  --ft-primary-default-color: #c8f5ff;
+  --ft-primary-hover-bg-color: rgb(0, 77, 97);
+  --ft-primary-active-bg-color: rgb(0, 48, 60);
+  --ft-primary-shadow-color: rgba(1, 30, 38, 0.567);
+  --ft-primary-hover-shadow-color: rgba(0, 164, 205, 0.56);
+  --ft-primary-hover-color: #ffffff;
 
   --ft-button-small-font-size: 13px;
   --ft-button-default-font-size: 16px;
