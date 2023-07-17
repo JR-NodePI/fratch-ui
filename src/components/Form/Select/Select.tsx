@@ -314,6 +314,7 @@ function Select<T>({
       <div className={c(styles.controls)}>
         <div>
           <InputText
+            title={selectedLabel}
             ref={triggerRef}
             className={c(styles.trigger)}
             disabled={disabled}

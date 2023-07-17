@@ -10,4 +10,5 @@ export interface InputTextProps {
   readOnly?: boolean;
   type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search';
   value?: string;
+  title?: string;
 }

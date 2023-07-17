@@ -17,6 +17,7 @@ const InputText = forwardRef<HTMLInputElement, InputTextProps>(
       readOnly,
       type = 'text',
       value,
+      title,
     }: InputTextProps,
     ref
   ) => (
@@ -33,6 +34,7 @@ const InputText = forwardRef<HTMLInputElement, InputTextProps>(
       ref={ref}
       type={type}
       value={value}
+      title={title}
     />
   )
 );
