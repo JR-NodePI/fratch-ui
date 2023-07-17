@@ -15,10 +15,14 @@
   appearance: none;
   border: 1px solid var(--ft-form-item-border-color);
   border-radius: 3px;
-  box-shadow: var(--ft-box-shadow-1);
+  box-shadow: var(--ft-box-shadow-1), inset var(--ft-box-shadow-3);
   background-color: var(--ft-color-white);
+  transition: box-shadow 0.2s ease-in-out;
 }
-
+.checkbox input:active,
+.checkbox input:hover {
+  box-shadow: var(--ft-box-shadow-2);
+}
 .checkbox input:checked {
   box-shadow: var(--ft-box-shadow-2);
 }
