@@ -5,6 +5,7 @@ import type { ButtonProps } from './ButtonProps';
 import styles from './Button.module.css';
 
 const Button = ({
+  disabled,
   className,
   Icon,
   isRound,
@@ -16,6 +17,7 @@ const Button = ({
 }: ButtonProps): JSX.Element => {
   return (
     <button
+      disabled={disabled}
       className={c(
         styles.button,
         styles[type],

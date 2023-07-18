@@ -26,6 +26,10 @@
 .checkbox input:checked {
   box-shadow: var(--ft-box-shadow-2);
 }
+.checkbox input:disabled {
+  user-select: none;
+  filter: saturate(0.2) brightness(105%) contrast(80%);
+}
 
 .checkbox input:checked::before {
   content: '';

@@ -3,6 +3,7 @@ import { c } from '../../../helpers/classNameHelpers';
 import styles from './InputCheck.module.css';
 
 type InputCheckProps = {
+  disabled?: boolean;
   checked?: boolean;
   className?: string;
   label: string;
@@ -11,7 +12,7 @@ type InputCheckProps = {
 
 const InputCheck = forwardRef<HTMLInputElement, InputCheckProps>(
   (
-    { checked, className, label, onChange }: InputCheckProps,
+    { disabled, checked, className, label, onChange }: InputCheckProps,
     ref: React.ForwardedRef<HTMLInputElement>
   ) => {
     const inputRef = useRef<HTMLInputElement>(null);
@@ -34,7 +35,7 @@ const InputCheck = forwardRef<HTMLInputElement, InputCheckProps>(
 
     return (
       <label className={c(styles.checkbox, className)}>
-        <input ref={ref} type="checkbox" onChange={handleOnChange} />
+        <input ref={ref} type="checkbox" disabled={disabled} onChange={handleOnChange} />
         <span>{label}</span>
       </label>
     );

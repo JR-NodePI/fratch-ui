@@ -20,6 +20,10 @@
   color: var(--ft-button-default-color);
   height: var(--ft-button-default-height);
 }
+.button:disabled {
+  user-select: none;
+  filter: saturate(0.5) brightness(135%) contrast(80%);
+}
 .button.stretch {
   width: 100%;
 }

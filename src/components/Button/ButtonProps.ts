@@ -15,6 +15,7 @@ export const ButtonSize = {
 
 export interface ButtonProps {
   className?: string;
+  disabled?: boolean;
   Icon?: typeof Icon;
   isRound?: boolean;
   label: string;
