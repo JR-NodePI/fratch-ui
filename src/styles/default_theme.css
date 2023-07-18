@@ -4,6 +4,6 @@
 :root {
   --ft-font-family: 'Fira Code', sans-serif;
   --ft-font-weight-light: light;
-  --ft-font-weight-normal: 300;
-  --ft-font-weight-bold: 500;
+  --ft-font-weight-normal: 400;
+  --ft-font-weight-bold: 600;
 }
