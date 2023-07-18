@@ -1,9 +1,7 @@
 .button {
-  --icon-color: var(--ft-button-default-color);
   gap: 16px;
   display: flex;
   align-items: center;
-  background-color: var(--ft-button-default-bg-color);
   border-radius: var(--ft-button-default-border-radius);
   border: none;
   letter-spacing: var(--ft-button-default-letter-spacing);
@@ -16,13 +14,7 @@
   text-overflow: ellipsis;
   transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
   white-space: nowrap;
-  box-shadow: inset 0 0 0 1px var(--ft-form-item-border-color);
-  color: var(--ft-button-default-color);
   height: var(--ft-button-default-height);
-}
-.button:disabled {
-  user-select: none;
-  filter: saturate(0.5) brightness(135%) contrast(80%);
 }
 .button.stretch {
   width: 100%;
@@ -47,6 +39,17 @@
 .button:active {
   background-color: var(--ft-button-active-bg-color);
 }
+.button,
+.button:disabled {
+  background-color: var(--ft-button-default-bg-color);
+  --icon-color: var(--ft-button-default-color);
+  box-shadow: inset 0 0 0 1px var(--ft-form-item-border-color);
+  color: var(--ft-button-default-color);
+}
+.button:disabled {
+  filter: saturate(0.5) brightness(135%) contrast(80%);
+  user-select: none;
+}
 
 .primary {
   background-color: var(--ft-primary-default-bg-color);
@@ -65,13 +68,14 @@
   color: var(--ft-primary-default-color);
   --icon-color: var(--ft-primary-default-color);
 }
-
-.secondary {
-  background-color: var(--ft-secondary-default-bg-color);
-  color: var(--ft-secondary-default-color);
-  --icon-color: var(--ft-secondary-default-color);
-  box-shadow: 0 1px 4px 0 var(--ft-secondary-shadow-color);
+.primary,
+.primary:disabled {
+  background-color: var(--ft-primary-default-bg-color);
+  color: var(--ft-primary-default-color);
+  --icon-color: var(--ft-primary-default-color);
+  box-shadow: 0 1px 4px 0 var(--ft-primary-shadow-color);
 }
+
 .secondary:hover {
   background-color: var(--ft-secondary-hover-bg-color);
   color: var(--ft-secondary-hover-color);
@@ -83,13 +87,14 @@
   color: var(--ft-secondary-default-color);
   --icon-color: var(--ft-secondary-default-color);
 }
-
-.tertiary {
-  background-color: var(--ft-tertiary-default-bg-color);
-  color: var(--ft-tertiary-default-color);
-  --icon-color: var(--ft-tertiary-default-color);
-  box-shadow: 0 1px 4px 0 var(--ft-tertiary-shadow-color);
+.secondary,
+.secondary:disabled {
+  background-color: var(--ft-secondary-default-bg-color);
+  color: var(--ft-secondary-default-color);
+  --icon-color: var(--ft-secondary-default-color);
+  box-shadow: 0 1px 4px 0 var(--ft-secondary-shadow-color);
 }
+
 .tertiary:hover {
   background-color: var(--ft-tertiary-hover-bg-color);
   color: var(--ft-tertiary-hover-color);
@@ -100,6 +105,13 @@
   background-color: var(--ft-tertiary-active-bg-color);
   color: var(--ft-tertiary-default-color);
   --icon-color: var(--ft-tertiary-default-color);
+}
+.tertiary,
+.tertiary:disabled {
+  background-color: var(--ft-tertiary-default-bg-color);
+  color: var(--ft-tertiary-default-color);
+  --icon-color: var(--ft-tertiary-default-color);
+  box-shadow: 0 1px 4px 0 var(--ft-tertiary-shadow-color);
 }
 
 /***** size *****/

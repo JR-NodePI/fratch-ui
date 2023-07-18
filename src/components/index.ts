@@ -5,4 +5,5 @@ export { default as InputText } from './Form/InputText/InputText';
 export { default as LeftLabeledField } from './Form/LeftLabeledField/LeftLabeledField';
 export { default as Select } from './Form/Select/Select';
 export { default as Spinner } from './Spinner/Spinner';
+export { default as Modal } from './Modal/Modal';
 export * as SelectProps from './Form/Select/SelectProps';
