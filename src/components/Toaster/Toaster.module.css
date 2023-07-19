@@ -1,0 +1,88 @@
+.toaster_list {
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+  padding: 28px 32px;
+  box-sizing: border-box;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.toaster.success {
+  --color: #4caf50;
+}
+.toaster.error {
+  --color: #f44336;
+}
+.toaster.warning {
+  --color: #ff9800;
+}
+.toaster.info {
+  --color: #2196f3;
+}
+
+.toaster {
+  pointer-events: all;
+  position: relative;
+  margin-bottom: 8px;
+  padding: 0 24px;
+  border-radius: var(--ft-button-default-border-radius);
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+  border: solid 1px var(--color);
+  background-color: var(--ft-color-white);
+  box-shadow: var(--ft-box-shadow-2);
+  transition: margin-top 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(48px);
+}
+.toaster.open {
+  z-index: 3;
+  opacity: 1;
+  transform: translateY(0);
+}
+.toaster.close {
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-48px);
+  margin-top: -48px;
+}
+.toaster * {
+  position: relative;
+  z-index: 2;
+}
+.toaster::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--color);
+  box-shadow: 0 0 10px 0 var(--color);
+  opacity: 0.1;
+}
+
+.toaster .title,
+.toaster .message {
+  margin: 16px 0;
+}
+
+.toaster .closer {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  color: var(--color);
+  font-size: 24px;
+  height: 100%;
+  width: 42px;
+}
+.toaster .closer:hover {
+  color: var(--ft-color-primary);
+}

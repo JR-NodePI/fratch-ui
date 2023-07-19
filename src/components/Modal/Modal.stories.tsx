@@ -15,7 +15,7 @@ export default meta;
 
 type Story = StoryObj<typeof Modal>;
 
-export const Default: Story = {
+export const Docs: Story = {
   args: {
     title: 'This is the title',
     children: 'This is the content',
