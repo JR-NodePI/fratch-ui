@@ -21,17 +21,18 @@ export default function ToasterList({ children }: { children: ReactNode }): JSX.
     setToasters((prevToasters: Toaster[]) => [...prevToasters, { ...toaster, id: uuid() }]);
   }, []);
 
-  return createPortal(
+  return (
     <ToasterListContext.Provider value={{ toasters, addToaster }}>
-      {toasters.length > 0 && (
-        <div className={c(styles.toaster_list)}>
-          {toasters.map((toaster, index) => (
-            <ToasterItem key={index} onClose={handleToasterClose} {...toaster} />
-          ))}
-        </div>
-      )}
+      {toasters.length > 0 &&
+        createPortal(
+          <div className={c(styles.toaster_list)}>
+            {toasters.map((toaster, index) => (
+              <ToasterItem key={index} onClose={handleToasterClose} {...toaster} />
+            ))}
+          </div>,
+          document.body
+        )}
       {children}
-    </ToasterListContext.Provider>,
-    document.body
+    </ToasterListContext.Provider>
   );
 }

@@ -10,11 +10,7 @@ const ItemCaller = ({ toaster }: { toaster: Toaster }): JSX.Element => {
     addToaster?.(toaster);
   };
 
-  return (
-    <div style={{ position: 'fixed', left: 10, top: 10 }}>
-      <Button onClick={onClick} label="Show toaster" size="small" type="primary" />
-    </div>
-  );
+  return <Button onClick={onClick} label="Show toaster" size="small" type="primary" />;
 };
 
 export default function ToasterLoader(props: Toaster): JSX.Element {
