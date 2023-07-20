@@ -12,8 +12,7 @@ export const ModalCloseTypes = {
   CLOSE: 'close' as const,
 };
 
-export type ModalCloseType =
-  (typeof ModalCloseTypes)[keyof typeof ModalCloseTypes];
+export type ModalCloseType = (typeof ModalCloseTypes)[keyof typeof ModalCloseTypes];
 
 export type ModalProps = {
   acceptButtonLabel?: string;
