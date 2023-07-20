@@ -23,16 +23,16 @@
   --ft-button-default-font-weight: var(--ft-font-weight-bold);
   --ft-button-default-letter-spacing: 0.5px;
 
-  --ft-button-default-bg-color: #e7e7e7;
+  --ft-button-default-bg-color: #eae9e9;
   --ft-button-default-color: var(--ft-color-primary);
-  --ft-button-hover-bg-color: #ffffff;
-  --ft-button-active-bg-color: #d6d6d6;
+  --ft-button-hover-bg-color: #f6f6f6;
+  --ft-button-active-bg-color: #a5a5a5;
   --ft-button-hover-color: var(--ft-color-black);
   --ft-button-default-border-radius: 6px;
 
   --ft-tertiary-default-bg-color: #5858f0;
   --ft-tertiary-default-color: #ede3fb;
-  --ft-tertiary-hover-bg-color: #2929ae;
+  --ft-tertiary-hover-bg-color: #6d6dff;
   --ft-tertiary-active-bg-color: #181865;
   --ft-tertiary-shadow-color: rgba(5, 4, 46, 0.567);
   --ft-tertiary-hover-shadow-color: rgba(74, 45, 255, 0.567);
@@ -40,7 +40,7 @@
 
   --ft-secondary-default-bg-color: rgb(215, 0, 101);
   --ft-secondary-default-color: #ffe8f4;
-  --ft-secondary-hover-bg-color: rgb(169, 1, 71);
+  --ft-secondary-hover-bg-color: rgb(255, 20, 130);
   --ft-secondary-active-bg-color: rgb(86, 14, 44);
   --ft-secondary-shadow-color: rgba(80, 7, 37, 0.567);
   --ft-secondary-hover-shadow-color: rgba(215, 0, 101, 0.567);
@@ -48,7 +48,7 @@
 
   --ft-primary-default-bg-color: rgb(0, 115, 144);
   --ft-primary-default-color: #c8f5ff;
-  --ft-primary-hover-bg-color: rgb(0, 77, 97);
+  --ft-primary-hover-bg-color: rgb(0, 147, 184);
   --ft-primary-active-bg-color: rgb(0, 48, 60);
   --ft-primary-shadow-color: rgba(1, 30, 38, 0.567);
   --ft-primary-hover-shadow-color: rgba(0, 164, 205, 0.56);

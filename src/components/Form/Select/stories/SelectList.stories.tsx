@@ -6,6 +6,7 @@ const SelectListTest = ({ numberSelects }: { numberSelects: number }): JSX.Eleme
   const refFirstSelectInput = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    // eslint-disable-next-line no-console
     console.log('refFirstSelectInput', refFirstSelectInput);
   }, [refFirstSelectInput]);
 

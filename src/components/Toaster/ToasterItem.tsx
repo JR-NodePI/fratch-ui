@@ -14,7 +14,6 @@ export default function ToasterItem({
   title,
   type,
 }: Toaster & { onClose: (id: string) => void }): JSX.Element {
-  console.log('>>>----->> id ', id);
   const [cssClassStatus, setCssClassStatus] = useState<string>('');
 
   const close = useCallback((): void => {

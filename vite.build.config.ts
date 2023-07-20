@@ -35,7 +35,14 @@ const buildComponent = file => {
         formats: ['es', 'cjs'],
       },
       rollupOptions: {
-        external: ['uuid', 'lodash', 'react', 'react-dom', 'react/jsx-runtime', new RegExp('\\./[./\\w]+$')],
+        external: [
+          'uuid',
+          'lodash',
+          'react',
+          'react-dom',
+          'react/jsx-runtime',
+          new RegExp('\\./[./\\w]+$'),
+        ],
         output: {
           assetFileNames: assetInfo => {
             if (assetInfo.name.endsWith('.css')) return `${fileName}.css`;

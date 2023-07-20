@@ -3,7 +3,7 @@
   left: 0px;
   position: fixed;
   width: 100%;
-  padding: 36px 32px 0 32px;
+  padding: 42px 32px 0 32px;
   box-sizing: border-box;
   z-index: 9999;
   pointer-events: none;
@@ -33,7 +33,7 @@
   border: solid 1px var(--color);
   background-color: var(--ft-color-white);
   box-shadow: var(--ft-box-shadow-2);
-  transition: margin-top 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   opacity: 0;
   transform: translateY(48px);
 }
@@ -46,7 +46,6 @@
   z-index: 2;
   opacity: 0;
   transform: translateY(-48px);
-  margin-top: -48px;
 }
 .toaster * {
   position: relative;

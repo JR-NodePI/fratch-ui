@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { ModalCloseTypes, type ModalProps, ModalTypes, type ModalCloseType } from './ModalProps';
 import Button from '../Button/Button';
 import { c } from '../../helpers/classNameHelpers';
@@ -20,7 +20,7 @@ export default function Modal({
   const [mounted, setMounted] = useState<boolean>(false);
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
 
-  const close = (): void => {
+  const close = useCallback((): void => {
     if (isTransitioning) {
       return;
     }
@@ -33,9 +33,9 @@ export default function Modal({
       setMounted(false);
       setIsTransitioning(false);
     }, 500);
-  };
+  }, [isTransitioning]);
 
-  const open = (): void => {
+  const open = useCallback((): void => {
     if (isTransitioning) {
       return;
     }
@@ -48,11 +48,11 @@ export default function Modal({
       setCssClassStatus(styles.open);
       setIsTransitioning(false);
     }, 100);
-  };
+  }, [isTransitioning, onOpen]);
 
   useEffect(() => {
     visible ? open() : close();
-  }, [visible]);
+  }, [visible, open, close]);
 
   const handleCloseTypes = (type: ModalCloseType = ModalCloseTypes.CLOSE): void => {
     if (isTransitioning) {
