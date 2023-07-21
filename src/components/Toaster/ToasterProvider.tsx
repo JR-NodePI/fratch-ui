@@ -7,7 +7,7 @@ import { c } from '../../helpers/classNameHelpers';
 import styles from './Toaster.module.css';
 import { createPortal } from 'react-dom';
 
-export default function ToasterList({ children }: { children: ReactNode }): JSX.Element {
+export default function ToasterProvider({ children }: { children: ReactNode }): JSX.Element {
   const [toasters, setToasters] = useState<Toaster[]>([]);
 
   const handleToasterClose = useCallback(

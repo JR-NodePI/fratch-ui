@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import ToasterListContext, { Toaster } from '../ToasterListContext';
-import ToasterList from '../ToasterList';
+import ToasterProvider from '../ToasterProvider';
 import Button from '../../Button/Button';
 
 const ItemCaller = ({ toaster }: { toaster: Toaster }): JSX.Element => {
@@ -15,8 +15,8 @@ const ItemCaller = ({ toaster }: { toaster: Toaster }): JSX.Element => {
 
 export default function ToasterLoader(props: Toaster): JSX.Element {
   return (
-    <ToasterList>
+    <ToasterProvider>
       <ItemCaller toaster={{ ...props }} />
-    </ToasterList>
+    </ToasterProvider>
   );
 }
