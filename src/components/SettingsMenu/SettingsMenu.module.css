@@ -1,0 +1,65 @@
+.settings_menu {
+  z-index: 100;
+  margin: 8px;
+  padding: 8px 0;
+  display: flex;
+  position: absolute;
+}
+
+.settings_menu .opener {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 0 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: self-start;
+}
+
+.settings_menu.open {
+  background-color: var(--ft-color-white);
+  border-radius: var(--ft-button-default-border-radius);
+  box-shadow: var(--ft-box-shadow-2);
+}
+.settings_menu.open .menu {
+  display: block;
+}
+.settings_menu.close .menu {
+  display: none;
+}
+
+.settings_menu .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+.settings_menu .menu li {
+  display: block;
+  padding: 2px 16px;
+}
+
+/*** position ***/
+.settings_menu.left {
+  left: 0;
+}
+.settings_menu.left .opener {
+  order: 1;
+}
+.settings_menu.left .menu {
+  order: 2;
+  text-align: left;
+}
+
+.settings_menu.right {
+  right: 0;
+}
+.settings_menu.right .opener {
+  order: 2;
+}
+.settings_menu.right .menu {
+  order: 1;
+  text-align: right;
+}

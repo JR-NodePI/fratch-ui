@@ -8,5 +8,6 @@ export * as SelectProps from './Form/Select/SelectProps';
 export { default as Spinner } from './Spinner/Spinner';
 export { default as Modal } from './Modal/Modal';
 export * as ModalProps from './Modal/ModalProps';
+export { default as SettingsMenu } from './SettingsMenu/SettingsMenu';
 export { default as ToasterProvider } from './Toaster/ToasterProvider';
 export { default as ToasterListContext } from './Toaster/ToasterListContext';

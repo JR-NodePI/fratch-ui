@@ -14,11 +14,12 @@ export const ButtonSize = {
 };
 
 export interface ButtonProps {
+  children?: React.ReactNode;
   className?: string;
   disabled?: boolean;
   Icon?: typeof Icon;
   isRound?: boolean;
-  label: string;
+  label?: string;
   onClick?: () => void;
   size?: (typeof ButtonSize)[keyof typeof ButtonSize];
   stretch?: boolean;

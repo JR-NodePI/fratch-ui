@@ -1,6 +1,6 @@
 .button {
   gap: 16px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   border-radius: var(--ft-button-default-border-radius);
   border: none;

@@ -1,15 +1,16 @@
 import { c } from '../../../helpers/classNameHelpers';
+import { createPortal } from 'react-dom';
 import { isEqual } from 'lodash';
 import { type SelectOption, type SelectProps } from './SelectProps';
 import { useEffect, useRef, useState } from 'react';
+import { v4 as uuid } from 'uuid';
 import IconArrowDown from '../../Icon/IconArrowDown';
 import IconClose from '../../Icon/IconClose';
-import SelectOptionsList from './components/SelectOptionsList';
-import { createPortal } from 'react-dom';
-import { v4 as uuidv4 } from 'uuid';
+import InputText from '../InputText/InputText';
+import SelectOptionsList from './SelectOptionsList';
 
 import styles from './Select.module.css';
-import InputText from '../InputText/InputText';
+import { isAscendantEvenTargetByID } from '../../../helpers/htmlSelectorsHelpers';
 
 const selectInstances = new Map();
 
@@ -42,24 +43,24 @@ function filterOptionByText<T>(text: string) {
 }
 
 const useHideOnClickedOutside = ({
+  id,
   setVisible,
-  visible,
 }: {
+  id: string;
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  visible: boolean;
 }): void => {
   // hide options list when clicked outside
   useEffect(() => {
-    if (visible) {
-      const handleDocumentClick = (): void => {
+    const handleDocumentClick = (event: MouseEvent): void => {
+      if (!isAscendantEvenTargetByID(event, id)) {
         setVisible(false);
-      };
-      document.addEventListener('click', handleDocumentClick);
-      return () => {
-        document.removeEventListener('click', handleDocumentClick);
-      };
-    }
-  }, [setVisible, visible]);
+      }
+    };
+    window.document.body.addEventListener('click', handleDocumentClick);
+    return () => {
+      window.document.body.removeEventListener('click', handleDocumentClick);
+    };
+  }, [id, setVisible]);
 };
 
 const useHideOnTriggerDOMRectChange = ({
@@ -185,7 +186,7 @@ function Select<T>({
   value,
   triggerElementRef,
 }: SelectProps<T>): JSX.Element {
-  const [id] = useState<string>(uuidv4());
+  const [id] = useState<string>(uuid());
   const newTriggerRef = useRef<HTMLInputElement>(null);
   const triggerRef = triggerElementRef ?? newTriggerRef;
   const [selectedLabel, setSelectedLabel] = useState<string>('');
@@ -260,10 +261,8 @@ function Select<T>({
     }
   };
 
-  const handleOnInputClick = (event: React.MouseEvent<HTMLInputElement>) => {
+  const handleOnInputClick = (): void => {
     if (!disabled && triggerRef.current) {
-      event.stopPropagation();
-
       // hide other select instances
       selectInstances.forEach((instance, key) => {
         if (key !== id) {
@@ -293,7 +292,7 @@ function Select<T>({
     }
   }, [disabled]);
 
-  useHideOnClickedOutside({ setVisible, visible });
+  useHideOnClickedOutside({ id, setVisible });
 
   useHideOnTriggerDOMRectChange({
     setVisible,
@@ -304,6 +303,7 @@ function Select<T>({
 
   return (
     <div
+      id={id}
       className={c(
         className,
         styles.select,

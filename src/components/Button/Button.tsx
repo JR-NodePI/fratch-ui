@@ -5,8 +5,9 @@ import type { ButtonProps } from './ButtonProps';
 import styles from './Button.module.css';
 
 const Button = ({
-  disabled,
+  children,
   className,
+  disabled,
   Icon,
   isRound,
   label,
@@ -30,7 +31,7 @@ const Button = ({
       title={isRound ? label : ''}
     >
       {Icon != null && <Icon type="error" className={styles.icon} />}
-      {!isRound && <span>{label}</span>}
+      {!isRound ? children || <span>{label}</span> : <></>}
     </button>
   );
 };

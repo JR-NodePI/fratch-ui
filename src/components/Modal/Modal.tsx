@@ -2,11 +2,13 @@ import { createPortal } from 'react-dom';
 import { useCallback, useEffect, useState } from 'react';
 import { ModalCloseTypes, type ModalProps, ModalTypes, type ModalCloseType } from './ModalProps';
 import Button from '../Button/Button';
+import { v4 as uuid } from 'uuid';
 import { c } from '../../helpers/classNameHelpers';
 
 import styles from './Modal.module.css';
+import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
 
-export default function Modal({
+function Modal({
   acceptButtonLabel,
   cancelButtonLabel,
   children,
@@ -16,15 +18,12 @@ export default function Modal({
   type = ModalTypes.INFO,
   visible,
 }: ModalProps): JSX.Element {
+  const [id] = useState<string>(uuid());
   const [cssClassStatus, setCssClassStatus] = useState<string>('');
   const [mounted, setMounted] = useState<boolean>(false);
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
 
   const close = useCallback((): void => {
-    if (isTransitioning) {
-      return;
-    }
-
     setIsTransitioning(true);
     setCssClassStatus(styles.close);
 
@@ -33,13 +32,9 @@ export default function Modal({
       setMounted(false);
       setIsTransitioning(false);
     }, 500);
-  }, [isTransitioning]);
+  }, []);
 
   const open = useCallback((): void => {
-    if (isTransitioning) {
-      return;
-    }
-
     setIsTransitioning(true);
     setMounted(true);
 
@@ -48,11 +43,11 @@ export default function Modal({
       setCssClassStatus(styles.open);
       setIsTransitioning(false);
     }, 100);
-  }, [isTransitioning, onOpen]);
+  }, [onOpen]);
 
   useEffect(() => {
     visible ? open() : close();
-  }, [visible, open, close]);
+  }, [close, open, visible]);
 
   const handleCloseTypes = (type: ModalCloseType = ModalCloseTypes.CLOSE): void => {
     if (isTransitioning) {
@@ -68,12 +63,13 @@ export default function Modal({
   const handleCancel = (): void => {
     handleCloseTypes(ModalCloseTypes.CANCEL);
   };
-  const handleClose = (): void => {
-    handleCloseTypes(ModalCloseTypes.CANCEL);
+  const handleOverflowClose = (event: React.MouseEvent): void => {
+    if (!isAscendantEvenTargetByID(event.nativeEvent, id)) {
+      handleCloseTypes(ModalCloseTypes.CANCEL);
+    }
   };
-
-  const handleStopPropagation = (event: React.MouseEvent): void => {
-    event.stopPropagation();
+  const handleOverflow = (): void => {
+    handleCloseTypes(ModalCloseTypes.CANCEL);
   };
 
   const hasHeader = title || type === ModalTypes.INFO;
@@ -87,14 +83,14 @@ export default function Modal({
   return createPortal(
     <div
       className={c(styles.modal_overflow, cssClassStatus)}
-      onClick={hasCloser ? handleClose : undefined}
+      onClick={hasCloser ? handleOverflowClose : undefined}
     >
-      <section onClick={handleStopPropagation} className={c(styles.modal, styles[type])}>
+      <section id={id} className={c(styles.modal, styles[type])}>
         {hasHeader && (
           <header className={c(styles.header)}>
             <h5 className={c(styles.title)}>{title}</h5>
             {hasCloser && (
-              <button className={c(styles.closer)} onClick={handleClose}>
+              <button className={c(styles.closer)} onClick={handleOverflow}>
                 ×
               </button>
             )}
@@ -126,3 +122,5 @@ export default function Modal({
     document.body
   );
 }
+
+export default Modal;

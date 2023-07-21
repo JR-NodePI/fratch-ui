@@ -9,9 +9,10 @@ const meta = {
 } satisfies Meta<typeof Header>;
 
 export default meta;
+
 type Story = StoryObj<typeof Header>;
 
-export const Default: Story = {
+export const Docs: Story = {
   args: {
     title: 'This is the title  ',
     iconSrc: logo,

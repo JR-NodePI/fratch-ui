@@ -1,4 +1,4 @@
-import { SelectOption } from '../SelectProps';
+import { SelectOption } from './SelectProps';
 
 export type SelectOptionsListProps<T> = {
   noResultsElement?: React.ReactNode;

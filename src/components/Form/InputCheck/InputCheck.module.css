@@ -1,9 +1,12 @@
 .checkbox {
   display: inline-block;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 4px;
   height: 32px;
+}
+.checkbox.right {
+  flex-direction: row-reverse;
 }
 
 .checkbox input {

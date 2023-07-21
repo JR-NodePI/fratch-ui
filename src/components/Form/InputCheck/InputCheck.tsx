@@ -2,17 +2,30 @@ import { forwardRef, useEffect, useRef, useState } from 'react';
 import { c } from '../../../helpers/classNameHelpers';
 import styles from './InputCheck.module.css';
 
+export const InputCheckPropsPosition = {
+  LEFT: 'left',
+  RIGHT: 'right',
+} as const;
+
 type InputCheckProps = {
-  disabled?: boolean;
   checked?: boolean;
   className?: string;
+  disabled?: boolean;
   label: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  position?: (typeof InputCheckPropsPosition)[keyof typeof InputCheckPropsPosition];
 };
 
 const InputCheck = forwardRef<HTMLInputElement, InputCheckProps>(
   (
-    { disabled, checked, className, label, onChange }: InputCheckProps,
+    {
+      checked,
+      className,
+      disabled,
+      label,
+      onChange,
+      position = InputCheckPropsPosition.LEFT,
+    }: InputCheckProps,
     ref: React.ForwardedRef<HTMLInputElement>
   ) => {
     const inputRef = useRef<HTMLInputElement>(null);
@@ -34,7 +47,7 @@ const InputCheck = forwardRef<HTMLInputElement, InputCheckProps>(
     };
 
     return (
-      <label className={c(styles.checkbox, className)}>
+      <label className={c(styles.checkbox, styles[position], className)}>
         <input ref={ref} type="checkbox" disabled={disabled} onChange={handleOnChange} />
         <span>{label}</span>
       </label>
