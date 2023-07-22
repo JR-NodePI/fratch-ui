@@ -1,7 +1,9 @@
 import { forwardRef } from 'react';
+
 import { c } from '../../../helpers/classNameHelpers';
-import styles from './InputText.module.css';
 import { type InputTextProps } from './InputTextProps';
+
+import styles from './InputText.module.css';
 
 const InputText = forwardRef<HTMLInputElement, InputTextProps>(
   (

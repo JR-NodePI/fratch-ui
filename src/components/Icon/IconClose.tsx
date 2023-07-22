@@ -1,7 +1,10 @@
-import { IconProps } from './components/IconProps';
 import ContainerIcon from './components/Icon';
+import { IconProps } from './components/IconProps';
 
-const IconClose = ({ type, className }: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
+const IconClose = ({
+  type,
+  className,
+}: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
   return (
     <ContainerIcon
       className={className}

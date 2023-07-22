@@ -14,7 +14,8 @@
 
 /*** cleaner ***/
 .cleaner {
-  border-radius: 0 var(--ft-form-item-border-radius) var(--ft-form-item-border-radius) 0;
+  border-radius: 0 var(--ft-form-item-border-radius)
+    var(--ft-form-item-border-radius) 0;
   border: var(--ft-form-item-border);
   margin: 0;
   padding: var(--ft-form-item-padding-y) var(--ft-form-item-padding-x);
@@ -76,7 +77,8 @@
   box-shadow: none;
 }
 .cleanable .trigger {
-  border-radius: var(--ft-form-item-border-radius) 0 0 var(--ft-form-item-border-radius);
+  border-radius: var(--ft-form-item-border-radius) 0 0
+    var(--ft-form-item-border-radius);
 }
 
 .controls .trigger_icon [fill] {

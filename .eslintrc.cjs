@@ -9,8 +9,22 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  plugins: ['react-refresh'],
+  plugins: ['react-refresh', 'simple-import-sort'],
   rules: {
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [
+          ['^\\u0000'],
+          ['^react(.*)'],
+          ['^@?\\w'],
+          ['^'],
+          ['^\\.'],
+          ['\\.css$'],
+        ],
+      },
+    ],
+    'simple-import-sort/exports': 'error',
     'no-console': 'error',
     '@typescript-eslint/no-explicit-any': 'off',
     'react-refresh/only-export-components': 'warn',

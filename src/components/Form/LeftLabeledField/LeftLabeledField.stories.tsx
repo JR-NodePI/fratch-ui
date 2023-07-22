@@ -1,6 +1,7 @@
-import { Select } from '../..';
-import LeftLabeledField from './LeftLabeledField';
 import type { Meta, StoryObj } from '@storybook/react';
+
+import Select from '../../../components/Form/Select/Select';
+import LeftLabeledField from './LeftLabeledField';
 
 const meta = {
   title: 'Example/Form/LeftLabeledField',

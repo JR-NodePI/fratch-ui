@@ -1,5 +1,6 @@
-import { c } from '../../../helpers/classNameHelpers';
 import { useEffect, useRef, useState } from 'react';
+
+import { c } from '../../../helpers/classNameHelpers';
 import { type SelectOptionsListProps } from './SelectOptionsListProps';
 
 import styles from './SelectOptionsList.module.css';
@@ -94,7 +95,9 @@ function SelectOptionsList<T>({
   useEffect(() => {
     setMouseEnterItemIndex(undefined);
   }, [visible]);
-  const handleItemMouseEnter = (event: React.MouseEvent<HTMLAnchorElement>): void => {
+  const handleItemMouseEnter = (
+    event: React.MouseEvent<HTMLAnchorElement>
+  ): void => {
     const element = event.target;
     const index = Number((element as any).dataset?.index);
     if (!isNaN(index)) {
@@ -112,7 +115,8 @@ function SelectOptionsList<T>({
       }
 
       const index = Number(current.dataset.index);
-      const mustScrollIntoView = index === focusedIndex && mouseEnterItemIndex !== focusedIndex;
+      const mustScrollIntoView =
+        index === focusedIndex && mouseEnterItemIndex !== focusedIndex;
       if (mustScrollIntoView) {
         current.scrollIntoView({ block: 'nearest' });
       }
@@ -125,7 +129,10 @@ function SelectOptionsList<T>({
     itemHeight,
   });
 
-  const classNames = [styles.select_list, visible ? styles.visible : styles.hidden];
+  const classNames = [
+    styles.select_list,
+    visible ? styles.visible : styles.hidden,
+  ];
 
   const hasSomeVisibleOption = options.some(({ visible }) => visible !== false);
 

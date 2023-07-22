@@ -1,7 +1,9 @@
 import { createPortal } from 'react-dom';
-import SettingsMenu from './SettingsMenu';
+
 import type { Meta, StoryObj } from '@storybook/react';
+
 import { Button, InputCheck } from '..';
+import SettingsMenu from './SettingsMenu';
 import { SettingsMenuPosition } from './SettingsMenuProps';
 
 const inlineStyles: React.CSSProperties = {

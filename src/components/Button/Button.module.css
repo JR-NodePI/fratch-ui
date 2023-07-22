@@ -65,7 +65,8 @@
   color: var(--ft-primary-hover-color);
   --icon-color: var(--ft-primary-hover-color);
   box-shadow: 0 3px 16px 0 var(--ft-primary-hover-shadow-color),
-    inset 0 -1px 0 0 rgba(0, 0, 0, 0.229), inset 0 1px 0 0 rgba(0, 251, 255, 0.504);
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.229),
+    inset 0 1px 0 0 rgba(0, 251, 255, 0.504);
 }
 .primary:active {
   background-color: var(--ft-primary-active-bg-color);
@@ -77,8 +78,8 @@
   background-color: var(--ft-primary-default-bg-color);
   color: var(--ft-primary-default-color);
   --icon-color: var(--ft-primary-default-color);
-  box-shadow: 0 1px 4px 0 var(--ft-primary-shadow-color), inset 0 -1px 0 0 rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 0 rgba(0, 251, 255, 0.4);
+  box-shadow: 0 1px 4px 0 var(--ft-primary-shadow-color),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(0, 251, 255, 0.4);
 }
 
 .secondary:hover {
@@ -86,7 +87,8 @@
   color: var(--ft-secondary-hover-color);
   --icon-color: var(--ft-secondary-hover-color);
   box-shadow: 0 3px 16px 0 var(--ft-secondary-hover-shadow-color),
-    inset 0 -1px 0 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 0 rgba(255, 146, 244, 0.929);
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 0 rgba(255, 146, 244, 0.929);
 }
 .secondary:active {
   background-color: var(--ft-secondary-active-bg-color);
@@ -98,8 +100,8 @@
   background-color: var(--ft-secondary-default-bg-color);
   color: var(--ft-secondary-default-color);
   --icon-color: var(--ft-secondary-default-color);
-  box-shadow: 0 1px 4px 0 var(--ft-secondary-shadow-color), inset 0 -1px 0 0 rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 0 rgb(255, 146, 244, 0.8);
+  box-shadow: 0 1px 4px 0 var(--ft-secondary-shadow-color),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgb(255, 146, 244, 0.8);
 }
 
 .tertiary:hover {
@@ -107,7 +109,8 @@
   color: var(--ft-tertiary-hover-color);
   --icon-color: var(--ft-tertiary-hover-color);
   box-shadow: 0 3px 16px 0 var(--ft-tertiary-hover-shadow-color),
-    inset 0 -1px 0 0 rgba(0, 0, 0, 0.339), inset 0 1px 0 0 rgba(141, 179, 255, 0.815);
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.339),
+    inset 0 1px 0 0 rgba(141, 179, 255, 0.815);
 }
 .tertiary:active {
   background-color: var(--ft-tertiary-active-bg-color);
@@ -119,7 +122,8 @@
   background-color: var(--ft-tertiary-default-bg-color);
   color: var(--ft-tertiary-default-color);
   --icon-color: var(--ft-tertiary-default-color);
-  box-shadow: 0 1px 4px 0 var(--ft-tertiary-shadow-color), inset 0 -1px 0 0 rgba(0, 0, 0, 0.3),
+  box-shadow: 0 1px 4px 0 var(--ft-tertiary-shadow-color),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.3),
     inset 0 1px 0 0 rgba(124, 224, 255, 0.6);
 }
 /***** size *****/

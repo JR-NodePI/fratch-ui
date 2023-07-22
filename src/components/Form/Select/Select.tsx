@@ -1,16 +1,18 @@
-import { c } from '../../../helpers/classNameHelpers';
-import { createPortal } from 'react-dom';
-import { isEqual } from 'lodash';
-import { type SelectOption, type SelectProps } from './SelectProps';
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+
+import { isEqual } from 'lodash';
 import { v4 as uuid } from 'uuid';
+
+import { c } from '../../../helpers/classNameHelpers';
+import { isAscendantEvenTargetByID } from '../../../helpers/htmlSelectorsHelpers';
 import IconArrowDown from '../../Icon/IconArrowDown';
 import IconClose from '../../Icon/IconClose';
 import InputText from '../InputText/InputText';
 import SelectOptionsList from './SelectOptionsList';
+import { type SelectOption, type SelectProps } from './SelectProps';
 
 import styles from './Select.module.css';
-import { isAscendantEvenTargetByID } from '../../../helpers/htmlSelectorsHelpers';
 
 const selectInstances = new Map();
 
@@ -77,7 +79,8 @@ const useHideOnTriggerDOMRectChange = ({
   useEffect(() => {
     if (visible && triggerDOMRect && triggerRef.current) {
       const intervalId = setInterval(() => {
-        const newTriggerDOMRect = triggerRef.current && triggerRef.current.getBoundingClientRect();
+        const newTriggerDOMRect =
+          triggerRef.current && triggerRef.current.getBoundingClientRect();
 
         if (
           visible &&
@@ -127,7 +130,9 @@ function useKeyboardNavigation<T>({
     setFocusedItemIndex(undefined);
   }, [filteredOptions]);
 
-  const handleOnInputKeyDownCapture = (event: React.KeyboardEvent<HTMLInputElement>): void => {
+  const handleOnInputKeyDownCapture = (
+    event: React.KeyboardEvent<HTMLInputElement>
+  ): void => {
     if (
       event.code === 'ArrowDown' ||
       event.code === 'ArrowUp' ||
@@ -147,12 +152,15 @@ function useKeyboardNavigation<T>({
         setFocusedItemIndex(nextIndex);
       }
 
-      const prevIndex = filteredOptions.reduce((lastIndex, { visible }, index) => {
-        if (visible !== false && index < focusedIndex && lastIndex < index) {
-          return index;
-        }
-        return lastIndex;
-      }, -1);
+      const prevIndex = filteredOptions.reduce(
+        (lastIndex, { visible }, index) => {
+          if (visible !== false && index < focusedIndex && lastIndex < index) {
+            return index;
+          }
+          return lastIndex;
+        },
+        -1
+      );
       if (event.code === 'ArrowUp' && prevIndex >= 0) {
         setFocusedItemIndex(prevIndex);
       }
@@ -193,7 +201,8 @@ function Select<T>({
   const [selectedIndex, setSelectedIndex] = useState<number>();
   const [visible, setVisible] = useState<boolean>(false);
   const [triggerDOMRect, setTriggerDOMRect] = useState<DOMRect>();
-  const [filteredOptions, setFilteredOptions] = useState<SelectOption<T>[]>(options);
+  const [filteredOptions, setFilteredOptions] =
+    useState<SelectOption<T>[]>(options);
 
   useEffect(() => {
     selectInstances.set(id, {
@@ -240,7 +249,9 @@ function Select<T>({
     }
   };
 
-  const handleOnInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleOnInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
     const text = event.target.value ?? '';
     setSelectedLabel(text);
     setSelectedIndex(undefined);

@@ -1,8 +1,10 @@
-import { c } from '../../helpers/classNameHelpers';
 import { useEffect, useState } from 'react';
+
 import { v4 as uuid } from 'uuid';
-import { SettingsMenuPosition, SettingsMenuProps } from './SettingsMenuProps';
+
+import { c } from '../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
+import { SettingsMenuPosition, SettingsMenuProps } from './SettingsMenuProps';
 
 import styles from './SettingsMenu.module.css';
 

@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
-import { type Toaster } from './ToasterListContext';
+
+import { c } from '../../helpers/classNameHelpers';
 import { nlToNodes } from './ToasterFormatHelper';
+import { type Toaster } from './ToasterListContext';
 
 import styles from './Toaster.module.css';
-import { c } from '../../helpers/classNameHelpers';
 
 export default function ToasterItem({
   duration,

@@ -1,5 +1,6 @@
-import Select from '../Select';
 import type { Meta, StoryObj } from '@storybook/react';
+
+import Select from '../Select';
 
 type TesOptionValue = { opt: string; prop: string };
 
@@ -26,7 +27,9 @@ export const Docs: Story = {
       value: { opt: `opt-${i + 1}`, prop: `prop-${i + 1}` },
     })),
     noResultsElement: (
-      <div style={{ padding: '8px 16px', fontSize: '25px' }}>No results found...</div>
+      <div style={{ padding: '8px 16px', fontSize: '25px' }}>
+        No results found...
+      </div>
     ),
   },
 };

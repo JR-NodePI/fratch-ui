@@ -1,18 +1,19 @@
-import { defineConfig, build } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 import fs from 'fs';
 import glob from 'glob';
 import path from 'node:path';
-
-import react from '@vitejs/plugin-react-swc';
-import dts from 'vite-plugin-dts';
+import { build, defineConfig } from 'vite';
 import type { PluginOptions } from 'vite-plugin-dts';
+import dts from 'vite-plugin-dts';
 
 const srcDir = './src';
 const outDir = './dist';
 const excludePattern = './**/*.{stories,test,d}.{tsx,ts}';
 
 const buildComponent = file => {
-  const fileName = path.basename(file).slice(0, path.basename(file).indexOf(path.extname(file)));
+  const fileName = path
+    .basename(file)
+    .slice(0, path.basename(file).indexOf(path.extname(file)));
 
   const moduleOutDir = `${outDir}/${path.relative(srcDir, path.dirname(file))}`;
 

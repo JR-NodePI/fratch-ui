@@ -1,12 +1,20 @@
-import { createPortal } from 'react-dom';
 import { useCallback, useEffect, useState } from 'react';
-import { ModalCloseTypes, type ModalProps, ModalTypes, type ModalCloseType } from './ModalProps';
-import Button from '../Button/Button';
+import { createPortal } from 'react-dom';
+
+import { debounce } from 'lodash';
 import { v4 as uuid } from 'uuid';
+
 import { c } from '../../helpers/classNameHelpers';
+import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
+import Button from '../Button/Button';
+import {
+  type ModalCloseType,
+  ModalCloseTypes,
+  type ModalProps,
+  ModalTypes,
+} from './ModalProps';
 
 import styles from './Modal.module.css';
-import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
 
 function Modal({
   acceptButtonLabel,
@@ -21,55 +29,53 @@ function Modal({
   const [id] = useState<string>(uuid());
   const [cssClassStatus, setCssClassStatus] = useState<string>('');
   const [mounted, setMounted] = useState<boolean>(false);
-  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
 
-  const close = useCallback((): void => {
-    setIsTransitioning(true);
-    setCssClassStatus(styles.close);
+  const close = useCallback(
+    (type: ModalCloseType): void => {
+      setCssClassStatus(() => {
+        debounce(() => {
+          setCssClassStatus('');
+          setMounted(false);
+        }, 500)();
 
-    setTimeout(() => {
-      setCssClassStatus('');
-      setMounted(false);
-      setIsTransitioning(false);
-    }, 500);
-  }, []);
+        onClose?.(type);
+        return styles.close;
+      });
+    },
+    [onClose]
+  );
 
   const open = useCallback((): void => {
-    setIsTransitioning(true);
-    setMounted(true);
+    setMounted(() => {
+      debounce(() => {
+        setCssClassStatus(styles.open);
+      }, 1)();
 
-    setTimeout(() => {
       onOpen?.();
-      setCssClassStatus(styles.open);
-      setIsTransitioning(false);
-    }, 100);
+      return true;
+    });
   }, [onOpen]);
 
   useEffect(() => {
-    visible ? open() : close();
+    visible ? open() : close(ModalCloseTypes.CANCEL);
   }, [close, open, visible]);
 
-  const handleCloseTypes = (type: ModalCloseType = ModalCloseTypes.CLOSE): void => {
-    if (isTransitioning) {
-      return;
-    }
-    onClose?.(type);
-    close();
+  const handleAccept = (): void => {
+    close(ModalCloseTypes.ACCEPT);
   };
 
-  const handleAccept = (): void => {
-    handleCloseTypes(ModalCloseTypes.ACCEPT);
-  };
   const handleCancel = (): void => {
-    handleCloseTypes(ModalCloseTypes.CANCEL);
+    close(ModalCloseTypes.CANCEL);
   };
+
+  const handleOverflow = (): void => {
+    close(ModalCloseTypes.CLOSE);
+  };
+
   const handleOverflowClose = (event: React.MouseEvent): void => {
     if (!isAscendantEvenTargetByID(event.nativeEvent, id)) {
-      handleCloseTypes(ModalCloseTypes.CANCEL);
+      close(ModalCloseTypes.CLOSE);
     }
-  };
-  const handleOverflow = (): void => {
-    handleCloseTypes(ModalCloseTypes.CANCEL);
   };
 
   const hasHeader = title || type === ModalTypes.INFO;
@@ -112,7 +118,10 @@ function Modal({
               onClick={handleAccept}
               className={c(styles.button)}
               type="primary"
-              label={acceptButtonLabel || (type === ModalTypes.CONFIRM ? 'OK' : 'Accept')}
+              label={
+                acceptButtonLabel ||
+                (type === ModalTypes.CONFIRM ? 'OK' : 'Accept')
+              }
               size="small"
             />
           </footer>

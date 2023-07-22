@@ -1,7 +1,8 @@
 import { useContext } from 'react';
+
+import Button from '../../Button/Button';
 import ToasterListContext, { Toaster } from '../ToasterListContext';
 import ToasterProvider from '../ToasterProvider';
-import Button from '../../Button/Button';
 
 const ItemCaller = ({ toaster }: { toaster: Toaster }): JSX.Element => {
   const { addToaster } = useContext(ToasterListContext);
@@ -10,7 +11,14 @@ const ItemCaller = ({ toaster }: { toaster: Toaster }): JSX.Element => {
     addToaster?.(toaster);
   };
 
-  return <Button onClick={onClick} label="Show toaster" size="small" type="primary" />;
+  return (
+    <Button
+      onClick={onClick}
+      label="Show toaster"
+      size="small"
+      type="primary"
+    />
+  );
 };
 
 export default function ToasterLoader(props: Toaster): JSX.Element {

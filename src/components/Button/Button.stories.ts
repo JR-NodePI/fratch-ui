@@ -1,7 +1,9 @@
-import { ButtonSize, ButtonType } from './ButtonProps';
-import Button from './Button';
 import type { Meta, StoryObj } from '@storybook/react';
+
 import * as Icons from '../Icon/Icons';
+import Button from './Button';
+import { ButtonSize, ButtonType } from './ButtonProps';
+
 const IconOptions = { Default: undefined, ...Icons };
 
 const meta = {

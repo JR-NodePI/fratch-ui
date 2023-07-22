@@ -13,7 +13,8 @@
   border-bottom: var(--ft-form-item-border);
   padding: var(--ft-form-item-padding-y);
   white-space: nowrap;
-  border-radius: var(--ft-form-item-border-radius) 0 0 var(--ft-form-item-border-radius);
+  border-radius: var(--ft-form-item-border-radius) 0 0
+    var(--ft-form-item-border-radius);
   box-shadow: var(--ft-box-shadow-1);
   position: relative;
   margin-right: -3px;

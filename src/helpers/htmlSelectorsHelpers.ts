@@ -1,4 +1,7 @@
-export const isAscendantEvenTargetByID = (event: MouseEvent, id: string): boolean => {
+export const isAscendantEvenTargetByID = (
+  event: MouseEvent,
+  id: string
+): boolean => {
   let element = event.target as HTMLElement | null;
 
   while (element?.id !== id && element?.parentElement) {

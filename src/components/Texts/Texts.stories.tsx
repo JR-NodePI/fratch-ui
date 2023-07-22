@@ -1,6 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import styles from './Texts.module.css';
 import React, { Fragment } from 'react';
+
+import type { Meta, StoryObj } from '@storybook/react';
+
+import styles from './Texts.module.css';
 
 function Texts({ content = '' }: { content: string }): JSX.Element {
   return (

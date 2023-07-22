@@ -77,7 +77,8 @@
   --ft-form-item-border-wight: 1px;
   --ft-form-item-border-color: rgb(171, 158, 179);
   --ft-form-item-border-color-light: rgb(209, 204, 213);
-  --ft-form-item-border: var(--ft-form-item-border-wight) solid var(--ft-form-item-border-color);
+  --ft-form-item-border: var(--ft-form-item-border-wight) solid
+    var(--ft-form-item-border-color);
   --ft-form-item-bg-color: rgb(246, 255, 255);
 
   --ft-select-default-font-family: var(--ft-font-family);

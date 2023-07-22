@@ -1,6 +1,7 @@
-import Header from './Header';
 import type { Meta, StoryObj } from '@storybook/react';
+
 import logo from '../../assets/logo.png';
+import Header from './Header';
 
 const meta = {
   title: 'Example/Header',

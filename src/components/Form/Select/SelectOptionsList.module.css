@@ -80,8 +80,10 @@
 .select_list.hidden {
   opacity: 0;
   transition: opacity var(--ft-transition-duration) ease-out,
-    top 0s linear var(--ft-transition-duration), left 0s linear var(--ft-transition-duration),
-    width 0s linear var(--ft-transition-duration), height 0s linear var(--ft-transition-duration),
+    top 0s linear var(--ft-transition-duration),
+    left 0s linear var(--ft-transition-duration),
+    width 0s linear var(--ft-transition-duration),
+    height 0s linear var(--ft-transition-duration),
     max-height 0s linear var(--ft-transition-duration);
 }
 .select_list.visible {

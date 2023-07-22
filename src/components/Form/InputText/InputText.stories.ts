@@ -1,5 +1,6 @@
-import InputText from './InputText';
 import type { Meta, StoryObj } from '@storybook/react';
+
+import InputText from './InputText';
 
 const meta = {
   title: 'Example/Form/InputText',

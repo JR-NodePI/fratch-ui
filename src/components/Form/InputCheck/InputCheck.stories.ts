@@ -1,5 +1,6 @@
-import InputCheck from './InputCheck';
 import type { Meta, StoryObj } from '@storybook/react';
+
+import InputCheck from './InputCheck';
 
 const meta = {
   title: 'Example/Form/InputCheck',
