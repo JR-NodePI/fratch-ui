@@ -8,7 +8,7 @@
   --ft-font-size: 14px;
 
   --ft-color-white: #fff;
-  --ft-color-primary: #2d1846;
+  --ft-color-primary: #371c58;
   --ft-color-link: #5858f0;
   --ft-color-black: #0d000d;
   --ft-color-light: #00ffb7;
@@ -88,13 +88,13 @@
   --ft-select-list-item-bg-color-hover-active: #bbebff;
   --ft-select-list-item-selected-text-color: var(--ft-color-primary);
 
-  --ft-icon-primary-color: var(--ft-color-primary);
-  --ft-icon-secondary-color: #d70065;
-  --ft-icon-tertiary-color: #007390;
-  --ft-icon-error-color: #ff004c;
-  --ft-icon-info-color: #4a2dff;
-  --ft-icon-success-color: #3ba93b;
-  --ft-icon-warning-color: #ffa600;
+  --ft-primary-color: var(--ft-color-link);
+  --ft-secondary-color: #d7009a;
+  --ft-tertiary-color: #007390;
+  --ft-error-color: #d60040;
+  --ft-info-color: #2f18c1;
+  --ft-success-color: #65e100;
+  --ft-warning-color: #ffb300;
 
   --ft-box-shadow-1: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   --ft-box-shadow-2: 0 2px 8px 0 rgba(0, 0, 0, 0.2);

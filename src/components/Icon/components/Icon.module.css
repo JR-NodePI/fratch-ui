@@ -14,10 +14,10 @@
 }
 
 .primary [fill] {
-  fill: var(--ft-icon-primary-color);
+  fill: var(--ft-primary-color);
 }
 .primary [stroke] {
-  stroke: var(--ft-icon-primary-color);
+  stroke: var(--ft-primary-color);
 }
 .primary [fill='none'] {
   fill: transparent;
@@ -27,10 +27,10 @@
 }
 
 .secondary [fill] {
-  fill: var(--ft-icon-secondary-color);
+  fill: var(--ft-secondary-color);
 }
 .secondary [stroke] {
-  stroke: var(--ft-icon-secondary-color);
+  stroke: var(--ft-secondary-color);
 }
 .secondary [fill='none'] {
   fill: transparent;
@@ -40,10 +40,10 @@
 }
 
 .tertiary [fill] {
-  fill: var(--ft-icon-tertiary-color);
+  fill: var(--ft-tertiary-color);
 }
 .tertiary [stroke] {
-  stroke: var(--ft-icon-tertiary-color);
+  stroke: var(--ft-tertiary-color);
 }
 .tertiary [fill='none'] {
   fill: transparent;
@@ -53,10 +53,10 @@
 }
 
 .error [fill] {
-  fill: var(--ft-icon-error-color);
+  fill: var(--ft-error-color);
 }
 .error [stroke] {
-  stroke: var(--ft-icon-error-color);
+  stroke: var(--ft-error-color);
 }
 .error [fill='none'] {
   fill: transparent;
@@ -79,10 +79,10 @@
 }
 
 .success [fill] {
-  fill: var(--ft-icon-success-color);
+  fill: var(--ft-success-color);
 }
 .success [stroke] {
-  stroke: var(--ft-icon-success-color);
+  stroke: var(--ft-success-color);
 }
 .success [fill='none'] {
   fill: transparent;
@@ -92,10 +92,10 @@
 }
 
 .warning [fill] {
-  fill: var(--ft-icon-warning-color);
+  fill: var(--ft-warning-color);
 }
 .warning [stroke] {
-  stroke: var(--ft-icon-warning-color);
+  stroke: var(--ft-warning-color);
 }
 .warning [fill='none'] {
   fill: transparent;

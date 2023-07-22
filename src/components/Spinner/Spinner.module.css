@@ -1,20 +1,83 @@
-@refe url(./default_variables.css);
+.spinner_container {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.spinner_container.cover {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 300px;
+}
 
 .spinner {
   animation: rotate 2s linear infinite;
   z-index: 2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -25px 0 0 -25px;
   width: 50px;
   height: 50px;
 }
+.inverted .spinner {
+  animation: rotate 2s linear infinite reverse;
+}
 
 .spinner_path {
-  stroke: var(--ft-spinner-default-color);
   stroke-linecap: round;
   animation: dash 1.5s ease-in-out infinite;
+}
+.inverted .spinner_path {
+  animation: dash 1.5s ease-in-out infinite reverse;
+}
+
+.spinner_container.primary .spinner_path {
+  stroke: var(--ft-primary-color);
+}
+.spinner_container.secondary .spinner_path {
+  stroke: var(--ft-secondary-color);
+}
+.spinner_container.tertiary .spinner_path {
+  stroke: var(--ft-tertiary-color);
+}
+.spinner_container.green .spinner_path {
+  stroke: var(--ft-success-color);
+}
+.spinner_container.red .spinner_path {
+  stroke: var(--ft-error-color);
+}
+.spinner_container.yellow .spinner_path {
+  stroke: var(--ft-warning-color);
+}
+.spinner_container.blue .spinner_path {
+  stroke: var(--ft-info-color);
+}
+
+.spinner_container.primary {
+  color: var(--ft-primary-color);
+}
+.spinner_container.secondary {
+  color: var(--ft-secondary-color);
+}
+.spinner_container.tertiary {
+  color: var(--ft-tertiary-color);
+}
+.spinner_container.green {
+  color: var(--ft-success-color);
+}
+.spinner_container.red {
+  color: var(--ft-error-color);
+}
+.spinner_container.yellow {
+  color: var(--ft-warning-color);
+}
+.spinner_container.blue {
+  color: var(--ft-info-color);
 }
 
 @keyframes rotate {
