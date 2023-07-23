@@ -58,29 +58,40 @@
 }
 .modal .header {
   margin: 0;
-  background-color: var(--ft-select-list-item-bg-color-active);
   border-start-start-radius: var(--ft-button-default-border-radius);
   border-start-end-radius: var(--ft-button-default-border-radius);
   display: flex;
   justify-content: space-between;
   min-height: 42px;
 }
+.modal.info .header,
+.modal.accept .header {
+  background-color: var(--ft-primary-default-color);
+}
+.modal.confirm .header {
+  background-color: var(--ft-tertiary-default-color);
+}
 .modal .header .title {
   margin: 0;
   padding: 12px 24px;
 }
-.modal .header .closer {
-  min-width: 42px;
+.modal .closer {
+  width: 42px;
+  height: 42px;
   font-size: 24px;
   background-color: transparent;
   border: none;
-  color: var(--ft-form-item-border-color);
-}
-.modal .header .closer:hover {
   color: var(--ft-color-primary);
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  border-radius: var(--ft-button-default-border-radius);
+}
+.modal .closer:hover {
+  opacity: 1;
 }
 .modal .content {
-  padding: 16px 24px;
+  padding: 16px 42px 16px 24px;
 }
 .modal .footer {
   gap: 16px;

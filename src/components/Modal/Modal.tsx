@@ -30,20 +30,16 @@ function Modal({
   const [cssClassStatus, setCssClassStatus] = useState<string>('');
   const [mounted, setMounted] = useState<boolean>(false);
 
-  const close = useCallback(
-    (type: ModalCloseType): void => {
-      setCssClassStatus(() => {
-        debounce(() => {
-          setCssClassStatus('');
-          setMounted(false);
-        }, 500)();
+  const close = useCallback((): void => {
+    setCssClassStatus(() => {
+      debounce(() => {
+        setCssClassStatus('');
+        setMounted(false);
+      }, 500)();
 
-        onClose?.(type);
-        return styles.close;
-      });
-    },
-    [onClose]
-  );
+      return styles.close;
+    });
+  }, []);
 
   const open = useCallback((): void => {
     setMounted(() => {
@@ -57,30 +53,35 @@ function Modal({
   }, [onOpen]);
 
   useEffect(() => {
-    visible ? open() : close(ModalCloseTypes.CANCEL);
+    visible ? open() : close();
   }, [close, open, visible]);
 
   const handleAccept = (): void => {
-    close(ModalCloseTypes.ACCEPT);
+    close();
+    onClose?.(ModalCloseTypes.ACCEPT);
   };
 
   const handleCancel = (): void => {
-    close(ModalCloseTypes.CANCEL);
+    close();
+    onClose?.(ModalCloseTypes.CANCEL);
   };
 
   const handleOverflow = (): void => {
-    close(ModalCloseTypes.CLOSE);
+    close();
+    onClose?.(ModalCloseTypes.CLOSE);
   };
 
   const handleOverflowClose = (event: React.MouseEvent): void => {
     if (!isAscendantEvenTargetByID(event.nativeEvent, id)) {
-      close(ModalCloseTypes.CLOSE);
+      close();
+      onClose?.(ModalCloseTypes.CLOSE);
     }
   };
 
-  const hasHeader = title || type === ModalTypes.INFO;
+  const hasHeader = Boolean(title);
   const hasCloser = type !== ModalTypes.CONFIRM;
   const hasFooter = type !== ModalTypes.INFO;
+  const buttonAcceptType = type === ModalTypes.ACCEPT ? 'primary' : 'tertiary';
 
   if (!mounted) {
     return <></>;
@@ -94,15 +95,15 @@ function Modal({
       <section id={id} className={c(styles.modal, styles[type])}>
         {hasHeader && (
           <header className={c(styles.header)}>
-            <h5 className={c(styles.title)}>{title}</h5>
-            {hasCloser && (
-              <button className={c(styles.closer)} onClick={handleOverflow}>
-                ×
-              </button>
-            )}
+            <h5 className={c(styles.title)}>{title}</h5>{' '}
           </header>
         )}
-        <div className={c(styles.content)}>{children}</div>{' '}
+        {hasCloser && (
+          <button className={c(styles.closer)} onClick={handleOverflow}>
+            ×
+          </button>
+        )}
+        <div className={c(styles.content)}>{children}</div>
         {hasFooter && (
           <footer className={c(styles.footer)}>
             {type === ModalTypes.CONFIRM && (
@@ -117,7 +118,7 @@ function Modal({
             <Button
               onClick={handleAccept}
               className={c(styles.button)}
-              type="primary"
+              type={buttonAcceptType}
               label={
                 acceptButtonLabel ||
                 (type === ModalTypes.CONFIRM ? 'OK' : 'Accept')

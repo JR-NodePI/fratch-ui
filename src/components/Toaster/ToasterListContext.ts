@@ -10,11 +10,14 @@ export interface Toaster {
 }
 
 export interface ToasterListProviderProps {
-  addToaster?: (toaster: Toaster) => void;
-  toasters?: Toaster[];
+  addToaster: (toaster: Toaster) => void;
+  toasters: Toaster[];
 }
 
-const ToasterListContext = React.createContext<ToasterListProviderProps>({});
+const ToasterListContext = React.createContext<ToasterListProviderProps>({
+  addToaster: (): void => undefined,
+  toasters: [],
+});
 ToasterListContext.displayName = 'ToasterListContext';
 
 export default ToasterListContext;
