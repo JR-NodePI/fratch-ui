@@ -32,13 +32,13 @@ function Texts({ content = '' }: { content: string }): JSX.Element {
 const meta = {
   title: 'Example/Texts',
   component: Texts,
-  tags: [],
+  tags: ['autodocs'],
   argTypes: {},
 } satisfies Meta<typeof Texts>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Docs: Story = {
   args: { content: 'Hello World!' },
 };

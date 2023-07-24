@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { memo, useCallback, useEffect, useState } from 'react';
 
 import { c } from '../../helpers/classNameHelpers';
 import { nlToNodes } from './ToasterFormatHelper';
@@ -6,7 +6,7 @@ import { type Toaster } from './ToasterListContext';
 
 import styles from './Toaster.module.css';
 
-export default function ToasterItem({
+const ToasterItem = memo(function ({
   duration,
   id,
   message,
@@ -36,6 +36,7 @@ export default function ToasterItem({
   const finalMessage = nlToBr ? nlToNodes(message) : message;
   const toMuchDuration = !duration || duration >= 3000;
 
+  console.log('>>>----->> id', id);
   return (
     <div key={id} className={c(styles.toaster, styles[type], cssClassStatus)}>
       {title && <h5 className={c(styles.title)}>{title}</h5>}
@@ -47,4 +48,6 @@ export default function ToasterItem({
       )}
     </div>
   );
-}
+});
+
+export default ToasterItem;

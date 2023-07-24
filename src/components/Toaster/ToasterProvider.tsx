@@ -30,20 +30,23 @@ export default function ToasterProvider({
     ]);
   }, []);
 
+  console.log('>>>----->> toasters ', toasters);
+
   return (
     <ToasterListContext.Provider value={{ toasters, addToaster }}>
       {toasters.length > 0 &&
         createPortal(
           <div className={c(styles.toaster_list)}>
-            {toasters.map((toaster, index) => (
+            {toasters.map(toaster => (
               <ToasterItem
-                key={index}
+                key={toaster.id}
                 onClose={handleToasterClose}
                 {...toaster}
               />
             ))}
           </div>,
-          document.body
+          document.body,
+          uuid()
         )}
       {children}
     </ToasterListContext.Provider>
