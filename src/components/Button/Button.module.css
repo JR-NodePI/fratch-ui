@@ -160,9 +160,9 @@
 
 /***** icon *****/
 .button .icon {
-  margin: -0.3em;
-  font-size: 1.3em;
-  width: 1.3em;
+  margin: -0.1em;
+  font-size: 1.1em;
+  width: 1.1em;
 }
 .button .icon [fill] {
   fill: var(--icon-color);
