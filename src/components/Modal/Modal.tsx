@@ -45,7 +45,7 @@ function Modal({
     setMounted(() => {
       debounce(() => {
         setCssClassStatus(styles.open);
-      }, 1)();
+      }, 100)();
 
       onOpen?.();
       return true;
