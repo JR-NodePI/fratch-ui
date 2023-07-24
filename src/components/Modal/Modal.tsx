@@ -7,12 +7,8 @@ import { v4 as uuid } from 'uuid';
 import { c } from '../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
 import Button from '../Button/Button';
-import {
-  type ModalCloseType,
-  ModalCloseTypes,
-  type ModalProps,
-  ModalTypes,
-} from './ModalProps';
+import ButtonCloser from '../ButtonCloser/ButtonCloser';
+import { ModalCloseTypes, type ModalProps, ModalTypes } from './ModalProps';
 
 import styles from './Modal.module.css';
 
@@ -98,11 +94,7 @@ function Modal({
             <h5 className={c(styles.title)}>{title}</h5>{' '}
           </header>
         )}
-        {hasCloser && (
-          <button className={c(styles.closer)} onClick={handleOverflow}>
-            ×
-          </button>
-        )}
+        {hasCloser && <ButtonCloser onClick={handleOverflow} />}
         <div className={c(styles.content)}>{children}</div>
         {hasFooter && (
           <footer className={c(styles.footer)}>

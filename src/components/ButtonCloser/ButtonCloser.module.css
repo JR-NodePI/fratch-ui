@@ -1,0 +1,16 @@
+.button_closer {
+  width: 42px;
+  height: 42px;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  color: var(--ft-color-primary);
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: var(--ft-button-default-border-radius);
+}
+.button_closer:hover {
+  opacity: 1;
+}

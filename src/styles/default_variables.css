@@ -12,8 +12,12 @@
   --ft-color-link: #5858f0;
   --ft-color-black: #0d000d;
   --ft-color-light: #00ffb7;
-  --ft-header-bg-color: #5858f0;
-  --ft-item-bg-color: #e6fffc;
+  --ft-color-success: #4caf50;
+  --ft-color-error: #f44336;
+  --ft-color-warning: #ff9800;
+  --ft-color-info: #2196f3;
+
+  --ft-header-bg-color: var(--ft-color-link);
 
   --ft-max-z-index: 2147483647;
   --ft-transition-duration: 0.2s;

@@ -52,7 +52,6 @@
 .modal_overflow.close .modal {
   opacity: 0;
 }
-
 .modal.confirm {
   max-width: 460px;
 }
@@ -74,21 +73,6 @@
 .modal .header .title {
   margin: 0;
   padding: 12px 24px;
-}
-.modal .closer {
-  width: 42px;
-  height: 42px;
-  font-size: 24px;
-  background-color: transparent;
-  border: none;
-  color: var(--ft-color-primary);
-  opacity: 0.5;
-  position: absolute;
-  right: 0;
-  border-radius: var(--ft-button-default-border-radius);
-}
-.modal .closer:hover {
-  opacity: 1;
 }
 .modal .content {
   padding: 16px 42px 16px 24px;

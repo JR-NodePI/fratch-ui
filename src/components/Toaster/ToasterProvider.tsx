@@ -1,4 +1,4 @@
-import { type ReactNode, useCallback, useState } from 'react';
+import { type ReactNode, useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import { v4 as uuid } from 'uuid';
@@ -11,17 +11,19 @@ import styles from './Toaster.module.css';
 
 export default function ToasterProvider({
   children,
+  listClassName,
+  itemClassName,
 }: {
   children: ReactNode;
+  listClassName?: string;
+  itemClassName?: string;
 }): JSX.Element {
+  const [portalId] = useState<string>(uuid());
   const [toasters, setToasters] = useState<Toaster[]>([]);
 
-  const handleToasterClose = useCallback(
-    (id: string): void => {
-      setToasters(toasters.filter(toaster => toaster.id !== id));
-    },
-    [toasters]
-  );
+  const handleToasterClose = (id: string): void => {
+    setToasters(toasters.filter(toaster => toaster.id !== id));
+  };
 
   const addToaster = useCallback((toaster: Toaster): void => {
     setToasters((prevToasters: Toaster[]) => [
@@ -30,24 +32,29 @@ export default function ToasterProvider({
     ]);
   }, []);
 
-  console.log('>>>----->> toasters ', toasters);
+  const toasterListRef = useRef<HTMLDivElement>(null);
 
   return (
     <ToasterListContext.Provider value={{ toasters, addToaster }}>
-      {toasters.length > 0 &&
-        createPortal(
-          <div className={c(styles.toaster_list)}>
+      {createPortal(
+        toasters.length > 0 && (
+          <div
+            ref={toasterListRef}
+            className={c(styles.toaster_list, listClassName)}
+          >
             {toasters.map(toaster => (
               <ToasterItem
+                className={c(itemClassName)}
                 key={toaster.id}
                 onClose={handleToasterClose}
-                {...toaster}
+                toaster={toaster}
               />
             ))}
-          </div>,
-          document.body,
-          uuid()
-        )}
+          </div>
+        ),
+        document.body,
+        portalId
+      )}
       {children}
     </ToasterListContext.Provider>
   );

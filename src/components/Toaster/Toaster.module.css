@@ -1,25 +1,25 @@
 .toaster_list {
-  top: 0px;
+  top: 8px;
   left: 0px;
   position: fixed;
-  width: 100%;
-  padding: 42px 32px 0 32px;
+  padding: 0 32px 0 32px;
   box-sizing: border-box;
   z-index: 9999;
   pointer-events: none;
+  width: 100%;
 }
 
 .toaster.success {
-  --color: #4caf50;
+  --ft-toaster-color: var(--ft-color-success);
 }
 .toaster.error {
-  --color: #f44336;
+  --ft-toaster-color: var(--ft-color-error);
 }
 .toaster.warning {
-  --color: #ff9800;
+  --ft-toaster-color: var(--ft-color-warning);
 }
 .toaster.info {
-  --color: #2196f3;
+  --ft-toaster-color: var(--ft-color-info);
 }
 
 .toaster {
@@ -30,12 +30,14 @@
   border-radius: var(--ft-button-default-border-radius);
   box-sizing: border-box;
   transition: transform 0.2s ease-in-out;
-  border: solid 1px var(--color);
+  border: solid 1px var(--ft-button-active-bg-color);
+  border-left: solid 6px var(--ft-toaster-color);
   background-color: var(--ft-color-white);
   box-shadow: var(--ft-box-shadow-2);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  opacity: 0;
+  transition: height 300ms ease-in-out, opacity 300ms ease-in-out,
+    transform 300ms ease-in-out;
   transform: translateY(48px);
+  overflow: hidden;
 }
 .toaster.open {
   z-index: 3;
@@ -44,44 +46,15 @@
 }
 .toaster.close {
   z-index: 2;
+  height: 0 !important;
   opacity: 0;
   transform: translateY(-48px);
 }
-.toaster * {
-  position: relative;
-  z-index: 2;
-}
-.toaster::after {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: var(--color);
-  box-shadow: 0 0 10px 0 var(--color);
-  opacity: 0.1;
-}
 
+.toaster .title {
+  color: var(--ft-toaster-color);
+}
 .toaster .title,
 .toaster .message {
   margin: 16px 0;
-}
-
-.toaster .closer {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  font-weight: bold;
-  border: none;
-  background-color: transparent;
-  color: var(--color);
-  font-size: 24px;
-  height: 100%;
-  width: 42px;
-}
-.toaster .closer:hover {
-  color: var(--ft-color-primary);
 }
