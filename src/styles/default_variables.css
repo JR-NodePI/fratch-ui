@@ -1,43 +1,112 @@
 :root {
+  --ft-header-height: 36px;
+
   --ft-font-family: sans-serif;
+  --ft-font-weight-light: light;
+  --ft-font-weight-normal: normal;
+  --ft-font-weight-bold: bold;
+  --ft-font-size: 14px;
+
+  --ft-color-text: #371c58;
+  --ft-color-white: #fff;
+  --ft-color-grey-1: #ab9eb3;
+  --ft-color-grey-2: #d1ccd5;
+  --ft-color-grey-3: #f6ffff;
+  --ft-color-black: #0d000d;
+  --ft-color-light: #00ffb7;
+  --ft-color-success: #4caf50;
+  --ft-color-error: #f44336;
+  --ft-color-warning: #ff9800;
+  --ft-color-info: #2196f3;
+  --ft-color-primary: #5858f0;
+  --ft-color-secondary: #d7009a;
+  --ft-color-tertiary: #007390;
+  --ft-color-error: #d60040;
+  --ft-color-info: #2f18c1;
+  --ft-color-item-hover: #e6d9fe;
+  --ft-color-item-active: #b5fdfb;
+  --ft-color-item-hover-active: #bbebff;
+
+  --ft-box-shadow-1: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  --ft-box-shadow-2: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  --ft-box-shadow-3: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+
+  --ft-color-link: var(--ft-color-primary);
+  --ft-header-bg-color: var(--ft-color-link);
+
+  --ft-max-z-index: 2147483647;
+  --ft-transition-duration: 0.2s;
+
   --ft-button-default-font-family: var(--ft-font-family);
 
-  --ft-button-default-font-size: 16px;
-  --ft-button-default-font-weight: bold;
+  --ft-button-default-font-weight: var(--ft-font-weight-bold);
   --ft-button-default-letter-spacing: 0.5px;
 
-  --ft-button-default-background-color: #ccc;
-  --ft-button-default-color: #000;
+  --ft-button-default-bg-color: #eae9e9;
+  --ft-button-default-color: var(--ft-color-text);
+  --ft-button-hover-bg-color: #f6f6f6;
+  --ft-button-active-bg-color: #a5a5a5;
+  --ft-button-hover-color: var(--ft-color-black);
   --ft-button-default-border-radius: 6px;
-  --ft-button-default-padding-y: 12px;
-  --ft-button-default-padding-x: 24px;
 
-  --ft-primary-default-background-color: #0d00ff;
-  --ft-primary-default-color: #fff;
-  --ft-primary-hover-background-color: #0900b2;
-  --ft-primary-hover-color: #c2f6ff;
+  --ft-tertiary-default-bg-color: var(--ft-color-primary);
+  --ft-tertiary-default-color: #ede3fb;
+  --ft-tertiary-hover-bg-color: #6d6dff;
+  --ft-tertiary-active-bg-color: #181865;
+  --ft-tertiary-shadow-color: rgba(5, 4, 46, 0.567);
+  --ft-tertiary-hover-shadow-color: rgba(74, 45, 255, 0.567);
+  --ft-tertiary-hover-color: var(--ft-color-white);
 
-  --ft-secondary-default-background-color: #c6005c;
-  --ft-secondary-default-color: #fff;
-  --ft-secondary-hover-background-color: #b2004a;
-  --ft-secondary-hover-color: #ffe1fb;
+  --ft-secondary-default-bg-color: var(--ft-color-secondary);
+  --ft-secondary-default-color: #ffe8f4;
+  --ft-secondary-hover-bg-color: rgb(255, 20, 130);
+  --ft-secondary-active-bg-color: rgb(86, 14, 44);
+  --ft-secondary-shadow-color: rgba(80, 7, 37, 0.567);
+  --ft-secondary-hover-shadow-color: rgba(215, 0, 101, 0.567);
+  --ft-secondary-hover-color: var(--ft-color-white);
 
-  --ft-tertiary-default-background-color: #00740c;
-  --ft-tertiary-default-color: #fff;
-  --ft-tertiary-hover-background-color: #005008;
-  --ft-tertiary-hover-color: #d2ffd8;
+  --ft-primary-default-bg-color: var(--ft-color-tertiary);
+  --ft-primary-default-color: #c8f5ff;
+  --ft-primary-hover-bg-color: rgb(0, 147, 184);
+  --ft-primary-active-bg-color: rgb(0, 48, 60);
+  --ft-primary-shadow-color: rgba(1, 30, 38, 0.567);
+  --ft-primary-hover-shadow-color: rgba(0, 164, 205, 0.56);
+  --ft-primary-hover-color: #ffffff;
 
-  --ft-button-small-font-size: 12px;
-  --ft-button-small-padding-y: 12px;
-  --ft-button-small-padding-x: 20px;
-
-  --ft-button-medium-font-size: 16px;
-  --ft-button-medium-padding-y: 16px;
-  --ft-button-medium-padding-x: 24px;
-
+  --ft-button-small-font-size: 13px;
+  --ft-button-default-font-size: 16px;
+  --ft-button-medium-font-size: var(--ft-button-default-font-size);
   --ft-button-large-font-size: 18px;
-  --ft-button-large-padding-y: 16px;
-  --ft-button-large-padding-x: 36px;
 
-  --ft-spinner-default-color: #0d00ff;
+  --ft-button-small-height: 40px;
+  --ft-button-default-height: 52px;
+  --ft-button-medium-height: var(--ft-button-default-height);
+  --ft-button-large-height: 60px;
+
+  --ft-button-small-padding-x: 16px;
+  --ft-button-default-padding-x: 24px;
+  --ft-button-medium-padding-x: var(--ft-button-default-padding-x);
+  --ft-button-large-padding-x: 32px;
+
+  --ft-spinner-default-color: var(--ft-color-link);
+
+  --ft-form-item-border-radius: 4px;
+  --ft-form-item-padding-y: 8px;
+  --ft-form-item-padding-x: 12px;
+  --ft-form-item-border-wight: 1px;
+  --ft-form-item-border-color: var(--ft-color-grey-1);
+  --ft-form-item-border-color-light: var(--ft-color-grey-2);
+  --ft-form-item-border: var(--ft-form-item-border-wight) solid
+    var(--ft-form-item-border-color);
+  --ft-form-item-bg-color: var(--ft-color-grey-3);
+
+  --ft-select-default-font-family: var(--ft-font-family);
+  --ft-select-default-font-size: var(--ft-font-size);
+  --ft-select-default-line-height: 22px;
+  --ft-select-list-item-bg-color-hover: var(--ft-color-item-hover);
+  --ft-select-list-item-bg-color-active: var(--ft-color-item-active);
+  --ft-select-list-item-bg-color-hover-active: var(
+    --ft-color-item-hover-active
+  );
+  --ft-select-list-item-selected-text-color: var(--ft-color-text);
 }

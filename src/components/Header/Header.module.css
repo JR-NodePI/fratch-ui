@@ -1,0 +1,36 @@
+.header {
+  z-index: 2;
+  -webkit-app-region: drag;
+  background-color: var(--ft-header-bg-color);
+  box-shadow: inset 0 0 10px var(--ft-primary-default-bg-color);
+  color: var(--ft-primary-default-color);
+  text-shadow: -1px 1px 3px var(--ft-secondary-default-bg-color),
+    1px 1px 2px var(--ft-primary-hover-bg-color),
+    1px -1px 1px var(--ft-color-light);
+  text-transform: uppercase;
+  font-size: var(--ft-font-size);
+  margin: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.header .icon {
+  position: absolute;
+  width: 24px;
+  margin: 6px;
+}
+.header .icon.left {
+  left: 0;
+}
+.header .icon.right {
+  right: 0;
+}
+.header h1 {
+  text-align: center;
+  line-height: var(--ft-header-height);
+  font-size: var(--ft-font-size);
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+}

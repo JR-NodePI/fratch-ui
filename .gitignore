@@ -21,6 +21,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+coverage.json
 *.lcov
 
 # nyc test coverage
@@ -131,3 +132,5 @@ dist
 
 /dist
 /storybook-static
+*.tgz
+.DS_Store

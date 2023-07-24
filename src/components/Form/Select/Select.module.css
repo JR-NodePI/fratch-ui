@@ -1,0 +1,101 @@
+.select {
+  font-family: var(--ft-select-default-font-family);
+  font-size: var(--ft-select-default-font-size);
+  box-shadow: var(--ft-box-shadow-1);
+  border-radius: var(--ft-form-item-border-radius);
+}
+.select * {
+  font-family: var(--ft-select-default-font-family);
+  font-size: var(--ft-select-default-font-size);
+}
+.select.disabled * {
+  pointer-events: none;
+}
+
+/*** cleaner ***/
+.cleaner {
+  border-radius: 0 var(--ft-form-item-border-radius)
+    var(--ft-form-item-border-radius) 0;
+  border: var(--ft-form-item-border);
+  margin: 0;
+  padding: var(--ft-form-item-padding-y) var(--ft-form-item-padding-x);
+  border-left: none;
+  transition: background-color 0.2s ease-out;
+  background-color: var(--ft-button-default-bg-color);
+}
+.cleaner:hover {
+  background-color: var(--ft-button-hover-bg-color);
+}
+.cleaner:active {
+  background-color: var(--ft-button-active-bg-color);
+}
+.cleaner_icon [fill] {
+  fill: var(--ft-button-default-color);
+}
+.cleaner .cleaner_icon [stroke] {
+  stroke: var(--ft-button-default-color);
+}
+.cleaner .cleaner:hover .cleaner_icon [fill] {
+  fill: var(--ft-button-hover-color);
+}
+.cleaner:hover .cleaner_icon [stroke] {
+  stroke: var(--ft-button-hover-color);
+}
+.cleaner .cleaner_icon [fill='none'] {
+  fill: transparent !important;
+}
+.cleaner .cleaner_icon [stroke='none'] {
+  stroke: transparent !important;
+}
+
+.controls .trigger_icon,
+.cleaner .cleaner_icon {
+  font-size: var(--ft-button-default-font-size);
+  margin: -0.1em;
+  font-size: 1.1em;
+  min-width: 1.1em;
+}
+
+.controls {
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+}
+.controls > *:first-child {
+  width: 100%;
+  position: relative;
+}
+.controls .trigger_icon {
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  right: var(--ft-form-item-padding-x);
+}
+.controls .trigger {
+  box-shadow: none;
+}
+.cleanable .trigger {
+  border-radius: var(--ft-form-item-border-radius) 0 0
+    var(--ft-form-item-border-radius);
+}
+
+.controls .trigger_icon [fill] {
+  fill: var(--ft-form-item-border-color);
+}
+.controls .trigger_icon [stroke] {
+  stroke: var(--ft-form-item-border-color);
+}
+.controls .trigger:hover ~ .trigger_icon [fill] {
+  fill: var(--ft-color-primary);
+}
+.controls .trigger:hover ~ .trigger_icon [stroke] {
+  stroke: var(--ft-color-primary);
+}
+.controls .trigger_icon [fill='none'] {
+  fill: transparent !important;
+}
+.controls .trigger_icon [stroke='none'] {
+  stroke: transparent !important;
+}

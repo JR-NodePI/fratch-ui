@@ -1,0 +1,60 @@
+.toaster_list {
+  top: 8px;
+  left: 0px;
+  position: fixed;
+  padding: 0 32px 0 32px;
+  box-sizing: border-box;
+  z-index: 9999;
+  pointer-events: none;
+  width: 100%;
+}
+
+.toaster.success {
+  --ft-toaster-color: var(--ft-color-success);
+}
+.toaster.error {
+  --ft-toaster-color: var(--ft-color-error);
+}
+.toaster.warning {
+  --ft-toaster-color: var(--ft-color-warning);
+}
+.toaster.info {
+  --ft-toaster-color: var(--ft-color-info);
+}
+
+.toaster {
+  pointer-events: all;
+  position: relative;
+  margin-bottom: 8px;
+  padding: 0 24px;
+  border-radius: var(--ft-button-default-border-radius);
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+  border: solid 1px var(--ft-button-active-bg-color);
+  border-left: solid 6px var(--ft-toaster-color);
+  background-color: var(--ft-color-white);
+  box-shadow: var(--ft-box-shadow-2);
+  transition: height 300ms ease-in-out, opacity 300ms ease-in-out,
+    transform 300ms ease-in-out;
+  transform: translateY(48px);
+  overflow: hidden;
+}
+.toaster.open {
+  z-index: 3;
+  opacity: 1;
+  transform: translateY(0);
+}
+.toaster.close {
+  z-index: 2;
+  height: 0 !important;
+  opacity: 0;
+  transform: translateY(-48px);
+}
+
+.toaster .title {
+  color: var(--ft-toaster-color);
+}
+.toaster .title,
+.toaster .message {
+  margin: 16px 0;
+}

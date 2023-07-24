@@ -4,7 +4,7 @@
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   },
-  "include": ["vite.build.config.ts"]
+  "include": ["vite.build.config.ts", "coverage/**/*.json", ],
 }

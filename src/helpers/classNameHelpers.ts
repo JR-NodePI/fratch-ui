@@ -1,8 +1,11 @@
-export const c = (classNames: string | string[]): string => {
-  let classNameList: string[] = [];
+type CssClassName = string | undefined | (string | undefined)[];
+type CssClassNameParams = CssClassName[];
 
-  if (typeof classNames === "string") {
-    classNameList = classNames.split(" ");
+const getCssClasses = (classNames: CssClassName): string => {
+  let classNameList: (string | undefined)[] = [];
+
+  if (typeof classNames === 'string') {
+    classNameList = classNames.split(' ');
   }
 
   if (Array.isArray(classNames)) {
@@ -10,7 +13,13 @@ export const c = (classNames: string | string[]): string => {
   }
 
   return classNameList
-    .map((className) => className.trim())
+    .map(className => (className ?? '').trim())
     .filter(Boolean)
-    .join(" ");
+    .join(' ');
 };
+
+export const c = (...params: CssClassNameParams): string =>
+  params
+    .filter(Boolean)
+    .map(param => getCssClasses(param))
+    .join(' ');

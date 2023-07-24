@@ -1,30 +1,41 @@
-import { c } from "../../helpers/classNameHelpers";
+import { c } from '../../helpers/classNameHelpers';
+import type { ButtonProps } from './ButtonProps';
+import { ButtonSize, ButtonType } from './ButtonProps';
 
-import styles from "./Button.module.css";
-import { ButtonSizes, ButtonTypes } from "./ButtonProps";
-import type { ButtonProps } from "./ButtonProps";
+import styles from './Button.module.css';
 
-const Button = ({ label, type, size, onClick }: ButtonProps): JSX.Element => {
-  const classNameByType =
-    type === ButtonTypes.SECONDARY
-      ? styles.secondary
-      : type === ButtonTypes.TERTIARY
-      ? styles.tertiary
-      : styles.primary;
-
-  const classNameBySize =
-    size === ButtonSizes.LARGE
-      ? styles.large
-      : size === ButtonSizes.SMALL
-      ? styles.small
-      : styles.medium;
+const Button = ({
+  children,
+  className,
+  disabled,
+  Icon,
+  isRound,
+  label,
+  onClick,
+  size = ButtonSize.MEDIUM,
+  stretch = false,
+  type = ButtonType.DEFAULT,
+}: ButtonProps): JSX.Element => {
+  const handleClick = () => {
+    onClick?.();
+  };
 
   return (
     <button
-      className={c([styles.default, classNameByType, classNameBySize])}
-      onClick={onClick}
+      disabled={disabled}
+      className={c(
+        styles.button,
+        styles[type],
+        styles[size],
+        stretch ? styles.stretch : '',
+        isRound ? styles.only_icon : '',
+        className
+      )}
+      onClick={handleClick}
+      title={isRound ? label : undefined}
     >
-      {label}
+      {Icon != null && <Icon className={styles.icon} />}
+      {!isRound ? children || <span>{label}</span> : <></>}
     </button>
   );
 };

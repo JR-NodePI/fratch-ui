@@ -1,22 +1,27 @@
-export const ButtonTypes = Object.freeze({
-  PRIMARY: "primary",
-  SECONDARY: "secondary",
-  TERTIARY: "tertiary",
-});
+import { type IconPlus as Icon } from '../Icon/Icons';
 
-export const ButtonSizes = Object.freeze({
-  SMALL: "small",
-  MEDIUM: "medium",
-  LARGE: "large",
-});
+export const ButtonType = {
+  DEFAULT: 'default' as const,
+  PRIMARY: 'primary' as const,
+  SECONDARY: 'secondary' as const,
+  TERTIARY: 'tertiary' as const,
+};
 
-export type ButtonType = (typeof ButtonTypes)[keyof typeof ButtonTypes];
-
-export type ButtonSize = (typeof ButtonSizes)[keyof typeof ButtonSizes];
+export const ButtonSize = {
+  SMALL: 'small' as const,
+  MEDIUM: 'medium' as const,
+  LARGE: 'large' as const,
+};
 
 export interface ButtonProps {
-  type?: ButtonType;
-  size?: ButtonSize;
-  label: string;
+  children?: string;
+  className?: string;
+  disabled?: boolean;
+  Icon?: typeof Icon;
+  isRound?: boolean;
+  label?: string;
   onClick?: () => void;
+  size?: (typeof ButtonSize)[keyof typeof ButtonSize];
+  stretch?: boolean;
+  type?: (typeof ButtonType)[keyof typeof ButtonType];
 }

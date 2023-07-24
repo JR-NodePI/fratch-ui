@@ -1,0 +1,16 @@
+.miniTitle {
+  font-size: 10px;
+  display: block;
+  padding-bottom: 4px;
+}
+
+.wrapper {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 16 px;
+  background-color: #fff5ce;
+}
+
+.wrapper > * {
+  background-color: #c8ebfe;
+}

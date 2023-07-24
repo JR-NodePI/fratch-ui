@@ -3,6 +3,36 @@
 body {
   margin: 0;
   padding: 0;
+  color: var(--ft-color-text);
   font-family: var(--ft-font-family);
-  font-size: 14px;
+  font-size: var(--ft-font-size);
+  font-weight: var(--ft-font-weight-normal);
+}
+
+h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+h4 {
+  font-size: 1.2em;
+}
+h5 {
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+b,
+strong {
+  font-weight: var(--ft-font-weight-bold);
+}
+a {
+  color: var(--ft-color-link);
 }
