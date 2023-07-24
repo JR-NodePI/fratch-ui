@@ -1,0 +1,182 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button.tsx > should render Icon 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _medium_2a1efe"
+  >
+    <div
+      class="_icon_bf9551 _primary_bf9551 _icon_2a1efe"
+    >
+      <svg
+        fill="none"
+        viewBox="-2 -4 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 5.917 5.724 10.5 15 1.5"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.2"
+        />
+      </svg>
+    </div>
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render children over label 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _medium_2a1efe"
+  >
+    Test children
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render className 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _medium_2a1efe mock_test_class_name"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render disabled 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _medium_2a1efe"
+    disabled=""
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render isRound 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _medium_2a1efe _only_icon_2a1efe"
+    title="Test button"
+  />
+</div>
+`;
+
+exports[`Button.tsx > should render properly 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _medium_2a1efe"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render properly for SIZE > large 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _large_2a1efe"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render properly for SIZE > medium 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _medium_2a1efe"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render properly for SIZE > small 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _small_2a1efe"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render properly for TYPE > default 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _medium_2a1efe"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render properly for TYPE > primary 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _primary_2a1efe _medium_2a1efe"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render properly for TYPE > secondary 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _secondary_2a1efe _medium_2a1efe"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render properly for TYPE > tertiary 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _tertiary_2a1efe _medium_2a1efe"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button.tsx > should render stretch 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _medium_2a1efe _stretch_2a1efe"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;

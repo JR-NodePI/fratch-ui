@@ -16,6 +16,10 @@ const Button = ({
   stretch = false,
   type = ButtonType.DEFAULT,
 }: ButtonProps): JSX.Element => {
+  const handleClick = () => {
+    onClick?.();
+  };
+
   return (
     <button
       disabled={disabled}
@@ -27,10 +31,10 @@ const Button = ({
         isRound ? styles.only_icon : '',
         className
       )}
-      onClick={onClick}
-      title={isRound ? label : ''}
+      onClick={handleClick}
+      title={isRound ? label : undefined}
     >
-      {Icon != null && <Icon type="error" className={styles.icon} />}
+      {Icon != null && <Icon className={styles.icon} />}
       {!isRound ? children || <span>{label}</span> : <></>}
     </button>
   );

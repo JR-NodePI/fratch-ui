@@ -1,4 +1,4 @@
-import { IconPlus as Icon } from '../Icon/Icons';
+import { type IconPlus as Icon } from '../Icon/Icons';
 
 export const ButtonType = {
   DEFAULT: 'default' as const,
@@ -14,7 +14,7 @@ export const ButtonSize = {
 };
 
 export interface ButtonProps {
-  children?: React.ReactNode;
+  children?: string;
   className?: string;
   disabled?: boolean;
   Icon?: typeof Icon;
