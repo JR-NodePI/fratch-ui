@@ -6,7 +6,13 @@ const meta = {
   title: 'Example/Form/InputText',
   component: InputText,
   tags: ['autodocs'],
-  argTypes: { onChange: { action: 'onChange' } },
+  argTypes: {
+    onChange: { control: false },
+    onBlur: { control: false },
+    onClick: { control: false },
+    onFocus: { control: false },
+    onKeyDownCapture: { control: false },
+  },
 } satisfies Meta<typeof InputText>;
 
 export default meta;

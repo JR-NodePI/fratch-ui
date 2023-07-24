@@ -7,7 +7,10 @@ const meta = {
   title: 'Example/Form/LeftLabeledField',
   component: LeftLabeledField,
   tags: ['autodocs'],
-  argTypes: {},
+  argTypes: {
+    field: { control: false },
+    label: { control: false },
+  },
 } satisfies Meta<typeof LeftLabeledField>;
 
 export default meta;

@@ -1,38 +1,15 @@
-import { createPortal } from 'react-dom';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button, InputCheck } from '..';
-import SettingsMenu from './SettingsMenu';
-import { SettingsMenuPosition } from './SettingsMenuProps';
-
-const inlineStyles: React.CSSProperties = {
-  position: 'fixed',
-  zIndex: 999999,
-  top: 0,
-  width: '100%',
-  height: '64px',
-  backgroundColor: '#e6e6e6',
-};
-
-function StoryRenderer(args: StoryObj['args']) {
-  return createPortal(
-    <div style={inlineStyles}>
-      <SettingsMenu {...args} />
-    </div>,
-    document.body
-  );
-}
+import { Button, InputCheck } from '../..';
+import SettingsMenu from '../SettingsMenu';
+import StoryRenderer from './StoryRenderer';
 
 const meta = {
   title: 'Example/SettingsMenu',
   component: StoryRenderer,
   tags: ['autodocs'],
   argTypes: {
-    position: {
-      options: Object.values(SettingsMenuPosition),
-      control: { type: 'radio' },
-    },
+    items: { control: false },
   },
 } satisfies Meta<typeof SettingsMenu>;
 

@@ -7,16 +7,31 @@
   --ft-font-weight-bold: bold;
   --ft-font-size: 14px;
 
+  --ft-color-text: #371c58;
   --ft-color-white: #fff;
-  --ft-color-primary: #371c58;
-  --ft-color-link: #5858f0;
+  --ft-color-grey-1: #ab9eb3;
+  --ft-color-grey-2: #d1ccd5;
+  --ft-color-grey-3: #f6ffff;
   --ft-color-black: #0d000d;
   --ft-color-light: #00ffb7;
   --ft-color-success: #4caf50;
   --ft-color-error: #f44336;
   --ft-color-warning: #ff9800;
   --ft-color-info: #2196f3;
+  --ft-color-primary: #5858f0;
+  --ft-color-secondary: #d7009a;
+  --ft-color-tertiary: #007390;
+  --ft-color-error: #d60040;
+  --ft-color-info: #2f18c1;
+  --ft-color-item-hover: #e6d9fe;
+  --ft-color-item-active: #b5fdfb;
+  --ft-color-item-hover-active: #bbebff;
 
+  --ft-box-shadow-1: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  --ft-box-shadow-2: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  --ft-box-shadow-3: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+
+  --ft-color-link: var(--ft-color-primary);
   --ft-header-bg-color: var(--ft-color-link);
 
   --ft-max-z-index: 2147483647;
@@ -28,13 +43,13 @@
   --ft-button-default-letter-spacing: 0.5px;
 
   --ft-button-default-bg-color: #eae9e9;
-  --ft-button-default-color: var(--ft-color-primary);
+  --ft-button-default-color: var(--ft-color-text);
   --ft-button-hover-bg-color: #f6f6f6;
   --ft-button-active-bg-color: #a5a5a5;
   --ft-button-hover-color: var(--ft-color-black);
   --ft-button-default-border-radius: 6px;
 
-  --ft-tertiary-default-bg-color: #5858f0;
+  --ft-tertiary-default-bg-color: var(--ft-color-primary);
   --ft-tertiary-default-color: #ede3fb;
   --ft-tertiary-hover-bg-color: #6d6dff;
   --ft-tertiary-active-bg-color: #181865;
@@ -42,7 +57,7 @@
   --ft-tertiary-hover-shadow-color: rgba(74, 45, 255, 0.567);
   --ft-tertiary-hover-color: var(--ft-color-white);
 
-  --ft-secondary-default-bg-color: rgb(215, 0, 101);
+  --ft-secondary-default-bg-color: var(--ft-color-secondary);
   --ft-secondary-default-color: #ffe8f4;
   --ft-secondary-hover-bg-color: rgb(255, 20, 130);
   --ft-secondary-active-bg-color: rgb(86, 14, 44);
@@ -50,7 +65,7 @@
   --ft-secondary-hover-shadow-color: rgba(215, 0, 101, 0.567);
   --ft-secondary-hover-color: var(--ft-color-white);
 
-  --ft-primary-default-bg-color: rgb(0, 115, 144);
+  --ft-primary-default-bg-color: var(--ft-color-tertiary);
   --ft-primary-default-color: #c8f5ff;
   --ft-primary-hover-bg-color: rgb(0, 147, 184);
   --ft-primary-active-bg-color: rgb(0, 48, 60);
@@ -79,29 +94,19 @@
   --ft-form-item-padding-y: 8px;
   --ft-form-item-padding-x: 12px;
   --ft-form-item-border-wight: 1px;
-  --ft-form-item-border-color: rgb(171, 158, 179);
-  --ft-form-item-border-color-light: rgb(209, 204, 213);
+  --ft-form-item-border-color: var(--ft-color-grey-1);
+  --ft-form-item-border-color-light: var(--ft-color-grey-2);
   --ft-form-item-border: var(--ft-form-item-border-wight) solid
     var(--ft-form-item-border-color);
-  --ft-form-item-bg-color: rgb(246, 255, 255);
+  --ft-form-item-bg-color: var(--ft-color-grey-3);
 
   --ft-select-default-font-family: var(--ft-font-family);
   --ft-select-default-font-size: var(--ft-font-size);
   --ft-select-default-line-height: 22px;
-  --ft-select-list-item-bg-color-hover: #e6d9fe;
-  --ft-select-list-item-bg-color-active: #b5fdfb;
-  --ft-select-list-item-bg-color-hover-active: #bbebff;
-  --ft-select-list-item-selected-text-color: var(--ft-color-primary);
-
-  --ft-primary-color: var(--ft-color-link);
-  --ft-secondary-color: #d7009a;
-  --ft-tertiary-color: #007390;
-  --ft-error-color: #d60040;
-  --ft-info-color: #2f18c1;
-  --ft-success-color: #65e100;
-  --ft-warning-color: #ffb300;
-
-  --ft-box-shadow-1: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  --ft-box-shadow-2: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-  --ft-box-shadow-3: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  --ft-select-list-item-bg-color-hover: var(--ft-color-item-hover);
+  --ft-select-list-item-bg-color-active: var(--ft-color-item-active);
+  --ft-select-list-item-bg-color-hover-active: var(
+    --ft-color-item-hover-active
+  );
+  --ft-select-list-item-selected-text-color: var(--ft-color-text);
 }

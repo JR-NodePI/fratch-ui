@@ -15,6 +15,7 @@
   transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
   white-space: nowrap;
   height: var(--ft-button-default-height);
+  text-align: center;
 }
 .button.stretch {
   width: 100%;
@@ -159,9 +160,9 @@
 
 /***** icon *****/
 .button .icon {
-  margin: -0.1em;
-  font-size: 1.1em;
-  min-width: 1.1em;
+  margin: -0.3em;
+  font-size: 1.3em;
+  width: 1.3em;
 }
 .button .icon [fill] {
   fill: var(--icon-color);

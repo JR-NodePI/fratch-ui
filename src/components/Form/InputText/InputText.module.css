@@ -9,7 +9,7 @@
   box-sizing: border-box;
   border-radius: var(--ft-form-item-border-radius);
   border: var(--ft-form-item-border);
-  color: var(--ft-color-primary);
+  color: var(--ft-color-text);
   text-overflow: ellipsis;
   background-color: var(--ft-color-white);
 }

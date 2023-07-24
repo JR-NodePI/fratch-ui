@@ -8,7 +8,12 @@ const meta = {
   title: 'Example/Form/Select',
   component: Select,
   tags: ['autodocs'],
-  argTypes: { onChange: { action: 'onChange' } },
+  argTypes: {
+    onChange: { control: false },
+    options: { control: false },
+    value: { control: false },
+    noResultsElement: { control: false },
+  },
 } satisfies Meta<typeof Select<TesOptionValue>>;
 
 export default meta;

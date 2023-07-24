@@ -49,14 +49,14 @@ const SelectListTest = ({
 };
 
 const meta = {
-  title: 'Example/Form/SelectList',
+  title: 'Example/Form/Select/List example',
   component: SelectListTest,
-  tags: [],
+  tags: ['autodocs'],
 } satisfies Meta<typeof SelectListTest>;
 
 export default meta;
 type Story = StoryObj<typeof SelectListTest>;
 
-export const SelectList: Story = {
+export const Docs: Story = {
   args: { numberSelects: 5 },
 };
