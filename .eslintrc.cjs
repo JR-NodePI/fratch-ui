@@ -16,6 +16,7 @@ module.exports = {
       {
         groups: [
           ['^\\u0000'],
+          ['\\.json$'],
           ['^react(.*)'],
           ['^@?\\w'],
           ['^'],
