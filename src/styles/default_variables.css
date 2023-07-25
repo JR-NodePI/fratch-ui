@@ -109,4 +109,7 @@
     --ft-color-item-hover-active
   );
   --ft-select-list-item-selected-text-color: var(--ft-color-text);
+
+  --toaster-item-icon-size: 28px;
+  --button-icon-size: 1.1em;
 }

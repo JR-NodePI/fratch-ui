@@ -21,12 +21,6 @@
 .button.stretch {
   width: 100%;
 }
-.button.only_icon {
-  border-radius: 100%;
-  padding: 0;
-  width: var(--ft-button-default-height);
-  justify-content: center;
-}
 .button * {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -161,9 +155,12 @@
 
 /***** icon *****/
 .button .icon {
-  margin: -0.1em;
-  font-size: 1.1em;
-  width: 1.1em;
+  font-size: var(--button-icon-size);
+  min-width: var(--button-icon-size);
+  max-width: var(--button-icon-size);
+  min-height: var(--button-icon-size);
+  max-height: var(--button-icon-size);
+  margin: calc(1em - var(--button-icon-size));
 }
 .button .icon [fill] {
   fill: var(--icon-color);
@@ -176,4 +173,11 @@
 }
 .button .icon [stroke='none'] {
   stroke: transparent;
+}
+
+.button.only_icon {
+  border-radius: 100%;
+  padding: 0;
+  width: var(--ft-button-default-height);
+  justify-content: center;
 }

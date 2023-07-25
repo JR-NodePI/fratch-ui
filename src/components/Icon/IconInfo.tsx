@@ -20,7 +20,7 @@ const IconInfo = ({
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
-            d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            d="M8 9h2v5m-2 0h4M9.408 5.5h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
           />
         </svg>
       }
