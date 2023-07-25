@@ -3,14 +3,14 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
+
 jobs:
   deploy-coverage:
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      pull-requests: write
-
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -27,12 +27,8 @@ jobs:
           folder: docs/coverage
 
   deploy-storybook:
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      pull-requests: write
-
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
