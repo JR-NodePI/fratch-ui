@@ -9,6 +9,6 @@ React UI kit where each component can be used as a stand-alone module
 
 ---
 
-[![NPM - Publish](https://github.com/JorgeRojo/fratch-ui/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/npm-publish.yml)
-[![Deploy static content to Pages](https://github.com/JorgeRojo/fratch-ui/actions/workflows/artifact-pages.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/artifact-pages.yml)
+[![NPM Publish](https://github.com/JorgeRojo/fratch-ui/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/npm-publish.yml)
+[![Artifact pages](https://github.com/JorgeRojo/fratch-ui/actions/workflows/artifact-pages.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/artifact-pages.yml)
 [![Coverage](https://github.com/JorgeRojo/fratch-ui/actions/workflows/coverage.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/coverage.yml)
