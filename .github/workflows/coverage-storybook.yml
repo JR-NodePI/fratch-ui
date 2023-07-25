@@ -4,8 +4,7 @@ on:
     branches:
       - main
 jobs:
-  'Coverage':
-    concurrency: ci-${{ github.ref }}
+  'Deploy coverage':
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,15 +13,15 @@ jobs:
           node-version: 16
       - run: yarn install --pure-lock
       - run: yarn test:cover
+      - run: mv ./coverage ./docs/coverage
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gb-page-coverage
+          branch: gb-pages
           folder: coverage
 
-  'Storybook':
-    concurrency: ci-${{ github.ref }}
+  'Deploy storybook':
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -31,9 +30,10 @@ jobs:
           node-version: 16
       - run: yarn install --pure-lock
       - run: yarn storybook:build
+      - run: mv ./.storybook ./docs/.storybook
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gb-page-storybook
+          branch: gb-pages
           folder: .storybook
