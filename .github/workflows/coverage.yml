@@ -28,6 +28,5 @@ jobs:
         uses: davelosert/vitest-coverage-report-action@v2
       - name: 'Set patch version'
         run: yarn version --patch
-      - name: 'Push'
-        - run: git add .
-        - run: git push
+      - run: git add .
+      - run: git push
