@@ -63,7 +63,8 @@ const combineCssFiles = () => {
     ignore: cssMainFilesPattern,
   });
   const cssImports = [...cssMainFiles, ...cssFiles].map(
-    file => `@import url(./${path.relative(outDir, file)});`
+    file =>
+      `@import url(./${path.relative(outDir, file).replace(/\\/gi, '/')});`
   );
   fs.writeFileSync(`${outDir}/styles.css`, cssImports.join('\n'), 'utf-8');
 };
