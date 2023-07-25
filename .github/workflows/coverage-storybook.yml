@@ -18,7 +18,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: coverage
+          branch: gb-page-coverage
           folder: coverage
 
   'Storybook':
@@ -35,5 +35,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: storybook
+          branch: gb-page-storybook
           folder: .storybook
