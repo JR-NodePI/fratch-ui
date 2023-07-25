@@ -1,7 +1,21 @@
 {
   "name": "fratch-ui",
-  "version": "1.1.34",
-  "repository": "git@github.com:JorgeRojo/fratch-ui.git",
+  "version": "1.1.35",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JorgeRojo/fratch-ui.git"
+  },
+  "description": "React UI components library",
+  "keywords": [
+    "ui-components",
+    "css-modules",
+    "library",
+    "react",
+    "storybook",
+    "typescript",
+    "vite",
+    "vitest"
+  ],
   "author": "JorgeRojo <jorge.rojodiseno@gmail.com>",
   "license": "MIT",
   "private": false,
