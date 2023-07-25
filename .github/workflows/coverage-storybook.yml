@@ -36,10 +36,10 @@ jobs:
           node-version: 16
       - run: yarn install --pure-lock
       - run: yarn storybook:build
-      - run: mv ./.storybook ./docs/.storybook
+      - run: mv ./storybook-static ./docs/storybook-static
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gb-pages
-          folder: docs/.storybook
+          folder: docs/storybook-static
