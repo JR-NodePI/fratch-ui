@@ -1,5 +1,3 @@
-import coverage from '../../../coverage.json';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
 import * as Icons from '../Icon/Icons';
@@ -19,18 +17,12 @@ const meta = {
       control: { type: 'select' },
     },
   },
-  parameters: {
-    vitest: {
-      testFile: 'Button.test.tsx',
-      testResults: coverage,
-    },
-  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Docs: Story = {
   args: {
     label: 'Default',
     type: ButtonType.DEFAULT,

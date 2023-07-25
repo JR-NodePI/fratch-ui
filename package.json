@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.1.10",
+  "version": "1.1.25",
   "repository": "git@github.com:JorgeRojo/fratch-ui.git",
   "author": "JorgeRojo <jorge.rojodiseno@gmail.com>",
   "license": "MIT",
@@ -32,6 +32,8 @@
     "@vitest/coverage-v8": "^0.33.0",
     "concurrently": "^8.2.0",
     "cross-env": "^7.0.3",
+    "cross-var": "^1.1.0",
+    "dotenv-cli": "^7.2.1",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
@@ -48,14 +50,17 @@
     "vitest": "^0.33.0"
   },
   "scripts": {
-    "format": "prettier --write .",
-    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "format": "prettier --write ./*.{ts,json} ./.storybook/**/*.ts ./src/**/*.{ts,tsx}",
+    "lint": "eslint ./*.{ts,json} ./.storybook/**/*.ts ./src/**/*.{ts,tsx} --fix",
     "start": "storybook dev -p 6006",
-    "build": "rm -rf ./dist && tsc && vite build --config vite.build.config.ts",
+    "build": "rm -rf ./dist && tsc && cross-env NODE_OPTIONS='--max_old_space_size=8192' vite build --config vite.build.config.ts",
     "storybook:build": "storybook build",
-    "storybook:preview": "yarn storybook:build && vite preview --outDir ./storybook-static/ --open / ",
-    "dist": "yarn build && cp ./{package.json,LICENSE,README.md} ./dist/ && yarn pack --cwd ./dist/ && yarn publish ./dist/*.tgz",
+    "storybook:preview": "yarn storybook:build && vite preview --outDir ./storybook-static/ --open /",
+    "set-version": "yarn version",
+    "dist": "yarn set-version && yarn build && cp ./{package.json,LICENSE,README.md} ./dist/ && yarn pack --cwd ./dist/ && yarn publish-package",
     "test": "vitest --config ./vitest.config.ts",
-    "test:cover": "vitest --config ./vitest.config.ts run --coverage"
+    "test:cover": "vitest --config ./vitest.config.ts run --coverage",
+    "publish-login": "dotenv -- cross-var echo \"//registry.npmjs.org/:_authToken=%NPM_AUTH_TOKEN%\" > ./.npmrc",
+    "publish-package": "yarn publish-login && yarn publish ./dist/ --non-interactive"
   }
 }

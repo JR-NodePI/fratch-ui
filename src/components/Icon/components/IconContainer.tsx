@@ -1,9 +1,9 @@
 import { c } from '../../../helpers/classNameHelpers';
 import { IconProps, IconType } from './IconProps';
 
-import styles from './Icon.module.css';
+import styles from './IconContainer.module.css';
 
-const ContainerIcon = ({
+const IconContainer = ({
   svg,
   className,
   type = IconType.PRIMARY,
@@ -11,4 +11,4 @@ const ContainerIcon = ({
   return <div className={c(styles.icon, styles[type], className)}>{svg}</div>;
 };
 
-export default ContainerIcon;
+export default IconContainer;

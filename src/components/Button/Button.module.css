@@ -131,33 +131,31 @@
     inset 0 1px 0 0 rgba(124, 224, 255, 0.6);
 }
 /***** size *****/
-.small {
+.button.small {
   gap: 12px;
   font-size: var(--ft-button-small-font-size);
   padding: 0 var(--ft-button-small-padding-x);
   height: var(--ft-button-small-height);
 }
-.small.only_icon {
+.button.small.only_icon {
   width: var(--ft-button-small-height);
 }
-
-.medium {
+.button.medium {
   gap: 16px;
   font-size: var(--ft-button-medium-font-size);
   padding: 0 var(--ft-button-medium-padding-x);
   height: var(--ft-button-medium-height);
 }
-.medium.only_icon {
+.button.medium.only_icon {
   width: var(--ft-button-medium-height);
 }
-
-.large {
+.button.large {
   gap: 20px;
   font-size: var(--ft-button-large-font-size);
   padding: 0 var(--ft-button-large-padding-x);
   height: var(--ft-button-large-height);
 }
-.large.only_icon {
+.button.large.only_icon {
   width: var(--ft-button-large-height);
 }
 

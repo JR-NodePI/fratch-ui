@@ -1,5 +1,5 @@
-import path from 'node:path';
 import type { StorybookConfig } from '@storybook/react-vite';
+
 const config: StorybookConfig = {
   // viteFinal(config) {
   //   return {
@@ -18,7 +18,6 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    'storybook_vitest_addon',
   ],
   framework: {
     name: '@storybook/react-vite',
