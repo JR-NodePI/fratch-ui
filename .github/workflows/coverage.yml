@@ -1,11 +1,11 @@
 name: 'Coverage'
-on: 
+on:
   pull_request:
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     permissions:
       # Required to checkout the code
       contents: read
@@ -13,15 +13,19 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: actions/checkout@v2
-    - name: 'Install Node'
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16.x'
-    - name: 'Install Deps'
-      run: yarn install --pure-lock
-    - name: 'Test'
-      run: yarn test:cover
-    - name: 'Report Coverage'
-      if: always() # Also generate the report if tests are failing
-      uses:  davelosert/vitest-coverage-report-action@v2
+      - uses: actions/checkout@v2
+      - name: 'Install Node'
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+      - name: 'Install Deps'
+        run: yarn install --pure-lock
+      - name: 'Test'
+        run: yarn test:cover
+      - name: 'Report Coverage'
+        if: always()
+        uses: davelosert/vitest-coverage-report-action@v2
+        with:
+          name: 'Frontend'
+          json-summary-path: './coverage/coverage-summary-frontend.json'
+          json-final-path: './coverage/coverage-final-frontend.json'
