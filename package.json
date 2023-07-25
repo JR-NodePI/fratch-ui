@@ -57,7 +57,7 @@
     "storybook:build": "storybook build",
     "storybook:preview": "yarn storybook:build && vite preview --outDir ./storybook-static/ --open /",
     "set-version": "yarn version",
-    "copy-package-files": "ls ./ && cp ./package.json ./dist/ && cp ./LICENSE ./dist/ && cp ./README.md ./dist/",
+    "copy-package-files": "ls ./ && cp ./{package.json,LICENSE,README.md} ./dist/",
     "dist": "yarn set-version && yarn copy-package-files && yarn pack --cwd ./dist/ && yarn publish-package",
     "test": "vitest --config ./vitest.config.ts",
     "test:cover": "vitest --config ./vitest.config.ts run --coverage",
