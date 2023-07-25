@@ -19,7 +19,7 @@ function StoryRenderer({ visible, type, ...props }: ModalProps): JSX.Element {
         type={buttonAcceptType}
         size="small"
       >
-        Open modal, {type}
+        Open modal
       </Button>
       <Modal
         {...props}
