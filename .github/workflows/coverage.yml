@@ -29,4 +29,5 @@ jobs:
       - name: 'Set patch version'
         run: yarn version --patch
       - name: 'Push'
-        run: git push
+        - run: git add .
+        - run: git push
