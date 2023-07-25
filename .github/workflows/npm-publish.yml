@@ -15,8 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16      
-      - name: 'Install Deps'
-        run: yarn install --pure-lock
+      - run: yarn install --pure-lock
       - run: yarn test
       - run: yarn build
 
