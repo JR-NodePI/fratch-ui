@@ -8,26 +8,17 @@ on:
     types: [created]
 
 jobs:
-  build:
+  test-build-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 16      
+          registry-url: https://registry.npmjs.org/
       - run: yarn install --pure-lock
       - run: yarn test
-      - run: yarn build
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
+      - run: yarn build 
       - run: yarn dist
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

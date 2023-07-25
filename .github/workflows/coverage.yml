@@ -24,3 +24,5 @@ jobs:
       - name: 'Report Coverage'
         if: always()
         uses: davelosert/vitest-coverage-report-action@v2
+      - name: 'Set patch version'
+        run: yarn version --patch
