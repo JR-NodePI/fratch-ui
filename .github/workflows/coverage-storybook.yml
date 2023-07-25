@@ -19,7 +19,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gb-pages
-          folder: coverage
+          folder: docs/coverage
 
   deploy-storybook:
     runs-on: ubuntu-latest
@@ -36,4 +36,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gb-pages
-          folder: .storybook
+          folder: docs/.storybook
