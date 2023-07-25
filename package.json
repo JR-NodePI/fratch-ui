@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
   },
-  "description": "React UI components library",
+  "description": "React UI kit where each component can be used as a stand-alone module",
   "keywords": [
     "ui-components",
     "css-modules",
