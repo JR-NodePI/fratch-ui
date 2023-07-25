@@ -6,6 +6,11 @@ on:
 jobs:
   deploy-coverage:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -23,6 +28,11 @@ jobs:
 
   deploy-storybook:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
