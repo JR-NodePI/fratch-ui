@@ -4,8 +4,7 @@ on:
     branches:
       - main
 jobs:
-  'Coverage':
-    concurrency: ci-${{ github.ref }}
+  'Deploy coverage':
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,8 +21,7 @@ jobs:
           branch: gb-pages
           folder: coverage
 
-  'Storybook':
-    concurrency: ci-${{ github.ref }}
+  'Deploy storybook':
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
