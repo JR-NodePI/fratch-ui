@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "repository": "git@github.com:JorgeRojo/fratch-ui.git",
   "author": "JorgeRojo <jorge.rojodiseno@gmail.com>",
   "license": "MIT",
@@ -51,7 +51,7 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "start": "storybook dev -p 6006",
-    "build": "rm -rf ./dist && tsc && vite build --config vite.build.config.ts",
+    "build": "rm -rf ./dist && tsc && cross-env NODE_OPTIONS=\"--max_old_space_size=8192 --openssl-legacy-provider\" vite build --config vite.build.config.ts  ",
     "storybook:build": "storybook build",
     "storybook:preview": "yarn storybook:build && vite preview --outDir ./storybook-static/ --open / ",
     "dist": "yarn build && cp ./{package.json,LICENSE,README.md} ./dist/ && yarn pack --cwd ./dist/ && yarn publish ./dist/*.tgz",
