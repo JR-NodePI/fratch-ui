@@ -3,13 +3,11 @@ on:
   pull_request:
 
 jobs:
-  test-cover:
+  'Install - Test - Coverage':
     runs-on: ubuntu-latest
 
     permissions:
-      # Required to checkout the code
       contents: read
-      # Required to put a comment into the pull-request
       pull-requests: write
 
     steps:

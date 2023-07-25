@@ -3,12 +3,13 @@
 
 name: Node.js Package
 
+name: 'NPM - Publish'
 on:
   release:
     types: [created]
 
 jobs:
-  build:
+  'Install - Test - Build - Dist':
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
