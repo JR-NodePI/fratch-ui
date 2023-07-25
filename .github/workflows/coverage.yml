@@ -25,4 +25,6 @@ jobs:
         if: always()
         uses: davelosert/vitest-coverage-report-action@v2
       - name: 'Set patch version'
-        run: yarn version --patch
+        - run: git config --global user.email "jorge.rojodiseno@gmail.com"
+        - run: git config --global user.name "JorgeRojo"
+        - run: yarn version --patch
