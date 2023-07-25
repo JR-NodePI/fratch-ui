@@ -53,7 +53,7 @@
     "format": "prettier --write ./*.{ts,json} ./.storybook/**/*.ts ./src/**/*.{ts,tsx}",
     "lint": "eslint ./*.{ts,json} ./.storybook/**/*.ts ./src/**/*.{ts,tsx} --fix",
     "start": "storybook dev -p 6006",
-    "build": "ls ./ && rm -rf ./dist && tsc && cross-env NODE_OPTIONS='--max_old_space_size=8192' vite build --config vite.build.config.ts && cp ./{package.json,LICENSE,README.md} ./dist/ ",
+    "build": "rm -rf ./dist && tsc && cross-env NODE_OPTIONS='--max_old_space_size=8192' vite build --config vite.build.config.ts && cp ./{package.json,LICENSE,README.md} ./dist/ && ls ./dist/ ",
     "storybook:build": "storybook build",
     "storybook:preview": "yarn storybook:build && vite preview --outDir ./storybook-static/ --open /",
     "set-version": "yarn version",
