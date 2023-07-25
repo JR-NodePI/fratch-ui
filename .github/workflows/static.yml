@@ -52,7 +52,7 @@ jobs:
   deploy:
     needs:
       - build-coverage
-      -
+      - build-storybook
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
