@@ -4,6 +4,7 @@ on:
 
 jobs:
   'Install - Test - Coverage':
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
 
     permissions:
