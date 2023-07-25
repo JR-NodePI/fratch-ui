@@ -9,7 +9,7 @@ on:
     types: [created]
 
 jobs:
-  'Install - Test - Build - Dist':
+  install-test-build-dist:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
