@@ -2,10 +2,29 @@ import { useEffect, useState } from 'react';
 
 import { c } from '../../helpers/classNameHelpers';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
+import IconError from '../Icon/IconError';
+import IconInfo from '../Icon/IconInfo';
+import IconSuccess from '../Icon/IconSuccess';
+import IconWarning from '../Icon/IconWarning';
 import { nlToNodes } from './ToasterFormatHelper';
-import { type Toaster } from './ToasterListContext';
+import { type Toaster, ToasterType } from './ToasterListContext';
 
 import styles from './Toaster.module.css';
+
+const renderIconByType = (type: string): JSX.Element => {
+  switch (type) {
+    case ToasterType.SUCCESS:
+      return <IconSuccess type={type} className={c(styles.icon)} />;
+    case ToasterType.ERROR:
+      return <IconError type={type} className={c(styles.icon)} />;
+    case ToasterType.WARNING:
+      return <IconWarning type={type} className={c(styles.icon)} />;
+    case ToasterType.INFO:
+      return <IconInfo type={type} className={c(styles.icon)} />;
+    default:
+      return <></>;
+  }
+};
 
 export default function ToasterItem({
   onClose,
@@ -73,8 +92,14 @@ export default function ToasterItem({
     <div
       key={id}
       ref={handleRef}
-      className={c(styles.toaster, styles[type], className, cssClassStatus)}
+      className={c(
+        styles.toaster_item,
+        styles[type],
+        className,
+        cssClassStatus
+      )}
     >
+      {renderIconByType(type)}
       {title && <h5 className={c(styles.title)}>{title}</h5>}
       <p className={c(styles.message)}>{finalMessage}</p>
       {toMuchDuration && <ButtonCloser onClick={handleClose} />}

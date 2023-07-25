@@ -1,10 +1,17 @@
 import React from 'react';
 
+export const ToasterType = {
+  SUCCESS: 'success',
+  ERROR: 'error',
+  WARNING: 'warning',
+  INFO: 'info',
+} as const;
+
 export interface Toaster {
   id?: string;
   title?: string;
   message: string;
-  type: 'success' | 'error' | 'warning' | 'info';
+  type: (typeof ToasterType)[keyof typeof ToasterType];
   duration?: number;
   nlToBr?: boolean;
 }

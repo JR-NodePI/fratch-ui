@@ -19,24 +19,12 @@
 .primary [stroke] {
   stroke: var(--ft-color-primary);
 }
-.primary [fill='none'] {
-  fill: transparent;
-}
-.primary [stroke='none'] {
-  stroke: transparent;
-}
 
 .secondary [fill] {
   fill: var(--ft-color-secondary);
 }
 .secondary [stroke] {
   stroke: var(--ft-color-secondary);
-}
-.secondary [fill='none'] {
-  fill: transparent;
-}
-.secondary [stroke='none'] {
-  stroke: transparent;
 }
 
 .tertiary [fill] {
@@ -45,24 +33,12 @@
 .tertiary [stroke] {
   stroke: var(--ft-color-tertiary);
 }
-.tertiary [fill='none'] {
-  fill: transparent;
-}
-.tertiary [stroke='none'] {
-  stroke: transparent;
-}
 
 .error [fill] {
   fill: var(--ft-color-error);
 }
 .error [stroke] {
   stroke: var(--ft-color-error);
-}
-.error [fill='none'] {
-  fill: transparent;
-}
-.error [stroke='none'] {
-  stroke: transparent;
 }
 
 .info [fill] {
@@ -71,24 +47,12 @@
 .info [stroke] {
   stroke: var(--ft-color-info);
 }
-.info [fill='none'] {
-  fill: transparent;
-}
-.info [stroke='none'] {
-  stroke: transparent;
-}
 
 .success [fill] {
   fill: var(--ft-color-success);
 }
 .success [stroke] {
   stroke: var(--ft-color-success);
-}
-.success [fill='none'] {
-  fill: transparent;
-}
-.success [stroke='none'] {
-  stroke: transparent;
 }
 
 .warning [fill] {
@@ -97,9 +61,10 @@
 .warning [stroke] {
   stroke: var(--ft-color-warning);
 }
-.warning [fill='none'] {
-  fill: transparent;
+
+.icon [fill='none'] {
+  fill: transparent !important;
 }
-.warning [stroke='none'] {
-  stroke: transparent;
+.icon [stroke='none'] {
+  stroke: transparent !important;
 }

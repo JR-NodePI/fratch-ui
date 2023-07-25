@@ -9,7 +9,10 @@ const StoryRendererItem = (props: Toaster): JSX.Element => {
   const { addToaster } = useContext(ToasterListContext);
 
   const onClick = () => {
-    addToaster?.({ ...props, title: `${props.title} - ${counter}` });
+    addToaster?.({
+      ...props,
+      title: props.title ? `${props.title} - ${counter}` : '',
+    });
     setCounter(counter + 1);
   };
 
