@@ -17,6 +17,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
+      - run: git config --global user.email "jorge.rojodiseno@gmail.com"
+      - run: git config --global user.name "JorgeRojo"
       - name: 'Install Deps'
         run: yarn install --pure-lock
       - name: 'Test cover'
@@ -25,6 +27,4 @@ jobs:
         if: always()
         uses: davelosert/vitest-coverage-report-action@v2
       - name: 'Set patch version'
-        - run: git config --global user.email "jorge.rojodiseno@gmail.com"
-        - run: git config --global user.name "JorgeRojo"
-        - run: yarn version --patch
+        run: yarn version --patch
