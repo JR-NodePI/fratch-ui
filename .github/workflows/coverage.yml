@@ -3,7 +3,7 @@ on:
   pull_request:
 
 jobs:
-  'Install - Test - Coverage':
+  install-test-coverage:
     runs-on: ubuntu-latest
 
     permissions:
