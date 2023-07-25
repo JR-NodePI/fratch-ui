@@ -22,6 +22,17 @@ jobs:
       run: yarn install --pure-lock
     - name: 'Test'
       run: yarn test:cover
-    - name: 'Report Coverage'
-      if: always() # Also generate the report if tests are failing
+    - name: 'Report Frontend Coverage'
+      if: always()  
       uses:  davelosert/vitest-coverage-report-action@v2
+      with:
+        name: 'Frontend'
+        json-summary-path: './coverage/coverage-summary-frontend.json'
+        json-final-path: './coverage/coverage-final-frontend.json'
+    - name: 'Report Backend Coverage'
+      if: always()  
+      uses:  davelosert/vitest-coverage-report-action@v2
+      with:
+        name: 'Backend'
+        json-summary-path: './coverage/coverage-summary-backend.json'
+        json-final-path: './coverage/coverage-final-backend.json'
