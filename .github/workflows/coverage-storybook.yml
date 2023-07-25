@@ -34,6 +34,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - run: rm ./yarn.lock
       - run: yarn install --pure-lock
       - run: yarn storybook:build
       - run: mv ./storybook-static ./docs/storybook-static
