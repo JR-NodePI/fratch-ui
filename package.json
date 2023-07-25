@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.1.32",
+  "version": "1.1.34",
   "repository": "git@github.com:JorgeRojo/fratch-ui.git",
   "author": "JorgeRojo <jorge.rojodiseno@gmail.com>",
   "license": "MIT",
@@ -60,7 +60,6 @@
     "dist": "yarn copy-package-files && yarn pack --cwd ./dist/ && yarn publish-package",
     "test": "vitest --config ./vitest.config.ts",
     "test:cover": "vitest --config ./vitest.config.ts run --coverage",
-    "publish-auth": "dotenv -- cross-var echo \"//registry.npmjs.org/:_authToken=%NODE_AUTH_TOKEN%\" > ./.npmrc",
     "publish-package": "yarn publish ./dist/ --non-interactive"
   }
 }
