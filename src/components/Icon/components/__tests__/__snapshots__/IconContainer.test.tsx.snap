@@ -1,0 +1,91 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button.tsx > should render properly 1`] = `
+<div>
+  <div
+    class="_icon_295c81 _primary_295c81"
+  >
+    <svg />
+  </div>
+</div>
+`;
+
+exports[`Button.tsx > should render with TYPE > error 1`] = `
+<div>
+  <div
+    class="_icon_295c81 _error_295c81"
+  >
+    <svg />
+  </div>
+</div>
+`;
+
+exports[`Button.tsx > should render with TYPE > info 1`] = `
+<div>
+  <div
+    class="_icon_295c81 _info_295c81"
+  >
+    <svg />
+  </div>
+</div>
+`;
+
+exports[`Button.tsx > should render with TYPE > primary 1`] = `
+<div>
+  <div
+    class="_icon_295c81 _primary_295c81"
+  >
+    <svg />
+  </div>
+</div>
+`;
+
+exports[`Button.tsx > should render with TYPE > secondary 1`] = `
+<div>
+  <div
+    class="_icon_295c81 _secondary_295c81"
+  >
+    <svg />
+  </div>
+</div>
+`;
+
+exports[`Button.tsx > should render with TYPE > success 1`] = `
+<div>
+  <div
+    class="_icon_295c81 _success_295c81"
+  >
+    <svg />
+  </div>
+</div>
+`;
+
+exports[`Button.tsx > should render with TYPE > tertiary 1`] = `
+<div>
+  <div
+    class="_icon_295c81 _tertiary_295c81"
+  >
+    <svg />
+  </div>
+</div>
+`;
+
+exports[`Button.tsx > should render with TYPE > warning 1`] = `
+<div>
+  <div
+    class="_icon_295c81 _warning_295c81"
+  >
+    <svg />
+  </div>
+</div>
+`;
+
+exports[`Button.tsx > should render with className 1`] = `
+<div>
+  <div
+    class="_icon_295c81 _primary_295c81 mock_test_class_name"
+  >
+    <svg />
+  </div>
+</div>
+`;

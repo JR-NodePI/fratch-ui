@@ -1,4 +1,4 @@
-import ContainerIcon from './components/Icon';
+import IconContainer from './components/IconContainer';
 import { IconProps } from './components/IconProps';
 
 const IconArrowDown = ({
@@ -6,7 +6,7 @@ const IconArrowDown = ({
   className,
 }: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
   return (
-    <ContainerIcon
+    <IconContainer
       className={className}
       svg={
         <svg

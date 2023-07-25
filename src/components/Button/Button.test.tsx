@@ -15,7 +15,7 @@ describe('Button.tsx', () => {
     expect(container).toMatchSnapshot();
   });
 
-  describe('should render properly for SIZE', () => {
+  describe('should render with SIZE', () => {
     Object.values(ButtonSize).forEach(size => {
       it(size, () => {
         const { container } = setup({ size });
@@ -24,7 +24,7 @@ describe('Button.tsx', () => {
     });
   });
 
-  describe('should render properly for TYPE', () => {
+  describe('should render with TYPE', () => {
     Object.values(ButtonType).forEach(type => {
       it(type, () => {
         const { container } = setup({ type });
@@ -33,7 +33,7 @@ describe('Button.tsx', () => {
     });
   });
 
-  it('should render children over label', () => {
+  it('should render with children over label', () => {
     const { container } = setup({
       children: 'Test children',
       label: 'Test label',
@@ -41,35 +41,35 @@ describe('Button.tsx', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render stretch', () => {
+  it('should render with stretch', () => {
     const { container } = setup({
       stretch: true,
     });
     expect(container).toMatchSnapshot();
   });
 
-  it('should render isRound', () => {
+  it('should render with isRound', () => {
     const { container } = setup({
       isRound: true,
     });
     expect(container).toMatchSnapshot();
   });
 
-  it('should render Icon', () => {
+  it('should render with Icon', () => {
     const { container } = setup({
       Icon: IconCheck,
     });
     expect(container).toMatchSnapshot();
   });
 
-  it('should render className', () => {
+  it('should render with className', () => {
     const { container } = setup({
       className: 'mock_test_class_name',
     });
     expect(container).toMatchSnapshot();
   });
 
-  it('should render disabled', () => {
+  it('should render with disabled', () => {
     const { container } = setup({
       disabled: true,
     });
