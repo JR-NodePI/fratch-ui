@@ -4,9 +4,7 @@ React UI kit where each component can be used as an stand-alone module.
 
 [![NPM Publish](https://github.com/JorgeRojo/fratch-ui/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/npm-publish.yml) [![Artifact pages](https://github.com/JorgeRojo/fratch-ui/actions/workflows/artifact-pages.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/artifact-pages.yml) [![Coverage](https://github.com/JorgeRojo/fratch-ui/actions/workflows/coverage.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/coverage.yml)
 
-[Coverage report](https://jorgerojo.github.io/fratch-ui/coverage/)
-
-[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://jorgerojo.github.io/fratch-ui/storybook/)
+[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://jorgerojo.github.io/fratch-ui/coverage/) [![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://jorgerojo.github.io/fratch-ui/storybook/)
 
 ---
 
