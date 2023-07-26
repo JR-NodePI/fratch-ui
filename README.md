@@ -4,7 +4,7 @@ React UI kit where each component can be used as an stand-alone module.
 
 [![NPM Publish](https://github.com/JorgeRojo/fratch-ui/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/npm-publish.yml) [![Artifact pages](https://github.com/JorgeRojo/fratch-ui/actions/workflows/artifact-pages.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/artifact-pages.yml) [![Coverage](https://github.com/JorgeRojo/fratch-ui/actions/workflows/coverage.yml/badge.svg)](https://github.com/JorgeRojo/fratch-ui/actions/workflows/coverage.yml)
 
-[![Coverage](https://img.shields.io/badge/-Coverage-86b91a?style=for-the-badge&logo=vitest&logoColor=fff089)](https://jorgerojo.github.io/fratch-ui/coverage/) [![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://jorgerojo.github.io/fratch-ui/storybook/)
+[![Coverage](https://img.shields.io/badge/-Coverage-86b91a?style=for-the-badge&logo=vitest&logoColor=fff089)](https://jorgerojo.github.io/fratch-ui/coverage/) [![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://jorgerojo.github.io/fratch-ui/storybook/) [![npm](https://img.shields.io/badge/-npm-c12127?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/fratch-ui)
 
 ---
 
