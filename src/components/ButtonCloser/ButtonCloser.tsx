@@ -8,17 +8,13 @@ export default function ButtonCloser({
   title,
 }: {
   className?: string;
-  onClick: () => void;
   title?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }): JSX.Element {
-  const handleClick = () => {
-    onClick?.();
-  };
-
   return (
     <button
       className={c(styles.button_closer, className)}
-      onClick={handleClick}
+      onClick={onClick}
       title={title}
     >
       {'\u00D7'}
