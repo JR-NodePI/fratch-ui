@@ -14,5 +14,6 @@ export type TabsMenuProps = {
   onTabClick?: (tabData: Pick<Tab, 'label'> & { index: number }) => void;
   onTabEdit?: (tabData: Pick<Tab, 'label'> & { index: number }) => void;
   onTabRemove?: (tabData: { index: number }) => void;
+  onTabsChange?: (tabs: Tab[]) => void;
   tabs?: Tab[];
 };

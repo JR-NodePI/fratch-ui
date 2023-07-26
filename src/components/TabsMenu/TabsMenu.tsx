@@ -15,13 +15,14 @@ export default function TabsMenu({
   onTabClick,
   onTabEdit,
   onTabRemove,
+  onTabsChange,
   tabs,
 }: TabsMenuProps): JSX.Element {
   const [currentTabs, setCurrentTabs] = useState<Tab[]>(tabs ?? []);
 
   useEffect(() => {
-    setCurrentTabs(tabs ?? []);
-  }, [tabs]);
+    onTabsChange?.(currentTabs);
+  }, [onTabsChange, currentTabs]);
 
   const handleTabClick = (currentTabindex: number): void => {
     setCurrentTabs(
