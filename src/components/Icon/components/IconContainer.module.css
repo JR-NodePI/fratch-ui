@@ -14,10 +14,10 @@
 }
 
 .primary [fill] {
-  fill: var(--ft-color-primary);
+  fill: var(--ft-color-text);
 }
 .primary [stroke] {
-  stroke: var(--ft-color-primary);
+  stroke: var(--ft-color-text);
 }
 
 .secondary [fill] {

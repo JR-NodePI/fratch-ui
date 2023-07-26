@@ -1,0 +1,103 @@
+.tab_menu {
+  overflow: auto;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+}
+.tab_menu > ul {
+  border-bottom: 1px solid var(--ft-color-grey-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: nowrap;
+  display: flex;
+  gap: 1px;
+  position: relative;
+  padding: 8px 8px 0 16px;
+  height: calc(var(--ft-button-small-height) + 1px);
+  flex-wrap: nowrap;
+  width: auto;
+  flex: 1 1 100%;
+}
+
+.tab_item {
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  min-width: 100px;
+  border-top-left-radius: var(--ft-button-default-border-radius);
+  border-top-right-radius: var(--ft-button-default-border-radius);
+  background-color: var(--ft-color-white);
+  border: 1px solid var(--ft-color-grey-1);
+  margin-bottom: -1px;
+  text-decoration: none;
+}
+
+.tab_item .tab_trigger {
+  flex-wrap: nowrap;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: default;
+  padding-left: var(--ft-button-default-padding-x);
+  height: var(--ft-button-small-height);
+  width: 100%;
+  color: var(--ft-color-text);
+}
+
+.tab_item .tab_icon {
+  width: 1em;
+  min-width: 1em;
+}
+
+.tab_item .tab_trigger:last-child {
+  padding-right: var(--ft-button-default-padding-x);
+}
+
+.tab_item .tab_trigger .tab_label {
+  flex: 1 1 100%;
+  max-width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.tab_item .tab_closer {
+  position: relative;
+  min-width: 42px;
+}
+
+.tab_item.active {
+  z-index: 2;
+  box-shadow: var(--ft-box-shadow-2);
+  border-bottom: 1px solid var(--ft-color-white);
+}
+
+.add_tab {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px;
+  align-self: center;
+}
+.add_tab a {
+  text-decoration: none;
+  opacity: 0.5;
+  display: block;
+  line-height: 32px;
+  font-size: 24px;
+  text-align: center;
+  color: var(--ft-color-text);
+  cursor: default;
+  font-weight: 500;
+  border-radius: 100%;
+  background-color: var(--ft-color-white);
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.add_tab a:hover {
+  opacity: 1;
+  background-color: var(--ft-button-hover-bg-color);
+}
