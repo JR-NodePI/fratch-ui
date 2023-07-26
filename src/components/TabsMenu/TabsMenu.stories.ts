@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import IconCheck from '../Icon/IconCheck';
-import TabsMenu from './TabsMenu';
 import IconInfo from '../Icon/IconInfo';
 import IconSuccess from '../Icon/IconSuccess';
+import TabsMenu from './TabsMenu';
 
 const meta = {
   title: 'Example/Tabs Menu',
@@ -13,6 +13,7 @@ const meta = {
     onTabAdd: { action: 'tab added' },
     onTabRemove: { action: 'tab removed' },
     onTabEdit: { action: 'tab edited' },
+    onTabsChange: { action: 'tabs changed' },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof TabsMenu>;
