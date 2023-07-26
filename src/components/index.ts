@@ -12,4 +12,4 @@ export { default as Spinner } from './Spinner/Spinner';
 export { default as TabsMenu } from './TabsMenu/TabsMenu';
 export * as TabsMenuProps from './TabsMenu/TabsMenuProps';
 export { default as ToasterListContext } from './Toaster/ToasterListContext';
-export * as ToasterProvider from './Toaster/ToasterProvider';
+export { default as ToasterProvider } from './Toaster/ToasterProvider';
