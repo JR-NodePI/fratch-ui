@@ -32,14 +32,14 @@ export const Default: Story = {
       },
       {
         Icon: IconInfo,
-        label: 'Tab 2',
+        label: 'Tab 2 with more text',
       },
       {
         Icon: IconSuccess,
         label: 'Tab 3',
       },
       {
-        label: 'Tab 4',
+        label: 'Tab 4 with much more text',
       },
     ],
   },

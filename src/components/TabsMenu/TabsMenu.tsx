@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { c } from '../../helpers/classNameHelpers';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
-import TabLabelEditable from './components/TabLabelEditable';
+import TabEditable from './components/TabEditable';
 import { type Tab, type TabsMenuProps } from './TabsMenuProps';
 
 import styles from './TabMenu.module.css';
@@ -116,16 +116,14 @@ export default function TabsMenu({
             key={index}
             title={label}
           >
-            <a
-              href="#"
+            <div
               className={c(styles.tab_trigger)}
-              onClick={event => {
-                event.preventDefault();
+              onClick={() => {
                 handleTabClick(index);
               }}
             >
               {Icon && <Icon className={c(styles.tab_icon)} />}
-              <TabLabelEditable
+              <TabEditable
                 className={c(styles.tab_label)}
                 label={label}
                 editable={editable}
@@ -133,7 +131,7 @@ export default function TabsMenu({
                   handleEditChange(index, newLabel);
                 }}
               />
-            </a>
+            </div>
             {editable && (
               <ButtonCloser
                 title="Remove tag"
