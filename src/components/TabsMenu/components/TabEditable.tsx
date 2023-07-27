@@ -1,6 +1,7 @@
 import { type FocusEvent, type KeyboardEvent, useState } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
+import { TabEditableProps } from './TabEditableProps';
 
 import styles from './TabEditable.module.css';
 
@@ -9,13 +10,7 @@ export default function TabEditable({
   editable,
   label,
   onChange,
-}: {
-  className?: string;
-  editable?: boolean;
-  label?: string;
-  onActivate?: () => void;
-  onChange?: (value: string) => void;
-}): JSX.Element {
+}: TabEditableProps): JSX.Element {
   const [isEditing, setIsEditing] = useState<boolean>(false);
   const [width, setWidth] = useState<number | undefined>();
 
@@ -60,12 +55,13 @@ export default function TabEditable({
             onClick={handleEditClick}
             title="Edit tag"
           >
-            ✎
+            ✎ <i>Edit tag</i>
           </button>
         )}
       </div>
       {isEditing && (
         <input
+          aria-label="Edit tag"
           autoFocus
           className={c(styles.input)}
           defaultValue={label}
