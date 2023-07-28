@@ -13,7 +13,7 @@ const IconPlus = ({
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="-1 -1 20 20"
+          viewBox="-0.5 -0.5 19 19"
         >
           <path
             stroke="currentColor"

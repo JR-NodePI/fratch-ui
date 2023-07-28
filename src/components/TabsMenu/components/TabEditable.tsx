@@ -4,6 +4,7 @@ import { c } from '../../../helpers/classNameHelpers';
 import { TabEditableProps } from './TabEditableProps';
 
 import styles from './TabEditable.module.css';
+import IconEdit from '../../Icons/IconEdit';
 
 export default function TabEditable({
   className,
@@ -55,7 +56,8 @@ export default function TabEditable({
             onClick={handleEditClick}
             title="Edit tag"
           >
-            ✎ <i>Edit tag</i>
+            <IconEdit className={c(styles.edit_icon)} />
+            <i>Edit tag</i>
           </button>
         )}
       </div>

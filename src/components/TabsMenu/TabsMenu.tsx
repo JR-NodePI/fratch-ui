@@ -8,6 +8,7 @@ import TabEditable from './components/TabEditable';
 import { type Tab, type TabsMenuProps } from './TabsMenuProps';
 
 import styles from './TabMenu.module.css';
+import IconPlus from '../Icons/IconPlus';
 
 export default function TabsMenu({
   className,
@@ -155,7 +156,7 @@ export default function TabsMenu({
                 handleAddClick();
               }}
             >
-              +
+              <IconPlus />
             </a>
           </li>
         )}

@@ -59,8 +59,10 @@
 }
 
 .tab_menu .tab_item .tab_trigger .tab_icon {
-  width: 1em;
-  min-width: 1em;
+  width: 1.3em;
+  min-width: 1.3em;
+  font-size: 1.3em;
+  margin-left: -6px;
 }
 
 .tab_menu .tab_item .tab_trigger .tab_label {
@@ -92,10 +94,10 @@
 .tab_menu .add_tab a {
   text-decoration: none;
   opacity: 0.5;
-  display: block;
-  line-height: 32px;
-  font-size: 24px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
   color: var(--ft-color-text);
   cursor: default;
   font-weight: 500;

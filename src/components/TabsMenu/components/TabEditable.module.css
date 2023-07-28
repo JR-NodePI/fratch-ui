@@ -49,16 +49,21 @@
   margin: 0;
   padding: 0;
   border: none;
-  font-size: 1.4em;
-  text-align: center;
+  font-size: 1.2em;
   background-color: transparent;
   border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0.5;
   background-color: var(--ft-color-white);
   transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-.tab_editable .label .edit_button * {
+.tab_editable .label .edit_button > * {
   display: none;
+}
+.tab_editable .label .edit_button .edit_icon {
+  display: block;
 }
 .tab_editable .label .edit_button:hover {
   opacity: 1;

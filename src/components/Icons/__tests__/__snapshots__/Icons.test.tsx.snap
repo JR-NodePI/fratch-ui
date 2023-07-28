@@ -125,7 +125,7 @@ exports[`Icons.ts > should render properly > IconPlus 1`] = `
     aria-hidden="true"
     class="_icon_2be8fc _primary_2be8fc"
     fill="none"
-    viewBox="-1 -1 20 20"
+    viewBox="-0.5 -0.5 19 19"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path

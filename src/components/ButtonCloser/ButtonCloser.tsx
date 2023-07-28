@@ -1,4 +1,5 @@
 import { c } from '../../helpers/classNameHelpers';
+import IconClose from '../Icons/IconClose';
 
 import styles from './ButtonCloser.module.css';
 
@@ -17,7 +18,7 @@ export default function ButtonCloser({
       onClick={onClick}
       title={title}
     >
-      {'\u00D7'}
+      <IconClose className={c(styles.icon)} />
       <i>{title}</i>
     </button>
   );
