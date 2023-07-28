@@ -15,8 +15,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - name: 'Install Deps'
-        run: yarn install --pure-lock
+      - run: rm -f ./yarn.lock
+      - run: yarn install
       - name: 'Test cover'
         run: yarn test:cover
       - name: 'Report Coverage'
