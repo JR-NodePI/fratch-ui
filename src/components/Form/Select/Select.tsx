@@ -6,8 +6,7 @@ import { v4 as uuid } from 'uuid';
 
 import { c } from '../../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../../helpers/htmlSelectorsHelpers';
-import IconArrowDown from '../../Icons/Icons/IconArrowDown';
-import IconClose from '../../Icons/IconClose';
+import { IconArrowDown, IconClose } from '../../Icons/Icons';
 import InputText from '../InputText/InputText';
 import SelectOptionsList from './SelectOptionsList';
 import { type SelectOption, type SelectProps } from './SelectProps';

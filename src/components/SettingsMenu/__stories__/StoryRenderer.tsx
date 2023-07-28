@@ -8,7 +8,7 @@ const inlineStyles: React.CSSProperties = {
   zIndex: 999999,
   top: 0,
   width: '100%',
-  height: '64px',
+  height: '68px',
   backgroundColor: '#e6e6e6',
 };
 
