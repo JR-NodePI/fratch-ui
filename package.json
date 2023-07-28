@@ -79,6 +79,7 @@
     "set-version-minor": "yarn version --minor",
     "set-version-major": "yarn version --major",
     "test": "vitest --config ./vitest.config.ts",
-    "test:cover": "yarn test run --coverage"
+    "test:cover": "yarn test run --coverage",
+    "prepare": "husky install"
   }
 }
