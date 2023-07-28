@@ -5,7 +5,6 @@ export { default as Header } from './Header/Header';
 export * as Icons from './Icons/Icons';
 export { default as Modal } from './Modal/Modal';
 export * as ModalConstants from './Modal/ModalConstants';
-export * as ModalProps from './Modal/ModalProps';
 export { default as SettingsMenu } from './SettingsMenu/SettingsMenu';
 export * as SettingsMenuConstants from './SettingsMenu/SettingsMenuConstants';
 export { default as Spinner } from './Spinner/Spinner';
