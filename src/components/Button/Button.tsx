@@ -1,6 +1,6 @@
 import { c } from '../../helpers/classNameHelpers';
-import type { ButtonProps } from './ButtonProps';
 import { ButtonSize, ButtonType } from './ButtonConstants';
+import type { ButtonProps } from './ButtonProps';
 
 import styles from './Button.module.css';
 

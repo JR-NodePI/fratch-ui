@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 
+import { isEqual } from 'lodash';
+
 import { c } from '../../helpers/classNameHelpers';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
 import TabEditable from './components/TabEditable';
 import { type Tab, type TabsMenuProps } from './TabsMenuProps';
 
 import styles from './TabMenu.module.css';
-import { isEqual } from 'lodash';
 
 export default function TabsMenu({
   className,
