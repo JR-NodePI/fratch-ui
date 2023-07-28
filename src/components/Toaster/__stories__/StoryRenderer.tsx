@@ -1,7 +1,8 @@
 import { useContext, useState } from 'react';
 
 import Button from '../../Button/Button';
-import ToasterListContext, { type Toaster } from '../ToasterListContext';
+import ToasterListContext from '../ToasterListContext';
+import { Toaster } from '../ToasterListContextProps';
 import ToasterProvider from '../ToasterProvider';
 
 const StoryRendererItem = (props: Toaster): JSX.Element => {

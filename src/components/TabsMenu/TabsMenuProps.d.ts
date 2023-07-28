@@ -1,4 +1,4 @@
-import Icon from '../Icon/IconCheck';
+import Icon from '../Icons/IconCheck';
 
 export type Tab = {
   active?: boolean;

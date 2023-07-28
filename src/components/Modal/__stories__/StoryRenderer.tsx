@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 
 import { Button } from '../..';
 import Modal from '../Modal';
-import { type ModalProps, ModalTypes } from '../ModalProps';
+import { ModalTypes } from '../ModalConstants';
+import { type ModalProps } from '../ModalProps';
 
 function StoryRenderer({ visible, type, ...props }: ModalProps): JSX.Element {
   const [currentVisible, setVisible] = useState(visible);
