@@ -1,10 +1,10 @@
-import IconContainer from './components/IconContainer';
-import { IconProps } from './components/IconProps';
+import IconContainer from '../components/IconContainer';
+import { IconProps } from './IconProps';
 
-const IconError = ({
+export default function IconArrowDown({
   type,
   className,
-}: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
+}: IconProps): JSX.Element {
   return (
     <IconContainer className={className} type={type}>
       {({ iconClassName }) => (
@@ -13,19 +13,17 @@ const IconError = ({
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="0 0 20 20"
+          viewBox="-1 -4 16 16"
         >
           <path
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
-            d="m13 7-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
           />
         </svg>
       )}
     </IconContainer>
   );
-};
-
-export default IconError;
+}

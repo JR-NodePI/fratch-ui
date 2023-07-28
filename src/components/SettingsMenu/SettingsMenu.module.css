@@ -1,21 +1,31 @@
 .settings_menu {
   z-index: 100;
   margin: 8px;
-  padding: 8px 0;
+  padding: 8px;
   display: flex;
   position: absolute;
 }
 
 .settings_menu .opener {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 22px;
   text-decoration: none;
-  display: block;
-  padding: 0 8px;
+  padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
   align-self: self-start;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  outline: none;
+}
+.opener_icon[fill] {
+  fill: var(--ft-color-text);
+}
+.opener_icon[stroke] {
+  stroke: var(--ft-color-text);
 }
 
 .settings_menu.open {
@@ -38,7 +48,7 @@
 }
 .settings_menu .menu li {
   display: block;
-  padding: 2px 16px;
+  padding: 2px 8px;
 }
 
 /*** position ***/

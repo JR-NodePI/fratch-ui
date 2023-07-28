@@ -1,6 +1,6 @@
 import { c } from '../../../helpers/classNameHelpers';
 import { IconType } from './IconConstants';
-import { IconProps } from './IconProps';
+import { IconContainerProps } from './IconContainerProps';
 
 import styles from './IconContainer.module.css';
 
@@ -8,7 +8,7 @@ const IconContainer = ({
   children,
   className,
   type = IconType.PRIMARY,
-}: IconProps): JSX.Element =>
+}: IconContainerProps): JSX.Element =>
   children({
     iconClassName: c(styles.icon, styles[type], className),
   });

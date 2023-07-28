@@ -4,6 +4,7 @@ import { v4 as uuid } from 'uuid';
 
 import { c } from '../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
+import { IconVerticalDots } from '../Icons/Icons';
 import { SettingsMenuPosition } from './SettingsMenuConstants';
 import { SettingsMenuProps } from './SettingsMenuProps';
 
@@ -49,7 +50,7 @@ export default function SettingsMenu({
         ))}
       </ul>
       <button onClick={handleOpenerClick} className={c(styles.opener)}>
-        ⋮
+        <IconVerticalDots className={c(styles.opener_icon)} />
       </button>
     </div>
   );

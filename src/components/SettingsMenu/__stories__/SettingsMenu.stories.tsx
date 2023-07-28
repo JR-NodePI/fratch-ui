@@ -21,19 +21,20 @@ export const Docs: Story = {
   args: {
     position: 'left',
     items: [
-      <a href="javascript:void(0)">Setting menu item 1</a>,
-      <a href="javascript:void(0)">Setting menu item 2</a>,
-      <Button>Setting menu item 3</Button>,
+      <InputCheck label="Setting menu item 1" position="right" />,
+      <InputCheck label="Setting menu item 2" position="left" />,
+      <a href="javascript:void(0)">Setting menu item 3</a>,
+      <a href="javascript:void(0)">Setting menu item 4</a>,
+      <Button size="small">Setting menu item 5</Button>,
       <Button size="small" type="primary">
-        Setting menu item 4
-      </Button>,
-      <Button size="small" type="secondary">
-        Setting menu item 5
-      </Button>,
-      <Button size="small" type="tertiary">
         Setting menu item 6
       </Button>,
-      <InputCheck label="Setting menu item 7" position="right" />,
+      <Button size="small" type="secondary">
+        Setting menu item 7
+      </Button>,
+      <Button size="small" type="tertiary">
+        Setting menu item 8
+      </Button>,
     ],
   },
 };

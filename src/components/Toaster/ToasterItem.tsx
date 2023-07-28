@@ -2,10 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { c } from '../../helpers/classNameHelpers';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
-import IconError from '../Icons/IconError';
-import IconInfo from '../Icons/IconInfo';
-import IconSuccess from '../Icons/IconSuccess';
-import IconWarning from '../Icons/IconWarning';
+import { IconError, IconInfo, IconSuccess, IconWarning } from '../Icons/Icons';
 import { ToasterType } from './ToasterConstants';
 import { nlToNodes } from './ToasterFormatHelpers';
 import { type Toaster } from './ToasterListContextProps';

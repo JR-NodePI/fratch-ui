@@ -1,10 +1,7 @@
-import IconContainer from './components/IconContainer';
-import { IconProps } from './components/IconProps';
+import IconContainer from '../components/IconContainer';
+import { IconProps } from './IconProps';
 
-const IconInfo = ({
-  type,
-  className,
-}: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
+export default function IconError({ type, className }: IconProps): JSX.Element {
   return (
     <IconContainer className={className} type={type}>
       {({ iconClassName }) => (
@@ -20,12 +17,10 @@ const IconInfo = ({
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
-            d="M8 9h2v5m-2 0h4M9.408 5.5h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            d="m13 7-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
           />
         </svg>
       )}
     </IconContainer>
   );
-};
-
-export default IconInfo;
+}

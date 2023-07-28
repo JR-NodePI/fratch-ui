@@ -1,30 +1,26 @@
-import IconContainer from './components/IconContainer';
-import { IconProps } from './components/IconProps';
+import IconContainer from '../components/IconContainer';
+import { IconProps } from './IconProps';
 
-const IconCheck = ({
-  type,
-  className,
-}: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
+export default function IconClose({ type, className }: IconProps): JSX.Element {
   return (
     <IconContainer className={className} type={type}>
       {({ iconClassName }) => (
         <svg
           className={iconClassName}
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="-1 -3 18 18"
+          viewBox="-1 -1 16 16"
         >
           <path
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="2.2"
-            d="M1 5.917 5.724 10.5 15 1.5"
+            strokeWidth="2"
+            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
           />
         </svg>
       )}
     </IconContainer>
   );
-};
-
-export default IconCheck;
+}

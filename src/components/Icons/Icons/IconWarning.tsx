@@ -1,10 +1,10 @@
-import IconContainer from './components/IconContainer';
-import { IconProps } from './components/IconProps';
+import IconContainer from '../components/IconContainer';
+import { IconProps } from './IconProps';
 
-const IconSuccess = ({
+export default function IconWarning({
   type,
   className,
-}: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
+}: IconProps): JSX.Element {
   return (
     <IconContainer className={className} type={type}>
       {({ iconClassName }) => (
@@ -20,12 +20,10 @@ const IconSuccess = ({
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
-            d="m7 10 2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
           />
         </svg>
       )}
     </IconContainer>
   );
-};
-
-export default IconSuccess;
+}
