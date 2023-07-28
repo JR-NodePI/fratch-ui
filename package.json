@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.1.41",
+  "version": "1.1.42",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
@@ -36,6 +36,7 @@
     "@storybook/react": "7.1.0",
     "@storybook/react-vite": "7.1.0",
     "@storybook/testing-library": "^0.2.0",
+    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.7",

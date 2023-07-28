@@ -14,18 +14,20 @@
   display: flex;
   gap: 1px;
   position: relative;
-  padding: 8px 8px 0 16px;
-  height: calc(var(--ft-button-small-height) + 1px);
+  padding: 8px 8px 0 8px;
+  height: calc(var(--ft-tab-height) + 1px);
   flex-wrap: nowrap;
   width: auto;
   flex: 1 1 100%;
 }
 
-.tab_item {
+/***  Tab Item  ***/
+.tab_menu .tab_item {
   flex-wrap: nowrap;
   position: relative;
   z-index: 1;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   max-width: 300px;
   min-width: 100px;
@@ -37,53 +39,57 @@
   text-decoration: none;
 }
 
-.tab_item .tab_trigger {
+.tab_menu .tab_item .tab_trigger {
   flex-wrap: nowrap;
   display: flex;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
   overflow: hidden;
   text-decoration: none;
   cursor: default;
-  padding-left: var(--ft-button-default-padding-x);
-  height: var(--ft-button-small-height);
+  padding-left: var(--ft-button-small-padding-x);
+  height: var(--ft-tab-height);
   width: 100%;
   color: var(--ft-color-text);
+  justify-content: space-between;
 }
 
-.tab_item .tab_icon {
+.tab_menu .tab_item .tab_trigger:last-child {
+  padding-right: var(--ft-button-small-padding-x);
+}
+
+.tab_menu .tab_item .tab_trigger .tab_icon {
   width: 1em;
   min-width: 1em;
 }
 
-.tab_item .tab_trigger:last-child {
-  padding-right: var(--ft-button-default-padding-x);
-}
-
-.tab_item .tab_trigger .tab_label {
+.tab_menu .tab_item .tab_trigger .tab_label {
   flex: 1 1 100%;
   max-width: 100%;
   text-align: center;
   box-sizing: border-box;
 }
-.tab_item .tab_closer {
+.tab_menu .tab_item .tab_closer {
   position: relative;
-  min-width: 42px;
+  min-width: var(--ft-tab-height);
+  height: var(--ft-tab-height);
+  overflow: hidden;
 }
 
-.tab_item.active {
+.tab_menu .tab_item.active {
   z-index: 2;
   box-shadow: var(--ft-box-shadow-2);
   border-bottom: 1px solid var(--ft-color-white);
 }
 
-.add_tab {
+/***  Add Tab  ***/
+.tab_menu .add_tab {
   width: 32px;
   height: 32px;
   margin-left: 4px;
   align-self: center;
 }
-.add_tab a {
+.tab_menu .add_tab a {
   text-decoration: none;
   opacity: 0.5;
   display: block;
@@ -97,7 +103,7 @@
   background-color: var(--ft-color-white);
   transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-.add_tab a:hover {
+.tab_menu .add_tab a:hover {
   opacity: 1;
   background-color: var(--ft-button-hover-bg-color);
 }

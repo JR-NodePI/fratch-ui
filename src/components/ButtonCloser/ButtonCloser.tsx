@@ -18,6 +18,7 @@ export default function ButtonCloser({
       title={title}
     >
       {'\u00D7'}
+      <i>{title}</i>
     </button>
   );
 }

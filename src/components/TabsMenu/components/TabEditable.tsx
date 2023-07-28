@@ -1,21 +1,18 @@
 import { type FocusEvent, type KeyboardEvent, useState } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
+import { TabEditableProps } from './TabEditableProps';
 
-import styles from './TabLabelEditable.module.css';
+import styles from './TabEditable.module.css';
 
-export default function TabLabelEditable({
+export default function TabEditable({
   className,
   editable,
   label,
   onChange,
-}: {
-  className?: string;
-  editable?: boolean;
-  label?: string;
-  onChange?: (value: string) => void;
-}): JSX.Element {
+}: TabEditableProps): JSX.Element {
   const [isEditing, setIsEditing] = useState<boolean>(false);
+  const [width, setWidth] = useState<number | undefined>();
 
   const handleEditClick = (): void => {
     setIsEditing(true);
@@ -23,6 +20,7 @@ export default function TabLabelEditable({
 
   const handleChange = (value: string): void => {
     if (value !== label) {
+      setWidth(undefined);
       onChange?.(value);
     }
   };
@@ -32,15 +30,23 @@ export default function TabLabelEditable({
     setIsEditing(false);
   };
 
+  const [lastValue, setLastValue] = useState<string>('');
+
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>): void => {
+    const value = event.currentTarget.value;
+    if (lastValue.length < value.length) {
+      setWidth(event.currentTarget.scrollWidth);
+    }
+    setLastValue(value);
+
     if (event.key === 'Enter') {
-      handleChange(event.currentTarget.value);
+      handleChange(value);
       setIsEditing(false);
     }
   };
 
   return (
-    <div className={c(styles.label_editable, className)}>
+    <div className={c(styles.tab_editable, className)} style={{ width }}>
       <div className={c(styles.label)}>
         <span className={c(styles.text)}>{label || '...'}</span>
         {editable && (
@@ -49,12 +55,13 @@ export default function TabLabelEditable({
             onClick={handleEditClick}
             title="Edit tag"
           >
-            ✎
+            ✎ <i>Edit tag</i>
           </button>
         )}
       </div>
       {isEditing && (
         <input
+          aria-label="Edit tag"
           autoFocus
           className={c(styles.input)}
           defaultValue={label}

@@ -78,6 +78,7 @@
   --ft-button-medium-font-size: var(--ft-button-default-font-size);
   --ft-button-large-font-size: 18px;
 
+  --ft-tab-height: 36px;
   --ft-button-small-height: 40px;
   --ft-button-default-height: 52px;
   --ft-button-medium-height: var(--ft-button-default-height);

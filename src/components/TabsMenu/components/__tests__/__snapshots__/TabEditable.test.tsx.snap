@@ -1,0 +1,115 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TabEditable.tsx > should render in edition mode 1`] = `
+<div>
+  <div
+    class="_tab_editable_732c04"
+  >
+    <div
+      class="_label_732c04"
+    >
+      <span
+        class="_text_732c04"
+      >
+        label-value-test
+      </span>
+      <button
+        class="_edit_button_732c04"
+        title="Edit tag"
+      >
+        ✎ 
+        <i>
+          Edit tag
+        </i>
+      </button>
+    </div>
+    <input
+      aria-label="Edit tag"
+      class="_input_732c04"
+      type="text"
+      value="label-value-test"
+    />
+  </div>
+</div>
+`;
+
+exports[`TabEditable.tsx > should render properly 1`] = `
+<div>
+  <div
+    class="_tab_editable_732c04"
+  >
+    <div
+      class="_label_732c04"
+    >
+      <span
+        class="_text_732c04"
+      >
+        ...
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TabEditable.tsx > should render with className 1`] = `
+<div>
+  <div
+    class="_tab_editable_732c04 className-test"
+  >
+    <div
+      class="_label_732c04"
+    >
+      <span
+        class="_text_732c04"
+      >
+        ...
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TabEditable.tsx > should render with editable 1`] = `
+<div>
+  <div
+    class="_tab_editable_732c04"
+  >
+    <div
+      class="_label_732c04"
+    >
+      <span
+        class="_text_732c04"
+      >
+        ...
+      </span>
+      <button
+        class="_edit_button_732c04"
+        title="Edit tag"
+      >
+        ✎ 
+        <i>
+          Edit tag
+        </i>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TabEditable.tsx > should render with label 1`] = `
+<div>
+  <div
+    class="_tab_editable_732c04"
+  >
+    <div
+      class="_label_732c04"
+    >
+      <span
+        class="_text_732c04"
+      >
+        label-test
+      </span>
+    </div>
+  </div>
+</div>
+`;
