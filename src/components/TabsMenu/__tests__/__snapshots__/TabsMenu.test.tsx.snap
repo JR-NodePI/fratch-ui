@@ -1,0 +1,269 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TabsMenu.tsx > should add new tab based on template in editable mode 1`] = `
+<div>
+  <nav
+    class="_tab_menu_c51407"
+  >
+    <ul>
+      <li
+        class="_tab_item_c51407 _active_c51407"
+        title="new-tab-label-from-template"
+      >
+        <div
+          class="_tab_trigger_c51407"
+        >
+          <div
+            class="_tab_editable_732c04 _tab_label_c51407"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                new-tab-label-from-template
+              </span>
+              <button
+                class="_edit_button_732c04"
+                title="Edit tag"
+              >
+                ✎ 
+                <i>
+                  Edit tag
+                </i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="_button_closer_8d9a3f _tab_closer_c51407"
+          title="Remove tag"
+        >
+          ×
+          <i>
+            Remove tag
+          </i>
+        </button>
+      </li>
+      <li
+        class="_add_tab_c51407"
+      >
+        <a
+          aria-label="Add new tab"
+          href="#"
+          title="Add new tab"
+        >
+          +
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`TabsMenu.tsx > should render properly 1`] = `
+<div>
+  <nav
+    class="_tab_menu_c51407"
+  >
+    <ul>
+      <li
+        class="_tab_item_c51407 _active_c51407"
+        title="label-test-1"
+      >
+        <div
+          class="_tab_trigger_c51407"
+        >
+          <div
+            class="_icon_295c81 _primary_295c81 _tab_icon_c51407"
+          >
+            <svg
+              fill="none"
+              viewBox="-2 -4 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 5.917 5.724 10.5 15 1.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.2"
+              />
+            </svg>
+          </div>
+          <div
+            class="_tab_editable_732c04 _tab_label_c51407"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-test-1
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="_tab_item_c51407"
+        title="label-test-2"
+      >
+        <div
+          class="_tab_trigger_c51407"
+        >
+          <div
+            class="_tab_editable_732c04 _tab_label_c51407"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-test-2
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="_tab_item_c51407"
+        title="label-test-3"
+      >
+        <div
+          class="_tab_trigger_c51407"
+        >
+          <div
+            class="_tab_editable_732c04 _tab_label_c51407"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-test-3
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`TabsMenu.tsx > should render with className 1`] = `
+<div>
+  <nav
+    class="_tab_menu_c51407 className-test"
+  >
+    <ul />
+  </nav>
+</div>
+`;
+
+exports[`TabsMenu.tsx > should render with editable 1`] = `
+<div>
+  <nav
+    class="_tab_menu_c51407"
+  >
+    <ul>
+      <li
+        class="_tab_item_c51407 _active_c51407"
+        title="label-test-1"
+      >
+        <div
+          class="_tab_trigger_c51407"
+        >
+          <div
+            class="_tab_editable_732c04 _tab_label_c51407"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-test-1
+              </span>
+              <button
+                class="_edit_button_732c04"
+                title="Edit tag"
+              >
+                ✎ 
+                <i>
+                  Edit tag
+                </i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="_button_closer_8d9a3f _tab_closer_c51407"
+          title="Remove tag"
+        >
+          ×
+          <i>
+            Remove tag
+          </i>
+        </button>
+      </li>
+      <li
+        class="_tab_item_c51407"
+        title="label-test-2"
+      >
+        <div
+          class="_tab_trigger_c51407"
+        >
+          <div
+            class="_tab_editable_732c04 _tab_label_c51407"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-test-2
+              </span>
+              <button
+                class="_edit_button_732c04"
+                title="Edit tag"
+              >
+                ✎ 
+                <i>
+                  Edit tag
+                </i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="_button_closer_8d9a3f _tab_closer_c51407"
+          title="Remove tag"
+        >
+          ×
+          <i>
+            Remove tag
+          </i>
+        </button>
+      </li>
+      <li
+        class="_add_tab_c51407"
+      >
+        <a
+          aria-label="Add new tab"
+          href="#"
+          title="Add new tab"
+        >
+          +
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

@@ -144,12 +144,13 @@ export default function TabsMenu({
         {editable && (
           <li className={c(styles.add_tab)}>
             <a
+              title="Add new tab"
+              aria-label="Add new tab"
               href="#"
               onClick={event => {
                 event.preventDefault();
                 handleAddClick();
               }}
-              title="Add new tab"
             >
               +
             </a>

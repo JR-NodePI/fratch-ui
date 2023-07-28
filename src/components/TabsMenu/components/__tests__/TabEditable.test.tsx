@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 
 import TabEditable from '../TabEditable';
-import { TabEditableProps } from '../TabEditableProps';
+import { type TabEditableProps } from '../TabEditableProps';
 
 describe('TabEditable.tsx', () => {
   const setup = (props: TabEditableProps = {}) =>
