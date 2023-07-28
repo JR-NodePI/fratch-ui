@@ -4,7 +4,8 @@ import { v4 as uuid } from 'uuid';
 
 import { c } from '../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
-import { SettingsMenuPosition, SettingsMenuProps } from './SettingsMenuProps';
+import { SettingsMenuPosition } from './SettingsMenuConstants';
+import { SettingsMenuProps } from './SettingsMenuProps';
 
 import styles from './SettingsMenu.module.css';
 

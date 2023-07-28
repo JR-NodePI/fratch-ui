@@ -1,5 +1,6 @@
 import { c } from '../../helpers/classNameHelpers';
-import { type SpinnerProps, SpinnerType } from './SpinnerProps';
+import { SpinnerType } from './SpinnerConstants';
+import { type SpinnerProps } from './SpinnerProps';
 
 import styles from './Spinner.module.css';
 

@@ -5,7 +5,8 @@ import { v4 as uuid } from 'uuid';
 
 import { c } from '../../helpers/classNameHelpers';
 import ToasterItem from './ToasterItem';
-import ToasterListContext, { type Toaster } from './ToasterListContext';
+import ToasterListContext from './ToasterListContext';
+import { type Toaster } from './ToasterListContextProps';
 
 import styles from './Toaster.module.css';
 

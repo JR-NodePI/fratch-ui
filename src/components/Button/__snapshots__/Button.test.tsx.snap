@@ -18,7 +18,7 @@ exports[`Button.tsx > should render with Icon 1`] = `
     class="_button_2a1efe _default_2a1efe _medium_2a1efe"
   >
     <div
-      class="_icon_295c81 _primary_295c81 _icon_2a1efe"
+      class="_icon_2be8fc _primary_2be8fc _icon_2a1efe"
     >
       <svg
         fill="none"

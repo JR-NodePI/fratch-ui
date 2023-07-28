@@ -1,5 +1,6 @@
 import { c } from '../../../helpers/classNameHelpers';
-import { IconProps, IconType } from './IconProps';
+import { IconType } from './IconConstants';
+import { IconProps } from './IconProps';
 
 import styles from './IconContainer.module.css';
 

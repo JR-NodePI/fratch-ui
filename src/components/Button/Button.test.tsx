@@ -2,9 +2,10 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 
-import IconCheck from '../Icon/IconCheck';
+import IconCheck from '../Icons/IconCheck';
 import Button from './Button';
-import { ButtonProps, ButtonSize, ButtonType } from './ButtonProps';
+import { ButtonSize, ButtonType } from './ButtonConstants';
+import { type ButtonProps } from './ButtonProps';
 
 describe('Button.tsx', () => {
   const setup = (props: ButtonProps = {}) =>

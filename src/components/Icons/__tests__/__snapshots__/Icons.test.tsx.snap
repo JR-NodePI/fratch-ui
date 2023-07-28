@@ -3,7 +3,7 @@
 exports[`Icons.ts > should render properly > IconArrowDown 1`] = `
 <div>
   <div
-    class="_icon_295c81 _primary_295c81"
+    class="_icon_2be8fc _primary_2be8fc"
   >
     <svg
       aria-hidden="true"
@@ -26,7 +26,7 @@ exports[`Icons.ts > should render properly > IconArrowDown 1`] = `
 exports[`Icons.ts > should render properly > IconCheck 1`] = `
 <div>
   <div
-    class="_icon_295c81 _primary_295c81"
+    class="_icon_2be8fc _primary_2be8fc"
   >
     <svg
       fill="none"
@@ -48,7 +48,7 @@ exports[`Icons.ts > should render properly > IconCheck 1`] = `
 exports[`Icons.ts > should render properly > IconClose 1`] = `
 <div>
   <div
-    class="_icon_295c81 _primary_295c81"
+    class="_icon_2be8fc _primary_2be8fc"
   >
     <svg
       aria-hidden="true"
@@ -71,7 +71,7 @@ exports[`Icons.ts > should render properly > IconClose 1`] = `
 exports[`Icons.ts > should render properly > IconError 1`] = `
 <div>
   <div
-    class="_icon_295c81 _primary_295c81"
+    class="_icon_2be8fc _primary_2be8fc"
   >
     <svg
       aria-hidden="true"
@@ -94,7 +94,7 @@ exports[`Icons.ts > should render properly > IconError 1`] = `
 exports[`Icons.ts > should render properly > IconInfo 1`] = `
 <div>
   <div
-    class="_icon_295c81 _primary_295c81"
+    class="_icon_2be8fc _primary_2be8fc"
   >
     <svg
       aria-hidden="true"
@@ -117,7 +117,7 @@ exports[`Icons.ts > should render properly > IconInfo 1`] = `
 exports[`Icons.ts > should render properly > IconPlus 1`] = `
 <div>
   <div
-    class="_icon_295c81 _primary_295c81"
+    class="_icon_2be8fc _primary_2be8fc"
   >
     <svg
       aria-hidden="true"
@@ -140,7 +140,7 @@ exports[`Icons.ts > should render properly > IconPlus 1`] = `
 exports[`Icons.ts > should render properly > IconSuccess 1`] = `
 <div>
   <div
-    class="_icon_295c81 _primary_295c81"
+    class="_icon_2be8fc _primary_2be8fc"
   >
     <svg
       aria-hidden="true"
@@ -163,7 +163,7 @@ exports[`Icons.ts > should render properly > IconSuccess 1`] = `
 exports[`Icons.ts > should render properly > IconWarning 1`] = `
 <div>
   <div
-    class="_icon_295c81 _primary_295c81"
+    class="_icon_2be8fc _primary_2be8fc"
   >
     <svg
       aria-hidden="true"
