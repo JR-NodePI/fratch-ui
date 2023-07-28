@@ -12,7 +12,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: yarn install --pure-lock
+      - run: rm -f ./yarn.lock
+      - run: yarn install
       - run: yarn test
       - run: yarn build
       - run: yarn dist
