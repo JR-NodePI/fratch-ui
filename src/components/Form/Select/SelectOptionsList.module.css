@@ -55,7 +55,7 @@
 }
 
 .select_list ul li > a b {
-  font-weight: normal;
+  font-weight: 500;
   color: var(--ft-select-list-item-selected-text-color);
 }
 .select_list ul li > a * {
