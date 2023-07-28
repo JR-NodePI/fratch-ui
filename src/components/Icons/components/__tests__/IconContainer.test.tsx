@@ -1,8 +1,9 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
+import { IconType } from '../IconConstants';
 import IconContainer from '../IconContainer';
-import { type IconProps, IconType } from '../IconProps';
+import { type IconProps } from '../IconProps';
 
 describe('Button.tsx', () => {
   const svg = <svg></svg>;

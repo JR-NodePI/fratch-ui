@@ -76,7 +76,7 @@ exports[`TabsMenu.tsx > should render properly 1`] = `
           class="_tab_trigger_c51407"
         >
           <div
-            class="_icon_295c81 _primary_295c81 _tab_icon_c51407"
+            class="_icon_2be8fc _primary_2be8fc _tab_icon_c51407"
           >
             <svg
               fill="none"

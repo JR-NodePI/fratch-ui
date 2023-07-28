@@ -8,7 +8,8 @@ import { c } from '../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
 import Button from '../Button/Button';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
-import { ModalCloseTypes, type ModalProps, ModalTypes } from './ModalProps';
+import { ModalCloseTypes, ModalTypes } from './ModalConstants';
+import { type ModalProps } from './ModalProps';
 
 import styles from './Modal.module.css';
 

@@ -6,8 +6,9 @@ import IconError from '../Icon/IconError';
 import IconInfo from '../Icon/IconInfo';
 import IconSuccess from '../Icon/IconSuccess';
 import IconWarning from '../Icon/IconWarning';
-import { nlToNodes } from './ToasterFormatHelper';
-import { type Toaster, ToasterType } from './ToasterListContext';
+import { nlToNodes } from './ToasterFormatHelpers';
+import { ToasterType } from './ToasterConstants';
+import { type Toaster } from './ToasterListContextProps';
 
 import styles from './Toaster.module.css';
 

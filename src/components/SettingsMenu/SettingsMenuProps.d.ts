@@ -1,7 +1,4 @@
-export const SettingsMenuPosition = {
-  LEFT: 'left',
-  RIGHT: 'right',
-} as const;
+import { SettingsMenuPosition } from './SettingsMenuConstants';
 
 export type SettingsMenuProps = {
   className?: string;

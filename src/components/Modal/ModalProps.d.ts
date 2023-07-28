@@ -1,19 +1,9 @@
 import { ReactNode } from 'react';
 
-export const ModalTypes = {
-  ACCEPT: 'accept' as const,
-  CONFIRM: 'confirm' as const,
-  INFO: 'info' as const,
-};
-
-export const ModalCloseTypes = {
-  ACCEPT: 'accept' as const,
-  CANCEL: 'cancel' as const,
-  CLOSE: 'close' as const,
-};
+import { ModalCloseTypes, ModalTypes } from './ModalConstants';
 
 export type ModalCloseType =
-  (typeof ModalCloseTypes)[keyof typeof ModalCloseTypes];
+  (typeof ModalCloseTypes)[keyof typeof ModalCloseTypess];
 
 export type ModalProps = {
   acceptButtonLabel?: string;

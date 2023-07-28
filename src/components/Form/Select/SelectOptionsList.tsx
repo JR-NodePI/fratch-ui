@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
-import { type SelectOptionsListProps } from './SelectOptionsListProps';
+import { SelectOptionsListProps } from './SelectOptionsListProps';
 
 import styles from './SelectOptionsList.module.css';
 

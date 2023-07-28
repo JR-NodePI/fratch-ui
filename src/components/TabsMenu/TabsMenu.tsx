@@ -6,6 +6,7 @@ import TabEditable from './components/TabEditable';
 import { type Tab, type TabsMenuProps } from './TabsMenuProps';
 
 import styles from './TabMenu.module.css';
+import { isEqual } from 'lodash';
 
 export default function TabsMenu({
   className,
@@ -18,11 +19,15 @@ export default function TabsMenu({
   onTabsChange,
   tabs,
 }: TabsMenuProps): JSX.Element {
+  const [initialTabs, setInitialTabs] = useState<Tab[]>(tabs ?? []);
   const [currentTabs, setCurrentTabs] = useState<Tab[]>(tabs ?? []);
 
   useEffect(() => {
-    onTabsChange?.(currentTabs);
-  }, [onTabsChange, currentTabs]);
+    if (!isEqual(initialTabs, currentTabs)) {
+      onTabsChange?.(currentTabs);
+      setInitialTabs(currentTabs);
+    }
+  }, [onTabsChange, currentTabs, initialTabs]);
 
   const handleTabClick = (currentTabindex: number): void => {
     setCurrentTabs(
@@ -32,9 +37,7 @@ export default function TabsMenu({
       }))
     );
 
-    const currentTab = !isNaN(currentTabindex)
-      ? currentTabs[currentTabindex]
-      : null;
+    const currentTab = currentTabs?.[currentTabindex];
     onTabClick?.({ label: currentTab?.label, index: currentTabindex });
   };
 
@@ -46,18 +49,17 @@ export default function TabsMenu({
       active: false,
     }));
 
-    newTabs = [...(newTabs ?? []), { ...(newTabTemplate ?? {}), active: true }];
+    newTabs = [...newTabs, { ...(newTabTemplate ?? {}), active: true }];
 
     setCurrentTabs(newTabs);
 
-    const newTabIndex = currentTabs.length ?? 0;
+    const newTabIndex = currentTabs.length;
     onTabAdd?.({ label: newTabTemplate?.label, index: newTabIndex });
   };
 
   const handleRemoveClick = (currentTabindex: number): void => {
-    const currentTab = !isNaN(currentTabindex)
-      ? currentTabs[currentTabindex]
-      : null;
+    const currentTab = currentTabs[currentTabindex];
+
     let newTabs = currentTabs;
 
     const mustActivatePreviousTab = currentTab?.active && currentTabindex > 0;
@@ -70,7 +72,7 @@ export default function TabsMenu({
     }
 
     const mustActivateNextTab =
-      currentTab?.active && currentTabindex < (newTabs?.length ?? 0) - 1;
+      currentTab?.active && currentTabindex < newTabs?.length - 1;
 
     if (mustActivateNextTab) {
       newTabs = newTabs?.map((tab, index) => ({
