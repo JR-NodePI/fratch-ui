@@ -1,5 +1,3 @@
-.icon_list {
-}
 .icon_list ul {
   margin: 0;
   padding: 0;
@@ -13,7 +11,7 @@
   position: relative;
 }
 
-.icon_list ul li > div {
+.icon_list ul li .story_icon {
   background-color: #fff;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
 }
@@ -32,10 +30,4 @@
 }
 .icon_custom_color [stroke] {
   stroke: rgb(170, 0, 255);
-}
-.icon_custom_color [fill='none'] {
-  fill: transparent;
-}
-.icon_custom_color [stroke='none'] {
-  stroke: transparent;
 }

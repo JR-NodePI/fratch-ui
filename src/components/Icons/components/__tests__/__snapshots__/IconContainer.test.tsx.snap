@@ -2,90 +2,72 @@
 
 exports[`Button.tsx > should render properly 1`] = `
 <div>
-  <div
+  <svg
     class="_icon_2be8fc _primary_2be8fc"
-  >
-    <svg />
-  </div>
+  />
 </div>
 `;
 
 exports[`Button.tsx > should render with TYPE > error 1`] = `
 <div>
-  <div
+  <svg
     class="_icon_2be8fc _error_2be8fc"
-  >
-    <svg />
-  </div>
+  />
 </div>
 `;
 
 exports[`Button.tsx > should render with TYPE > info 1`] = `
 <div>
-  <div
+  <svg
     class="_icon_2be8fc _info_2be8fc"
-  >
-    <svg />
-  </div>
+  />
 </div>
 `;
 
 exports[`Button.tsx > should render with TYPE > primary 1`] = `
 <div>
-  <div
+  <svg
     class="_icon_2be8fc _primary_2be8fc"
-  >
-    <svg />
-  </div>
+  />
 </div>
 `;
 
 exports[`Button.tsx > should render with TYPE > secondary 1`] = `
 <div>
-  <div
+  <svg
     class="_icon_2be8fc _secondary_2be8fc"
-  >
-    <svg />
-  </div>
+  />
 </div>
 `;
 
 exports[`Button.tsx > should render with TYPE > success 1`] = `
 <div>
-  <div
+  <svg
     class="_icon_2be8fc _success_2be8fc"
-  >
-    <svg />
-  </div>
+  />
 </div>
 `;
 
 exports[`Button.tsx > should render with TYPE > tertiary 1`] = `
 <div>
-  <div
+  <svg
     class="_icon_2be8fc _tertiary_2be8fc"
-  >
-    <svg />
-  </div>
+  />
 </div>
 `;
 
 exports[`Button.tsx > should render with TYPE > warning 1`] = `
 <div>
-  <div
+  <svg
     class="_icon_2be8fc _warning_2be8fc"
-  >
-    <svg />
-  </div>
+  />
 </div>
 `;
 
 exports[`Button.tsx > should render with className 1`] = `
 <div>
-  <div
+  <svg
     class="_icon_2be8fc _primary_2be8fc mock_test_class_name"
-  >
-    <svg />
-  </div>
+  />
 </div>
 `;

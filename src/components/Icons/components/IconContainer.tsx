@@ -5,11 +5,12 @@ import { IconProps } from './IconProps';
 import styles from './IconContainer.module.css';
 
 const IconContainer = ({
-  svg,
+  children,
   className,
   type = IconType.PRIMARY,
-}: IconProps): JSX.Element => {
-  return <div className={c(styles.icon, styles[type], className)}>{svg}</div>;
-};
+}: IconProps): JSX.Element =>
+  children({
+    iconClassName: c(styles.icon, styles[type], className),
+  });
 
 export default IconContainer;

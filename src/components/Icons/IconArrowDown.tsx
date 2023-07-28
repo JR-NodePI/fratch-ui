@@ -6,14 +6,14 @@ const IconArrowDown = ({
   className,
 }: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
   return (
-    <IconContainer
-      className={className}
-      svg={
+    <IconContainer className={className} type={type}>
+      {({ iconClassName }) => (
         <svg
+          className={iconClassName}
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="-2 -5 18 18"
+          viewBox="-1 -4 16 16"
         >
           <path
             stroke="currentColor"
@@ -23,9 +23,8 @@ const IconArrowDown = ({
             d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
           />
         </svg>
-      }
-      type={type}
-    />
+      )}
+    </IconContainer>
   );
 };
 
