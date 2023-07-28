@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.1.46",
+  "version": "1.1.47",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
@@ -78,7 +78,7 @@
     "set-version-patch": "yarn version --patch",
     "set-version-minor": "yarn version --minor",
     "set-version-major": "yarn version --major",
-    "test": "vitest --config ./vitest.config.ts",
+    "test": "vitest --run --config ./vitest.config.ts",
     "test:cover": "yarn test run --coverage",
     "prepare": "husky install"
   }
