@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { ModalCloseTypes, ModalTypes } from './ModalConstants';
 
 export type ModalCloseType =
-  (typeof ModalCloseTypes)[keyof typeof ModalCloseTypess];
+  (typeof ModalCloseTypes)[keyof typeof ModalCloseTypes];
 
 export type ModalProps = {
   acceptButtonLabel?: string;

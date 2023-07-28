@@ -1,4 +1,4 @@
-import { IconPlus as Icon } from '../Icon/Icons';
+import { IconPlus as Icon } from '../Icons/Icons';
 import { ButtonSize, ButtonType } from './ButtonConstants';
 
 export interface ButtonProps {

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button, InputCheck } from '../..';
+import { Button } from '../..';
+import { InputCheck } from '../../Form/Form';
 import SettingsMenu from '../SettingsMenu';
 import StoryRenderer from './StoryRenderer';
 

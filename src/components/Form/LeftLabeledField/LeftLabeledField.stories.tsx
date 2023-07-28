@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Select from '../../../components/Form/Select/Select';
+import Select from '../Select/Select';
 import LeftLabeledField from './LeftLabeledField';
 
 const meta = {
