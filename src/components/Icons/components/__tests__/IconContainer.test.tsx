@@ -6,10 +6,12 @@ import IconContainer from '../IconContainer';
 import { type IconProps } from '../IconProps';
 
 describe('Button.tsx', () => {
-  const svg = <svg></svg>;
-
-  const setup = (props: IconProps = { svg }) =>
-    render(<IconContainer {...props} />);
+  const setup = (props: Omit<IconProps, 'children'> = {}) =>
+    render(
+      <IconContainer {...props}>
+        {({ iconClassName }) => <svg className={iconClassName} />}
+      </IconContainer>
+    );
 
   it('should render properly', () => {
     const { container } = setup();
@@ -19,7 +21,7 @@ describe('Button.tsx', () => {
   describe('should render with TYPE', () => {
     Object.values(IconType).forEach(type => {
       it(type, () => {
-        const { container } = setup({ type, svg });
+        const { container } = setup({ type });
         expect(container).toMatchSnapshot();
       });
     });
@@ -28,7 +30,6 @@ describe('Button.tsx', () => {
   it('should render with className', () => {
     const { container } = setup({
       className: 'mock_test_class_name',
-      svg,
     });
     expect(container).toMatchSnapshot();
   });

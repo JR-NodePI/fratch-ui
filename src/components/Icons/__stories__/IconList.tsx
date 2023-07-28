@@ -10,14 +10,17 @@ const IconList = ({ type }: Pick<IconProps, 'type'>): JSX.Element => (
       {Object.entries(Icons).map(([key, Icon]) => (
         <li key={key}>
           <span className={c(styles.icon_title)}>{key}</span>
-          <Icon type={type} />
+          <Icon type={type} className={c(styles.story_icon)} />
         </li>
       ))}
       <li>
         <span className={c(styles.icon_title)}>
           IconClose <br /> custom color
         </span>
-        <Icons.IconClose className={c(styles.icon_custom_color)} type={type} />
+        <Icons.IconClose
+          className={c(styles.story_icon, styles.icon_custom_color)}
+          type={type}
+        />
       </li>
     </ul>
     <a href="https://flowbite.com/icons/">Icons from flowbite</a>

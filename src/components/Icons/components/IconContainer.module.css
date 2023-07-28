@@ -3,14 +3,9 @@
   width: 1em;
   height: 1em;
   overflow: hidden;
-  display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.icon svg {
-  display: block;
-  height: auto;
+  display: inline-flex;
 }
 
 .primary [fill] {
@@ -62,9 +57,11 @@
   stroke: var(--ft-color-warning);
 }
 
+.icon[fill='none'],
 .icon [fill='none'] {
   fill: transparent !important;
 }
+.icon[stroke='none'],
 .icon [stroke='none'] {
   stroke: transparent !important;
 }

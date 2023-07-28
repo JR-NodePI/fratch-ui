@@ -1,7 +1,6 @@
 .button_closer {
   width: 42px;
   height: 42px;
-  font-size: 24px;
   background-color: transparent;
   border: none;
   color: var(--ft-color-text);
@@ -10,10 +9,16 @@
   right: 0;
   top: 0;
   border-radius: var(--ft-button-default-border-radius);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 .button_closer:hover {
   opacity: 1;
 }
-.button_closer * {
+.button_closer > * {
   display: none;
+}
+.button_closer .icon {
+  display: block;
 }
