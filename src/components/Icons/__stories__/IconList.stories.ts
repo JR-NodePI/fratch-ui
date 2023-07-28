@@ -4,7 +4,7 @@ import { IconType } from '../components/IconConstants';
 import IconList from './IconList';
 
 const meta = {
-  title: 'Example/Icon list',
+  title: 'Example/Icons',
   component: IconList,
   tags: ['autodocs'],
   argTypes: {},

@@ -1,31 +1,25 @@
-import IconContainer from './components/IconContainer';
-import { IconProps } from './components/IconProps';
+import IconContainer from '../components/IconContainer';
+import { IconProps } from './IconProps';
 
-const IconArrowDown = ({
-  type,
-  className,
-}: Pick<IconProps, 'type' | 'className'>): JSX.Element => {
+export default function IconCheck({ type, className }: IconProps): JSX.Element {
   return (
     <IconContainer className={className} type={type}>
       {({ iconClassName }) => (
         <svg
           className={iconClassName}
-          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="-1 -4 16 16"
+          viewBox="-1 -3 18 18"
         >
           <path
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="2"
-            d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+            strokeWidth="2.2"
+            d="M1 5.917 5.724 10.5 15 1.5"
           />
         </svg>
       )}
     </IconContainer>
   );
-};
-
-export default IconArrowDown;
+}

@@ -1,10 +1,10 @@
 import { type FocusEvent, type KeyboardEvent, useState } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
+import { IconEdit } from '../../Icons/Icons';
 import { TabEditableProps } from './TabEditableProps';
 
 import styles from './TabEditable.module.css';
-import IconEdit from '../../Icons/IconEdit';
 
 export default function TabEditable({
   className,

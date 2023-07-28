@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 
-import IconCheck from '../Icons/IconCheck';
+import { IconCheck } from '../Icons/Icons';
 import Button from './Button';
 import { ButtonSize, ButtonType } from './ButtonConstants';
 import { type ButtonProps } from './ButtonProps';

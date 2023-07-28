@@ -2,7 +2,7 @@ import { IconType } from './IconConstants';
 
 export type RenderSvgProps = { iconClassName?: string };
 
-export type IconProps = {
+export type IconContainerProps = {
   children: ({
     iconClassName,
   }: RenderSvgProps) => React.ReactElement<JSX.IntrinsicElements['svg']>;

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import IconCheck from '../Icons/IconCheck';
 import IconInfo from '../Icons/IconInfo';
-import IconSuccess from '../Icons/IconSuccess';
+import IconSuccess from '../Icons/Icons/IconSuccess';
 import TabsMenu from './TabsMenu';
 
 const meta = {

@@ -1,10 +1,10 @@
 import { c } from '../../../helpers/classNameHelpers';
-import type { IconProps } from '../components/IconProps';
+import type { IconContainerProps } from '../components/IconContainerProps';
 import * as Icons from '../Icons';
 
 import styles from './IconList.module.css';
 
-const IconList = ({ type }: Pick<IconProps, 'type'>): JSX.Element => (
+const IconList = ({ type }: Pick<IconContainerProps, 'type'>): JSX.Element => (
   <div className={c(styles.icon_list)}>
     <ul>
       {Object.entries(Icons).map(([key, Icon]) => (
@@ -15,7 +15,7 @@ const IconList = ({ type }: Pick<IconProps, 'type'>): JSX.Element => (
       ))}
       <li>
         <span className={c(styles.icon_title)}>
-          IconClose <br /> custom color
+          ∫ IconClose <br /> custom color
         </span>
         <Icons.IconClose
           className={c(styles.story_icon, styles.icon_custom_color)}

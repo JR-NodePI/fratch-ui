@@ -4,7 +4,7 @@ import { c } from '../../helpers/classNameHelpers';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
 import IconError from '../Icons/IconError';
 import IconInfo from '../Icons/IconInfo';
-import IconSuccess from '../Icons/IconSuccess';
+import IconSuccess from '../Icons/Icons/IconSuccess';
 import IconWarning from '../Icons/IconWarning';
 import { ToasterType } from './ToasterConstants';
 import { nlToNodes } from './ToasterFormatHelpers';
