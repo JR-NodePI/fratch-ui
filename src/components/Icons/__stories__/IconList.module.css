@@ -25,9 +25,6 @@
   max-width: 100px;
 }
 
-.icon_custom_color [fill] {
-  fill: rgb(170, 0, 255);
-}
-.icon_custom_color [stroke] {
-  stroke: rgb(170, 0, 255);
+.icon_custom_color {
+  color: rgb(170, 0, 255);
 }

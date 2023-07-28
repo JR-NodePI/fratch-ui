@@ -161,18 +161,7 @@
   min-height: var(--button-icon-size);
   max-height: var(--button-icon-size);
   margin: calc(1em - var(--button-icon-size));
-}
-.button .icon [fill] {
-  fill: var(--icon-color);
-}
-.button .icon [stroke] {
-  stroke: var(--icon-color);
-}
-.button .icon [fill='none'] {
-  fill: transparent;
-}
-.button .icon [stroke='none'] {
-  stroke: transparent;
+  color: var(--icon-color);
 }
 
 .button.only_icon {

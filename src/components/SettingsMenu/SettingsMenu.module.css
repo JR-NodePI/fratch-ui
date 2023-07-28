@@ -21,11 +21,8 @@
   height: 36px;
   outline: none;
 }
-.opener_icon[fill] {
-  fill: var(--ft-color-text);
-}
-.opener_icon[stroke] {
-  stroke: var(--ft-color-text);
+.opener_icon {
+  color: var(--ft-color-text);
 }
 
 .settings_menu.open {

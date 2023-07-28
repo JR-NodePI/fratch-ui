@@ -22,6 +22,9 @@
   border-left: none;
   transition: background-color 0.2s ease-out;
   background-color: var(--ft-button-default-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cleaner:hover {
   background-color: var(--ft-button-hover-bg-color);
@@ -29,33 +32,12 @@
 .cleaner:active {
   background-color: var(--ft-button-active-bg-color);
 }
-.cleaner_icon [fill] {
-  fill: var(--ft-button-default-color);
+.cleaner .cleaner .cleaner_icon {
+  color: var(--ft-button-default-color);
 }
-.cleaner .cleaner_icon [stroke] {
-  stroke: var(--ft-button-default-color);
-}
-.cleaner .cleaner:hover .cleaner_icon [fill] {
+.cleaner .cleaner:hover .cleaner_icon {
   fill: var(--ft-button-hover-color);
 }
-.cleaner:hover .cleaner_icon [stroke] {
-  stroke: var(--ft-button-hover-color);
-}
-.cleaner .cleaner_icon [fill='none'] {
-  fill: transparent !important;
-}
-.cleaner .cleaner_icon [stroke='none'] {
-  stroke: transparent !important;
-}
-
-.controls .trigger_icon,
-.cleaner .cleaner_icon {
-  font-size: var(--ft-button-default-font-size);
-  margin: -0.1em;
-  font-size: 1.1em;
-  min-width: 1.1em;
-}
-
 .controls {
   display: flex;
   position: relative;
@@ -80,22 +62,9 @@
   border-radius: var(--ft-form-item-border-radius) 0 0
     var(--ft-form-item-border-radius);
 }
-
-.controls .trigger_icon [fill] {
-  fill: var(--ft-form-item-border-color);
+.controls .trigger_icon {
+  color: var(--ft-form-item-border-color);
 }
-.controls .trigger_icon [stroke] {
-  stroke: var(--ft-form-item-border-color);
-}
-.controls .trigger:hover ~ .trigger_icon [fill] {
-  fill: var(--ft-color-primary);
-}
-.controls .trigger:hover ~ .trigger_icon [stroke] {
-  stroke: var(--ft-color-primary);
-}
-.controls .trigger_icon [fill='none'] {
-  fill: transparent !important;
-}
-.controls .trigger_icon [stroke='none'] {
-  stroke: transparent !important;
+.controls .trigger:hover ~ .trigger_icon {
+  color: var(--ft-color-primary);
 }

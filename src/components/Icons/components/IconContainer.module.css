@@ -8,60 +8,24 @@
   display: inline-flex;
 }
 
-.primary [fill] {
-  fill: var(--ft-color-text);
+.primary {
+  color: var(--ft-color-text);
 }
-.primary [stroke] {
-  stroke: var(--ft-color-text);
+.secondary {
+  color: var(--ft-color-secondary);
 }
-
-.secondary [fill] {
-  fill: var(--ft-color-secondary);
+.tertiary {
+  color: var(--ft-color-tertiary);
 }
-.secondary [stroke] {
-  stroke: var(--ft-color-secondary);
+.error {
+  color: var(--ft-color-error);
 }
-
-.tertiary [fill] {
-  fill: var(--ft-color-tertiary);
+.info {
+  color: var(--ft-color-info);
 }
-.tertiary [stroke] {
-  stroke: var(--ft-color-tertiary);
+.success {
+  color: var(--ft-color-success);
 }
-
-.error [fill] {
-  fill: var(--ft-color-error);
-}
-.error [stroke] {
-  stroke: var(--ft-color-error);
-}
-
-.info [fill] {
-  fill: var(--ft-color-info);
-}
-.info [stroke] {
-  stroke: var(--ft-color-info);
-}
-
-.success [fill] {
-  fill: var(--ft-color-success);
-}
-.success [stroke] {
-  stroke: var(--ft-color-success);
-}
-
-.warning [fill] {
-  fill: var(--ft-color-warning);
-}
-.warning [stroke] {
-  stroke: var(--ft-color-warning);
-}
-
-.icon[fill='none'],
-.icon [fill='none'] {
-  fill: transparent !important;
-}
-.icon[stroke='none'],
-.icon [stroke='none'] {
-  stroke: transparent !important;
+.warning {
+  color: var(--ft-color-warning);
 }

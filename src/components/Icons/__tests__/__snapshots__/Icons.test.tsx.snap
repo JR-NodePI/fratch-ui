@@ -181,12 +181,12 @@ exports[`Icons.ts > should render properly > IconWarning 1`] = `
     aria-hidden="true"
     class="_icon_2be8fc _primary_2be8fc"
     fill="none"
+    stroke="currentColor"
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="2"
