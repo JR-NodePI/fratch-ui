@@ -19,7 +19,7 @@
   "author": "JorgeRojo <jorge.rojodiseno@gmail.com>",
   "license": "MIT",
   "private": false,
-  "main": "index.js",
+  "main": "component/index.js",
   "type": "module",
   "devDependencies": {
     "@storybook/addon-essentials": "^7.1.1",
