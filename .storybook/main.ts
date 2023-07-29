@@ -1,18 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-  // viteFinal(config) {
-  //   return {
-  //     ...config,
-  //     resolve: {
-  //       ...config?.resolve,
-  //       alias: {
-  //         ...config?.resolve?.alias,
-  //         '@fonts': path.resolve('./src/fonts'),
-  //       },
-  //     },
-  //   };
-  // },
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',

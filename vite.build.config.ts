@@ -3,7 +3,6 @@ import fs from 'fs';
 import glob from 'glob';
 import path from 'node:path';
 import { build, defineConfig } from 'vite';
-import type { PluginOptions } from 'vite-plugin-dts';
 import dts from 'vite-plugin-dts';
 
 const srcDir = './src';
@@ -17,14 +16,9 @@ const buildComponent = file => {
 
   const moduleOutDir = `${outDir}/${path.relative(srcDir, path.dirname(file))}`;
 
-  const dtsOptions = (dts as (ops?: PluginOptions) => any)({
-    outDir,
-    exclude: excludePattern,
-  });
-
   return build({
     publicDir: false,
-    plugins: [dtsOptions, react()],
+    plugins: [react()],
     build: {
       outDir: moduleOutDir,
       emptyOutDir: false,
@@ -81,7 +75,14 @@ const buildComponentsOnCloseBundle = () => ({
 });
 
 export default defineConfig({
-  plugins: [buildComponentsOnCloseBundle()],
+  plugins: [
+    buildComponentsOnCloseBundle(),
+    dts({
+      outDir,
+      exclude: excludePattern,
+      entryRoot: srcDir,
+    }),
+  ],
   build: {
     outDir,
     emptyOutDir: false,
