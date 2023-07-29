@@ -13,7 +13,7 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: rm -f ./yarn.lock
-      - run: yarn install
+      - run: yarn install --disable-pnp
       - run: yarn test
       - run: yarn build
       - run: yarn dist
