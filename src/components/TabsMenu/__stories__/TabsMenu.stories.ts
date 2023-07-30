@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import getRandomColor from '../../../helpers/getRandomColor';
 import { IconCheck, IconInfo } from '../../Icons/Icons';
 import IconSuccess from '../../Icons/Icons/IconSuccess';
 import TabsMenu from '../TabsMenu';
@@ -28,21 +29,21 @@ export const Default: Story = {
         Icon: IconCheck,
         label: 'Tab 1',
         active: true,
-        color: '#08d799',
+        color: getRandomColor(),
       },
       {
         Icon: IconInfo,
         label: 'Tab 2 with more text',
-        color: '#0857d7',
+        color: getRandomColor(),
       },
       {
         Icon: IconSuccess,
         label: 'Tab 3',
-        color: '#7d08d7',
+        color: getRandomColor(),
       },
       {
         label: 'Tab 4 with much more text',
-        color: '#d70873',
+        color: getRandomColor(),
       },
     ],
   },
@@ -72,7 +73,7 @@ export const AddFromTemplate: Story = {
     newTabTemplate: {
       label: 'Template tab',
       Icon: IconInfo,
-      color: 'rgba(215, 8, 115, 0.5)',
+      color: getRandomColor(),
     },
     tabs: [
       {
