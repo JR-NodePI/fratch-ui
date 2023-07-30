@@ -54,6 +54,19 @@ describe('TabsMenu.tsx', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should render with tab colors', () => {
+    const mockTabs = [
+      { label: 'label-1', color: 'Red' },
+      { label: 'label-2', color: 'Blue' },
+    ];
+
+    const { container } = setup({
+      className: 'className-test',
+      tabs: mockTabs,
+    });
+    expect(container).toMatchSnapshot();
+  });
+
   it('should add new tab based on template in addable mode', async () => {
     const { container } = setup({
       addable: true,
