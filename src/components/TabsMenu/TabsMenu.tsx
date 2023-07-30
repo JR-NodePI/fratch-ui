@@ -113,7 +113,7 @@ export default function TabsMenu({
   return (
     <nav className={c(styles.tab_menu, className)}>
       <ul>
-        {currentTabs.map(({ label, Icon, active }, index) => (
+        {currentTabs.map(({ label, Icon, active, color }, index) => (
           <li
             className={c(styles.tab_item, active ? styles.active : '')}
             key={index}
@@ -125,6 +125,12 @@ export default function TabsMenu({
                 handleTabClick(index);
               }}
             >
+              {color && (
+                <span
+                  className={c(styles.tab_color)}
+                  style={{ background: color }}
+                />
+              )}
               {Icon && <Icon className={c(styles.tab_icon)} />}
               <TabEditable
                 className={c(styles.tab_label)}

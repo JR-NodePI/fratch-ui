@@ -28,17 +28,21 @@ export const Default: Story = {
         Icon: IconCheck,
         label: 'Tab 1',
         active: true,
+        color: '#08d799',
       },
       {
         Icon: IconInfo,
         label: 'Tab 2 with more text',
+        color: '#0857d7',
       },
       {
         Icon: IconSuccess,
         label: 'Tab 3',
+        color: '#7d08d7',
       },
       {
         label: 'Tab 4 with much more text',
+        color: '#d70873',
       },
     ],
   },
@@ -68,6 +72,7 @@ export const AddFromTemplate: Story = {
     newTabTemplate: {
       label: 'Template tab',
       Icon: IconInfo,
+      color: 'rgba(215, 8, 115, 0.5)',
     },
     tabs: [
       {
