@@ -9,6 +9,8 @@ export type Tab = {
 export type TabsMenuProps = {
   className?: string;
   editable?: boolean;
+  removable?: boolean;
+  addable?: boolean;
   newTabTemplate?: Pick<Tab, 'label' | 'Icon'>;
   onTabAdd?: (tabData: Pick<Tab, 'label'> & { index: number }) => void;
   onTabClick?: (tabData: Pick<Tab, 'label'> & { index: number }) => void;
