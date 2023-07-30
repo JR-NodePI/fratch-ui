@@ -13,6 +13,8 @@ import styles from './TabMenu.module.css';
 export default function TabsMenu({
   className,
   editable,
+  removable,
+  addable,
   newTabTemplate,
   onTabAdd,
   onTabClick,
@@ -38,7 +40,6 @@ export default function TabsMenu({
         active: index === currentTabindex,
       }))
     );
-
     const currentTab = currentTabs?.[currentTabindex];
     onTabClick?.({ label: currentTab?.label, index: currentTabindex });
   };
@@ -60,10 +61,8 @@ export default function TabsMenu({
   };
 
   const handleRemoveClick = (currentTabindex: number): void => {
-    const currentTab = currentTabs[currentTabindex];
-
     let newTabs = currentTabs;
-
+    const currentTab = currentTabs[currentTabindex];
     const mustActivatePreviousTab = currentTab?.active && currentTabindex > 0;
 
     if (mustActivatePreviousTab) {
@@ -136,16 +135,16 @@ export default function TabsMenu({
                 }}
               />
             </div>
-            {editable && (
+            {removable && (
               <ButtonCloser
-                title="Remove tag"
+                title="Remove tab"
                 className={c(styles.tab_closer)}
                 onClick={() => handleRemoveClick(index)}
               />
             )}
           </li>
         ))}
-        {editable && (
+        {addable && (
           <li className={c(styles.add_tab)}>
             <a
               title="Add new tab"

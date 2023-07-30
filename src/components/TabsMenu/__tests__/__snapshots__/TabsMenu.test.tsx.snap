@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TabsMenu.tsx > should add new tab based on template in editable mode 1`] = `
+exports[`TabsMenu.tsx > should add new tab based on template in addable mode 1`] = `
 <div>
   <nav
     class="_tab_menu_c51407"
@@ -24,55 +24,9 @@ exports[`TabsMenu.tsx > should add new tab based on template in editable mode 1`
               >
                 new-tab-label-from-template
               </span>
-              <button
-                class="_edit_button_732c04"
-                title="Edit tag"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="_icon_2be8fc _primary_2be8fc _edit_icon_732c04"
-                  fill="none"
-                  viewBox="0 0 21 21"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
-                <i>
-                  Edit tag
-                </i>
-              </button>
             </div>
           </div>
         </div>
-        <button
-          class="_button_closer_8d9a3f _tab_closer_c51407"
-          title="Remove tag"
-        >
-          <svg
-            aria-hidden="true"
-            class="_icon_2be8fc _primary_2be8fc _icon_8d9a3f"
-            fill="none"
-            viewBox="-1 -1 16 16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-          </svg>
-          <i>
-            Remove tag
-          </i>
-        </button>
       </li>
       <li
         class="_add_tab_c51407"
@@ -205,7 +159,7 @@ exports[`TabsMenu.tsx > should render with className 1`] = `
 </div>
 `;
 
-exports[`TabsMenu.tsx > should render with editable 1`] = `
+exports[`TabsMenu.tsx > should render with editable addable and removable 1`] = `
 <div>
   <nav
     class="_tab_menu_c51407"
@@ -257,7 +211,7 @@ exports[`TabsMenu.tsx > should render with editable 1`] = `
         </div>
         <button
           class="_button_closer_8d9a3f _tab_closer_c51407"
-          title="Remove tag"
+          title="Remove tab"
         >
           <svg
             aria-hidden="true"
@@ -275,7 +229,7 @@ exports[`TabsMenu.tsx > should render with editable 1`] = `
             />
           </svg>
           <i>
-            Remove tag
+            Remove tab
           </i>
         </button>
       </li>
@@ -325,7 +279,7 @@ exports[`TabsMenu.tsx > should render with editable 1`] = `
         </div>
         <button
           class="_button_closer_8d9a3f _tab_closer_c51407"
-          title="Remove tag"
+          title="Remove tab"
         >
           <svg
             aria-hidden="true"
@@ -343,7 +297,7 @@ exports[`TabsMenu.tsx > should render with editable 1`] = `
             />
           </svg>
           <i>
-            Remove tag
+            Remove tab
           </i>
         </button>
       </li>

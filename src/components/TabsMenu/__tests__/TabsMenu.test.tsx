@@ -29,9 +29,11 @@ describe('TabsMenu.tsx', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render with editable', () => {
+  it('should render with editable addable and removable', () => {
     const { container } = setup({
       editable: true,
+      addable: true,
+      removable: true,
       tabs: [
         {
           label: 'label-test-1',
@@ -52,9 +54,9 @@ describe('TabsMenu.tsx', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should add new tab based on template in editable mode', async () => {
+  it('should add new tab based on template in addable mode', async () => {
     const { container } = setup({
-      editable: true,
+      addable: true,
       tabs: [],
       newTabTemplate: { label: 'new-tab-label-from-template' },
     });
@@ -68,7 +70,7 @@ describe('TabsMenu.tsx', () => {
     const onTabAdd = vi.fn();
     const mockTabs = [{ label: 'label-test-1', active: true }];
     setup({
-      editable: true,
+      addable: true,
       onTabAdd,
       newTabTemplate: { label: 'new-tab-label' },
       tabs: mockTabs,
@@ -86,7 +88,9 @@ describe('TabsMenu.tsx', () => {
   it('should perform onTabsChange', async () => {
     const onTabsChange = vi.fn();
     setup({
+      addable: true,
       editable: true,
+      removable: true,
       onTabsChange,
     });
 
@@ -108,7 +112,7 @@ describe('TabsMenu.tsx', () => {
       const onTabRemove = vi.fn();
       const onTabsChange = vi.fn();
       setup({
-        editable: true,
+        removable: true,
         tabs: mockTabs,
         onTabRemove,
         onTabsChange,
@@ -117,7 +121,7 @@ describe('TabsMenu.tsx', () => {
       await userEvent.click(
         (
           await screen.getAllByRole('button', {
-            name: /Remove tag/,
+            name: /Remove tab/,
             hidden: true,
           })
         )?.[expectedTabIndexRemoved]
@@ -146,7 +150,7 @@ describe('TabsMenu.tsx', () => {
       const onTabRemove = vi.fn();
       const onTabsChange = vi.fn();
       setup({
-        editable: true,
+        removable: true,
         tabs: mockTabs,
         onTabRemove,
         onTabsChange,
@@ -155,7 +159,7 @@ describe('TabsMenu.tsx', () => {
       await userEvent.click(
         (
           await screen.getAllByRole('button', {
-            name: /Remove tag/,
+            name: /Remove tab/,
             hidden: true,
           })
         )?.[expectedTabIndexRemoved]
@@ -182,7 +186,6 @@ describe('TabsMenu.tsx', () => {
       { label: 'label-test-3' },
     ];
     setup({
-      editable: true,
       tabs: mockTabs,
       onTabClick,
     });

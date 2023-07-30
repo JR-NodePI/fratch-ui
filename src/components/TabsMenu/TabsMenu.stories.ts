@@ -62,17 +62,55 @@ export const Editable: Story = {
   },
 };
 
-export const EditableWithTemplate: Story = {
+export const AddFromTemplate: Story = {
   args: {
-    editable: true,
+    addable: true,
     newTabTemplate: {
       label: 'Template tab',
       Icon: IconInfo,
     },
     tabs: [
       {
+        label: 'Label tab text 1',
+        active: true,
+      },
+    ],
+  },
+};
+
+export const Removable: Story = {
+  args: {
+    removable: true,
+    tabs: [
+      {
         label: 'Tab 1',
         active: true,
+      },
+      {
+        label: 'Tab 2',
+      },
+      {
+        label: 'Tab 3',
+      },
+    ],
+  },
+};
+
+export const EditableAddableRemovable: Story = {
+  args: {
+    removable: true,
+    editable: true,
+    addable: true,
+    tabs: [
+      {
+        label: 'Tab 1',
+        active: true,
+      },
+      {
+        label: 'Tab 2',
+      },
+      {
+        label: 'Tab 3',
       },
     ],
   },
