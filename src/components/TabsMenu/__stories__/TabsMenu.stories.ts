@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { IconCheck, IconInfo } from '../Icons/Icons';
-import IconSuccess from '../Icons/Icons/IconSuccess';
-import TabsMenu from './TabsMenu';
+import { IconCheck, IconInfo } from '../../Icons/Icons';
+import IconSuccess from '../../Icons/Icons/IconSuccess';
+import TabsMenu from '../TabsMenu';
 
 const meta = {
   title: 'Example/Tabs Menu',
