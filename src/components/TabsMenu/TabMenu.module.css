@@ -4,21 +4,34 @@
   width: 100%;
   box-sizing: border-box;
   flex-wrap: nowrap;
+  padding-bottom: 32px;
 }
 .tab_menu > ul {
   border-bottom: 1px solid var(--ft-color-grey-1);
+  background: var(--ft-color-grey-3);
   margin: 0;
   padding: 0;
   list-style: none;
   flex-wrap: nowrap;
   display: flex;
   gap: 1px;
-  position: relative;
   padding: 8px 8px 0 8px;
   height: calc(var(--ft-tab-height) + 1px);
   flex-wrap: nowrap;
   width: auto;
   flex: 1 1 100%;
+  position: relative;
+  z-index: 1;
+}
+.tab_menu > ul::after {
+  content: ' ';
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  top: calc(100% + 1px);
+  background-image: linear-gradient(var(--ft-color-white), rgba(0, 0, 0, 0));
 }
 
 /***  Tab Item  ***/
@@ -103,7 +116,9 @@
   font-weight: 500;
   border-radius: 100%;
   background-color: var(--ft-color-white);
-  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
 .tab_menu .add_tab a:hover {
   opacity: 1;
