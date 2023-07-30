@@ -74,7 +74,15 @@
 .tab_menu .tab_item .tab_trigger:last-child {
   padding-right: var(--ft-button-small-padding-x);
 }
-
+.tab_menu .tab_item .tab_trigger .tab_color {
+  display: block;
+  position: absolute;
+  width: 4px;
+  left: 4px;
+  top: 4px;
+  height: 28px;
+  border-radius: 4px;
+}
 .tab_menu .tab_item .tab_trigger .tab_icon {
   width: 1.3em;
   min-width: 1.3em;
