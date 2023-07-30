@@ -330,3 +330,66 @@ exports[`TabsMenu.tsx > should render with editable addable and removable 1`] = 
   </nav>
 </div>
 `;
+
+exports[`TabsMenu.tsx > should render with tab colors 1`] = `
+<div>
+  <nav
+    class="_tab_menu_c51407 className-test"
+  >
+    <ul>
+      <li
+        class="_tab_item_c51407"
+        title="label-1"
+      >
+        <div
+          class="_tab_trigger_c51407"
+        >
+          <span
+            class="_tab_color_c51407"
+            style="background: Red;"
+          />
+          <div
+            class="_tab_editable_732c04 _tab_label_c51407"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-1
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="_tab_item_c51407"
+        title="label-2"
+      >
+        <div
+          class="_tab_trigger_c51407"
+        >
+          <span
+            class="_tab_color_c51407"
+            style="background: Blue;"
+          />
+          <div
+            class="_tab_editable_732c04 _tab_label_c51407"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-2
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
