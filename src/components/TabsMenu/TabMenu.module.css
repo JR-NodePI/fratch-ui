@@ -33,6 +33,7 @@
   top: calc(100% + 1px);
   background-image: linear-gradient(
     var(--ft-color-white),
+    90%,
     rgba(255, 255, 255, 0)
   );
 }
