@@ -11,20 +11,27 @@ import { type Tab, type TabsMenuProps } from './TabsMenuProps';
 import styles from './TabMenu.module.css';
 
 export default function TabsMenu({
+  addable,
   className,
   editable,
-  removable,
-  addable,
   newTabTemplate,
   onTabAdd,
   onTabClick,
   onTabEdit,
   onTabRemove,
   onTabsChange,
+  removable,
   tabs,
+  tabsDefault,
 }: TabsMenuProps): JSX.Element {
-  const [initialTabs, setInitialTabs] = useState<Tab[]>(tabs ?? []);
-  const [currentTabs, setCurrentTabs] = useState<Tab[]>(tabs ?? []);
+  const [initialTabs, setInitialTabs] = useState<Tab[]>(tabsDefault ?? []);
+  const [currentTabs, setCurrentTabs] = useState<Tab[]>(tabsDefault ?? []);
+
+  useEffect(() => {
+    if (!tabs) return;
+    setInitialTabs(tabs ?? []);
+    setCurrentTabs(tabs ?? []);
+  }, [tabs]);
 
   useEffect(() => {
     if (!isEqual(initialTabs, currentTabs)) {
