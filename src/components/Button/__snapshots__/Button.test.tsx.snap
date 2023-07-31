@@ -28,7 +28,7 @@ exports[`Button.tsx > should render with Icon 1`] = `
         stroke="currentColor"
         stroke-linecap="round"
         stroke-linejoin="round"
-        stroke-width="2.2"
+        stroke-width="3"
       />
     </svg>
     <span>
