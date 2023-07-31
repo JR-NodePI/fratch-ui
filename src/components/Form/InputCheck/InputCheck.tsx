@@ -1,6 +1,7 @@
 import { forwardRef, useEffect, useRef, useState } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
+import { Icons } from '../..';
 
 import styles from './InputCheck.module.css';
 
@@ -58,6 +59,7 @@ const InputCheck = forwardRef<HTMLInputElement, InputCheckProps>(
           disabled={disabled}
           onChange={handleOnChange}
         />
+        <Icons.IconCheck className={c(styles.icon_check)} type="tertiary" />
         <span>{label}</span>
       </label>
     );

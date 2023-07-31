@@ -15,7 +15,7 @@ export default function IconCheck({ type, className }: IconProps): JSX.Element {
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="2.2"
+            strokeWidth="3"
             d="M1 5.917 5.724 10.5 15 1.5"
           />
         </svg>
