@@ -1,7 +1,7 @@
 .tab_editable {
   position: relative;
-  height: var(--ft-tab-height);
-  line-height: var(--ft-tab-height);
+  height: var(--ft-tabs-height);
+  line-height: var(--ft-tabs-height);
   box-sizing: border-box;
   align-self: end;
   overflow: hidden;
@@ -19,8 +19,8 @@
   overflow: hidden;
 
   --ft-tab-editable-padding-top: 3px;
-  height: var(--ft-tab-height);
-  line-height: var(--ft-tab-height);
+  height: var(--ft-tabs-height);
+  line-height: var(--ft-tabs-height);
 }
 
 /*** label ***/
@@ -57,7 +57,9 @@
   align-items: center;
   opacity: 0.5;
   background-color: var(--ft-color-white);
-  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
 .tab_editable .label .edit_button > * {
   display: none;

@@ -1,10 +1,11 @@
 .tab_menu {
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   display: flex;
   width: 100%;
   box-sizing: border-box;
   flex-wrap: nowrap;
-  padding-bottom: 16px;
+  height: calc(var(--ft-tabs-height) + 19px + var(--ft-tabs-padding));
 }
 .tab_menu > ul {
   border-bottom: 1px solid var(--ft-color-grey-1);
@@ -15,8 +16,9 @@
   flex-wrap: nowrap;
   display: flex;
   gap: 1px;
-  padding: 8px 8px 0 8px;
-  height: calc(var(--ft-tab-height) + 1px);
+  padding: var(--ft-tabs-padding) var(--ft-tabs-padding) 0
+    var(--ft-tabs-padding);
+  height: calc(var(--ft-tabs-height) + 1px);
   flex-wrap: nowrap;
   width: auto;
   flex: 1 1 100%;
@@ -65,7 +67,7 @@
   text-decoration: none;
   cursor: default;
   padding-left: var(--ft-button-small-padding-x);
-  height: var(--ft-tab-height);
+  height: var(--ft-tabs-height);
   width: 100%;
   color: var(--ft-color-text);
   justify-content: space-between;
@@ -98,8 +100,8 @@
 }
 .tab_menu .tab_item .tab_closer {
   position: relative;
-  min-width: var(--ft-tab-height);
-  height: var(--ft-tab-height);
+  min-width: var(--ft-tabs-height);
+  height: var(--ft-tabs-height);
   overflow: hidden;
 }
 
