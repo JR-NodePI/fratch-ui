@@ -64,7 +64,12 @@ export default function TabsMenu({
     setCurrentTabs(newTabs);
 
     const newTabIndex = currentTabs.length;
-    onTabAdd?.({ label: newTabTemplate?.label, index: newTabIndex });
+    onTabAdd?.({
+      color: newTabTemplate?.color,
+      Icon: newTabTemplate?.Icon,
+      index: newTabIndex,
+      label: newTabTemplate?.label,
+    });
   };
 
   const handleRemoveClick = (currentTabindex: number): void => {
@@ -92,9 +97,11 @@ export default function TabsMenu({
     newTabs = newTabs?.filter((_tab, index) => index !== currentTabindex);
 
     setCurrentTabs(newTabs);
-
     onTabRemove?.({
+      color: currentTab?.color,
+      Icon: currentTab?.Icon,
       index: currentTabindex,
+      label: currentTab?.label,
     });
   };
 
@@ -102,19 +109,24 @@ export default function TabsMenu({
     currentTabindex: number,
     newLabel: string
   ): void => {
-    setCurrentTabs(
-      currentTabs.map((tab, index) => {
-        if (index === currentTabindex) {
-          return {
-            ...tab,
-            label: newLabel,
-          };
-        }
-        return tab;
-      })
-    );
+    const currentTab = currentTabs[currentTabindex];
+    const newTabs = currentTabs.map((tab, index) => {
+      if (index === currentTabindex) {
+        return {
+          ...tab,
+          label: newLabel,
+        };
+      }
+      return tab;
+    });
 
-    onTabEdit?.({ label: newLabel, index: currentTabindex });
+    setCurrentTabs(newTabs);
+    onTabEdit?.({
+      label: newLabel,
+      index: currentTabindex,
+      color: currentTab?.color,
+      Icon: currentTab?.Icon,
+    });
   };
 
   return (

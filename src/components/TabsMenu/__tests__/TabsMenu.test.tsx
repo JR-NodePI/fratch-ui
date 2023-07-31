@@ -148,7 +148,10 @@ describe('TabsMenu.tsx', () => {
 
       expect(onTabRemove).toHaveBeenCalledTimes(1);
       expect(onTabRemove).toHaveBeenCalledWith({
+        Icon: undefined,
+        color: undefined,
         index: expectedTabIndexRemoved,
+        label: 'label-test-2',
       });
     });
 
@@ -186,7 +189,10 @@ describe('TabsMenu.tsx', () => {
 
       expect(onTabRemove).toHaveBeenCalledTimes(1);
       expect(onTabRemove).toHaveBeenCalledWith({
+        Icon: undefined,
+        color: undefined,
         index: expectedTabIndexRemoved,
+        label: 'label-test-3',
       });
     });
   });

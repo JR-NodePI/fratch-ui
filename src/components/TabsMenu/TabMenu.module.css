@@ -130,9 +130,7 @@
   font-weight: 500;
   border-radius: 100%;
   background-color: var(--ft-color-white);
-  transition:
-    opacity 0.2s ease-in-out,
-    background-color 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 .tab_menu .add_tab a:hover {
   opacity: 1;
