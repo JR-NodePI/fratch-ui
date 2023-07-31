@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.1.76",
+  "version": "1.1.77",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
@@ -54,12 +54,13 @@
     "storybook": "^7.1.1",
     "typescript-plugin-css-modules": "^5.0.1",
     "uuid": "^9.0.0",
+    "vite": "^4.4.7",
     "vite-plugin-dts": "^3.3.1",
     "vitest": "^0.33.0"
   },
   "scripts": {
-    "format": "prettier --write ./*.{ts,json} ./.storybook/**/*.ts ./src/**/*.{ts,tsx}",
-    "lint": "eslint ./*.{ts,json} ./.storybook/**/*.ts ./src/**/*.{ts,tsx} --fix",
+    "format": "prettier --write ./*.{ts,json} ./.storybook/**/*.ts ./src/**/*.{ts,tsx,css}",
+    "lint": "eslint --max-warnings=0 . --ext .ts,.tsx  --fix",
     "start": "storybook dev -p 6006",
     "build": "ls ./ && rm -rf ./dist && tsc && cross-env NODE_OPTIONS='--max_old_space_size=8192' vite build --config vite.build.config.ts",
     "storybook:build": "storybook build",
