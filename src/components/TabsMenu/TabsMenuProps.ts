@@ -9,15 +9,19 @@ export type Tab = {
   Icon?: typeof Icon;
 };
 
+export type TabEvent = Pick<Tab, 'label' | 'color' | 'Icon'> & {
+  index: number;
+};
+
 export type TabsMenuProps = {
   addable?: boolean;
   className?: string;
   editable?: boolean;
   newTabTemplate?: Pick<Tab, 'label' | 'Icon' | 'color'>;
-  onTabAdd?: (tabData: Pick<Tab, 'label'> & { index: number }) => void;
-  onTabClick?: (tabData: Pick<Tab, 'label'> & { index: number }) => void;
-  onTabEdit?: (tabData: Pick<Tab, 'label'> & { index: number }) => void;
-  onTabRemove?: (tabData: { index: number }) => void;
+  onTabAdd?: (tabData: TabEvent) => void;
+  onTabClick?: (tabData: TabEvent) => void;
+  onTabEdit?: (tabData: TabEvent) => void;
+  onTabRemove?: (tabData: TabEvent) => void;
   onTabsChange?: (tabs: Tab[]) => void;
   removable?: boolean;
   tabs?: Tab[];
