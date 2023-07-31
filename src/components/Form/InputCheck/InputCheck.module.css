@@ -44,6 +44,7 @@
   width: 18px;
   height: 18px;
   position: absolute;
+  color: var(--ft-color-primary);
 }
 .checkbox input:checked ~ .icon_check {
   display: block;

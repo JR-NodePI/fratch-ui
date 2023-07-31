@@ -59,7 +59,7 @@ const InputCheck = forwardRef<HTMLInputElement, InputCheckProps>(
           disabled={disabled}
           onChange={handleOnChange}
         />
-        <Icons.IconCheck className={c(styles.icon_check)} type="tertiary" />
+        <Icons.IconCheck className={c(styles.icon_check)} />
         <span>{label}</span>
       </label>
     );
