@@ -34,7 +34,9 @@
   border-left: solid 6px var(--ft-toaster-color);
   background-color: var(--ft-color-white);
   box-shadow: var(--ft-box-shadow-2);
-  transition: height 300ms ease-in-out, opacity 300ms ease-in-out,
+  transition:
+    height 300ms ease-in-out,
+    opacity 300ms ease-in-out,
     transform 300ms ease-in-out;
   transform: translateY(48px);
   overflow: hidden;
@@ -60,8 +62,8 @@
 }
 .toaster_item .icon {
   position: absolute;
-  top: 12px;
   left: 12px;
+  top: 12px;
   width: var(--toaster-item-icon-size);
   height: var(--toaster-item-icon-size);
   font-size: var(--toaster-item-icon-size);
