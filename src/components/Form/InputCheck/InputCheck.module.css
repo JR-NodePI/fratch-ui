@@ -33,9 +33,15 @@
   box-shadow: var(--ft-box-shadow-2);
   background-color: var(--ft-color-white);
 }
-.checkbox input:disabled {
+.checkbox input:disabled,
+.checkbox input:disabled:active,
+.checkbox input:disabled:hover {
   user-select: none;
-  filter: saturate(0.4) brightness(110%) contrast(100%);
+  box-shadow:
+    var(--ft-box-shadow-1),
+    inset var(--ft-box-shadow-3);
+  background-color: var(--ft-color-grey-2);
+  filter: saturate(0.2) brightness(120%) contrast(100%);
 }
 
 .checkbox input ~ .icon_check {
@@ -48,4 +54,7 @@
 }
 .checkbox input:checked ~ .icon_check {
   display: block;
+}
+.checkbox input:disabled ~ .icon_check {
+  filter: saturate(0.2) brightness(120%) contrast(100%);
 }

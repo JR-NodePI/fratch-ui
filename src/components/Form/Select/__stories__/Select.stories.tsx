@@ -10,6 +10,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     onChange: { control: false },
+    onClean: { control: false },
     options: { control: false },
     value: { control: false },
     noResultsElement: { control: false },
@@ -20,7 +21,7 @@ export default meta;
 
 type Story = StoryObj<typeof Select<TesOptionValue>>;
 
-export const Docs: Story = {
+export const Default: Story = {
   args: {
     cleanable: true,
     searchable: true,

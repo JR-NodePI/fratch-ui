@@ -12,32 +12,7 @@
   pointer-events: none;
 }
 
-/*** cleaner ***/
-.cleaner {
-  border-radius: 0 var(--ft-form-item-border-radius)
-    var(--ft-form-item-border-radius) 0;
-  border: var(--ft-form-item-border);
-  margin: 0;
-  padding: var(--ft-form-item-padding-y) var(--ft-form-item-padding-x);
-  border-left: none;
-  transition: background-color 0.2s ease-out;
-  background-color: var(--ft-button-default-bg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.cleaner:hover {
-  background-color: var(--ft-button-hover-bg-color);
-}
-.cleaner:active {
-  background-color: var(--ft-button-active-bg-color);
-}
-.cleaner .cleaner .cleaner_icon {
-  color: var(--ft-button-default-color);
-}
-.cleaner .cleaner:hover .cleaner_icon {
-  fill: var(--ft-button-hover-color);
-}
+/*** controls ***/
 .controls {
   display: flex;
   position: relative;
@@ -58,13 +33,18 @@
 .controls .trigger {
   box-shadow: none;
 }
-.cleanable .trigger {
-  border-radius: var(--ft-form-item-border-radius) 0 0
-    var(--ft-form-item-border-radius);
+.controls .trigger input {
+  padding-right: 58px;
+}
+.controls .trigger input:last-child {
+  padding-right: 24px;
+}
+.controls .trigger .cleaner {
+  margin-right: 24px;
 }
 .controls .trigger_icon {
   color: var(--ft-form-item-border-color);
 }
 .controls .trigger:hover ~ .trigger_icon {
-  color: var(--ft-color-primary);
+  color: var(--ft-color-text);
 }

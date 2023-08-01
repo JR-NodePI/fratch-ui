@@ -20,6 +20,7 @@ type Story = StoryObj<typeof InputText>;
 
 export const Docs: Story = {
   args: {
+    cleanable: true,
     type: 'text',
     value: 'Input value',
   },

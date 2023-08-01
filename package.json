@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.1.80",
+  "version": "1.1.81",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
@@ -42,6 +42,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "^0.6.13",
+    "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "lodash": "^4.17.21",
     "prettier": "^3.0.0",
@@ -59,6 +60,7 @@
   "scripts": {
     "format": "prettier --write ./*.{ts,json} ./.storybook/**/*.ts ./src/**/*.{ts,tsx,css}",
     "lint": "eslint --max-warnings=0 . --ext .ts,.tsx  --fix",
+    "typecheck": "tsc --noEmit -p tsconfig.json --composite false",
     "start": "storybook dev -p 6006",
     "build": "rm -rf ./dist && tsc && vite build --config vite.build.config.ts",
     "storybook:build": "storybook build",
@@ -67,6 +69,7 @@
     "dist:publish": "yarn publish ./dist/ --non-interactive --disable-pnp --ignore-scripts",
     "dist": "yarn dist:files && yarn pack --cwd ./dist/ && yarn dist:publish",
     "test": "vitest --run --config ./vitest.config.ts",
-    "test:cover": "yarn test run --coverage"
+    "test:cover": "yarn test run --coverage",
+    "prepare": "husky install"
   }
 }
