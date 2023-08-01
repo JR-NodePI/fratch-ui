@@ -106,7 +106,7 @@
   --ft-select-default-font-size: var(--ft-font-size);
   --ft-select-default-line-height: 22px;
   --ft-select-list-item-bg-color-hover: var(--ft-color-item-hover);
-  --ft-select-list-item-bg-color-active: var(--ft-color-item-active);
+  --ft-select-list-item-bg-color-active: rgb(67, 255, 249);
   --ft-select-list-item-bg-color-hover-active: var(
     --ft-color-item-hover-active
   );

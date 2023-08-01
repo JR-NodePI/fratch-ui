@@ -6,7 +6,7 @@ import { v4 as uuid } from 'uuid';
 
 import { c } from '../../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../../helpers/htmlSelectorsHelpers';
-import { IconArrowDown, IconClose } from '../../Icons/Icons';
+import { IconArrowDown } from '../../Icons/Icons';
 import InputText from '../InputText/InputText';
 import SelectOptionsList from './SelectOptionsList';
 import { type SelectOption, type SelectProps } from './SelectProps';
@@ -187,6 +187,7 @@ function Select<T>({
   disabled = false,
   noResultsElement,
   onChange,
+  onClean,
   options,
   placeholder = '',
   searchable = false,
@@ -240,6 +241,7 @@ function Select<T>({
   };
 
   const handleOnClean = (): void => {
+    onClean?.();
     if (selectedLabel) {
       setSelectedLabel('');
       setSelectedIndex(undefined);
@@ -249,9 +251,9 @@ function Select<T>({
   };
 
   const handleOnInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event?: React.ChangeEvent<HTMLInputElement>
   ): void => {
-    const text = event.target.value ?? '';
+    const text = event?.target?.value ?? '';
     setSelectedLabel(text);
     setSelectedIndex(undefined);
 
@@ -314,12 +316,7 @@ function Select<T>({
   return (
     <div
       id={id}
-      className={c(
-        className,
-        styles.select,
-        disabled ? styles.disabled : '',
-        cleanable ? styles.cleanable : ''
-      )}
+      className={c(className, styles.select, disabled ? styles.disabled : '')}
     >
       <div className={c(styles.controls)}>
         <div>
@@ -327,22 +324,20 @@ function Select<T>({
             title={selectedLabel}
             ref={triggerRef}
             className={c(styles.trigger)}
+            cleanerClassName={c(styles.cleaner)}
             disabled={disabled}
             onChange={handleOnInputChange}
+            onClean={handleOnClean}
             onBlur={handleOnInputBlur}
             onKeyDownCapture={handleOnInputKeyDownCapture}
             onClick={handleOnInputClick}
             placeholder={placeholder}
             readOnly={!searchable}
             value={selectedLabel}
+            cleanable={cleanable}
           />
           <IconArrowDown className={c(styles.trigger_icon)} />
         </div>
-        {cleanable && (
-          <button className={c(styles.cleaner)} onClick={handleOnClean}>
-            <IconClose className={c(styles.cleaner_icon)} />
-          </button>
-        )}
       </div>
 
       {createPortal(

@@ -11,6 +11,7 @@ export interface SelectProps<T> {
   disabled?: boolean;
   noResultsElement?: React.ReactNode;
   onChange?: (value?: T) => void;
+  onClean?: () => void;
   options: SelectOption<T>[];
   placeholder?: string;
   searchable?: boolean;
