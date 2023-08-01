@@ -112,6 +112,6 @@
   );
   --ft-select-list-item-selected-text-color: var(--ft-color-black);
 
-  --toaster-item-icon-size: 28px;
+  --toaster-item-icon-size: 25px;
   --button-icon-size: 1.1em;
 }

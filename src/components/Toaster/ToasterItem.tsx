@@ -99,7 +99,7 @@ export default function ToasterItem({
     >
       {renderIconByType(type)}
       {title && <h5 className={c(styles.title)}>{title}</h5>}
-      <p className={c(styles.message)}>{finalMessage}</p>
+      {message && <p className={c(styles.message)}>{finalMessage}</p>}
       {toMuchDuration && <ButtonCloser onClick={handleClose} />}
     </div>
   );
