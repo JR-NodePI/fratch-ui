@@ -83,7 +83,7 @@ export default function ToasterItem({
     }
   };
 
-  const finalMessage = nlToBr ? nlToNodes(message) : message;
+  const finalMessage = nlToBr && message ? nlToNodes(message) : message;
   const toMuchDuration = !duration || duration >= 3000;
 
   return (
