@@ -9,12 +9,13 @@ export interface SelectProps<T> {
   className?: string;
   cleanable?: boolean;
   disabled?: boolean;
+  id?: string;
   noResultsElement?: React.ReactNode;
   onChange?: (value?: T) => void;
   onClean?: () => void;
   options: SelectOption<T>[];
   placeholder?: string;
   searchable?: boolean;
-  value?: T;
   triggerElementRef?: React.RefObject<HTMLInputElement>;
+  value?: T;
 }

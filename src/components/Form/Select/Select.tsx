@@ -44,16 +44,16 @@ function filterOptionByText<T>(text: string) {
 }
 
 const useHideOnClickedOutside = ({
-  id,
+  uid,
   setVisible,
 }: {
-  id: string;
+  uid: string;
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }): void => {
   // hide options list when clicked outside
   useEffect(() => {
     const handleDocumentClick = (event: MouseEvent): void => {
-      if (!isAscendantEvenTargetByID(event, id)) {
+      if (!isAscendantEvenTargetByID(event, uid)) {
         setVisible(false);
       }
     };
@@ -61,7 +61,7 @@ const useHideOnClickedOutside = ({
     return () => {
       window.document.body.removeEventListener('click', handleDocumentClick);
     };
-  }, [id, setVisible]);
+  }, [uid, setVisible]);
 };
 
 const useHideOnTriggerDOMRectChange = ({
@@ -185,16 +185,17 @@ function Select<T>({
   className = '',
   cleanable = false,
   disabled = false,
+  id,
   noResultsElement,
   onChange,
   onClean,
   options,
   placeholder = '',
   searchable = false,
-  value,
   triggerElementRef,
+  value,
 }: SelectProps<T>): JSX.Element {
-  const [id] = useState<string>(uuid());
+  const [uid] = useState<string>(uuid());
   const newTriggerRef = useRef<HTMLInputElement>(null);
   const triggerRef = triggerElementRef ?? newTriggerRef;
   const [selectedLabel, setSelectedLabel] = useState<string>('');
@@ -205,13 +206,13 @@ function Select<T>({
     useState<SelectOption<T>[]>(options);
 
   useEffect(() => {
-    selectInstances.set(id, {
+    selectInstances.set(uid, {
       setVisible,
     });
     return () => {
-      selectInstances.delete(id);
+      selectInstances.delete(uid);
     };
-  }, [id]);
+  }, [uid]);
 
   // set filtered options when options changes
   useEffect(() => {
@@ -277,7 +278,7 @@ function Select<T>({
     if (!disabled && triggerRef.current) {
       // hide other select instances
       selectInstances.forEach((instance, key) => {
-        if (key !== id) {
+        if (key !== uid) {
           instance.setVisible(false);
         }
       });
@@ -304,7 +305,7 @@ function Select<T>({
     }
   }, [disabled]);
 
-  useHideOnClickedOutside({ id, setVisible });
+  useHideOnClickedOutside({ uid, setVisible });
 
   useHideOnTriggerDOMRectChange({
     setVisible,
@@ -315,12 +316,13 @@ function Select<T>({
 
   return (
     <div
-      id={id}
+      id={uid}
       className={c(className, styles.select, disabled ? styles.disabled : '')}
     >
       <div className={c(styles.controls)}>
         <div>
           <InputText
+            id={id}
             title={selectedLabel}
             ref={triggerRef}
             className={c(styles.trigger)}
@@ -352,7 +354,7 @@ function Select<T>({
           visible={visible}
         />,
         document.body,
-        id
+        uid
       )}
     </div>
   );
