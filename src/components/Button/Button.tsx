@@ -28,7 +28,7 @@ const Button = ({
         styles[type],
         styles[size],
         stretch ? styles.stretch : '',
-        isRound ? styles.only_icon : '',
+        isRound ? styles.is_round : '',
         className
       )}
       onClick={handleClick}

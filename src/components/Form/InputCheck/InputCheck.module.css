@@ -22,7 +22,7 @@
   box-shadow:
     var(--ft-box-shadow-1),
     inset var(--ft-box-shadow-3);
-  background-color: var(--ft-color-grey-3);
+  background-color: var(--ft-color-grey-4);
   transition: box-shadow 0.2s ease-in-out;
 }
 .checkbox input:active,
