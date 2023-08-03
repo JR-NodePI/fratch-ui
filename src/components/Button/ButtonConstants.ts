@@ -6,7 +6,8 @@ export const ButtonType = {
 } as const;
 
 export const ButtonSize = {
-  SMALL: 'small',
-  MEDIUM: 'medium',
   LARGE: 'large',
+  MEDIUM: 'medium',
+  SMALL: 'small',
+  SMALLER: 'smaller',
 } as const;

@@ -74,6 +74,18 @@ exports[`Button.tsx > should render with SIZE > small 1`] = `
 </div>
 `;
 
+exports[`Button.tsx > should render with SIZE > smaller 1`] = `
+<div>
+  <button
+    class="_button_2a1efe _default_2a1efe _smaller_2a1efe"
+  >
+    <span>
+      Test button
+    </span>
+  </button>
+</div>
+`;
+
 exports[`Button.tsx > should render with TYPE > default 1`] = `
 <div>
   <button
@@ -160,7 +172,7 @@ exports[`Button.tsx > should render with disabled 1`] = `
 exports[`Button.tsx > should render with isRound 1`] = `
 <div>
   <button
-    class="_button_2a1efe _default_2a1efe _medium_2a1efe _only_icon_2a1efe"
+    class="_button_2a1efe _default_2a1efe _medium_2a1efe _is_round_2a1efe"
     title="Test button"
   />
 </div>
