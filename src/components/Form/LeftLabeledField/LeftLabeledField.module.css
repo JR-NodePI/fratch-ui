@@ -11,13 +11,13 @@
   border-left: var(--ft-form-item-border);
   border-top: var(--ft-form-item-border);
   border-bottom: var(--ft-form-item-border);
-  padding: 0 16px;
+  padding: 0 19px 0 16px;
+  margin-right: -3px;
   white-space: nowrap;
   border-radius: var(--ft-form-item-border-radius) 0 0
     var(--ft-form-item-border-radius);
   box-shadow: var(--ft-box-shadow-1);
   position: relative;
-  margin-right: -3px;
   z-index: 1;
   align-items: center;
   display: flex;
