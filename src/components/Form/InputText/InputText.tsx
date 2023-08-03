@@ -10,8 +10,10 @@ const InputText = forwardRef<HTMLInputElement, InputTextProps>(
   (
     {
       className,
+      cleanable,
       cleanerClassName,
       disabled,
+      id,
       onBlur,
       onChange,
       onClean,
@@ -20,10 +22,9 @@ const InputText = forwardRef<HTMLInputElement, InputTextProps>(
       onKeyDownCapture,
       placeholder,
       readOnly,
+      title,
       type = 'text',
       value,
-      title,
-      cleanable,
     }: InputTextProps,
     ref
   ) => {
@@ -53,6 +54,8 @@ const InputText = forwardRef<HTMLInputElement, InputTextProps>(
     return (
       <div className={c(styles.input_wrapper, className)}>
         <input
+          id={id}
+          name={id}
           className={c(styles.input)}
           disabled={disabled}
           onBlur={onBlur}
@@ -63,8 +66,8 @@ const InputText = forwardRef<HTMLInputElement, InputTextProps>(
           placeholder={placeholder}
           readOnly={readOnly}
           ref={setInnerRef}
-          type={type}
           title={title}
+          type={type}
         />
         {cleanable && (
           <button

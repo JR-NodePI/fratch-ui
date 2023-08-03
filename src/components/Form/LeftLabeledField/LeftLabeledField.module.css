@@ -11,7 +11,7 @@
   border-left: var(--ft-form-item-border);
   border-top: var(--ft-form-item-border);
   border-bottom: var(--ft-form-item-border);
-  padding: var(--ft-form-item-padding-y);
+  padding: 0 16px;
   white-space: nowrap;
   border-radius: var(--ft-form-item-border-radius) 0 0
     var(--ft-form-item-border-radius);
