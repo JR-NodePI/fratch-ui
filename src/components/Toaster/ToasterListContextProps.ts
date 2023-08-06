@@ -7,6 +7,7 @@ export interface Toaster {
   type: (typeof ToasterType)[keyof typeof ToasterType];
   duration?: number;
   nlToBr?: boolean;
+  stoppable?: boolean;
 }
 
 export interface ToasterListProviderProps {
