@@ -1,12 +1,14 @@
 .toaster_list {
-  top: 8px;
+  top: 0px;
   left: 0px;
   position: fixed;
-  padding: 0 32px 0 32px;
+  padding: 8px 32px;
   box-sizing: border-box;
   z-index: 9999;
   pointer-events: none;
   width: 100%;
+  overflow: scroll;
+  max-height: 100vh;
 }
 
 .toaster_item.success {
