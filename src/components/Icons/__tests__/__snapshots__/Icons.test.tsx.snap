@@ -146,11 +146,11 @@ exports[`Icons.ts > should render properly > IconPin 1`] = `
     class="_icon_2be8fc _primary_2be8fc"
     fill="currentColor"
     version="1.1"
-    viewBox="-20 -20 500 500"
+    viewBox="-20 -20 520 520"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g
-      transform="rotate(32 200 200)"
+      transform="rotate(22 200 200)"
     >
       <path
         d="M379.577,247.395c-14.944-18.75-31.833-28.12-50.679-28.12V73.092c9.896,0,18.47-3.616,25.693-10.848
