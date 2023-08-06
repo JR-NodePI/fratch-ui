@@ -5,6 +5,7 @@ export { default as IconEdit } from './Icons/IconEdit';
 export { default as IconError } from './Icons/IconError';
 export { default as IconInfo } from './Icons/IconInfo';
 export { default as IconPause } from './Icons/IconPause';
+export { default as IconPin } from './Icons/IconPin';
 export { default as IconPlay } from './Icons/IconPlay';
 export { default as IconPlus } from './Icons/IconPlus';
 export { default as IconSuccess } from './Icons/IconSuccess';
