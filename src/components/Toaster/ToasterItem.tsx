@@ -2,7 +2,13 @@ import { useEffect, useState } from 'react';
 
 import { c } from '../../helpers/classNameHelpers';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
-import { IconError, IconInfo, IconSuccess, IconWarning } from '../Icons/Icons';
+import {
+  IconError,
+  IconInfo,
+  IconPin,
+  IconSuccess,
+  IconWarning,
+} from '../Icons/Icons';
 import { ToasterType } from './ToasterConstants';
 import { nlToNodes } from './ToasterFormatHelpers';
 import { type Toaster } from './ToasterListContextProps';
@@ -33,8 +39,9 @@ export default function ToasterItem({
   toaster: Toaster;
   className?: string;
 }): JSX.Element {
-  const { duration, id, message, nlToBr, title, type } = toaster;
+  const { duration, id, message, nlToBr, title, type, stoppable } = toaster;
 
+  const [pinned, setPinned] = useState<boolean>(false);
   const [mustClose, setMustClose] = useState<boolean>(false);
   const [cssClassStatus, setCssClassStatus] = useState<string>('');
 
@@ -57,18 +64,23 @@ export default function ToasterItem({
 
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout>;
-    if (duration) {
+    if (duration && !pinned) {
       timeoutId = setTimeout(() => {
         setMustClose(true);
       }, duration);
     }
+
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [duration]);
+  }, [duration, pinned]);
 
   const handleClose = () => {
     setMustClose(true);
+  };
+
+  const handlePin = (): void => {
+    setPinned(!pinned);
   };
 
   const handleRef = (node: HTMLDivElement | null): void => {
@@ -100,6 +112,14 @@ export default function ToasterItem({
       {renderIconByType(type)}
       {title && <h5 className={c(styles.title)}>{title}</h5>}
       {message && <p className={c(styles.message)}>{finalMessage}</p>}
+      {stoppable && toMuchDuration && (
+        <button
+          onClick={handlePin}
+          className={c(styles.pin_button, pinned ? styles.pinned : '')}
+        >
+          <IconPin className={c(styles.pin_button_icon)} />
+        </button>
+      )}
       {toMuchDuration && <ButtonCloser onClick={handleClose} />}
     </div>
   );

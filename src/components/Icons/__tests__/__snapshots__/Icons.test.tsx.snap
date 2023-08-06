@@ -143,10 +143,10 @@ exports[`Icons.ts > should render properly > IconPause 1`] = `
 exports[`Icons.ts > should render properly > IconPin 1`] = `
 <div>
   <svg
+    aria-hidden="true"
     class="_icon_2be8fc _primary_2be8fc"
     fill="currentColor"
-    version="1.1"
-    viewBox="-20 -20 520 520"
+    viewBox="-20 -20 500 500"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g

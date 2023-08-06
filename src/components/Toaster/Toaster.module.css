@@ -68,3 +68,34 @@
   height: var(--toaster-item-icon-size);
   font-size: var(--toaster-item-icon-size);
 }
+
+/*** pin_button ***/
+.pin_button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  top: 8px;
+  right: 42px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+.pin_button.pinned,
+.pin_button:hover {
+  opacity: 1;
+}
+.pin_button .pin_button_icon {
+  color: var(--ft-color-text);
+}
+.pin_button.pinned .pin_button_icon {
+  color: var(--ft-color-error);
+}
+.pin_button .pin_button_icon {
+  font-size: 16px;
+  min-width: 16px;
+}

@@ -7,9 +7,9 @@ export default function IconPin({ type, className }: IconProps): JSX.Element {
       {({ iconClassName }) => (
         <svg
           className={iconClassName}
-          version="1.1"
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="-20 -20 520 520"
+          viewBox="-20 -20 500 500"
           fill="currentColor"
         >
           <g transform="rotate(22 200 200)">
