@@ -172,9 +172,7 @@ function useKeyboardNavigation<T>({
         setVisible(false);
       }
     } else {
-      if (event.code === 'Enter' || event.code === 'ArrowDown') {
-        handleOnInputClick(event as any);
-      }
+      handleOnInputClick(event as any);
     }
   };
 
