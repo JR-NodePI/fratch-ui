@@ -5,9 +5,8 @@
   padding: 8px 32px;
   box-sizing: border-box;
   z-index: 9999;
-  pointer-events: none;
   width: 100%;
-  overflow: scroll;
+  overflow: auto;
   max-height: 100vh;
 }
 
