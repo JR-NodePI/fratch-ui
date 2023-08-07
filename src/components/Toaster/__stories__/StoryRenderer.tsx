@@ -18,7 +18,7 @@ const StoryRendererItem = (props: Toaster): JSX.Element => {
   };
 
   return (
-    <>
+    <div style={{ position: 'fixed', zIndex: 9999999 }}>
       <Button
         onClick={onClick}
         label="Show toaster"
@@ -26,7 +26,7 @@ const StoryRendererItem = (props: Toaster): JSX.Element => {
         type="primary"
       />
       <p> Total: {counter}</p>
-    </>
+    </div>
   );
 };
 

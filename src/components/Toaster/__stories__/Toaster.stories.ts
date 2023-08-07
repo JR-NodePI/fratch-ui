@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof StoryRenderer>;
 
-export const Docs: Story = {
+export const Default: Story = {
   args: {
     type: 'info',
     title: `Toaster title`,
