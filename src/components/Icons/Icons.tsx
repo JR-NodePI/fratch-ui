@@ -4,6 +4,8 @@ export { default as IconClose } from './Icons/IconClose';
 export { default as IconDownload } from './Icons/IconDownload';
 export { default as IconEdit } from './Icons/IconEdit';
 export { default as IconError } from './Icons/IconError';
+export { default as IconExport } from './Icons/IconExport';
+export { default as IconImport } from './Icons/IconImport';
 export { default as IconInfo } from './Icons/IconInfo';
 export { default as IconPause } from './Icons/IconPause';
 export { default as IconPin } from './Icons/IconPin';
