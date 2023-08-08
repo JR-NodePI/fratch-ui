@@ -43,7 +43,7 @@
   padding: 0;
   align-self: center;
 }
-.settings_menu .menu li {
+.settings_menu .menu > li {
   display: block;
   padding: 2px 8px;
 }
