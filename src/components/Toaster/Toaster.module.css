@@ -27,13 +27,12 @@
   pointer-events: all;
   position: relative;
   margin-bottom: 8px;
-  padding: 0 24px 0 calc(24px + var(--toaster-item-icon-size));
+  padding: 0 24px 0 calc(16px + var(--toaster-item-icon-size));
   border-radius: var(--ft-button-default-border-radius);
   box-sizing: border-box;
   transition: transform 0.2s ease-in-out;
-  border: solid 1px var(--ft-button-active-bg-color);
-  border-left: solid 6px var(--ft-toaster-color);
-  background-color: var(--ft-color-white);
+  border: solid 1px var(--ft-color-grey-2);
+  background-color: var(--ft-color-background);
   box-shadow: var(--ft-box-shadow-2);
   transition:
     height 300ms ease-in-out,
@@ -41,6 +40,17 @@
     transform 300ms ease-in-out;
   transform: translateY(48px);
   overflow: hidden;
+  opacity: 0;
+}
+.toaster_item::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: calc(100% - 4px);
+  background-color: var(--ft-toaster-color);
+  border-radius: 4px;
 }
 .toaster_item.open {
   z-index: 3;
@@ -63,11 +73,14 @@
 }
 .toaster_item .icon {
   position: absolute;
-  left: 12px;
-  top: 12px;
+  left: 0;
+  top: 6px;
   width: var(--toaster-item-icon-size);
   height: var(--toaster-item-icon-size);
   font-size: var(--toaster-item-icon-size);
+  background-color: var(--ft-color-background);
+  padding: 4px;
+  border-radius: 50%;
 }
 
 /*** pin_button ***/

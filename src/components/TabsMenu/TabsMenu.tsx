@@ -8,7 +8,7 @@ import { IconPlus } from '../Icons/Icons';
 import TabEditable from './components/TabEditable';
 import { type Tab, type TabsMenuProps } from './TabsMenuProps';
 
-import styles from './TabMenu.module.css';
+import styles from './TabsMenu.module.css';
 
 export default function TabsMenu({
   addable,

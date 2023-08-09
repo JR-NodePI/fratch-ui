@@ -6,14 +6,13 @@ import Header from './Header';
 const meta = {
   title: 'Example/Header',
   component: Header,
-  tags: ['autodocs'],
 } satisfies Meta<typeof Header>;
 
 export default meta;
 
 type Story = StoryObj<typeof Header>;
 
-export const Docs: Story = {
+export const _Header: Story = {
   args: {
     title: 'This is the title  ',
     iconSrc: logo,

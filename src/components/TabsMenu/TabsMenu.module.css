@@ -34,7 +34,7 @@
   height: 16px;
   top: calc(100% + 1px);
   background-image: linear-gradient(
-    var(--ft-color-white),
+    var(--ft-color-background),
     90%,
     rgba(255, 255, 255, 0)
   );
@@ -52,7 +52,7 @@
   min-width: 100px;
   border-top-left-radius: var(--ft-button-default-border-radius);
   border-top-right-radius: var(--ft-button-default-border-radius);
-  background-color: var(--ft-color-white);
+  background-color: var(--ft-color-background);
   border: 1px solid var(--ft-color-grey-1);
   margin-bottom: -1px;
   text-decoration: none;
@@ -61,7 +61,7 @@
 .tab_menu .tab_item .tab_trigger {
   flex-wrap: nowrap;
   display: flex;
-  gap: 6px;
+  gap: 4px;
   align-items: center;
   overflow: hidden;
   text-decoration: none;
@@ -72,7 +72,6 @@
   color: var(--ft-color-text);
   justify-content: space-between;
 }
-
 .tab_menu .tab_item .tab_trigger:last-child {
   padding-right: var(--ft-button-small-padding-x);
 }
@@ -86,12 +85,11 @@
   border-radius: 4px;
 }
 .tab_menu .tab_item .tab_trigger .tab_icon {
-  width: 1.3em;
-  min-width: 1.3em;
-  font-size: 1.3em;
-  margin-left: -6px;
+  min-width: 1.1em;
+  min-height: 1.1em;
+  font-size: 1.1em;
+  margin-right: 4px;
 }
-
 .tab_menu .tab_item .tab_trigger .tab_label {
   flex: 1 1 100%;
   max-width: 100%;
@@ -108,7 +106,7 @@
 .tab_menu .tab_item.active {
   z-index: 2;
   box-shadow: var(--ft-box-shadow-2);
-  border-bottom: 1px solid var(--ft-color-white);
+  border-bottom: 1px solid var(--ft-color-background);
 }
 
 /***  Add Tab  ***/
@@ -129,7 +127,7 @@
   cursor: default;
   font-weight: 500;
   border-radius: 100%;
-  background-color: var(--ft-color-white);
+  background-color: var(--ft-color-background);
   transition:
     opacity 0.2s ease-in-out,
     background-color 0.2s ease-in-out;

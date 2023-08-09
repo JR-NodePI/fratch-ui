@@ -31,7 +31,7 @@
 }
 .checkbox input:checked {
   box-shadow: var(--ft-box-shadow-2);
-  background-color: var(--ft-color-white);
+  background-color: var(--ft-checkbox-bg-checked);
 }
 .checkbox input:disabled,
 .checkbox input:disabled:active,

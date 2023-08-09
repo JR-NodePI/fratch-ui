@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--ft-color-text);
+  background-color: var(--ft-color-background);
   font-family: var(--ft-font-family);
   font-size: var(--ft-font-size);
   font-weight: var(--ft-font-weight-normal);

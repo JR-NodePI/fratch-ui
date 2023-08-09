@@ -5,7 +5,7 @@ import InputCheck from './InputCheck';
 const meta = {
   title: 'Example/Form/InputCheck',
   component: InputCheck,
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
   argTypes: {
     checked: {
       control: false,
@@ -17,7 +17,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof InputCheck>;
 
-export const Docs: Story = {
+export const Default: Story = {
   args: {
     label: 'Label input checkbox',
     checked: true,

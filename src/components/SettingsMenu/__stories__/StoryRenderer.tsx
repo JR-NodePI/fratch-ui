@@ -9,7 +9,7 @@ const inlineStyles: React.CSSProperties = {
   top: 0,
   width: '100%',
   height: '68px',
-  backgroundColor: '#e6e6e6',
+  backgroundColor: 'var(--ft-color-background)',
 };
 
 export default function StoryRenderer(props: SettingsMenuProps) {

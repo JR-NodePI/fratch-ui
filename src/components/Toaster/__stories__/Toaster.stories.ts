@@ -5,14 +5,13 @@ import StoryRenderer from './StoryRenderer';
 const meta = {
   title: 'Example/Toaster',
   component: StoryRenderer,
-  tags: ['autodocs'],
 } satisfies Meta<typeof StoryRenderer>;
 
 export default meta;
 
 type Story = StoryObj<typeof StoryRenderer>;
 
-export const Default: Story = {
+export const _Toaster: Story = {
   args: {
     type: 'info',
     title: `Toaster title`,

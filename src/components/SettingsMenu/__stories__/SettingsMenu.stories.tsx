@@ -8,7 +8,6 @@ import StoryRenderer from './StoryRenderer';
 const meta = {
   title: 'Example/SettingsMenu',
   component: StoryRenderer,
-  tags: ['autodocs'],
   argTypes: {
     items: { control: false },
   },
@@ -17,7 +16,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Docs: Story = {
+export const _SettingsMenu: Story = {
   args: {
     position: 'left',
     items: [

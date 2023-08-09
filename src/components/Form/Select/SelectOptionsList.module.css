@@ -56,21 +56,23 @@
 
 .select_list ul li > a b {
   font-weight: 500;
-  color: var(--ft-select-list-item-selected-text-color);
+  color: var(--ft-select-list-item-found-text-color);
 }
 .select_list ul li > a * {
   pointer-events: none;
+}
+
+.select_list ul li > a:focus,
+.select_list ul li.focused > a {
+  outline: none;
+  background-color: var(--ft-select-list-item-bg-color-hover);
 }
 
 .select_list ul li > a:active,
 .select_list ul li.selected > a {
   outline: none;
   background-color: var(--ft-select-list-item-bg-color-active);
-}
-.select_list ul li > a:focus,
-.select_list ul li.focused > a {
-  outline: none;
-  background-color: var(--ft-select-list-item-bg-color-hover);
+  color: var(--ft-select-list-item-color-active);
 }
 
 .select_list ul li.selected.focused > a {
@@ -79,7 +81,8 @@
 
 .select_list.hidden {
   opacity: 0;
-  transition: opacity var(--ft-transition-duration) ease-out,
+  transition:
+    opacity var(--ft-transition-duration) ease-out,
     top 0s linear var(--ft-transition-duration),
     left 0s linear var(--ft-transition-duration),
     width 0s linear var(--ft-transition-duration),

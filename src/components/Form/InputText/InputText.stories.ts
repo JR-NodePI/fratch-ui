@@ -5,7 +5,7 @@ import InputText from './InputText';
 const meta = {
   title: 'Example/Form/InputText',
   component: InputText,
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
   argTypes: {
     onChange: { control: false },
     onBlur: { control: false },
@@ -18,7 +18,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof InputText>;
 
-export const Docs: Story = {
+export const Default: Story = {
   args: {
     cleanable: true,
     type: 'text',

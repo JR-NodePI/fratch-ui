@@ -8,9 +8,18 @@
   display: block;
   overflow: hidden;
   margin-bottom: 16 px;
-  background-color: #fff5ce;
 }
 
+.wrapper {
+  background-color: rgba(255, 217, 0, 0.1);
+}
 .wrapper > * {
-  background-color: #c8ebfe;
+  background-color: rgba(255, 217, 0, 0.33);
+}
+
+@media (prefers-color-scheme: dark) {
+  .wrapper,
+  .wrapper > * {
+    background-color: rgba(225, 255, 0, 0.05);
+  }
 }

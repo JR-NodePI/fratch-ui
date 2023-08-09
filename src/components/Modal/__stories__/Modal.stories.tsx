@@ -9,14 +9,13 @@ const meta = {
     onClose: { action: 'onClose' },
     onOpen: { action: 'onOpen' },
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof StoryRenderer>;
 
 export default meta;
 
 type Story = StoryObj<typeof StoryRenderer>;
 
-export const Docs: Story = {
+export const _Modal: Story = {
   args: {
     type: 'info',
     visible: false,
