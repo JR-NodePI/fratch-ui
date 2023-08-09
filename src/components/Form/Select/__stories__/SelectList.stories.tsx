@@ -28,7 +28,10 @@ const SelectListTest = ({
         return (
           <div
             key={index}
-            style={{ width: `${(100 / numberSelects) * (index + 1)}%` }}
+            style={{
+              padding: '4px 0',
+              width: `${(100 / numberSelects) * (index + 1)}%`,
+            }}
           >
             <Select
               triggerElementRef={index === 0 ? refFirstSelectInput : undefined}
@@ -51,12 +54,12 @@ const SelectListTest = ({
 const meta = {
   title: 'Example/Form/Select/List example',
   component: SelectListTest,
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
 } satisfies Meta<typeof SelectListTest>;
 
 export default meta;
 type Story = StoryObj<typeof SelectListTest>;
 
-export const Docs: Story = {
+export const Default: Story = {
   args: { numberSelects: 5 },
 };

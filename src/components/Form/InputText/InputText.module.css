@@ -3,7 +3,7 @@
   display: flex;
   box-shadow: var(--ft-box-shadow-1);
   border-radius: var(--ft-form-item-border-radius);
-  background-color: var(--ft-color-white);
+  background-color: var(--ft-color-grey-4);
   border: var(--ft-form-item-border);
 }
 .input_wrapper .input {
@@ -17,6 +17,7 @@
   color: var(--ft-color-text);
   border: none;
   border-radius: var(--ft-form-item-border-radius);
+  background-color: transparent;
 }
 .input_wrapper .input:focus {
   outline: var(--ft-select-list-item-bg-color-active) solid 2px;
@@ -26,10 +27,15 @@
   outline: none;
 }
 .input_wrapper .input:disabled {
-  background-color: var(--ft-color-white);
+  background-color: var(--ft-color-grey-4);
   pointer-events: none;
   filter: saturate(0) brightness(115%) contrast(90%);
 }
+
+.input_wrapper input::placeholder {
+  color: var(--ft-color-grey-1);
+}
+
 /*** cleaner ***/
 .input_wrapper .cleaner {
   position: absolute;

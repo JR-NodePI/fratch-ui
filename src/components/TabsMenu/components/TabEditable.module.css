@@ -17,6 +17,7 @@
   color: var(--ft-color-text);
   height: 100%;
   overflow: hidden;
+  background-color: var(--ft-color-background);
 
   --ft-tab-editable-padding-top: 3px;
   height: var(--ft-tabs-height);
@@ -29,7 +30,6 @@
   position: relative;
   display: flex;
   flex-wrap: nowrap;
-  gap: 0px;
   justify-content: space-between;
   align-items: center;
 }
@@ -42,6 +42,10 @@
   z-index: 1;
   box-sizing: border-box;
   padding-top: var(--ft-tab-editable-padding-top);
+  margin-right: 8px;
+}
+.tab_editable .label .text:last-child {
+  margin-right: 0;
 }
 .tab_editable .label .edit_button {
   height: 30px;
@@ -56,7 +60,7 @@
   justify-content: center;
   align-items: center;
   opacity: 0.5;
-  background-color: var(--ft-color-white);
+  background-color: var(--ft-color-background);
   transition:
     opacity 0.2s ease-in-out,
     background-color 0.2s ease-in-out;

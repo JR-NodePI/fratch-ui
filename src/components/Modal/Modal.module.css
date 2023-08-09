@@ -36,14 +36,17 @@
 .modal {
   display: flex;
   flex-direction: column;
-  background-color: var(--ft-color-white);
+  background-color: var(--ft-color-background);
   border-radius: var(--ft-button-default-border-radius);
   box-shadow: var(--ft-box-shadow-2);
   max-width: 600px;
   width: 100%;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
   opacity: 0;
   transform: translateY(-32px);
+  outline: solid 1px var(--ft-modal-border-color);
 }
 .modal_overflow.open .modal {
   opacity: 1;
@@ -62,13 +65,14 @@
   display: flex;
   justify-content: space-between;
   min-height: 42px;
+  color: var(--ft-color-white);
 }
 .modal.info .header,
 .modal.accept .header {
-  background-color: var(--ft-primary-default-color);
+  background-color: var(--ft-modal-header-bg-color);
 }
 .modal.confirm .header {
-  background-color: var(--ft-tertiary-default-color);
+  background-color: var(--ft-modal-header-confirm-bg-color);
 }
 .modal .header .title {
   margin: 0;
@@ -80,7 +84,7 @@
 .modal .footer {
   gap: 16px;
   display: flex;
-  padding: 0 24px 24px 24px;
+  padding: 0 16px 16px 16px;
   justify-content: flex-end;
 }
 .modal .footer .button {

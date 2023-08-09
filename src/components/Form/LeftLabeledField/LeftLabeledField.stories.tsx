@@ -7,7 +7,6 @@ import LeftLabeledField from './LeftLabeledField';
 const meta = {
   title: 'Example/Form/LeftLabeledField',
   component: LeftLabeledField,
-  tags: ['autodocs'],
   argTypes: {
     field: { control: false },
     label: { control: false },
@@ -23,10 +22,10 @@ const options: SelectOption<string>[] = [
   { label: 'Option 2', value: '2' },
 ];
 
-export const Docs: Story = {
+export const _LeftLabeledField: Story = {
   args: {
     label: (
-      <label style={{ background: '#ccc', padding: '8px' }} htmlFor={labelId}>
+      <label style={{ padding: '8px' }} htmlFor={labelId}>
         Label text...
       </label>
     ),
