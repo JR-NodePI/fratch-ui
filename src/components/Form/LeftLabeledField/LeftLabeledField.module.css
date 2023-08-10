@@ -7,7 +7,7 @@
 }
 .wrapper .label_container {
   display: block;
-  background-color: var(--ft-form-item-bg-color);
+  background-color: var(--ft-color-grey-3);
   border-left: var(--ft-form-item-border);
   border-top: var(--ft-form-item-border);
   border-bottom: var(--ft-form-item-border);

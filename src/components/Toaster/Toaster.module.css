@@ -32,7 +32,7 @@
   box-sizing: border-box;
   transition: transform 0.2s ease-in-out;
   border: solid 1px var(--ft-color-grey-2);
-  background-color: var(--ft-color-background);
+  background-color: var(--ft-color-grey-4);
   box-shadow: var(--ft-box-shadow-2);
   transition:
     height 300ms ease-in-out,
@@ -78,7 +78,7 @@
   width: var(--toaster-item-icon-size);
   height: var(--toaster-item-icon-size);
   font-size: var(--toaster-item-icon-size);
-  background-color: var(--ft-color-background);
+  background-color: var(--ft-color-grey-4);
   padding: 4px;
   border-radius: 50%;
 }

@@ -151,7 +151,7 @@
     --ft-color-grey-1: #75687f;
     --ft-color-grey-2: #53475c;
     --ft-color-grey-3: #453d4c;
-    --ft-color-grey-4: #362a39;
+    --ft-color-grey-4: #2e2431;
     --ft-color-primary: #cbcbff;
 
     --ft-color-item-hover: #2a1437;
@@ -160,6 +160,10 @@
 
     --ft-color-text: #f4ebff;
     --ft-color-background: #231927;
+
+    --ft-box-shadow-1: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+    --ft-box-shadow-2: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+    --ft-box-shadow-3: 0 0 8px 0 rgba(0, 0, 0, 0.5);
 
     --ft-button-default-bg-color: #503057;
     --ft-button-hover-bg-color: #3e2b47;

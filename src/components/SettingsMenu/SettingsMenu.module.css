@@ -26,10 +26,10 @@
 }
 
 .settings_menu.open {
-  background-color: var(--ft-color-background);
   border-radius: var(--ft-button-default-border-radius);
   box-shadow: var(--ft-box-shadow-2);
   outline: solid 1px var(--ft-color-grey-3);
+  background-color: var(--ft-color-grey-4);
 }
 .settings_menu.open .menu {
   display: block;
