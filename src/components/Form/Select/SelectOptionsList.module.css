@@ -72,6 +72,8 @@
 .select_list ul li.selected > a {
   outline: none;
   background-color: var(--ft-select-list-item-bg-color-active);
+}
+.select_list ul li.selected * {
   color: var(--ft-select-list-item-color-active);
 }
 
