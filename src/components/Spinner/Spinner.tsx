@@ -27,6 +27,7 @@ const Spinner = ({
           r="20"
           fill="none"
           strokeWidth="5"
+          stroke="currentColor"
         ></circle>
       </svg>
       {label && <h5>{label}</h5>}
