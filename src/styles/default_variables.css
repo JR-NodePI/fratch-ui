@@ -148,10 +148,10 @@
   --ft-modal-header-confirm-bg-color: var(--ft-tertiary-active-bg-color);
 
   @media (prefers-color-scheme: dark) {
-    --ft-color-grey-1: #75687f;
-    --ft-color-grey-2: #53475c;
-    --ft-color-grey-3: #453d4c;
-    --ft-color-grey-4: #2e2431;
+    --ft-color-grey-1: #504557;
+    --ft-color-grey-2: #413848;
+    --ft-color-grey-3: #37303d;
+    --ft-color-grey-4: #281f2b;
     --ft-color-primary: #cbcbff;
 
     --ft-color-item-hover: #473451;
