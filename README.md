@@ -40,15 +40,6 @@ React UI kit where each component can be used as an stand-alone module.
 - `dist`
   runs `dist:files`, create the npm package and `dist:publish`
 
-- `set-version-patch`
-  Applies a patch version to the package.json and crate a git commit
-
-- `set-version-minor`
-  Applies a minor version to the package.json and crate a git commit
-
-- `set-version-major`
-  Applies a minor version to the package.json and crate a git commit
-
 ##### testing
 
 - `yarn test`

@@ -1,10 +1,10 @@
 .switcher {
+  --ft-switcher-width: 48px;
+  --ft-switcher-height: calc(var(--ft-switcher-width) / 2 + 2px);
+
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
-  --ft-switcher-width: 48px;
-  --ft-switcher-height: calc(var(--ft-switcher-width) / 2 + 2px);
 }
 .switcher.disabled {
   user-select: none;
