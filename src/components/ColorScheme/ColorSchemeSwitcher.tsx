@@ -24,7 +24,7 @@ export default function ColorSchemeSwitcher({
     <Switcher
       className={c(className)}
       title={title}
-      labelLeft="Color scheme"
+      labelLeft="color scheme"
       IconOff={IconLight}
       IconOn={IconDark}
       defaultSwitchOn={defaultSwitchOn}
