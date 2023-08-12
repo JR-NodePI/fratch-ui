@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import { v4 as uuid } from 'uuid';
-
 import { c } from '../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
 import { IconVerticalDots } from '../Icons/Icons';
@@ -15,7 +13,7 @@ export default function SettingsMenu({
   items = [],
   position = SettingsMenuPosition.LEFT,
 }: SettingsMenuProps): JSX.Element {
-  const [openerWrapperId] = useState(uuid());
+  const [openerWrapperId] = useState(crypto.randomUUID());
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {

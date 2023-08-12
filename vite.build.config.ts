@@ -31,7 +31,6 @@ const buildComponent = file => {
       },
       rollupOptions: {
         external: [
-          'uuid',
           'lodash',
           'react',
           'react-dom',

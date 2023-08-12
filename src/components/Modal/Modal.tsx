@@ -2,7 +2,6 @@ import { useCallback, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import { debounce } from 'lodash';
-import { v4 as uuid } from 'uuid';
 
 import { c } from '../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
@@ -23,7 +22,7 @@ function Modal({
   type = ModalTypes.INFO,
   visible,
 }: ModalProps): JSX.Element {
-  const [id] = useState<string>(uuid());
+  const [id] = useState<string>(crypto.randomUUID());
   const [cssClassStatus, setCssClassStatus] = useState<string>('');
   const [mounted, setMounted] = useState<boolean>(false);
 
