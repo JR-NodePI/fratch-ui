@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.1.101",
+  "version": "1.1.102",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
@@ -32,7 +32,6 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
-    "@types/uuid": "^9.0.2",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
@@ -52,7 +51,6 @@
     "simple-update-notifier": "^2.0.0",
     "storybook": "7.1.1",
     "typescript-plugin-css-modules": "^5.0.1",
-    "uuid": "^9.0.0",
     "vite": "^4.4.7",
     "vite-plugin-dts": "^3.3.1",
     "vitest": "^0.33.0"

@@ -1,8 +1,6 @@
 import { type ReactNode, useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
-import { v4 as uuid } from 'uuid';
-
 import { c } from '../../helpers/classNameHelpers';
 import ToasterItem from './ToasterItem';
 import ToasterListContext from './ToasterListContext';
@@ -19,7 +17,7 @@ export default function ToasterProvider({
   listClassName?: string;
   itemClassName?: string;
 }): JSX.Element {
-  const [portalId] = useState<string>(uuid());
+  const [portalId] = useState<string>(crypto.randomUUID());
   const [toasters, setToasters] = useState<Toaster[]>([]);
 
   const handleToasterClose = (id: string): void => {
@@ -29,7 +27,7 @@ export default function ToasterProvider({
   const addToaster = useCallback((toaster: Toaster): void => {
     setToasters((prevToasters: Toaster[]) => [
       ...prevToasters,
-      { ...toaster, id: uuid() },
+      { ...toaster, id: crypto.randomUUID() },
     ]);
   }, []);
 

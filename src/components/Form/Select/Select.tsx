@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import { isEqual } from 'lodash';
-import { v4 as uuid } from 'uuid';
 
 import { c } from '../../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../../helpers/htmlSelectorsHelpers';
@@ -193,7 +192,7 @@ function Select<T>({
   triggerElementRef,
   value,
 }: SelectProps<T>): JSX.Element {
-  const [uid] = useState<string>(uuid());
+  const [uid] = useState<string>(crypto.randomUUID());
   const newTriggerRef = useRef<HTMLInputElement>(null);
   const triggerRef = triggerElementRef ?? newTriggerRef;
   const [selectedLabel, setSelectedLabel] = useState<string>('');
