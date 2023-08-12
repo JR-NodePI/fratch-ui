@@ -19,7 +19,9 @@
 .header .icon {
   position: absolute;
   width: 24px;
-  margin: 6px;
+  margin: 0 6px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .header .icon.left {
   left: 0;
