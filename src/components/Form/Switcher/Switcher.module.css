@@ -1,0 +1,58 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  --ft-switcher-width: 60px;
+  --ft-switcher-height: calc(var(--ft-switcher-width) / 2 + 2px);
+}
+.switcher.disabled {
+  user-select: none;
+
+  filter: saturate(0.2) brightness(130%) contrast(70%);
+}
+.switcher .switcher_button {
+  border: none;
+  width: var(--ft-switcher-width);
+  min-width: var(--ft-switcher-width);
+  height: var(--ft-switcher-height);
+  border-radius: calc(var(--ft-switcher-height) / 2);
+  position: relative;
+  box-shadow: var(--ft-box-shadow-1);
+  border: var(--ft-form-item-border);
+  box-sizing: border-box;
+}
+.switcher .switcher_button .switcher_button_dot {
+  top: 2px;
+  left: 2px;
+  content: '';
+  position: absolute;
+  width: calc(var(--ft-switcher-width) / 2 - 4px);
+  height: calc(var(--ft-switcher-height) - 6px);
+  border-radius: calc(var(--ft-switcher-height) / 2 - 2px);
+  transition: all 0.3s;
+  box-shadow:
+    var(--ft-box-shadow-1),
+    inset var(--ft-box-shadow-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.switcher .switcher_button .switcher_button_icon {
+  width: 70%;
+  height: 70%;
+  pointer-events: none;
+}
+.switcher.on .switcher_button .switcher_button_dot {
+  background-color: var(--ft-brand-color);
+  left: calc(var(--ft-switcher-width) / 2);
+}
+.switcher.on .switcher_button .switcher_button_icon {
+  color: var(--ft-color-white);
+}
+.switcher.off .switcher_button .switcher_button_dot {
+  background-color: var(--ft-color-grey-2);
+}
+.switcher.off .switcher_button .switcher_button_icon {
+  color: var(--ft-color-text);
+}
