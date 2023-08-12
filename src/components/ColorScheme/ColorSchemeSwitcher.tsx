@@ -1,3 +1,5 @@
+import { useCallback } from 'react';
+
 import { c } from '../../helpers/classNameHelpers';
 import Switcher from '../Form/Switcher/Switcher';
 import { IconDark, IconLight } from '../Icons/Icons';
@@ -14,12 +16,16 @@ export default function ColorSchemeSwitcher({
     colorSchema === COLOR_SCHEMES.LIGHT
       ? COLOR_SCHEMES.DARK
       : COLOR_SCHEMES.LIGHT;
-  const handleToggleColorSchema = (switchOn: boolean): void => {
-    setColorSchema(switchOn ? COLOR_SCHEMES.DARK : COLOR_SCHEMES.LIGHT);
-  };
+
+  const handleToggleColorSchema = useCallback(
+    (switchOn: boolean): void => {
+      setColorSchema(switchOn ? COLOR_SCHEMES.DARK : COLOR_SCHEMES.LIGHT);
+    },
+    [setColorSchema]
+  );
 
   const title = `Switch to ${oppositeColorSchema} mode`;
-  const defaultSwitchOn = colorSchema === COLOR_SCHEMES.DARK;
+  const switchOn = colorSchema === COLOR_SCHEMES.DARK;
   return (
     <Switcher
       className={c(className)}
@@ -27,7 +33,7 @@ export default function ColorSchemeSwitcher({
       labelLeft="color scheme"
       IconOff={IconLight}
       IconOn={IconDark}
-      defaultSwitchOn={defaultSwitchOn}
+      value={switchOn}
       onChange={handleToggleColorSchema}
     />
   );

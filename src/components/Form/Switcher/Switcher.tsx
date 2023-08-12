@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
 import { IconPlus as Icon } from '../../Icons/Icons';
@@ -6,7 +6,7 @@ import { IconPlus as Icon } from '../../Icons/Icons';
 import styles from './Switcher.module.css';
 
 type SwitcherProps = {
-  defaultSwitchOn?: boolean;
+  value?: boolean;
   className?: string;
   labelLeft?: ReactNode;
   labelRight?: ReactNode;
@@ -18,7 +18,7 @@ type SwitcherProps = {
 };
 
 const Switcher = ({
-  defaultSwitchOn,
+  value,
   className,
   labelLeft,
   labelRight,
@@ -28,7 +28,11 @@ const Switcher = ({
   IconOn,
   IconOff,
 }: SwitcherProps) => {
-  const [switchOn, setSwitchOn] = useState<boolean>(defaultSwitchOn ?? false);
+  const [switchOn, setSwitchOn] = useState<boolean>(value ?? false);
+
+  useEffect(() => {
+    setSwitchOn(value ?? false);
+  }, [value]);
 
   const handleToggle = () => {
     if (disabled) return;
