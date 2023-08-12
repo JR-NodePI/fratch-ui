@@ -1,7 +1,7 @@
 @import url(../fonts/FiraCode/font-face.css);
 @import url(./default_variables.css);
 
-:root {
+:root body {
   --ft-font-family: 'Fira Code', sans-serif;
   --ft-font-weight-light: light;
   --ft-font-weight-normal: 400;

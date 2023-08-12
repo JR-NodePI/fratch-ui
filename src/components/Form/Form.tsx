@@ -8,3 +8,5 @@ export { default as Select } from './Select/Select';
 export * as SelectOptionsListProps from './Select/SelectOptionsListProps';
 // eslint-disable-next-line react-refresh/only-export-components
 export * as SelectProps from './Select/SelectProps';
+// eslint-disable-next-line react-refresh/only-export-components
+export * as Switcher from './Switcher/Switcher';

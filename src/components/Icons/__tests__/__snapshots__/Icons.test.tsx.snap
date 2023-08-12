@@ -59,6 +59,26 @@ exports[`Icons.ts > should render properly > IconClose 1`] = `
 </div>
 `;
 
+exports[`Icons.ts > should render properly > IconDark 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    class="_icon_2be8fc _primary_2be8fc"
+    fill="none"
+    viewBox="0 0 18 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8.509 5.75c0-1.493.394-2.96 1.144-4.25h-.081a8.5 8.5 0 1 0 7.356 12.746A8.5 8.5 0 0 1 8.509 5.75Z"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;
+
 exports[`Icons.ts > should render properly > IconDownload 1`] = `
 <div>
   <svg
@@ -170,6 +190,26 @@ exports[`Icons.ts > should render properly > IconInfo 1`] = `
   >
     <path
       d="M8 9h2v5m-2 0h4M9.408 5.5h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Icons.ts > should render properly > IconLight 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    class="_icon_2be8fc _primary_2be8fc"
+    fill="none"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10 3V1m0 18v-2M5.05 5.05 3.636 3.636m12.728 12.728L14.95 14.95M3 10H1m18 0h-2M5.05 14.95l-1.414 1.414M16.364 3.636 14.95 5.05M14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
       stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"

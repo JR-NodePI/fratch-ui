@@ -29,4 +29,7 @@ export * as ToasterConstants from './Toaster/ToasterConstants';
 export { default as ToasterListContext } from './Toaster/ToasterListContext';
 export * as ToasterListContextProps from './Toaster/ToasterListContextProps';
 export { default as ToasterProvider } from './Toaster/ToasterProvider';
+// -- ColorScheme
+export { default as ColorSchemeProvider } from './ColorScheme/ColorSchemeProvider';
+export { default as ColorSchemeSwitcher } from './ColorScheme/ColorSchemeSwitcher';
 // -- ...
