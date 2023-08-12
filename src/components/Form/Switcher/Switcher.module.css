@@ -3,7 +3,7 @@
   align-items: center;
   gap: 8px;
 
-  --ft-switcher-width: 60px;
+  --ft-switcher-width: 48px;
   --ft-switcher-height: calc(var(--ft-switcher-width) / 2 + 2px);
 }
 .switcher.disabled {
@@ -12,7 +12,6 @@
   filter: saturate(0.2) brightness(130%) contrast(70%);
 }
 .switcher .switcher_button {
-  border: none;
   width: var(--ft-switcher-width);
   min-width: var(--ft-switcher-width);
   height: var(--ft-switcher-height);
@@ -21,6 +20,7 @@
   box-shadow: var(--ft-box-shadow-1);
   border: var(--ft-form-item-border);
   box-sizing: border-box;
+  background-color: var(--ft-color-grey-4);
 }
 .switcher .switcher_button .switcher_button_dot {
   top: 2px;
@@ -44,15 +44,15 @@
   pointer-events: none;
 }
 .switcher.on .switcher_button .switcher_button_dot {
-  background-color: var(--ft-brand-color);
+  background-color: var(--ft-color-link);
   left: calc(var(--ft-switcher-width) / 2);
 }
 .switcher.on .switcher_button .switcher_button_icon {
-  color: var(--ft-color-white);
+  color: var(--ft-color-item-hover);
 }
 .switcher.off .switcher_button .switcher_button_dot {
-  background-color: var(--ft-color-grey-2);
+  background-color: var(--ft-color-item-hover);
 }
 .switcher.off .switcher_button .switcher_button_icon {
-  color: var(--ft-color-text);
+  color: var(--ft-color-link);
 }
