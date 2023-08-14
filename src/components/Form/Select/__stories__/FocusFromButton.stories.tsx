@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '../../..';
 import Select from '../Select';
 
-const SelectFocusFromButton = (): JSX.Element => {
+const FocusFromButton = (): JSX.Element => {
   const ref = useRef<HTMLInputElement>(null);
 
   const options = Array.from(Array(25).keys()).map(index => ({
@@ -33,14 +33,13 @@ const SelectFocusFromButton = (): JSX.Element => {
 };
 
 const meta = {
-  title: 'Example/Form/Select/Focus from button',
-  component: SelectFocusFromButton,
-  tags: ['autodocs'],
-} satisfies Meta<typeof SelectFocusFromButton>;
+  title: 'Example/Form/Select/FocusFromButton',
+  component: FocusFromButton,
+} satisfies Meta<typeof FocusFromButton>;
 
 export default meta;
-type Story = StoryObj<typeof SelectFocusFromButton>;
+type Story = StoryObj<typeof FocusFromButton>;
 
-export const Docs: Story = {
+export const _FocusFromButton: Story = {
   args: {},
 };

@@ -1,0 +1,13 @@
+.color_item {
+  padding: 8px;
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  margin: 4px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--ft-form-item-border-radius);
+  font-size: 14px;
+  background-color: var(--ft-color-grey-2);
+  box-shadow: var(--ft-box-shadow-1);
+}

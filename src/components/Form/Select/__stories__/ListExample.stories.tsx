@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Select from '../Select';
 
-const SelectListTest = ({
+const ListExample = ({
   numberSelects,
 }: {
   numberSelects: number;
@@ -52,14 +52,13 @@ const SelectListTest = ({
 };
 
 const meta = {
-  title: 'Example/Form/Select/List example',
-  component: SelectListTest,
-  // tags: ['autodocs'],
-} satisfies Meta<typeof SelectListTest>;
+  title: 'Example/Form/Select/ListExample',
+  component: ListExample,
+} satisfies Meta<typeof ListExample>;
 
 export default meta;
-type Story = StoryObj<typeof SelectListTest>;
+type Story = StoryObj<typeof ListExample>;
 
-export const Default: Story = {
+export const _ListExample: Story = {
   args: { numberSelects: 5 },
 };

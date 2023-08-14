@@ -65,7 +65,7 @@
   display: flex;
   justify-content: space-between;
   min-height: 42px;
-  color: var(--ft-color-white);
+  color: var(--ft-color-lightest);
 }
 .modal.info .header,
 .modal.accept .header {

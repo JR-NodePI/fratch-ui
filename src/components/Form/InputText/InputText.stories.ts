@@ -18,7 +18,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof InputText>;
 
-export const Default: Story = {
+export const _InputText: Story = {
   args: {
     cleanable: true,
     type: 'text',

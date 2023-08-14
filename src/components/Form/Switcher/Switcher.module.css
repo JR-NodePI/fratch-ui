@@ -30,7 +30,7 @@
   width: calc(var(--ft-switcher-width) / 2 - 4px);
   height: calc(var(--ft-switcher-height) - 6px);
   border-radius: calc(var(--ft-switcher-height) / 2 - 2px);
-  transition: all 0.3s;
+  transition: all 0.2s;
   box-shadow:
     var(--ft-box-shadow-1),
     inset var(--ft-box-shadow-3);
@@ -42,17 +42,12 @@
   width: 70%;
   height: 70%;
   pointer-events: none;
+  color: var(--ft-color-text-inverted);
 }
 .switcher.on .switcher_button .switcher_button_dot {
   background-color: var(--ft-color-link);
   left: calc(var(--ft-switcher-width) / 2);
 }
-.switcher.on .switcher_button .switcher_button_icon {
-  color: var(--ft-color-item-hover);
-}
 .switcher.off .switcher_button .switcher_button_dot {
-  background-color: var(--ft-color-item-hover);
-}
-.switcher.off .switcher_button .switcher_button_icon {
-  color: var(--ft-color-link);
+  background-color: var(--ft-color-grey-1);
 }
