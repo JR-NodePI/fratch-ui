@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 
 import Button from '../../Button/Button';
+import { IconPlus } from '../../Icons/Icons';
 import ToasterListContext from '../ToasterListContext';
 import { Toaster } from '../ToasterListContextProps';
 import ToasterProvider from '../ToasterProvider';
@@ -18,14 +19,15 @@ const StoryRendererItem = (props: Toaster): JSX.Element => {
   };
 
   return (
-    <div style={{ position: 'fixed', zIndex: 9999999 }}>
+    <div style={{ right: 0, top: 0, position: 'fixed', zIndex: 9999999 }}>
       <Button
         onClick={onClick}
         label="Show toaster"
         size="small"
-        type="primary"
+        type="secondary"
+        Icon={IconPlus}
+        isRound
       />
-      <p> Total: {counter}</p>
     </div>
   );
 };

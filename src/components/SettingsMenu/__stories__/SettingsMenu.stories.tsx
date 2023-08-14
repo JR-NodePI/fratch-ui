@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '../..';
+import { Button, ColorSchemeSwitcher } from '../..';
 import { InputCheck } from '../../Form/Form';
 import SettingsMenu from '../SettingsMenu';
 import StoryRenderer from './StoryRenderer';
@@ -20,6 +20,7 @@ export const _SettingsMenu: Story = {
   args: {
     position: 'left',
     items: [
+      <ColorSchemeSwitcher />,
       <InputCheck label="Setting menu item 1" position="right" />,
       <InputCheck label="Setting menu item 2" position="left" />,
       <a href="javascript:void(0)">Setting menu item 3</a>,

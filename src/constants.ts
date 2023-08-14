@@ -1,4 +1,4 @@
-export const COLOR_LIST_FOR_RANDOMIZE = [
+export const COLOR_LIST = [
   '#006aff',
   '#00bbff',
   '#00dfdf',

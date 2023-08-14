@@ -13,5 +13,7 @@ export default meta;
 type Story = StoryObj<typeof StoryRenderer>;
 
 export const RandomColors: Story = {
-  args: {},
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
 };

@@ -17,7 +17,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof InputCheck>;
 
-export const Default: Story = {
+export const _InputCheck: Story = {
   args: {
     label: 'Label input checkbox',
     checked: true,
