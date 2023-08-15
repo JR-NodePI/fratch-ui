@@ -10,7 +10,7 @@ export default function usePersistedColorScheme(
 ): ColorSchemeOutput {
   const storedData = globalThis.localStorage.getItem(COLOR_SCHEME_STORED_KEY);
 
-  const [colorScheme, serInnerColorScheme] = useState<ColorScheme>(
+  const [colorScheme, setInnerColorScheme] = useState<ColorScheme>(
     storedData === COLOR_SCHEMES.DARK
       ? COLOR_SCHEMES.DARK
       : storedData === COLOR_SCHEMES.LIGHT
@@ -20,8 +20,8 @@ export default function usePersistedColorScheme(
 
   const setColorScheme = useCallback((newColorScheme: ColorScheme): void => {
     globalThis.localStorage.setItem(COLOR_SCHEME_STORED_KEY, newColorScheme);
-    serInnerColorScheme(newColorScheme);
+    setInnerColorScheme(newColorScheme);
   }, []);
 
-  return { colorScheme, setColorScheme };
+  return [colorScheme, setColorScheme];
 }

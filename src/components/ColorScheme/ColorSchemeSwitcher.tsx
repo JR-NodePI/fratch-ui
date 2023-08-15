@@ -10,7 +10,7 @@ import useColorScheme from './useColorScheme';
 export default function ColorSchemeSwitcher({
   className,
 }: ColorSchemeSwitcherProps): JSX.Element {
-  const [colorSchema, setColorSchema] = useColorScheme();
+  const [colorSchema, setColorScheme] = useColorScheme();
   const oppositeColorSchema =
     colorSchema === COLOR_SCHEMES.LIGHT
       ? COLOR_SCHEMES.DARK
@@ -18,9 +18,9 @@ export default function ColorSchemeSwitcher({
 
   const handleToggleColorSchema = useCallback(
     (switchOn: boolean): void => {
-      setColorSchema(switchOn ? COLOR_SCHEMES.DARK : COLOR_SCHEMES.LIGHT);
+      setColorScheme(switchOn ? COLOR_SCHEMES.DARK : COLOR_SCHEMES.LIGHT);
     },
-    [setColorSchema]
+    [setColorScheme]
   );
 
   const title = `Switch to ${oppositeColorSchema} mode`;
