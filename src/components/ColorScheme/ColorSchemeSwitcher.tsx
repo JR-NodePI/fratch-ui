@@ -3,14 +3,13 @@ import { useCallback } from 'react';
 import { c } from '../../helpers/classNameHelpers';
 import Switcher from '../Form/Switcher/Switcher';
 import { IconDark, IconLight } from '../Icons/Icons';
+import { ColorSchemeSwitcherProps } from './ColorScheme';
 import { COLOR_SCHEMES } from './colorSchemeConstants';
 import useColorScheme from './useColorScheme';
 
 export default function ColorSchemeSwitcher({
   className,
-}: {
-  className?: string;
-}): JSX.Element {
+}: ColorSchemeSwitcherProps): JSX.Element {
   const [colorSchema, setColorSchema] = useColorScheme();
   const oppositeColorSchema =
     colorSchema === COLOR_SCHEMES.LIGHT

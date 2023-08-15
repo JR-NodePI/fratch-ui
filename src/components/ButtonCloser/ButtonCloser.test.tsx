@@ -5,7 +5,7 @@ import { describe, expect, it, vi } from 'vitest';
 import ButtonCloser from './ButtonCloser';
 import { type ButtonCloserProps } from './ButtonCloserProps';
 
-describe('Button.tsx', () => {
+describe('ButtonCloser', () => {
   const setup = (props: ButtonCloserProps = {}) =>
     render(<ButtonCloser title="Test button" {...props} />);
 

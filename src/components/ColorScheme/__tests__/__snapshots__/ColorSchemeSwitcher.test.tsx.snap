@@ -1,0 +1,69 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ColorSchemeSwitcher > should render properly 1`] = `
+<div>
+  <label
+    class="_switcher_b3fc64 _off_b3fc64"
+    title="Switch to dark mode"
+  >
+    color scheme
+    <button
+      class="_switcher_button_b3fc64"
+    >
+      <span
+        class="_switcher_button_dot_b3fc64"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_2be8fc _primary_2be8fc _switcher_button_icon_b3fc64"
+          fill="none"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 3V1m0 18v-2M5.05 5.05 3.636 3.636m12.728 12.728L14.95 14.95M3 10H1m18 0h-2M5.05 14.95l-1.414 1.414M16.364 3.636 14.95 5.05M14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </span>
+    </button>
+  </label>
+</div>
+`;
+
+exports[`ColorSchemeSwitcher > should render with className 1`] = `
+<div>
+  <label
+    class="_switcher_b3fc64 _off_b3fc64 mock_test_class_name"
+    title="Switch to dark mode"
+  >
+    color scheme
+    <button
+      class="_switcher_button_b3fc64"
+    >
+      <span
+        class="_switcher_button_dot_b3fc64"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_2be8fc _primary_2be8fc _switcher_button_icon_b3fc64"
+          fill="none"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 3V1m0 18v-2M5.05 5.05 3.636 3.636m12.728 12.728L14.95 14.95M3 10H1m18 0h-2M5.05 14.95l-1.414 1.414M16.364 3.636 14.95 5.05M14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </span>
+    </button>
+  </label>
+</div>
+`;

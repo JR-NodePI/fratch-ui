@@ -6,3 +6,7 @@ export type ColorSchemeOutput = {
   colorScheme: ColorScheme;
   setColorScheme: (data: ColorScheme) => void;
 };
+
+export type ColorSchemeSwitcherProps = {
+  className?: string;
+};

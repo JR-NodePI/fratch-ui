@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Button.tsx > should render properly 1`] = `
+exports[`ButtonCloser > should render properly 1`] = `
 <div>
   <button
     class="_button_closer_8d9a3f"
@@ -28,7 +28,7 @@ exports[`Button.tsx > should render properly 1`] = `
 </div>
 `;
 
-exports[`Button.tsx > should render with className 1`] = `
+exports[`ButtonCloser > should render with className 1`] = `
 <div>
   <button
     class="_button_closer_8d9a3f mock_test_class_name"
