@@ -7,7 +7,7 @@ import Button from './Button';
 import { ButtonSize, ButtonType } from './ButtonConstants';
 import { type ButtonProps } from './ButtonProps';
 
-describe('Button.tsx', () => {
+describe('Button', () => {
   const setup = (props: ButtonProps = {}) =>
     render(<Button label="Test button" {...props} />);
 

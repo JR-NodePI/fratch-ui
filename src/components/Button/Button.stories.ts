@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import * as Icons from '../../Icons/Icons';
-import Button from '../Button';
-import { ButtonSize, ButtonType } from '../ButtonConstants';
+import * as Icons from '../Icons/Icons';
+import Button from './Button';
+import { ButtonSize, ButtonType } from './ButtonConstants';
 
 const IconOptions = { Default: undefined, ...Icons };
 

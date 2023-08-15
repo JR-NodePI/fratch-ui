@@ -3,15 +3,14 @@ import { useCallback } from 'react';
 import { c } from '../../helpers/classNameHelpers';
 import Switcher from '../Form/Switcher/Switcher';
 import { IconDark, IconLight } from '../Icons/Icons';
+import { ColorSchemeSwitcherProps } from './ColorScheme';
 import { COLOR_SCHEMES } from './colorSchemeConstants';
 import useColorScheme from './useColorScheme';
 
 export default function ColorSchemeSwitcher({
   className,
-}: {
-  className?: string;
-}): JSX.Element {
-  const [colorSchema, setColorSchema] = useColorScheme();
+}: ColorSchemeSwitcherProps): JSX.Element {
+  const [colorSchema, setColorScheme] = useColorScheme();
   const oppositeColorSchema =
     colorSchema === COLOR_SCHEMES.LIGHT
       ? COLOR_SCHEMES.DARK
@@ -19,9 +18,9 @@ export default function ColorSchemeSwitcher({
 
   const handleToggleColorSchema = useCallback(
     (switchOn: boolean): void => {
-      setColorSchema(switchOn ? COLOR_SCHEMES.DARK : COLOR_SCHEMES.LIGHT);
+      setColorScheme(switchOn ? COLOR_SCHEMES.DARK : COLOR_SCHEMES.LIGHT);
     },
-    [setColorSchema]
+    [setColorScheme]
   );
 
   const title = `Switch to ${oppositeColorSchema} mode`;
