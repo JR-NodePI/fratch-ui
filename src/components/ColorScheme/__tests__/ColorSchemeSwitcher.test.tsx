@@ -10,11 +10,12 @@ vi.mock('../useColorScheme');
 
 describe('ColorSchemeSwitcher', () => {
   const setColorScheme = vi.fn();
+  const useColorSchemeMock = useColorScheme as jest.MockedFunction<
+    typeof useColorScheme
+  >;
 
   beforeEach(() => {
-    (
-      useColorScheme as jest.MockedFunction<typeof useColorScheme>
-    ).mockReturnValue(['light', setColorScheme]);
+    useColorSchemeMock.mockReturnValue(['light', setColorScheme]);
   });
 
   const setup = (props: ColorSchemeSwitcherProps = {}) =>
@@ -37,12 +38,18 @@ describe('ColorSchemeSwitcher', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should set a new color schema', async () => {
+  it('should set a new color schema as dark', async () => {
     setup();
-
     await userEvent.click(screen.getByRole('button'));
-
     expect(setColorScheme).toHaveBeenCalledTimes(1);
     expect(setColorScheme).toHaveBeenCalledWith('dark');
+  });
+
+  it('should set a new color schema as light', async () => {
+    useColorSchemeMock.mockReturnValue(['dark', setColorScheme]);
+    setup();
+    await userEvent.click(screen.getByRole('button'));
+    expect(setColorScheme).toHaveBeenCalledTimes(1);
+    expect(setColorScheme).toHaveBeenCalledWith('light');
   });
 });

@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn typecheck && yarn format && yarn lint
+yarn typecheck && yarn format --log-level error && yarn lint

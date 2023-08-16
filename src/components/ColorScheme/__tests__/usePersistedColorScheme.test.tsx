@@ -1,4 +1,6 @@
-import { renderHook } from '@testing-library/react-hooks';
+import { act } from 'react-dom/test-utils';
+
+import { renderHook } from '@testing-library/react';
 import { describe, it } from 'vitest';
 
 import usePersistedColorScheme from '../usePersistedColorScheme';
@@ -37,7 +39,7 @@ describe('usePersistedColorScheme', () => {
     );
 
     const [, setColorScheme] = result.current;
-    setColorScheme(colorSchemeToStore);
+    act(() => setColorScheme(colorSchemeToStore));
 
     const storedColorScheme = globalThis.localStorage.getItem(
       'fratch-color-scheme'
