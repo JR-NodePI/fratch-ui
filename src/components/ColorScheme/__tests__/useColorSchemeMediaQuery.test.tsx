@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react';
 import { describe, it, vi } from 'vitest';
 
 import useColorSchemeMediaQuery from '../useColorSchemeMediaQuery';
@@ -10,24 +10,29 @@ describe('useColorSchemeMediaQuery', () => {
   const setColorScheme = vi.fn();
   const defaultColorScheme = 'light';
 
+  const usePersistedColorSchemeMock =
+    usePersistedColorScheme as jest.MockedFunction<
+      typeof usePersistedColorScheme
+    >;
   const matchMediaAddEventListener = vi.fn();
   const matchMediaRemoveEventListener = vi.fn();
+  const getMatchMediaMock = ({ matches }: { matches: boolean }) =>
+    vi.fn().mockImplementation((query: any) => ({
+      matches,
+      media: query,
+      addEventListener: matchMediaAddEventListener,
+      removeEventListener: matchMediaRemoveEventListener,
+    }));
 
   beforeEach(() => {
-    (
-      usePersistedColorScheme as jest.MockedFunction<
-        typeof usePersistedColorScheme
-      >
-    ).mockReturnValue([defaultColorScheme, setColorScheme]);
+    usePersistedColorSchemeMock.mockReturnValue([
+      defaultColorScheme,
+      setColorScheme,
+    ]);
 
     Object.defineProperty(window, 'matchMedia', {
       writable: true,
-      value: vi.fn().mockImplementation((query: any) => ({
-        matches: false,
-        media: query,
-        addEventListener: matchMediaAddEventListener,
-        removeEventListener: matchMediaRemoveEventListener,
-      })),
+      value: getMatchMediaMock({ matches: false }),
     });
   });
 
@@ -38,7 +43,7 @@ describe('useColorSchemeMediaQuery', () => {
     matchMediaRemoveEventListener.mockClear();
   });
 
-  it('should return the persistedColorScheme and colorScheme setter', async () => {
+  it('should return the colorScheme as light and colorScheme setter', async () => {
     const { result, unmount } = renderHook(() => useColorSchemeMediaQuery());
     expect(result.current).toEqual([defaultColorScheme, setColorScheme]);
 
@@ -48,13 +53,30 @@ describe('useColorSchemeMediaQuery', () => {
     await unmount();
   });
 
-  it('should return the colorScheme dark when prefers-color-scheme matches', async () => {
-    const { unmount } = renderHook(() => useColorSchemeMediaQuery());
+  it('should return the colorScheme as dark when the prefers-color-scheme matches', async () => {
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: getMatchMediaMock({ matches: true }),
+    });
+    usePersistedColorSchemeMock.mockReturnValue(['dark', setColorScheme]);
 
-    expect(window.matchMedia).toHaveBeenCalledTimes(2);
+    const { result, unmount } = renderHook(() => useColorSchemeMediaQuery());
+
+    expect(result.current).toEqual(['dark', setColorScheme]);
+
+    expect(usePersistedColorScheme).toHaveBeenCalledTimes(1);
+    expect(usePersistedColorScheme).toHaveBeenCalledWith('dark');
+
+    await unmount();
+
+    expect(window.matchMedia).toHaveBeenCalledTimes(3);
     expect(window.matchMedia).toHaveBeenCalledWith(
       '(prefers-color-scheme: dark)'
     );
+  });
+
+  it('should return the colorScheme dark when prefers-color-scheme event matches', async () => {
+    const { unmount } = renderHook(() => useColorSchemeMediaQuery());
 
     expect(usePersistedColorScheme).toHaveBeenCalledTimes(1);
     expect(usePersistedColorScheme).toHaveBeenCalledWith(defaultColorScheme);
@@ -64,6 +86,7 @@ describe('useColorSchemeMediaQuery', () => {
       'change',
       expect.any(Function)
     );
+
     const matchMediaHandler = matchMediaAddEventListener.mock.calls[0][1];
     matchMediaHandler({ matches: true });
 
@@ -72,6 +95,10 @@ describe('useColorSchemeMediaQuery', () => {
 
     await unmount();
 
+    expect(window.matchMedia).toHaveBeenCalledTimes(3);
+    expect(window.matchMedia).toHaveBeenCalledWith(
+      '(prefers-color-scheme: dark)'
+    );
     expect(matchMediaRemoveEventListener).toHaveBeenCalledTimes(1);
     expect(matchMediaRemoveEventListener).toHaveBeenCalledWith(
       'change',
