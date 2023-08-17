@@ -1,21 +1,9 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
-import { IconPlus as Icon } from '../../Icons/Icons';
+import { type SwitcherProps } from './SwitcherProps';
 
 import styles from './Switcher.module.css';
-
-type SwitcherProps = {
-  value?: boolean;
-  className?: string;
-  labelLeft?: ReactNode;
-  labelRight?: ReactNode;
-  title?: string;
-  disabled?: boolean;
-  onChange?: (switchOn: boolean) => void;
-  IconOn?: typeof Icon;
-  IconOff?: typeof Icon;
-};
 
 const Switcher = ({
   value,
