@@ -30,13 +30,18 @@
   width: calc(var(--ft-switcher-width) / 2 - 4px);
   height: calc(var(--ft-switcher-height) - 6px);
   border-radius: calc(var(--ft-switcher-height) / 2 - 2px);
-  transition: all 0.2s;
+  transition:
+    left 200ms ease-out,
+    transform 100ms;
   box-shadow:
     var(--ft-box-shadow-1),
     inset var(--ft-box-shadow-3);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.switcher .switcher_button:hover .switcher_button_dot {
+  transform: scale(1.1);
 }
 .switcher .switcher_button .switcher_button_icon {
   width: 70%;

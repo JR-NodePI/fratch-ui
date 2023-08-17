@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import getRandomColor from '../../../helpers/getRandomColor';
 import { IconCheck, IconInfo } from '../../Icons/Icons';
 import IconSuccess from '../../Icons/Icons/IconSuccess';
 import TabsMenu from '../TabsMenu';
@@ -9,11 +8,13 @@ const meta = {
   title: 'Example/Tabs Menu',
   component: TabsMenu,
   argTypes: {
-    onTabClick: { action: 'tab clicked' },
-    onTabAdd: { action: 'tab added' },
-    onTabRemove: { action: 'tab removed' },
-    onTabEdit: { action: 'tab edited' },
-    onTabsChange: { action: 'tabs changed' },
+    onTabClick: { action: 'tab clicked', table: { disable: true } },
+    onTabAdd: { action: 'tab added', table: { disable: true } },
+    onTabRemove: { action: 'tab removed', table: { disable: true } },
+    onTabEdit: { action: 'tab edited', table: { disable: true } },
+    onTabsChange: { action: 'tabs changed', table: { disable: true } },
+    newTabTemplate: { table: { disable: true } },
+    tabs: { table: { disable: true } },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof TabsMenu>;
@@ -29,21 +30,21 @@ export const Default: Story = {
         Icon: IconCheck,
         label: 'Tab 1',
         active: true,
-        color: getRandomColor(),
+        color: 'Red',
       },
       {
         Icon: IconInfo,
         label: 'Tab 2 with more text',
-        color: getRandomColor(),
+        color: 'Blue',
       },
       {
         Icon: IconSuccess,
         label: 'Tab 3',
-        color: getRandomColor(),
+        color: 'Green',
       },
       {
         label: 'Tab 4 with much more text',
-        color: getRandomColor(),
+        color: 'Magenta',
       },
     ],
   },
@@ -73,12 +74,14 @@ export const AddFromTemplate: Story = {
     newTabTemplate: {
       label: 'Template tab',
       Icon: IconInfo,
-      color: getRandomColor(),
+      color: 'Green',
     },
     tabs: [
       {
         label: 'Label tab text 1',
+        Icon: IconSuccess,
         active: true,
+        color: 'Blue',
       },
     ],
   },
