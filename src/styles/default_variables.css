@@ -171,9 +171,9 @@
   --ft-button-active-bg-color: #271f2f;
   --ft-button-hover-color: var(--ft-color-lightest);
   --ft-button-border-top-color: rgba(255, 255, 255, 0.1);
-  --ft-button-border-bottom-color: rgba(0, 0, 0, 0.8);
+  --ft-button-border-bottom-color: rgba(0, 0, 0, 0.3);
   --ft-button-hover-border-top-color: rgba(255, 255, 255, 0.2);
-  --ft-button-hover-border-bottom-color: rgb(0, 0, 0);
+  --ft-button-hover-border-bottom-color: rgba(0, 0, 0, 0.4);
 
   --ft-checkbox-bg-checked: var(--ft-color-grey-4);
 

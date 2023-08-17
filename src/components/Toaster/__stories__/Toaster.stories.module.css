@@ -1,0 +1,15 @@
+.toaster_story_list {
+  top: 50px;
+
+  max-height: calc(100vh - 50px);
+}
+
+.toaster_story_renderer {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 16px;
+  position: fixed;
+  z-index: 9999999;
+  display: flex;
+  gap: 16px;
+}
