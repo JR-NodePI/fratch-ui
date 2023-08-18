@@ -1,10 +1,10 @@
 import { CSSProperties, useState } from 'react';
 
-import { Button } from '../components';
-import { c } from '../helpers/classNameHelpers';
-import { getContrastColor } from '../helpers/colorHelpers';
-import { AVAILABLE_COLOR_LIST } from './constants';
-import getRandomColor from './getRandomColor';
+import { Button } from '../../components';
+import { c } from '../../helpers/classNameHelpers';
+import { getContrastColor } from '../../helpers/colorHelpers';
+import { AVAILABLE_COLOR_LIST } from '../constants';
+import getRandomColor from '../getRandomColor';
 
 import styles from './StoryRenderer.module.css';
 

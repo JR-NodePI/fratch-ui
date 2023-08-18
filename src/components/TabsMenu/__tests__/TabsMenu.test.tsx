@@ -6,7 +6,7 @@ import { IconCheck } from '../../Icons/Icons';
 import TabsMenu from '../TabsMenu';
 import { type TabsMenuProps } from '../TabsMenuProps';
 
-describe('TabsMenu.tsx', () => {
+describe('TabsMenu', () => {
   const getComponent = (props: TabsMenuProps = {}) => <TabsMenu {...props} />;
   const setup = (props = {}) => render(getComponent(props));
 
