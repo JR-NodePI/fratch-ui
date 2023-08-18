@@ -1,0 +1,125 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`InputCheck > should render position right 1`] = `
+<div>
+  <label
+    class="_checkbox_29b3a3 _right_29b3a3"
+  >
+    <input
+      type="checkbox"
+    />
+    <svg
+      class="_icon_2be8fc _primary_2be8fc _icon_check_29b3a3"
+      fill="none"
+      viewBox="-1 -3 18 18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 5.917 5.724 10.5 15 1.5"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3"
+      />
+    </svg>
+    <span>
+      mock label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`InputCheck > should render properly 1`] = `
+<div>
+  <label
+    class="_checkbox_29b3a3 _left_29b3a3"
+  >
+    <input
+      type="checkbox"
+    />
+    <svg
+      class="_icon_2be8fc _primary_2be8fc _icon_check_29b3a3"
+      fill="none"
+      viewBox="-1 -3 18 18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 5.917 5.724 10.5 15 1.5"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3"
+      />
+    </svg>
+    <span>
+      mock label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`InputCheck > should render with className 1`] = `
+<div>
+  <label
+    class="_checkbox_29b3a3 _left_29b3a3 mock-class"
+  >
+    <input
+      type="checkbox"
+    />
+    <svg
+      class="_icon_2be8fc _primary_2be8fc _icon_check_29b3a3"
+      fill="none"
+      viewBox="-1 -3 18 18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 5.917 5.724 10.5 15 1.5"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3"
+      />
+    </svg>
+    <span>
+      mock label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`InputCheck > should render with label 1`] = `
+<div>
+  <label
+    class="_checkbox_29b3a3 _left_29b3a3"
+  >
+    <input
+      type="checkbox"
+    />
+    <svg
+      class="_icon_2be8fc _primary_2be8fc _icon_check_29b3a3"
+      fill="none"
+      viewBox="-1 -3 18 18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 5.917 5.724 10.5 15 1.5"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3"
+      />
+    </svg>
+    <span>
+      mock label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`InputCheck > should set the forwarded ref 1`] = `
+{
+  "current": <input
+    type="checkbox"
+  />,
+}
+`;

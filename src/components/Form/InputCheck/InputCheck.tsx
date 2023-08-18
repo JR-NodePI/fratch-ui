@@ -2,22 +2,10 @@ import { forwardRef, useEffect, useRef, useState } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
 import { Icons } from '../..';
+import { InputCheckPosition } from './InputCheckConstants';
+import type { InputCheckProps } from './InputCheckProps';
 
 import styles from './InputCheck.module.css';
-
-export const InputCheckPropsPosition = {
-  LEFT: 'left',
-  RIGHT: 'right',
-} as const;
-
-type InputCheckProps = {
-  checked?: boolean;
-  className?: string;
-  disabled?: boolean;
-  label: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  position?: (typeof InputCheckPropsPosition)[keyof typeof InputCheckPropsPosition];
-};
 
 const InputCheck = forwardRef<HTMLInputElement, InputCheckProps>(
   (
@@ -27,7 +15,7 @@ const InputCheck = forwardRef<HTMLInputElement, InputCheckProps>(
       disabled,
       label,
       onChange,
-      position = InputCheckPropsPosition.LEFT,
+      position = InputCheckPosition.LEFT,
     }: InputCheckProps,
     ref: React.ForwardedRef<HTMLInputElement>
   ) => {
@@ -47,7 +35,7 @@ const InputCheck = forwardRef<HTMLInputElement, InputCheckProps>(
     const handleOnChange = (
       event: React.ChangeEvent<HTMLInputElement>
     ): void => {
-      onChange && onChange(event);
+      onChange && onChange(event.target.checked);
       setIsChecked(event.target.checked);
     };
 

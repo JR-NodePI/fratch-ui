@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header > should render properly 1`] = `
+<div>
+  <div
+    class="_header_63c2ea"
+  >
+    <h1 />
+  </div>
+</div>
+`;
+
+exports[`Header > should render with iconPosition right 1`] = `
+<div>
+  <div
+    class="_header_63c2ea"
+  >
+    <h1>
+      <img
+        class="_icon_63c2ea _right_63c2ea"
+        src="icon.png"
+      />
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`Header > should render with iconSrc 1`] = `
+<div>
+  <div
+    class="_header_63c2ea"
+  >
+    <h1>
+      <img
+        class="_icon_63c2ea _left_63c2ea"
+        src="icon.png"
+      />
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`Header > should render with title 1`] = `
+<div>
+  <div
+    class="_header_63c2ea"
+  >
+    <h1>
+      mock title
+    </h1>
+  </div>
+</div>
+`;

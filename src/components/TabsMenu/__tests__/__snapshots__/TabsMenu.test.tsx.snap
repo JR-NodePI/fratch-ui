@@ -1,5 +1,399 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`TabsMenu > should add new tab based on template in addable mode 1`] = `
+<div>
+  <nav
+    class="_tab_menu_3abddc"
+  >
+    <ul>
+      <li
+        class="_tab_item_3abddc _active_3abddc"
+        title="new-tab-label-from-template"
+      >
+        <div
+          class="_tab_trigger_3abddc"
+        >
+          <div
+            class="_tab_editable_732c04 _tab_label_3abddc"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                new-tab-label-from-template
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="_add_tab_3abddc"
+      >
+        <a
+          aria-label="Add new tab"
+          href="#"
+          title="Add new tab"
+        >
+          <svg
+            aria-hidden="true"
+            class="_icon_2be8fc _primary_2be8fc"
+            fill="none"
+            viewBox="-0.5 -0.5 19 19"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 1v16M1 9h16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`TabsMenu > should render properly 1`] = `
+<div>
+  <nav
+    class="_tab_menu_3abddc"
+  >
+    <ul>
+      <li
+        class="_tab_item_3abddc _active_3abddc"
+        title="label-test-1"
+      >
+        <div
+          class="_tab_trigger_3abddc"
+        >
+          <svg
+            class="_icon_2be8fc _primary_2be8fc _tab_icon_3abddc"
+            fill="none"
+            viewBox="-1 -3 18 18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 5.917 5.724 10.5 15 1.5"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+            />
+          </svg>
+          <div
+            class="_tab_editable_732c04 _tab_label_3abddc"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-test-1
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="_tab_item_3abddc"
+        title="label-test-2"
+      >
+        <div
+          class="_tab_trigger_3abddc"
+        >
+          <div
+            class="_tab_editable_732c04 _tab_label_3abddc"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-test-2
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="_tab_item_3abddc"
+        title="label-test-3"
+      >
+        <div
+          class="_tab_trigger_3abddc"
+        >
+          <div
+            class="_tab_editable_732c04 _tab_label_3abddc"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-test-3
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`TabsMenu > should render with className 1`] = `
+<div>
+  <nav
+    class="_tab_menu_3abddc className-test"
+  >
+    <ul />
+  </nav>
+</div>
+`;
+
+exports[`TabsMenu > should render with editable addable and removable 1`] = `
+<div>
+  <nav
+    class="_tab_menu_3abddc"
+  >
+    <ul>
+      <li
+        class="_tab_item_3abddc _active_3abddc"
+        title="label-test-1"
+      >
+        <div
+          class="_tab_trigger_3abddc"
+        >
+          <div
+            class="_tab_editable_732c04 _tab_label_3abddc"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-test-1
+              </span>
+              <button
+                class="_edit_button_732c04"
+                title="Edit tag"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="_icon_2be8fc _primary_2be8fc _edit_icon_732c04"
+                  fill="none"
+                  viewBox="0 0 21 21"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+                <i>
+                  Edit tag
+                </i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="_button_closer_8d9a3f _tab_closer_3abddc"
+          title="Remove tab"
+        >
+          <svg
+            aria-hidden="true"
+            class="_icon_2be8fc _primary_2be8fc _icon_8d9a3f"
+            fill="none"
+            viewBox="-1 -1 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+          <i>
+            Remove tab
+          </i>
+        </button>
+      </li>
+      <li
+        class="_tab_item_3abddc"
+        title="label-test-2"
+      >
+        <div
+          class="_tab_trigger_3abddc"
+        >
+          <div
+            class="_tab_editable_732c04 _tab_label_3abddc"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-test-2
+              </span>
+              <button
+                class="_edit_button_732c04"
+                title="Edit tag"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="_icon_2be8fc _primary_2be8fc _edit_icon_732c04"
+                  fill="none"
+                  viewBox="0 0 21 21"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+                <i>
+                  Edit tag
+                </i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="_button_closer_8d9a3f _tab_closer_3abddc"
+          title="Remove tab"
+        >
+          <svg
+            aria-hidden="true"
+            class="_icon_2be8fc _primary_2be8fc _icon_8d9a3f"
+            fill="none"
+            viewBox="-1 -1 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+          <i>
+            Remove tab
+          </i>
+        </button>
+      </li>
+      <li
+        class="_add_tab_3abddc"
+      >
+        <a
+          aria-label="Add new tab"
+          href="#"
+          title="Add new tab"
+        >
+          <svg
+            aria-hidden="true"
+            class="_icon_2be8fc _primary_2be8fc"
+            fill="none"
+            viewBox="-0.5 -0.5 19 19"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 1v16M1 9h16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`TabsMenu > should render with tab colors 1`] = `
+<div>
+  <nav
+    class="_tab_menu_3abddc className-test"
+  >
+    <ul>
+      <li
+        class="_tab_item_3abddc"
+        title="label-1"
+      >
+        <div
+          class="_tab_trigger_3abddc"
+        >
+          <span
+            class="_tab_color_3abddc"
+            style="background: Red;"
+          />
+          <div
+            class="_tab_editable_732c04 _tab_label_3abddc"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-1
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="_tab_item_3abddc"
+        title="label-2"
+      >
+        <div
+          class="_tab_trigger_3abddc"
+        >
+          <span
+            class="_tab_color_3abddc"
+            style="background: Blue;"
+          />
+          <div
+            class="_tab_editable_732c04 _tab_label_3abddc"
+          >
+            <div
+              class="_label_732c04"
+            >
+              <span
+                class="_text_732c04"
+              >
+                label-2
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
 exports[`TabsMenu.tsx > should add new tab based on template in addable mode 1`] = `
 <div>
   <nav

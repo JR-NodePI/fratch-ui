@@ -1,16 +1,14 @@
 import { c } from '../../helpers/classNameHelpers';
+import { ICON_POSITION } from './HeaderConstants';
+import { HeaderProps } from './HeaderProps';
 
 import styles from './Header.module.css';
 
 function Header({
   title,
   iconSrc,
-  iconPosition = 'left',
-}: {
-  title: string;
-  iconSrc?: string;
-  iconPosition: 'left' | 'right';
-}): JSX.Element {
+  iconPosition = ICON_POSITION.LEFT,
+}: HeaderProps): JSX.Element {
   return (
     <div className={c(styles.header)}>
       <h1>

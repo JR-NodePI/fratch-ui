@@ -5,7 +5,7 @@ import { describe, expect, it, vi } from 'vitest';
 import TabEditable from '../TabEditable';
 import { type TabEditableProps } from '../TabEditableProps';
 
-describe('TabEditable.tsx', () => {
+describe('TabEditable', () => {
   const setup = (props: TabEditableProps = {}) =>
     render(<TabEditable {...props} />);
 

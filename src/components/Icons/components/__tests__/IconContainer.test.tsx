@@ -5,7 +5,7 @@ import { IconType } from '../IconConstants';
 import IconContainer from '../IconContainer';
 import { type IconContainerProps } from '../IconContainerProps';
 
-describe('Button.tsx', () => {
+describe('Button', () => {
   const setup = (props: Omit<IconContainerProps, 'children'> = {}) =>
     render(
       <IconContainer {...props}>
