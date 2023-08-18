@@ -4,7 +4,7 @@ import { IconType } from '../components/IconConstants';
 import IconList from './IconList';
 
 const meta = {
-  title: 'Example/Icons',
+  title: 'Components/Icons',
   component: IconList,
   argTypes: {},
 } satisfies Meta<typeof IconList>;

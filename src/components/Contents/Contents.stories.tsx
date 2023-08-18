@@ -32,7 +32,7 @@ function Contents({ content = '' }: { content: string }): JSX.Element {
 }
 
 const meta = {
-  title: 'Example/Contents',
+  title: 'Components/Contents',
   component: Contents,
   argTypes: {},
 } satisfies Meta<typeof Contents>;

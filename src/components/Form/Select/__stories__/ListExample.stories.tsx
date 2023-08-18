@@ -52,7 +52,7 @@ const ListExample = ({
 };
 
 const meta = {
-  title: 'Example/Form/Select/ListExample',
+  title: 'Components/Form/Select/ListExample',
   component: ListExample,
 } satisfies Meta<typeof ListExample>;
 

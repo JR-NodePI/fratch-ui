@@ -71,6 +71,10 @@
 .modal.accept .header {
   background-color: var(--ft-modal-header-bg-color);
 }
+.modal.info .button_closer svg,
+.modal.accept .button_closer svg {
+  color: var(--ft-primary-default-color);
+}
 .modal.confirm .header {
   background-color: var(--ft-modal-header-confirm-bg-color);
 }

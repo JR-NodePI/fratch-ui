@@ -5,7 +5,7 @@ import { SelectOption } from '../Select/SelectProps';
 import LeftLabeledField from './LeftLabeledField';
 
 const meta = {
-  title: 'Example/Form/LeftLabeledField',
+  title: 'Components/Form/LeftLabeledField',
   component: LeftLabeledField,
   argTypes: {
     field: { control: false },

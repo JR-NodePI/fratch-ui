@@ -3,14 +3,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 import InputCheck from './InputCheck';
 
 const meta = {
-  title: 'Example/Form/InputCheck',
+  title: 'Components/Form/InputCheck',
   component: InputCheck,
-  // tags: ['autodocs'],
   argTypes: {
-    checked: {
-      control: false,
-      description: 'The initial checked state',
-    },
+    onChange: { table: { disable: true } },
   },
 } satisfies Meta<typeof InputCheck>;
 

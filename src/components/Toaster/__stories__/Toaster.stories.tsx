@@ -49,7 +49,7 @@ const StoryRenderer = (props: Toaster): JSX.Element => {
 };
 
 const meta = {
-  title: 'Example/Toaster',
+  title: 'Components/Toaster',
   component: StoryRenderer,
   argTypes: {
     id: { table: { disable: true } },

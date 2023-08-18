@@ -1,10 +1,10 @@
 import { CSSProperties, useState } from 'react';
 
-import { COLOR_LIST } from '../../../constants';
-import { c } from '../../../helpers/classNameHelpers';
-import { getContrastColor } from '../../../helpers/colorHelpers';
-import getRandomColor from '../../../helpers/getRandomColor';
-import { Button } from '../..';
+import { Button } from '../components';
+import { c } from '../helpers/classNameHelpers';
+import { getContrastColor } from '../helpers/colorHelpers';
+import { AVAILABLE_COLOR_LIST } from './constants';
+import getRandomColor from './getRandomColor';
 
 import styles from './StoryRenderer.module.css';
 
@@ -29,7 +29,7 @@ export default function StoryRenderer(): JSX.Element {
   >([]);
 
   const handleAddRandomColor = () => {
-    if (randomizedColors.length === COLOR_LIST.length) return;
+    if (randomizedColors.length === AVAILABLE_COLOR_LIST.length) return;
 
     setRandomizedColors([
       ...randomizedColors,
@@ -43,8 +43,8 @@ export default function StoryRenderer(): JSX.Element {
 
   return (
     <>
-      <h1>Available list</h1>
-      {COLOR_LIST.map(color => {
+      <h1>Available color list</h1>
+      {AVAILABLE_COLOR_LIST.map(color => {
         return <ColorItem key={color} color={color} />;
       })}
 
@@ -59,7 +59,7 @@ export default function StoryRenderer(): JSX.Element {
         </Button>
       </p>
 
-      {Array.from({ length: COLOR_LIST.length }).map((_, index) => (
+      {Array.from({ length: AVAILABLE_COLOR_LIST.length }).map((_, index) => (
         <ColorItem key={index} color={randomizedColors[index] ?? ''} />
       ))}
     </>

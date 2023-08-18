@@ -12,7 +12,7 @@
 }
 
 .icon_list ul li .story_icon {
-  background-color: #fff;
+  background-color: var(--ft-color-grey-4);
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -33,7 +33,7 @@
   border: none;
   background: transparent;
   color: inherit;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-family: var(--ft-font-family);
   outline: none;
 }
