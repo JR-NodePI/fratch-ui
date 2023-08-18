@@ -5,6 +5,9 @@ import ColorSchemeSwitcher from './ColorSchemeSwitcher';
 const meta = {
   title: 'Example/ColorSchemeSwitcher',
   component: ColorSchemeSwitcher,
+  argTypes: {
+    className: { table: { disable: true } },
+  },
 } satisfies Meta<typeof ColorSchemeSwitcher>;
 
 export default meta;

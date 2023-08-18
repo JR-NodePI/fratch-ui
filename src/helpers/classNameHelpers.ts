@@ -1,11 +1,14 @@
-type CssClassName = string | undefined | (string | undefined)[];
+type CssClassNameItem = string | undefined | null;
+type CssClassName = CssClassNameItem | CssClassNameItem[];
 type CssClassNameParams = CssClassName[];
 
 const getCssClasses = (classNames: CssClassName): string => {
-  let classNameList: (string | undefined)[] = [];
+  let classNameList: CssClassNameItem[] = [];
+
+  if (classNames == null) return '';
 
   if (typeof classNames === 'string') {
-    classNameList = classNames.split(' ');
+    classNameList = classNames.split(/[\s]+/g);
   }
 
   if (Array.isArray(classNames)) {
@@ -18,8 +21,11 @@ const getCssClasses = (classNames: CssClassName): string => {
     .join(' ');
 };
 
-export const c = (...params: CssClassNameParams): string =>
-  params
-    .filter(Boolean)
+export const c = (...params: CssClassNameParams): string => {
+  const classNamesList = params
     .map(param => getCssClasses(param))
+    .filter(Boolean)
     .join(' ');
+
+  return getCssClasses(classNamesList);
+};

@@ -15,6 +15,8 @@ const meta = {
       mapping: IconOptions,
       control: { type: 'select' },
     },
+    onClick: { table: { disable: true } },
+    className: { table: { disable: true } },
   },
 } satisfies Meta<typeof Button>;
 
