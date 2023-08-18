@@ -7,7 +7,13 @@ import dts from 'vite-plugin-dts';
 
 const srcDir = './src';
 const outDir = './dist';
-const excludePattern = './**/*.{stories,test,d}.{tsx,ts}';
+
+const excludes = [
+  './**/*.{stories,test,d}.{tsx,ts}',
+  './**/__tests__*',
+  './**/__stories__*',
+  './**/__mocks__*',
+];
 
 const buildComponent = file => {
   const fileName = path
@@ -66,20 +72,32 @@ const buildComponentsOnCloseBundle = () => ({
   name: 'buildComponentsOnCloseBundle',
   async closeBundle() {
     const componentFiles = glob.sync(`${srcDir}/**/*.{tsx,ts}`, {
-      ignore: excludePattern,
+      ignore: excludes,
     });
     await Promise.allSettled(componentFiles.map(buildComponent));
     combineCssFiles();
   },
 });
 
+const copyDtsTypeFiles = () => {
+  const dTsFiles = glob.sync(`${srcDir}/**/*.d.ts`, {
+    ignore: ['./**/env.d.ts'],
+  });
+  dTsFiles.forEach(file => {
+    fs.copyFileSync(file, `${outDir}/${path.relative(srcDir, file)}`);
+  });
+};
+
 export default defineConfig({
   plugins: [
     buildComponentsOnCloseBundle(),
     dts({
       outDir,
-      exclude: excludePattern,
+      exclude: excludes,
       entryRoot: srcDir,
+      afterBuild: () => {
+        copyDtsTypeFiles();
+      },
     }),
   ],
   build: {
