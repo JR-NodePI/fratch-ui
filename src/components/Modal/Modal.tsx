@@ -91,10 +91,15 @@ function Modal({
       <section id={id} className={c(styles.modal, styles[type])}>
         {hasHeader && (
           <header className={c(styles.header)}>
-            <h5 className={c(styles.title)}>{title}</h5>{' '}
+            <h5 className={c(styles.title)}>{title}</h5>
           </header>
         )}
-        {hasCloser && <ButtonCloser onClick={handleOverflow} />}
+        {hasCloser && (
+          <ButtonCloser
+            onClick={handleOverflow}
+            className={c(styles.button_closer)}
+          />
+        )}
         <div className={c(styles.content)}>{children}</div>
         {hasFooter && (
           <footer className={c(styles.footer)}>

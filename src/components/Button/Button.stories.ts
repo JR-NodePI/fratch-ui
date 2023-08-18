@@ -7,7 +7,7 @@ import { ButtonSize, ButtonType } from './ButtonConstants';
 const IconOptions = { Default: undefined, ...Icons };
 
 const meta = {
-  title: 'Example/Button',
+  title: 'Components/Button',
   component: Button,
   argTypes: {
     Icon: {

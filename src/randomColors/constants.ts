@@ -1,4 +1,4 @@
-export const COLOR_LIST = [
+export const AVAILABLE_COLOR_LIST = [
   '#006aff',
   '#00bbff',
   '#00dfdf',

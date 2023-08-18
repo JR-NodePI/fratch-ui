@@ -1,11 +1,11 @@
 import { CSSProperties } from 'react';
 
-import { COLOR_LIST } from '../constants';
+import { AVAILABLE_COLOR_LIST } from './constants';
 
 export default function getRandomColor(
   excludedColors?: CSSProperties['color'][]
 ): CSSProperties['color'] {
-  const colors = COLOR_LIST.filter(
+  const colors = AVAILABLE_COLOR_LIST.filter(
     color => !(excludedColors ?? []).includes(color)
   );
   const indexColor = Math.floor(Math.random() * colors.length);

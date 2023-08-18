@@ -1,0 +1,125 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`index > should have a list of components 1`] = `
+{
+  "Button": [Function],
+  "ButtonConstants": {
+    "ButtonSize": {
+      "LARGE": "large",
+      "MEDIUM": "medium",
+      "SMALL": "small",
+      "SMALLER": "smaller",
+    },
+    "ButtonType": {
+      "DEFAULT": "default",
+      "PRIMARY": "primary",
+      "SECONDARY": "secondary",
+      "TERTIARY": "tertiary",
+    },
+  },
+  "ColorSchemeProvider": [Function],
+  "ColorSchemeSwitcher": [Function],
+  "Form": {
+    "InputCheck": {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    },
+    "InputText": {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    },
+    "LeftLabeledField": [Function],
+    "Select": [Function],
+    "Switcher": [Function],
+  },
+  "Header": [Function],
+  "Icons": {
+    "IconArrowDown": [Function],
+    "IconCheck": [Function],
+    "IconClose": [Function],
+    "IconDark": [Function],
+    "IconDownload": [Function],
+    "IconEdit": [Function],
+    "IconError": [Function],
+    "IconExport": [Function],
+    "IconImport": [Function],
+    "IconInfo": [Function],
+    "IconLight": [Function],
+    "IconPause": [Function],
+    "IconPin": [Function],
+    "IconPlay": [Function],
+    "IconPlus": [Function],
+    "IconSuccess": [Function],
+    "IconUpload": [Function],
+    "IconVerticalDots": [Function],
+    "IconWarning": [Function],
+  },
+  "Modal": [Function],
+  "ModalConstants": {
+    "ModalCloseTypes": {
+      "ACCEPT": "accept",
+      "CANCEL": "cancel",
+      "CLOSE": "close",
+    },
+    "ModalTypes": {
+      "ACCEPT": "accept",
+      "CONFIRM": "confirm",
+      "INFO": "info",
+    },
+  },
+  "SettingsMenu": [Function],
+  "SettingsMenuConstants": {
+    "SettingsMenuPosition": {
+      "LEFT": "left",
+      "RIGHT": "right",
+    },
+  },
+  "Spinner": [Function],
+  "SpinnerConstants": {
+    "SpinnerType": {
+      "BLUE": "blue",
+      "GREEN": "green",
+      "PRIMARY": "primary",
+      "RED": "red",
+      "SECONDARY": "secondary",
+      "TERTIARY": "tertiary",
+      "YELLOW": "yellow",
+    },
+  },
+  "TabsMenu": [Function],
+  "ToasterConstants": {
+    "ToasterType": {
+      "ERROR": "error",
+      "INFO": "info",
+      "SUCCESS": "success",
+      "WARNING": "warning",
+    },
+  },
+  "ToasterListContext": {
+    "$$typeof": Symbol(react.context),
+    "Consumer": {
+      "$$typeof": Symbol(react.context),
+      "_context": [Circular],
+    },
+    "Provider": {
+      "$$typeof": Symbol(react.provider),
+      "_context": [Circular],
+    },
+    "_currentRenderer": null,
+    "_currentRenderer2": null,
+    "_currentValue": {
+      "addToaster": [Function],
+      "toasters": [],
+    },
+    "_currentValue2": {
+      "addToaster": [Function],
+      "toasters": [],
+    },
+    "_defaultValue": null,
+    "_globalName": null,
+    "_threadCount": 0,
+    "displayName": "ToasterListContext",
+  },
+  "ToasterProvider": [Function],
+}
+`;

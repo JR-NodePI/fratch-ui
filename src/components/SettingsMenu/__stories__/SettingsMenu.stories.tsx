@@ -6,10 +6,10 @@ import SettingsMenu from '../SettingsMenu';
 import StoryRenderer from './StoryRenderer';
 
 const meta = {
-  title: 'Example/SettingsMenu',
+  title: 'Components/SettingsMenu',
   component: StoryRenderer,
   argTypes: {
-    items: { control: false },
+    items: { table: { disable: true } },
   },
 } satisfies Meta<typeof SettingsMenu>;
 

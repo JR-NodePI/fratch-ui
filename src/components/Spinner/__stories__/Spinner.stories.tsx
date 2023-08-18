@@ -4,7 +4,7 @@ import Spinner from '../Spinner';
 import StoryRenderer from './StoryRenderer';
 
 const meta = {
-  title: 'Example/Spinner',
+  title: 'Components/Spinner',
   component: StoryRenderer,
   argTypes: {},
 } satisfies Meta<typeof Spinner>;

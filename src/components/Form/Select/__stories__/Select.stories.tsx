@@ -6,15 +6,15 @@ import Select from '../Select';
 type TesOptionValue = { opt: string; prop: string };
 
 const meta = {
-  title: 'Example/Form/Select',
+  title: 'Components/Form/Select',
   component: Select,
   tags: ['autodocs'],
   argTypes: {
-    onChange: { control: false },
-    onClean: { control: false },
-    options: { control: false },
-    value: { control: false },
-    noResultsElement: { control: false },
+    onChange: { table: { disable: true } },
+    onClean: { table: { disable: true } },
+    options: { table: { disable: true } },
+    value: { table: { disable: true } },
+    noResultsElement: { table: { disable: true } },
   },
 } satisfies Meta<typeof Select<TesOptionValue>>;
 

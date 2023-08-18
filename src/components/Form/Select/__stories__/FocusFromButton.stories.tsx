@@ -33,7 +33,7 @@ const FocusFromButton = (): JSX.Element => {
 };
 
 const meta = {
-  title: 'Example/Form/Select/FocusFromButton',
+  title: 'Components/Form/Select/FocusFromButton',
   component: FocusFromButton,
 } satisfies Meta<typeof FocusFromButton>;
 

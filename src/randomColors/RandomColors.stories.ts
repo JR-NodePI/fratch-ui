@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import StoryRenderer from './StoryRenderer';
 
 const meta = {
-  title: 'Example/RandomColors',
+  title: 'Colors/RandomColors',
   component: StoryRenderer,
   argTypes: {},
 } satisfies Meta<typeof StoryRenderer>;

@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png';
 import Header from './Header';
 
 const meta = {
-  title: 'Example/Header',
+  title: 'Components/Header',
   component: Header,
 } satisfies Meta<typeof Header>;
 

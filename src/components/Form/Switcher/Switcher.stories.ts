@@ -7,7 +7,7 @@ import Switcher from './Switcher';
 const IconOptions = { Default: undefined, ...Icons };
 
 const meta = {
-  title: 'Example/Form/Switcher',
+  title: 'Components/Form/Switcher',
   component: Switcher,
   argTypes: {
     IconOff: {
@@ -20,6 +20,7 @@ const meta = {
       mapping: IconOptions,
       control: { type: 'select' },
     },
+    className: { table: { disable: true } },
   },
 } satisfies Meta<typeof Switcher>;
 

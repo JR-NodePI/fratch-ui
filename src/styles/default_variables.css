@@ -144,9 +144,8 @@
 
   --ft-checkbox-bg-checked: var(--ft-color-lightest);
 
-  --ft-modal-border-color: rgba(0, 0, 0, 0);
-  --ft-modal-header-bg-color: var(--ft-primary-active-bg-color);
-  --ft-modal-header-confirm-bg-color: var(--ft-tertiary-active-bg-color);
+  --ft-modal-header-bg-color: var(--ft-primary-default-bg-color);
+  --ft-modal-header-confirm-bg-color: var(--ft-tertiary-default-bg-color);
 }
 
 :root body[data-fratch_color_scheme='dark'] {
@@ -180,7 +179,6 @@
 
   --ft-checkbox-bg-checked: var(--ft-color-grey-4);
 
-  --ft-modal-border-color: var(--ft-color-grey-2);
   --ft-modal-header-bg-color: var(--ft-primary-active-bg-color);
   --ft-modal-header-confirm-bg-color: var(--ft-tertiary-active-bg-color);
 }

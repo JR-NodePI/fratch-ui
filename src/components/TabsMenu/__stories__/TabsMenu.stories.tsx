@@ -5,7 +5,7 @@ import IconSuccess from '../../Icons/Icons/IconSuccess';
 import TabsMenu from '../TabsMenu';
 
 const meta = {
-  title: 'Example/Tabs Menu',
+  title: 'Components/Tabs Menu',
   component: TabsMenu,
   argTypes: {
     onTabClick: { action: 'tab clicked', table: { disable: true } },
@@ -15,6 +15,7 @@ const meta = {
     onTabsChange: { action: 'tabs changed', table: { disable: true } },
     newTabTemplate: { table: { disable: true } },
     tabs: { table: { disable: true } },
+    className: { table: { disable: true } },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof TabsMenu>;
