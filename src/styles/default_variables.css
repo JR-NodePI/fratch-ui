@@ -25,6 +25,8 @@
   --ft-color-tertiary: #007896;
   --ft-color-error: #d60040;
 
+  --ft-select-color: var(--ft-color-light);
+
   --ft-color-item-hover: #e6d9fe;
   --ft-color-item-active: #b5fdfb;
   --ft-color-item-hover-active: #bbebff;
@@ -159,6 +161,7 @@
   --ft-color-item-hover-active: #d8e2ff;
 
   --ft-color-text: #f4ebff;
+  --ft-select-color: var(--ft-brand-color);
   --ft-color-text-inverted: #231927;
   --ft-color-background: #231927;
 

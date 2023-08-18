@@ -27,9 +27,15 @@
   font-size: 10px;
   display: block;
   text-align: center;
-  padding-bottom: 8px;
-  top: 0;
+  padding: 4px;
+  box-sizing: border-box;
   max-width: 100px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  margin-bottom: 16px;
+  font-family: var(--ft-font-family);
+  outline: none;
 }
 
 .icon_custom_color {
