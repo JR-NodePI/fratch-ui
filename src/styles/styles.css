@@ -10,6 +10,11 @@ body {
   font-weight: var(--ft-font-weight-normal);
 }
 
+::selection {
+  color: var(--ft-color-text);
+  background: var(--ft-select-color);
+}
+
 h1 {
   font-size: 1.8em;
 }
