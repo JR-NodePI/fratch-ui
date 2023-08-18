@@ -1,0 +1,146 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Switcher > should render properly 1`] = `
+<div>
+  <label
+    class="_switcher_b3fc64 _off_b3fc64"
+  >
+    <button
+      class="_switcher_button_b3fc64"
+    >
+      <span
+        class="_switcher_button_dot_b3fc64"
+      />
+    </button>
+  </label>
+</div>
+`;
+
+exports[`Switcher > should render with IconOff 1`] = `
+<div>
+  <label
+    class="_switcher_b3fc64 _off_b3fc64"
+  >
+    <button
+      class="_switcher_button_b3fc64"
+    >
+      <span
+        class="_switcher_button_dot_b3fc64"
+      >
+        <svg
+          class="_icon_2be8fc _primary_2be8fc _switcher_button_icon_b3fc64"
+          fill="none"
+          viewBox="-1 -3 18 18"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 5.917 5.724 10.5 15 1.5"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="3"
+          />
+        </svg>
+      </span>
+    </button>
+  </label>
+</div>
+`;
+
+exports[`Switcher > should render with IconOn 1`] = `
+<div>
+  <label
+    class="_switcher_b3fc64 _on_b3fc64"
+  >
+    <button
+      class="_switcher_button_b3fc64"
+    >
+      <span
+        class="_switcher_button_dot_b3fc64"
+      >
+        <svg
+          class="_icon_2be8fc _primary_2be8fc _switcher_button_icon_b3fc64"
+          fill="none"
+          viewBox="-1 -3 18 18"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 5.917 5.724 10.5 15 1.5"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="3"
+          />
+        </svg>
+      </span>
+    </button>
+  </label>
+</div>
+`;
+
+exports[`Switcher > should render with className 1`] = `
+<div>
+  <label
+    class="_switcher_b3fc64 _off_b3fc64 mock-class-name"
+  >
+    <button
+      class="_switcher_button_b3fc64"
+    >
+      <span
+        class="_switcher_button_dot_b3fc64"
+      />
+    </button>
+  </label>
+</div>
+`;
+
+exports[`Switcher > should render with label left 1`] = `
+<div>
+  <label
+    class="_switcher_b3fc64 _off_b3fc64"
+  >
+    mock label left
+    <button
+      class="_switcher_button_b3fc64"
+    >
+      <span
+        class="_switcher_button_dot_b3fc64"
+      />
+    </button>
+  </label>
+</div>
+`;
+
+exports[`Switcher > should render with label right 1`] = `
+<div>
+  <label
+    class="_switcher_b3fc64 _off_b3fc64"
+  >
+    <button
+      class="_switcher_button_b3fc64"
+    >
+      <span
+        class="_switcher_button_dot_b3fc64"
+      />
+    </button>
+    mock label right
+  </label>
+</div>
+`;
+
+exports[`Switcher > should render with title 1`] = `
+<div>
+  <label
+    class="_switcher_b3fc64 _off_b3fc64"
+    title="mock title"
+  >
+    <button
+      class="_switcher_button_b3fc64"
+    >
+      <span
+        class="_switcher_button_dot_b3fc64"
+      />
+    </button>
+  </label>
+</div>
+`;
