@@ -6,8 +6,7 @@ import Switcher from './Switcher';
 import { type SwitcherProps } from './SwitcherProps';
 
 describe('Switcher', () => {
-  const getComponent = (props: SwitcherProps = {}) => <Switcher {...props} />;
-  const setup = (props = {}) => render(getComponent(props));
+  const setup = (props: SwitcherProps = {}) => render(<Switcher {...props} />);
 
   it('should render properly', () => {
     const { container } = setup();

@@ -7,8 +7,7 @@ import TabsMenu from '../TabsMenu';
 import { type TabsMenuProps } from '../TabsMenuProps';
 
 describe('TabsMenu', () => {
-  const getComponent = (props: TabsMenuProps = {}) => <TabsMenu {...props} />;
-  const setup = (props = {}) => render(getComponent(props));
+  const setup = (props: TabsMenuProps = {}) => render(<TabsMenu {...props} />);
 
   it('should render properly', () => {
     const { container } = setup({

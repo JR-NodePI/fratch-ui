@@ -10,15 +10,10 @@ import { type InputTextProps } from './InputTextProps';
 describe('InputText', () => {
   const initialProps: InputTextProps = {};
 
-  const getComponent = (
-    props: InputTextProps = initialProps,
-    ref?: React.ForwardedRef<HTMLInputElement>
-  ) => <InputText ref={ref} {...props} />;
-
   const setup = (
     props = initialProps,
     ref?: React.ForwardedRef<HTMLInputElement>
-  ) => render(getComponent(props, ref));
+  ) => render(<InputText ref={ref} {...props} />);
 
   it('should render properly', () => {
     const { container } = setup();
