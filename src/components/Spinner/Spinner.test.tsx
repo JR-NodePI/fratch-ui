@@ -12,8 +12,31 @@ describe('Spinner', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render with className', () => {
-    const { container } = setup({});
+  it('should render with cover', () => {
+    const { container } = setup({
+      cover: true,
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render with inverted', () => {
+    const { container } = setup({
+      inverted: true,
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render with label', () => {
+    const { container } = setup({
+      label: 'mock label',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render with type', () => {
+    const { container } = setup({
+      type: 'secondary',
+    });
     expect(container).toMatchSnapshot();
   });
 });
