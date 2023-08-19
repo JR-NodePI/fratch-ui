@@ -45,3 +45,98 @@ exports[`Spinner > should render with className 1`] = `
   </div>
 </div>
 `;
+
+exports[`Spinner > should render with cover 1`] = `
+<div>
+  <div
+    class="_spinner_container_83c47e _cover_83c47e _primary_83c47e"
+  >
+    <svg
+      class="_spinner_83c47e"
+      viewBox="0 0 50 50"
+    >
+      <circle
+        class="_spinner_path_83c47e"
+        cx="25"
+        cy="25"
+        fill="none"
+        r="20"
+        stroke="currentColor"
+        stroke-width="5"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Spinner > should render with inverted 1`] = `
+<div>
+  <div
+    class="_spinner_container_83c47e _inverted_83c47e _primary_83c47e"
+  >
+    <svg
+      class="_spinner_83c47e"
+      viewBox="0 0 50 50"
+    >
+      <circle
+        class="_spinner_path_83c47e"
+        cx="25"
+        cy="25"
+        fill="none"
+        r="20"
+        stroke="currentColor"
+        stroke-width="5"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Spinner > should render with label 1`] = `
+<div>
+  <div
+    class="_spinner_container_83c47e _primary_83c47e"
+  >
+    <svg
+      class="_spinner_83c47e"
+      viewBox="0 0 50 50"
+    >
+      <circle
+        class="_spinner_path_83c47e"
+        cx="25"
+        cy="25"
+        fill="none"
+        r="20"
+        stroke="currentColor"
+        stroke-width="5"
+      />
+    </svg>
+    <h5>
+      mock label
+    </h5>
+  </div>
+</div>
+`;
+
+exports[`Spinner > should render with type 1`] = `
+<div>
+  <div
+    class="_spinner_container_83c47e _secondary_83c47e"
+  >
+    <svg
+      class="_spinner_83c47e"
+      viewBox="0 0 50 50"
+    >
+      <circle
+        class="_spinner_path_83c47e"
+        cx="25"
+        cy="25"
+        fill="none"
+        r="20"
+        stroke="currentColor"
+        stroke-width="5"
+      />
+    </svg>
+  </div>
+</div>
+`;
