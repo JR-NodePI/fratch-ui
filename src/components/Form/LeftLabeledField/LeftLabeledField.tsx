@@ -1,4 +1,5 @@
 import { c } from '../../../helpers/classNameHelpers';
+import { LeftLabeledFieldProps } from './LeftLabeledFieldProps';
 
 import styles from './LeftLabeledField.module.css';
 
@@ -6,11 +7,7 @@ function LeftLabeledField({
   className,
   field,
   label,
-}: {
-  className?: string;
-  field: JSX.Element;
-  label: JSX.Element;
-}): JSX.Element {
+}: LeftLabeledFieldProps): JSX.Element {
   return (
     <div className={c(styles.wrapper, className)}>
       <div className={c(styles.label_container)}>{label}</div>

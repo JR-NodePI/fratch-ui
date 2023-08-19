@@ -1,0 +1,47 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LeftLabeledField > should render properly 1`] = `
+<div>
+  <div
+    class="_wrapper_fca0d0"
+  >
+    <div
+      class="_label_container_fca0d0"
+    >
+      <label>
+        mock-label
+      </label>
+    </div>
+    <div
+      class="_field_container_fca0d0"
+    >
+      <input
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LeftLabeledField > should render with className 1`] = `
+<div>
+  <div
+    class="_wrapper_fca0d0 mock-class"
+  >
+    <div
+      class="_label_container_fca0d0"
+    >
+      <label>
+        mock-label
+      </label>
+    </div>
+    <div
+      class="_field_container_fca0d0"
+    >
+      <input
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
