@@ -1,0 +1,124 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`InputText > should be cleanable, perform onClean and onChange 1`] = `
+<div>
+  <div
+    class="_input_text_300ab4"
+  >
+    <input
+      class="_input_300ab4"
+      type="text"
+    />
+    <button
+      class="_cleaner_300ab4 mock-cleaner-class"
+    >
+      <svg
+        aria-hidden="true"
+        class="_icon_2be8fc _primary_2be8fc _cleaner_icon_300ab4"
+        fill="none"
+        viewBox="-1 -1 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`InputText > should render properly 1`] = `
+<div>
+  <div
+    class="_input_text_300ab4"
+  >
+    <input
+      class="_input_300ab4"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`InputText > should render with className 1`] = `
+<div>
+  <div
+    class="_input_text_300ab4 mock-class"
+  >
+    <input
+      class="_input_300ab4"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`InputText > should render with id 1`] = `
+<div>
+  <div
+    class="_input_text_300ab4"
+  >
+    <input
+      class="_input_300ab4"
+      id="mock-id"
+      name="mock-id"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`InputText > should render with placeholder 1`] = `
+<div>
+  <div
+    class="_input_text_300ab4"
+  >
+    <input
+      class="_input_300ab4"
+      placeholder="mock-placeholder"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`InputText > should render with title 1`] = `
+<div>
+  <div
+    class="_input_text_300ab4"
+  >
+    <input
+      class="_input_300ab4"
+      title="mock-title"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`InputText > should render with type 1`] = `
+<div>
+  <div
+    class="_input_text_300ab4"
+  >
+    <input
+      class="_input_300ab4"
+      type="password"
+    />
+  </div>
+</div>
+`;
+
+exports[`InputText > should set the forwarded ref 1`] = `
+{
+  "current": <input
+    class="_input_300ab4"
+    type="text"
+  />,
+}
+`;

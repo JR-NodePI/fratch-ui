@@ -52,7 +52,7 @@ const InputText = forwardRef<HTMLInputElement, InputTextProps>(
     };
 
     return (
-      <div className={c(styles.input_wrapper, className)}>
+      <div className={c(styles.input_text, className)}>
         <input
           id={id}
           name={id}
