@@ -12,15 +12,10 @@ describe('InputCheck', () => {
     label: 'mock label',
   };
 
-  const getComponent = (
-    props: InputCheckProps = initialProps,
-    ref?: React.ForwardedRef<HTMLInputElement>
-  ) => <InputCheck ref={ref} {...props} />;
-
   const setup = (
     props = initialProps,
     ref?: React.ForwardedRef<HTMLInputElement>
-  ) => render(getComponent(props, ref));
+  ) => render(<InputCheck ref={ref} {...props} />);
 
   it('should render properly', () => {
     const { container } = setup();

@@ -5,8 +5,7 @@ import Header from './Header';
 import { type HeaderProps } from './HeaderProps';
 
 describe('Header', () => {
-  const getComponent = (props: HeaderProps = {}) => <Header {...props} />;
-  const setup = (props = {}) => render(getComponent(props));
+  const setup = (props: HeaderProps = {}) => render(<Header {...props} />);
 
   it('should render properly', () => {
     const { container } = setup();
