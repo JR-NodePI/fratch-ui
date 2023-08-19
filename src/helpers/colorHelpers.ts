@@ -1,6 +1,8 @@
 import { CSSProperties } from 'react';
 
-export const hexToRgb = (hex: string | CSSProperties['color']) => {
+export const hexToRgb = (
+  hex: string | CSSProperties['color']
+): number[] | null => {
   const match = hex
     ?.toString()
     .match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
@@ -8,7 +10,9 @@ export const hexToRgb = (hex: string | CSSProperties['color']) => {
   return match.slice(1).map(x => parseInt(x, 16));
 };
 
-export const getContrastColor = (color: string | CSSProperties['color']) => {
+export const getContrastColor = (
+  color: string | CSSProperties['color']
+): 'var(--ft-color-lightest)' | 'var(--ft-color-darkest)' => {
   if (color === 'var(--ft-color-darkest)') return 'var(--ft-color-lightest)';
   if (color === 'var(--ft-color-lightest)') return 'var(--ft-color-darkest)';
 
