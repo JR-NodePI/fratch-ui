@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { c } from '../../../helpers/classNameHelpers';
 import { Button, ToasterListContext } from '../..';
-import type { Toaster } from '../ToasterListContextProps';
+import type { Toaster } from '../ToasterProps';
 import ToasterProvider from '../ToasterProvider';
 
 import styles from './Toaster.stories.module.css';

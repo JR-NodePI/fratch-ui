@@ -1,10 +1,10 @@
-import { type ReactNode, useCallback, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import { c } from '../../helpers/classNameHelpers';
 import ToasterItem from './ToasterItem';
 import ToasterListContext from './ToasterListContext';
-import { type Toaster } from './ToasterListContextProps';
+import type { Toaster, ToasterProviderProps } from './ToasterProps';
 
 import styles from './Toaster.module.css';
 
@@ -12,11 +12,7 @@ export default function ToasterProvider({
   children,
   listClassName,
   itemClassName,
-}: {
-  children: ReactNode;
-  listClassName?: string;
-  itemClassName?: string;
-}): JSX.Element {
+}: ToasterProviderProps): JSX.Element {
   const [portalId] = useState<string>(crypto.randomUUID());
   const [toasters, setToasters] = useState<Toaster[]>([]);
 
