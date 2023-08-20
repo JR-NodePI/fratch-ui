@@ -1,0 +1,79 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ToasterProvider > should add toasters 1`] = `
+<body>
+  <div>
+    <p>
+      Toaster counters: 4
+    </p>
+  </div>
+  <div
+    class="_toaster_list_68dafd"
+  >
+    <code
+      aria-label="ToasterItem props"
+    >
+      className : mock-item-class
+      toaster : {"type":"info","duration":100,"id":"crypto-mock-random-UUID-2"}
+    </code>
+    <code
+      aria-label="ToasterItem props"
+    >
+      className : mock-item-class
+      toaster : {"type":"success","duration":100,"id":"crypto-mock-random-UUID-4"}
+    </code>
+    <code
+      aria-label="ToasterItem props"
+    >
+      className : mock-item-class
+      toaster : {"type":"error","duration":100,"id":"crypto-mock-random-UUID-5"}
+    </code>
+    <code
+      aria-label="ToasterItem props"
+    >
+      className : mock-item-class
+      toaster : {"type":"warning","duration":100,"id":"crypto-mock-random-UUID-6"}
+    </code>
+  </div>
+</body>
+`;
+
+exports[`ToasterProvider > should close a toaster > with deleted toaster 1`] = `
+<body>
+  <div>
+    <p>
+      Toaster counters: 0
+    </p>
+  </div>
+</body>
+`;
+
+exports[`ToasterProvider > should close a toaster > with initial toaster 1`] = `
+<body>
+  <div>
+    <p>
+      Toaster counters: 1
+    </p>
+  </div>
+  <div
+    class="_toaster_list_68dafd"
+  >
+    <code
+      aria-label="ToasterItem props"
+    >
+      className : mock-item-class
+      toaster : {"type":"info","duration":100,"id":"crypto-mock-random-UUID-2"}
+    </code>
+  </div>
+</body>
+`;
+
+exports[`ToasterProvider > should render properly 1`] = `
+<body>
+  <div>
+    <p>
+      Toaster counters: 0
+    </p>
+  </div>
+</body>
+`;
