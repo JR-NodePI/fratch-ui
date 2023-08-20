@@ -70,6 +70,15 @@ describe('ToasterItem', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should render with type nlToBr', () => {
+    const message = `
+      line 1
+            line 2`;
+    const toaster: Toaster = { ...initialToaster, message, nlToBr: true };
+    const { container } = setup({ ...initialProps, toaster });
+    expect(container).toMatchSnapshot();
+  });
+
   it('should render with title', () => {
     const toaster: Toaster = { ...initialToaster, title: 'mock title' };
     const { container } = setup({ ...initialProps, toaster });

@@ -258,6 +258,34 @@ exports[`ToasterItem > should render with type error 1`] = `
 </div>
 `;
 
+exports[`ToasterItem > should render with type nlToBr 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _info_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconInfo props"
+    >
+      type : info
+      className : _icon_68dafd
+    </code>
+    <p
+      class="_message_68dafd"
+    >
+        
+      <br />
+            line 1
+        
+      <br />
+                  line 2
+        
+      <br />
+    </p>
+  </div>
+</div>
+`;
+
 exports[`ToasterItem > should render with type success 1`] = `
 <div>
   <div
