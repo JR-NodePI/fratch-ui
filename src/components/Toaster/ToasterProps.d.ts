@@ -10,7 +10,19 @@ export interface Toaster {
   stoppable?: boolean;
 }
 
-export interface ToasterListProviderProps {
+export type ToasterListProviderProps = {
   addToaster: (toaster: Toaster) => void;
   toasters: Toaster[];
-}
+};
+
+export type ToasterItemProps = {
+  onClose: (id: string) => void;
+  toaster: Toaster;
+  className?: string;
+};
+
+export type ToasterProviderProps = {
+  children: ReactNode;
+  listClassName?: string;
+  itemClassName?: string;
+};

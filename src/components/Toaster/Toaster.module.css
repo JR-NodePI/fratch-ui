@@ -99,6 +99,9 @@
   opacity: 0.5;
   border-radius: 50%;
 }
+.pin_button i {
+  display: none;
+}
 .pin_button.pinned,
 .pin_button:hover {
   opacity: 1;

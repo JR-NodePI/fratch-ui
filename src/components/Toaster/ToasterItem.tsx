@@ -11,7 +11,7 @@ import {
 } from '../Icons/Icons';
 import { ToasterType } from './ToasterConstants';
 import { nlToNodes } from './ToasterFormatHelpers';
-import { type Toaster } from './ToasterListContextProps';
+import { ToasterItemProps } from './ToasterProps';
 
 import styles from './Toaster.module.css';
 
@@ -34,11 +34,7 @@ export default function ToasterItem({
   onClose,
   toaster,
   className,
-}: {
-  onClose: (id: string) => void;
-  toaster: Toaster;
-  className?: string;
-}): JSX.Element {
+}: ToasterItemProps): JSX.Element {
   const { duration, id, message, nlToBr, title, type, stoppable } = toaster;
 
   const [pinned, setPinned] = useState<boolean>(false);
@@ -118,9 +114,10 @@ export default function ToasterItem({
           className={c(styles.pin_button, pinned ? styles.pinned : '')}
         >
           <IconPin className={c(styles.pin_button_icon)} />
+          <i>pin</i>
         </button>
       )}
-      {toMuchDuration && <ButtonCloser onClick={handleClose} />}
+      {toMuchDuration && <ButtonCloser title="close" onClick={handleClose} />}
     </div>
   );
 }

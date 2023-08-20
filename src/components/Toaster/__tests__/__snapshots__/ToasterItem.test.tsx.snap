@@ -1,0 +1,291 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ToasterItem > should perform closer after duration 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _info_68dafd _close_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconInfo props"
+    >
+      type : info
+      className : _icon_68dafd
+    </code>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should perform onClose with duration 0 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _info_68dafd _close_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconInfo props"
+    >
+      type : info
+      className : _icon_68dafd
+    </code>
+    <button
+      class="_button_closer_8d9a3f"
+      title="close"
+    >
+      <code
+        aria-label="IconClose props"
+      >
+        className : _icon_8d9a3f
+      </code>
+      <i>
+        close
+      </i>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should render properly 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _info_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconInfo props"
+    >
+      type : info
+      className : _icon_68dafd
+    </code>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should render when is stoppable but duration is 2999 ms 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _info_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconInfo props"
+    >
+      type : info
+      className : _icon_68dafd
+    </code>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should render when is stoppable with duration 0 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _info_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconInfo props"
+    >
+      type : info
+      className : _icon_68dafd
+    </code>
+    <button
+      class="_pin_button_68dafd"
+    >
+      <code
+        aria-label="IconPin props"
+      >
+        className : _pin_button_icon_68dafd
+      </code>
+      <i>
+        pin
+      </i>
+    </button>
+    <button
+      class="_button_closer_8d9a3f"
+      title="close"
+    >
+      <code
+        aria-label="IconClose props"
+      >
+        className : _icon_8d9a3f
+      </code>
+      <i>
+        close
+      </i>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should render when is stoppable with duration 0 and was pinned 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _info_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconInfo props"
+    >
+      type : info
+      className : _icon_68dafd
+    </code>
+    <button
+      class="_pin_button_68dafd _pinned_68dafd"
+    >
+      <code
+        aria-label="IconPin props"
+      >
+        className : _pin_button_icon_68dafd
+      </code>
+      <i>
+        pin
+      </i>
+    </button>
+    <button
+      class="_button_closer_8d9a3f"
+      title="close"
+    >
+      <code
+        aria-label="IconClose props"
+      >
+        className : _icon_8d9a3f
+      </code>
+      <i>
+        close
+      </i>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should render when is stoppable with duration is greater than 2999 ms 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _info_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconInfo props"
+    >
+      type : info
+      className : _icon_68dafd
+    </code>
+    <button
+      class="_pin_button_68dafd _pinned_68dafd"
+    >
+      <code
+        aria-label="IconPin props"
+      >
+        className : _pin_button_icon_68dafd
+      </code>
+      <i>
+        pin
+      </i>
+    </button>
+    <button
+      class="_button_closer_8d9a3f"
+      title="close"
+    >
+      <code
+        aria-label="IconClose props"
+      >
+        className : _icon_8d9a3f
+      </code>
+      <i>
+        close
+      </i>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should render with message 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _info_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconInfo props"
+    >
+      type : info
+      className : _icon_68dafd
+    </code>
+    <p
+      class="_message_68dafd"
+    >
+      mock message
+    </p>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should render with title 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _info_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconInfo props"
+    >
+      type : info
+      className : _icon_68dafd
+    </code>
+    <h5
+      class="_title_68dafd"
+    >
+      mock title
+    </h5>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should render with type error 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _error_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconError props"
+    >
+      type : error
+      className : _icon_68dafd
+    </code>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should render with type success 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _success_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconSuccess props"
+    >
+      type : success
+      className : _icon_68dafd
+    </code>
+  </div>
+</div>
+`;
+
+exports[`ToasterItem > should render with type warning 1`] = `
+<div>
+  <div
+    class="_toaster_item_68dafd _warning_68dafd _open_68dafd"
+    style="height: 0px;"
+  >
+    <code
+      aria-label="IconWarning props"
+    >
+      type : warning
+      className : _icon_68dafd
+    </code>
+  </div>
+</div>
+`;
