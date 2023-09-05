@@ -87,6 +87,7 @@ function Modal({
     <div
       className={c(styles.modal_overflow, cssClassStatus)}
       onClick={hasCloser ? handleOverflowClose : undefined}
+      aria-label={hasCloser ? 'Close' : ''}
     >
       <section id={id} className={c(styles.modal, styles[type])}>
         {hasHeader && (
@@ -98,6 +99,7 @@ function Modal({
           <ButtonCloser
             onClick={handleOverflow}
             className={c(styles.button_closer)}
+            title="Close"
           />
         )}
         <div className={c(styles.content)}>{children}</div>

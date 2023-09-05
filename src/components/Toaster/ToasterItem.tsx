@@ -16,17 +16,17 @@ import { ToasterItemProps } from './ToasterProps';
 import styles from './Toaster.module.css';
 
 const renderIconByType = (type: string): JSX.Element => {
+  const { SUCCESS, ERROR, WARNING, INFO } = ToasterType;
   switch (type) {
-    case ToasterType.SUCCESS:
-      return <IconSuccess type={type} className={c(styles.icon)} />;
-    case ToasterType.ERROR:
-      return <IconError type={type} className={c(styles.icon)} />;
-    case ToasterType.WARNING:
-      return <IconWarning type={type} className={c(styles.icon)} />;
-    case ToasterType.INFO:
-      return <IconInfo type={type} className={c(styles.icon)} />;
+    case SUCCESS:
+      return <IconSuccess type={SUCCESS} className={c(styles.icon)} />;
+    case ERROR:
+      return <IconError type={ERROR} className={c(styles.icon)} />;
+    case WARNING:
+      return <IconWarning type={WARNING} className={c(styles.icon)} />;
+    case INFO:
     default:
-      return <></>;
+      return <IconInfo type={INFO} className={c(styles.icon)} />;
   }
 };
 
