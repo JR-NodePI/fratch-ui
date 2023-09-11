@@ -27,6 +27,9 @@ exports[`InputText > should be cleanable, perform onClean and onChange 1`] = `
           stroke-width="2"
         />
       </svg>
+      <i>
+        Clean
+      </i>
     </button>
   </div>
 </div>

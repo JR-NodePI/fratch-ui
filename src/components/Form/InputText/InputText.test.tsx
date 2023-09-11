@@ -77,7 +77,7 @@ describe('InputText', () => {
     const textBoxElement = screen.getByRole('textbox');
     expect(textBoxElement).toHaveValue(mockInitialValue);
 
-    await userEvent.click(screen.getByRole('button'));
+    await userEvent.click(screen.getByRole('button', { name: /clean/i }));
 
     expect(textBoxElement).toHaveValue('');
     expect(textBoxElement).toHaveFocus();

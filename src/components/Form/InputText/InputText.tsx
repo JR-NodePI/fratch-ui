@@ -75,6 +75,7 @@ const InputText = forwardRef<HTMLInputElement, InputTextProps>(
             onClick={handleOnClean}
           >
             <IconClose className={c(styles.cleaner_icon)} />
+            <i>Clean</i>
           </button>
         )}
       </div>
