@@ -53,6 +53,9 @@
   line-height: 100%;
   right: 0;
 }
+.input_text .cleaner > i {
+  display: none;
+}
 .input_text .cleaner .cleaner_icon {
   color: var(--ft-form-item-border-color);
 }
