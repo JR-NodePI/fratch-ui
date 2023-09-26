@@ -1,11 +1,14 @@
-const renderPropValue = (value: any) => {
+const renderPropValue = (value: unknown): string => {
   switch (typeof value) {
     case 'function':
       return 'function () {}';
-    case 'object':
-      return JSON.stringify(value);
+    case 'string':
+    case 'number':
+    case 'bigint':
+    case 'boolean':
+      return value.toLocaleString();
     default:
-      return value;
+      return JSON.stringify(value);
   }
 };
 
@@ -13,7 +16,11 @@ export default function MockComponent({
   __testDisplayName,
   children,
   ...restProps
-}: any): JSX.Element {
+}: {
+  __testDisplayName?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}): JSX.Element {
   return (
     <>
       <code aria-label={`${__testDisplayName ?? ''} props`}>

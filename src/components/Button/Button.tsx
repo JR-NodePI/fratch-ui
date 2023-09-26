@@ -16,7 +16,7 @@ const Button = ({
   stretch = false,
   type = ButtonType.DEFAULT,
 }: ButtonProps): JSX.Element => {
-  const handleClick = () => {
+  const handleClick = (): void => {
     onClick?.();
   };
 

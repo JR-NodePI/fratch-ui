@@ -21,20 +21,20 @@ describe('ColorSchemeSwitcher', () => {
     ).mockReturnValue(['light', setColorScheme]);
   });
 
-  const setup = () => {
-    const MockChildComponent = () => {
-      const [colorScheme, setColorScheme] = useContext(ColorSchemeContext);
-      const handleClick = () => {
-        setColorScheme('dark');
-      };
-      return (
-        <>
-          {JSON.stringify({ colorScheme })}
-          <button onClick={handleClick}>CHANGE</button>
-        </>
-      );
+  const MockChildComponent = (): JSX.Element => {
+    const [colorScheme, setColorScheme] = useContext(ColorSchemeContext);
+    const handleClick = (): void => {
+      setColorScheme('dark');
     };
+    return (
+      <>
+        {JSON.stringify({ colorScheme })}
+        <button onClick={handleClick}>CHANGE</button>
+      </>
+    );
+  };
 
+  const setup = (): ReturnType<typeof render> => {
     return render(
       <ColorSchemeProvider>
         <MockChildComponent />

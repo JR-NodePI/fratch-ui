@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react';
-import { describe, it, vi } from 'vitest';
+import { describe, it, Mock, vi } from 'vitest';
 
 import useColorSchemeMediaQuery from '../useColorSchemeMediaQuery';
 import usePersistedColorScheme from '../usePersistedColorScheme';
@@ -16,8 +16,12 @@ describe('useColorSchemeMediaQuery', () => {
     >;
   const matchMediaAddEventListener = vi.fn();
   const matchMediaRemoveEventListener = vi.fn();
-  const getMatchMediaMock = ({ matches }: { matches: boolean }) =>
-    vi.fn().mockImplementation((query: any) => ({
+  const getMatchMediaMock = ({
+    matches,
+  }: {
+    matches: boolean;
+  }): Mock<[string], MediaQueryList> =>
+    vi.fn().mockImplementation((query: string) => ({
       matches,
       media: query,
       addEventListener: matchMediaAddEventListener,

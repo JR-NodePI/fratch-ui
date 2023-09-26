@@ -10,3 +10,9 @@ export type SelectOptionsListProps<T> = {
   triggerDOMRect?: DOMRect;
   visible?: boolean;
 };
+
+export type EventTargetWithDatasetIndex = EventTarget & {
+  dataset?: {
+    index: string;
+  };
+};

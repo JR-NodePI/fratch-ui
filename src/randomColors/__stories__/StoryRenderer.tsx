@@ -28,7 +28,7 @@ export default function StoryRenderer(): JSX.Element {
     CSSProperties['color'][]
   >([]);
 
-  const handleAddRandomColor = () => {
+  const handleAddRandomColor = (): void => {
     if (randomizedColors.length === AVAILABLE_COLOR_LIST.length) return;
 
     setRandomizedColors([
@@ -37,7 +37,7 @@ export default function StoryRenderer(): JSX.Element {
     ]);
   };
 
-  const handleRemoveColor = () => {
+  const handleRemoveColor = (): void => {
     setRandomizedColors([...randomizedColors.slice(0, -1)]);
   };
 

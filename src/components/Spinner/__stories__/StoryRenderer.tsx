@@ -1,7 +1,7 @@
 import Spinner from '../Spinner';
 import { SpinnerProps } from '../SpinnerProps';
 
-const StoryRenderer = (args: SpinnerProps) => (
+const StoryRenderer = (args: SpinnerProps): JSX.Element => (
   <div>
     <Spinner {...args} />
     <h1>Fake page</h1>

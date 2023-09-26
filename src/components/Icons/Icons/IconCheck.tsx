@@ -4,7 +4,7 @@ import { IconProps } from './IconProps';
 export default function IconCheck({ type, className }: IconProps): JSX.Element {
   return (
     <IconContainer className={className} type={type}>
-      {({ iconClassName }) => (
+      {({ iconClassName }): JSX.Element => (
         <svg
           className={iconClassName}
           xmlns="http://www.w3.org/2000/svg"

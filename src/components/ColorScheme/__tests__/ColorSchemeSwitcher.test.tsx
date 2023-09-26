@@ -18,8 +18,9 @@ describe('ColorSchemeSwitcher', () => {
     useColorSchemeMock.mockReturnValue(['light', setColorScheme]);
   });
 
-  const setup = (props: ColorSchemeSwitcherProps = {}) =>
-    render(<ColorSchemeSwitcher {...props} />);
+  const setup = (
+    props: ColorSchemeSwitcherProps = {}
+  ): ReturnType<typeof render> => render(<ColorSchemeSwitcher {...props} />);
 
   afterEach(() => {
     vi.resetAllMocks();

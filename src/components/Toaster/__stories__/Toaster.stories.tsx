@@ -14,7 +14,7 @@ const StoryRenderer = (props: Toaster): JSX.Element => {
   const { addToaster } = useContext(ToasterListContext);
   const title = props.title ? `${props.title} - ${counter}` : '';
 
-  const onClick = (type: Toaster['type']) => {
+  const onClick = (type: Toaster['type']): void => {
     addToaster?.({ ...props, type, title });
     setCounter(counter + 1);
   };
@@ -22,24 +22,24 @@ const StoryRenderer = (props: Toaster): JSX.Element => {
   return (
     <div className={c(styles.toaster_story_renderer)}>
       <Button
-        onClick={() => onClick('success')}
+        onClick={(): void => onClick('success')}
         label="Show success toaster"
         size="smaller"
         type="primary"
       />
       <Button
-        onClick={() => onClick('error')}
+        onClick={(): void => onClick('error')}
         label="Show error toaster"
         size="smaller"
         type="secondary"
       />
       <Button
-        onClick={() => onClick('warning')}
+        onClick={(): void => onClick('warning')}
         label="Show warning toaster"
         size="smaller"
       />
       <Button
-        onClick={() => onClick('info')}
+        onClick={(): void => onClick('info')}
         label="Show info toaster"
         size="smaller"
         type="tertiary"
@@ -60,7 +60,7 @@ const meta = {
     },
   },
   decorators: [
-    Story => (
+    (Story): JSX.Element => (
       <ToasterProvider listClassName={c(styles.toaster_story_list)}>
         <Story />
       </ToasterProvider>

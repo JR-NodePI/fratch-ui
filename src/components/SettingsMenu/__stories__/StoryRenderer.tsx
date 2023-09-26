@@ -15,7 +15,7 @@ const inlineStyles: React.CSSProperties = {
   border: '1px solid var(--ft-color-grey-1)',
 };
 
-export default function StoryRenderer(props: SettingsMenuProps) {
+export default function StoryRenderer(props: SettingsMenuProps): JSX.Element {
   return createPortal(
     <div style={inlineStyles}>
       <SettingsMenu {...props} />

@@ -15,14 +15,14 @@ const Switcher = ({
   onChange,
   IconOn,
   IconOff,
-}: SwitcherProps) => {
+}: SwitcherProps): JSX.Element => {
   const [switchOn, setSwitchOn] = useState<boolean>(value ?? false);
 
   useEffect(() => {
     setSwitchOn(value ?? false);
   }, [value]);
 
-  const handleToggle = () => {
+  const handleToggle = (): void => {
     if (disabled) return;
     setSwitchOn(!switchOn);
     onChange?.(!switchOn);

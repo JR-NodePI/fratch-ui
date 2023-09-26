@@ -1,4 +1,4 @@
-import { createElement, Fragment } from 'react';
+import { createElement, Fragment, HTMLAttributes } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -23,7 +23,11 @@ function Contents({ content = '' }: { content: string }): JSX.Element {
         <Fragment key={index}>
           <span className={styles.miniTitle}>{title}</span>
           <div className={styles.wrapper}>
-            {createElement(tag, (attrs ?? {}) as any, content)}
+            {createElement(
+              tag,
+              (attrs ?? {}) as HTMLAttributes<unknown>,
+              content
+            )}
           </div>
         </Fragment>
       ))}

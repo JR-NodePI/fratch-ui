@@ -10,7 +10,7 @@ import ToasterProvider from '../ToasterProvider';
 
 let triggerCloseToaster: (toasterId: string) => void;
 vi.mock('../ToasterItem', () => ({
-  default: ({ onClose, ...props }: any) => {
+  default: ({ onClose, ...props }: ToasterItemProps): JSX.Element => {
     triggerCloseToaster = onClose;
     return <MockComponent __testDisplayName="ToasterItem" {...props} />;
   },
@@ -26,13 +26,15 @@ describe('ToasterProvider', () => {
   };
   let triggerAddToaster: (toasters: Toaster) => void;
 
-  const MockContent = () => {
+  const MockContent = (): JSX.Element => {
     const { toasters, addToaster } = useContext(ToasterListContext);
     triggerAddToaster = addToaster;
     return <p>{`Toaster counters: ${toasters?.length}`}</p>;
   };
 
-  const setup = (props: ToasterItemProps = initialProps) =>
+  const setup = (
+    props: ToasterItemProps = initialProps
+  ): ReturnType<typeof render> =>
     render(
       <ToasterProvider {...props}>
         <MockContent />

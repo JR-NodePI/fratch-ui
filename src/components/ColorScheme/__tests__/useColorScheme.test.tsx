@@ -9,7 +9,7 @@ describe('useColorScheme', () => {
   const colorScheme = 'light';
   const setColorScheme = vi.fn();
 
-  const wrapper = ({ children }: ColorSchemeProviderProps) => (
+  const wrapper = ({ children }: ColorSchemeProviderProps): JSX.Element => (
     <ColorSchemeContext.Provider value={[colorScheme, setColorScheme]}>
       {children}
     </ColorSchemeContext.Provider>

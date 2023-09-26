@@ -13,7 +13,7 @@ describe('InputText', () => {
   const setup = (
     props = initialProps,
     ref?: React.ForwardedRef<HTMLInputElement>
-  ) => render(<InputText ref={ref} {...props} />);
+  ): ReturnType<typeof render> => render(<InputText ref={ref} {...props} />);
 
   it('should render properly', () => {
     const { container } = setup();
