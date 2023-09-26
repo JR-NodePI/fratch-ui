@@ -4,7 +4,7 @@ import { IconProps } from './IconProps';
 export default function IconPlus({ type, className }: IconProps): JSX.Element {
   return (
     <IconContainer className={className} type={type}>
-      {({ iconClassName }) => (
+      {({ iconClassName }): JSX.Element => (
         <svg
           className={iconClassName}
           aria-hidden="true"

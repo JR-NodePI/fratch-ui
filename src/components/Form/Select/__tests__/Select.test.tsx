@@ -43,7 +43,8 @@ describe('Select', () => {
     value: options[0].value,
   };
 
-  const setup = (props = initialProps) => render(<Select {...props} />);
+  const setup = (props = initialProps): ReturnType<typeof render> =>
+    render(<Select {...props} />);
 
   beforeEach(() => {
     vi.spyOn(crypto, 'randomUUID').mockReturnValue(

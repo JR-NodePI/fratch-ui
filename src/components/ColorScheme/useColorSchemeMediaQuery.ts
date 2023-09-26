@@ -19,7 +19,7 @@ export default function useColorSchemeMediaQuery(): ColorSchemeOutput {
   }, [colorScheme]);
 
   useEffect(() => {
-    const handler = (e: MediaQueryListEvent) => {
+    const handler = (e: MediaQueryListEvent): void => {
       setColorScheme(e.matches ? COLOR_SCHEMES.DARK : COLOR_SCHEMES.LIGHT);
     };
 

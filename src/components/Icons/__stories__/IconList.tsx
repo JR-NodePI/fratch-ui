@@ -5,7 +5,7 @@ import * as Icons from '../Icons';
 import styles from './IconList.module.css';
 
 const IconList = ({ type }: Pick<IconContainerProps, 'type'>): JSX.Element => {
-  const handleIconNameFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+  const handleIconNameFocus = (e: React.FocusEvent<HTMLInputElement>): void => {
     const input = e.currentTarget;
     input.select();
   };

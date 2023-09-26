@@ -2,7 +2,7 @@ import react from '@vitejs/plugin-react-swc';
 import fs from 'fs';
 import glob from 'glob';
 import path from 'node:path';
-import { build, defineConfig } from 'vite';
+import { build, defineConfig, PluginOption } from 'vite';
 import dts from 'vite-plugin-dts';
 
 const srcDir = './src';
@@ -15,7 +15,7 @@ const excludes = [
   './**/__mocks__*',
 ];
 
-const buildComponent = file => {
+const buildComponent = (file): ReturnType<typeof build> => {
   const fileName = path
     .basename(file)
     .slice(0, path.basename(file).indexOf(path.extname(file)));
@@ -54,7 +54,7 @@ const buildComponent = file => {
   });
 };
 
-const combineCssFiles = () => {
+const combineCssFiles = (): void => {
   const cssMainFilesPattern = `${outDir}/*_styles.css`;
   const cssFilesPattern = `${outDir}/components/**/*.css`;
   const cssMainFiles = glob.sync(cssMainFilesPattern);
@@ -68,9 +68,9 @@ const combineCssFiles = () => {
   fs.writeFileSync(`${outDir}/styles.css`, cssImports.join('\n'), 'utf-8');
 };
 
-const buildComponentsOnCloseBundle = () => ({
+const buildComponentsOnCloseBundle = (): PluginOption => ({
   name: 'buildComponentsOnCloseBundle',
-  async closeBundle() {
+  async closeBundle(): Promise<void> {
     const componentFiles = glob.sync(`${srcDir}/**/*.{tsx,ts}`, {
       ignore: excludes,
     });
@@ -79,7 +79,7 @@ const buildComponentsOnCloseBundle = () => ({
   },
 });
 
-const copyDtsTypeFiles = () => {
+const copyDtsTypeFiles = (): void => {
   const dTsFiles = glob.sync(`${srcDir}/**/*.d.ts`, {
     ignore: ['./**/env.d.ts'],
   });

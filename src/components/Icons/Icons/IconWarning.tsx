@@ -7,7 +7,7 @@ export default function IconWarning({
 }: IconProps): JSX.Element {
   return (
     <IconContainer className={className} type={type}>
-      {({ iconClassName }) => (
+      {({ iconClassName }): JSX.Element => (
         <svg
           className={iconClassName}
           aria-hidden="true"

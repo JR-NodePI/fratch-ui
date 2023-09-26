@@ -45,7 +45,7 @@ const InputText = forwardRef<HTMLInputElement, InputTextProps>(
       onClean?.(innerRef.current);
     };
 
-    const setInnerRef = (current: HTMLInputElement) => {
+    const setInnerRef = (current: HTMLInputElement): void => {
       if (typeof ref === 'function') ref(current);
       else if (ref) ref.current = current;
       innerRef.current = current;

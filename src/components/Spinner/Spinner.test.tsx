@@ -5,7 +5,8 @@ import Spinner from './Spinner';
 import { type SpinnerProps } from './SpinnerProps';
 
 describe('Spinner', () => {
-  const setup = (props: SpinnerProps = {}) => render(<Spinner {...props} />);
+  const setup = (props: SpinnerProps = {}): ReturnType<typeof render> =>
+    render(<Spinner {...props} />);
 
   it('should render properly', () => {
     const { container } = setup();

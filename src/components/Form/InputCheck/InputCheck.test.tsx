@@ -15,7 +15,7 @@ describe('InputCheck', () => {
   const setup = (
     props = initialProps,
     ref?: React.ForwardedRef<HTMLInputElement>
-  ) => render(<InputCheck ref={ref} {...props} />);
+  ): ReturnType<typeof render> => render(<InputCheck ref={ref} {...props} />);
 
   it('should render properly', () => {
     const { container } = setup();

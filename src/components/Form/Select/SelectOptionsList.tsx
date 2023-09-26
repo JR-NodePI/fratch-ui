@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
-import { SelectOptionsListProps } from './SelectOptionsListProps';
+import {
+  EventTargetWithDatasetIndex,
+  SelectOptionsListProps,
+} from './SelectOptionsListProps';
 
 import styles from './SelectOptionsList.module.css';
 
@@ -14,7 +17,7 @@ const usePersistLastScroll = ({
 }: {
   visible?: boolean;
   selectedIndex?: number;
-}) => {
+}): { containerRef: React.RefObject<HTMLDivElement> } => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [lastScroll, setLastScroll] = useState<number>(0);
 
@@ -43,7 +46,12 @@ const getVisibilityStyles = ({
   visible?: boolean;
   triggerDOMRect?: DOMRect;
   itemHeight?: number;
-}): any => {
+}): {
+  left: number;
+  width: number;
+  top: number;
+  maxHeight: number;
+} => {
   if (visible && triggerDOMRect && itemHeight) {
     const { top, height, width, left } = triggerDOMRect;
     const elementTop = top + height + LIST_VERTICAL_MARGIN;
@@ -82,10 +90,12 @@ function SelectOptionsList<T>({
 }: SelectOptionsListProps<T>): JSX.Element {
   const { containerRef } = usePersistLastScroll({ visible, selectedIndex });
 
-  const handleItemClick = (event: any): void => {
+  const handleItemClick = (
+    event: React.MouseEvent<HTMLAnchorElement>
+  ): void => {
     event.preventDefault();
-    const element = event.target;
-    const index = Number(element.dataset.index);
+    const element = event.target as EventTargetWithDatasetIndex;
+    const index = Number(element.dataset?.index);
     if (!isNaN(index)) {
       onChange && onChange(index);
     }
@@ -98,8 +108,8 @@ function SelectOptionsList<T>({
   const handleItemMouseEnter = (
     event: React.MouseEvent<HTMLAnchorElement>
   ): void => {
-    const element = event.target;
-    const index = Number((element as any).dataset?.index);
+    const element = event.target as EventTargetWithDatasetIndex;
+    const index = Number(element.dataset?.index);
     if (!isNaN(index)) {
       setFocusedItemIndex(index);
       setMouseEnterItemIndex(index);

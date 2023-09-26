@@ -8,7 +8,7 @@ import { ButtonSize, ButtonType } from './ButtonConstants';
 import { type ButtonProps } from './ButtonProps';
 
 describe('Button', () => {
-  const setup = (props: ButtonProps = {}) =>
+  const setup = (props: ButtonProps = {}): ReturnType<typeof render> =>
     render(<Button label="Test button" {...props} />);
 
   it('should render properly', () => {

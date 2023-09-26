@@ -140,7 +140,7 @@ export default function TabsMenu({
           >
             <div
               className={c(styles.tab_trigger)}
-              onClick={() => {
+              onClick={(): void => {
                 handleTabClick(index);
               }}
             >
@@ -155,7 +155,7 @@ export default function TabsMenu({
                 className={c(styles.tab_label)}
                 label={label}
                 editable={editable}
-                onChange={(newLabel: string) => {
+                onChange={(newLabel: string): void => {
                   handleEditChange(index, newLabel);
                 }}
               />
@@ -164,7 +164,7 @@ export default function TabsMenu({
               <ButtonCloser
                 title="Remove tab"
                 className={c(styles.tab_closer)}
-                onClick={() => handleRemoveClick(index)}
+                onClick={(): void => handleRemoveClick(index)}
               />
             )}
           </li>
@@ -175,7 +175,7 @@ export default function TabsMenu({
               title="Add new tab"
               aria-label="Add new tab"
               href="#"
-              onClick={event => {
+              onClick={(event): void => {
                 event.preventDefault();
                 handleAddClick();
               }}

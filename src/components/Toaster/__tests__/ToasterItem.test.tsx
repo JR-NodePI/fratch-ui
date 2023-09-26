@@ -13,7 +13,9 @@ describe('ToasterItem', () => {
   const initialToaster: Toaster = { type: 'info', duration: 100 };
   const initialProps = { onClose, toaster: initialToaster };
 
-  const setup = (props: ToasterItemProps = initialProps) => {
+  const setup = (
+    props: ToasterItemProps = initialProps
+  ): ReturnType<typeof render> => {
     const { container, ...data } = render(<ToasterItem {...props} />);
     return {
       container,

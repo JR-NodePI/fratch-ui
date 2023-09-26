@@ -7,7 +7,9 @@ import { SettingsMenuProps } from './SettingsMenuProps';
 
 describe('SettingsMenu', () => {
   const settingsMenuId = 'crypto-mock-random-UUID-1234';
-  const setup = (props: SettingsMenuProps = {}) => {
+  const setup = (
+    props: SettingsMenuProps = {}
+  ): ReturnType<typeof render> & { settingsMenu: Element | null } => {
     const { container, ...data } = render(<SettingsMenu {...props} />);
     return {
       container,

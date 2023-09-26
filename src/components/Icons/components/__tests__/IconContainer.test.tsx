@@ -6,10 +6,12 @@ import IconContainer from '../IconContainer';
 import { type IconContainerProps } from '../IconContainerProps';
 
 describe('Button', () => {
-  const setup = (props: Omit<IconContainerProps, 'children'> = {}) =>
+  const setup = (
+    props: Omit<IconContainerProps, 'children'> = {}
+  ): ReturnType<typeof render> =>
     render(
       <IconContainer {...props}>
-        {({ iconClassName }) => <svg className={iconClassName} />}
+        {({ iconClassName }): JSX.Element => <svg className={iconClassName} />}
       </IconContainer>
     );
 

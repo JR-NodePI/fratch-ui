@@ -16,7 +16,7 @@ function StoryRenderer({ visible, type, ...props }: ModalProps): JSX.Element {
   return (
     <>
       <Button
-        onClick={() => setVisible(true)}
+        onClick={(): void => setVisible(true)}
         type={buttonAcceptType}
         size="small"
       >
@@ -26,7 +26,7 @@ function StoryRenderer({ visible, type, ...props }: ModalProps): JSX.Element {
         {...props}
         visible={currentVisible}
         type={type}
-        onClose={() => {
+        onClose={(): void => {
           setVisible(false);
         }}
       />

@@ -6,7 +6,7 @@ import TabEditable from '../TabEditable';
 import { type TabEditableProps } from '../TabEditableProps';
 
 describe('TabEditable', () => {
-  const setup = (props: TabEditableProps = {}) =>
+  const setup = (props: TabEditableProps = {}): ReturnType<typeof render> =>
     render(<TabEditable {...props} />);
 
   it('should render properly', () => {

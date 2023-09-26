@@ -10,8 +10,9 @@ describe('LeftLabeledField', () => {
     label: <label>mock-label</label>,
   };
 
-  const setup = (props: LeftLabeledFieldProps = initialProps) =>
-    render(<LeftLabeledField {...props} />);
+  const setup = (
+    props: LeftLabeledFieldProps = initialProps
+  ): ReturnType<typeof render> => render(<LeftLabeledField {...props} />);
 
   it('should render properly', () => {
     const { container } = setup();

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import { isEqual } from 'lodash';
@@ -113,9 +113,15 @@ function useKeyboardNavigation<T>({
   selectedIndex?: number;
   filteredOptions: SelectOption<T>[];
   handleOnChange: (index: number) => void;
-  handleOnInputClick: (event: React.MouseEvent<HTMLInputElement>) => void;
+  handleOnInputClick: ({ target }: { target: EventTarget }) => void;
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
+}): {
+  handleOnInputKeyDownCapture: (
+    event: React.KeyboardEvent<HTMLInputElement>
+  ) => void;
+  focusedItemIndex?: number;
+  setFocusedItemIndex: React.Dispatch<React.SetStateAction<number | undefined>>;
+} {
   const [focusedItemIndex, setFocusedItemIndex] = useState<number>();
 
   useEffect(() => {
@@ -171,7 +177,7 @@ function useKeyboardNavigation<T>({
         setVisible(false);
       }
     } else {
-      handleOnInputClick(event as any);
+      handleOnInputClick({ target: event.target });
     }
   };
 

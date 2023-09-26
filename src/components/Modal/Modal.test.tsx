@@ -6,19 +6,20 @@ import Modal from './Modal';
 import { ModalTypes } from './ModalConstants';
 import { type ModalProps } from './ModalProps';
 
-vi.mock('lodash', () => ({ debounce: (fn: () => void) => fn }));
+vi.mock('lodash', () => ({ debounce: (fn: () => void): typeof fn => fn }));
 
 describe('Modal', () => {
   const modalId = 'crypto-mock-random-UUID-1234';
   const initialProps: Omit<ModalProps, 'children'> = {};
 
-  const getComponent = (props = initialProps) => (
+  const getComponent = (props = initialProps): JSX.Element => (
     <Modal {...props}>
       <p>Modal contents</p>
     </Modal>
   );
 
-  const setup = (props = initialProps) => render(getComponent(props));
+  const setup = (props = initialProps): ReturnType<typeof render> =>
+    render(getComponent(props));
 
   beforeEach(() => {
     vi.spyOn(crypto, 'randomUUID').mockReturnValue(modalId);

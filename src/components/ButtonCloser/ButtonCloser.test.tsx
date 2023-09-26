@@ -6,7 +6,7 @@ import ButtonCloser from './ButtonCloser';
 import { type ButtonCloserProps } from './ButtonCloserProps';
 
 describe('ButtonCloser', () => {
-  const setup = (props: ButtonCloserProps = {}) =>
+  const setup = (props: ButtonCloserProps = {}): ReturnType<typeof render> =>
     render(<ButtonCloser title="Test button" {...props} />);
 
   it('should render properly', () => {

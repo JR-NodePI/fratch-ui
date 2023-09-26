@@ -71,7 +71,7 @@ export default function ToasterItem({
     };
   }, [duration, pinned]);
 
-  const handleClose = () => {
+  const handleClose = (): void => {
     setMustClose(true);
   };
 
