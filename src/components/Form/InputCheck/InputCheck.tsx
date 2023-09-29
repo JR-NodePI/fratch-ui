@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useRef, useState } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
-import { Icons } from '../..';
+import { Icons } from '../../index';
 import { InputCheckPosition } from './InputCheckConstants';
 import type { InputCheckProps } from './InputCheckProps';
 
