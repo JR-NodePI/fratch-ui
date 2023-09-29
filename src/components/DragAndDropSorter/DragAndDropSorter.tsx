@@ -72,11 +72,14 @@ export default function DragAndDropSorter<T>({
     event.stopPropagation();
     const dropElement = event.target as HTMLDivElement;
     dropElement.classList.remove(styles.drag_over);
+    const itemId = dropElement.id;
+    const dragItemId = dragElementRef.current?.id;
+
+    if (itemId === dragItemId) {
+      return;
+    }
 
     if (dropElement.draggable && dragElementRef.current) {
-      const itemId = dropElement.id;
-      const dragItemId = dragElementRef.current.id;
-
       const draggingItem = draggableItems.find(item => item.id === dragItemId);
 
       const newDraggableItems = draggableItems.reduce<
