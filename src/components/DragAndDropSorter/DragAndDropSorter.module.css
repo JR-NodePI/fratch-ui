@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  position: relative;
+  flex-direction: column;
+}
+.draggable {
+  transition: opacity 0.2s ease-in-out;
+  cursor: move;
+}
+.dragging {
+  opacity: 0.5;
+}
+.drag_over {
+  opacity: 0;
+}
+.dragging *,
+.drag_over * {
+  pointer-events: none;
+}

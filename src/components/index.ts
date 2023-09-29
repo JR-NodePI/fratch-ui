@@ -1,6 +1,8 @@
 // -- Button
 export { default as Button } from './Button/Button';
 export * as ButtonConstants from './Button/ButtonConstants';
+// -- DragAndDropSorter
+export * as DragAndDropSorter from './DragAndDropSorter/DragAndDropSorter';
 // -- Form
 export * as Form from './Form/Form';
 // -- Header
