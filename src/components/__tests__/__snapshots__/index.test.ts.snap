@@ -19,6 +19,9 @@ exports[`index > should have a list of components 1`] = `
   },
   "ColorSchemeProvider": [Function],
   "ColorSchemeSwitcher": [Function],
+  "DragAndDropSorter": {
+    "default": [Function],
+  },
   "Form": {
     "InputCheck": {
       "$$typeof": Symbol(react.forward_ref),
