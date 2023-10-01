@@ -2,15 +2,15 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 
-import SettingsMenu from './SettingsMenu';
-import { SettingsMenuProps } from './SettingsMenuProps';
+import SettingsModal from './SettingsModal';
+import { SettingsModalProps } from './SettingsModalProps';
 
-describe('SettingsMenu', () => {
+describe('SettingsModal', () => {
   const settingsMenuId = 'crypto-mock-random-UUID-1234';
   const setup = (
-    props: SettingsMenuProps = {}
+    props: SettingsModalProps = {}
   ): ReturnType<typeof render> & { settingsMenu: Element | null } => {
-    const { container, ...data } = render(<SettingsMenu {...props} />);
+    const { container, ...data } = render(<SettingsModal {...props} />);
     return {
       container,
       ...data,
@@ -48,9 +48,9 @@ describe('SettingsMenu', () => {
 
     expect(settingsMenu?.classList).toMatchInlineSnapshot(`
       DOMTokenList {
-        "0": "_settings_menu_241598",
-        "1": "_open_241598",
-        "2": "_left_241598",
+        "0": "_settings_menu_21fdeb",
+        "1": "_open_21fdeb",
+        "2": "_left_21fdeb",
       }
     `);
 
@@ -58,9 +58,9 @@ describe('SettingsMenu', () => {
 
     expect(settingsMenu?.classList).toMatchInlineSnapshot(`
       DOMTokenList {
-        "0": "_settings_menu_241598",
-        "1": "_close_241598",
-        "2": "_left_241598",
+        "0": "_settings_menu_21fdeb",
+        "1": "_close_21fdeb",
+        "2": "_left_21fdeb",
       }
     `);
   });
@@ -71,9 +71,9 @@ describe('SettingsMenu', () => {
     expect(settingsMenu?.classList).toMatchInlineSnapshot(`
       DOMTokenList {
         "0": "mock_test_class_name",
-        "1": "_settings_menu_241598",
-        "2": "_close_241598",
-        "3": "_left_241598",
+        "1": "_settings_menu_21fdeb",
+        "2": "_close_21fdeb",
+        "3": "_left_21fdeb",
       }
     `);
   });
@@ -83,9 +83,9 @@ describe('SettingsMenu', () => {
 
     expect(settingsMenu?.classList).toMatchInlineSnapshot(`
       DOMTokenList {
-        "0": "_settings_menu_241598",
-        "1": "_close_241598",
-        "2": "_right_241598",
+        "0": "_settings_menu_21fdeb",
+        "1": "_close_21fdeb",
+        "2": "_right_21fdeb",
       }
     `);
   });

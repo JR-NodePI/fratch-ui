@@ -1,6 +1,6 @@
-{ 
-  "name": "fratch-ui", 
-  "version": "1.3.3", 
+{
+  "name": "fratch-ui",
+  "version": "1.3.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"

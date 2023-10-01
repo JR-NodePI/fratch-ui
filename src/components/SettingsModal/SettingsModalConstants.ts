@@ -1,4 +1,4 @@
-export const SettingsMenuPosition = {
+export const SettingsModalPosition = {
   LEFT: 'left',
   RIGHT: 'right',
 } as const;

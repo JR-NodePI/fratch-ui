@@ -27,7 +27,7 @@
 
 .settings_menu.open {
   border-radius: var(--ft-button-default-border-radius);
-  box-shadow: var(--ft-box-shadow-2);
+  box-shadow: var(--ft-box-shadow-4);
   outline: solid 1px var(--ft-color-grey-3);
   background-color: var(--ft-color-grey-4);
 }

@@ -2,21 +2,21 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button, ColorSchemeSwitcher } from '../..';
 import { InputCheck } from '../../Form/Form';
-import SettingsMenu from '../SettingsMenu';
+import SettingsModal from '../SettingsModal';
 import StoryRenderer from './StoryRenderer';
 
 const meta = {
-  title: 'Components/SettingsMenu',
+  title: 'Components/SettingsModal',
   component: StoryRenderer,
   argTypes: {
     items: { table: { disable: true } },
   },
-} satisfies Meta<typeof SettingsMenu>;
+} satisfies Meta<typeof SettingsModal>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const _SettingsMenu: Story = {
+export const _SettingsModal: Story = {
   args: {
     position: 'left',
     items: [

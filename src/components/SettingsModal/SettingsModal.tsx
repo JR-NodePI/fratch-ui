@@ -3,16 +3,16 @@ import { useEffect, useState } from 'react';
 import { c } from '../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
 import { IconVerticalDots } from '../Icons/Icons';
-import { SettingsMenuPosition } from './SettingsMenuConstants';
-import { SettingsMenuProps } from './SettingsMenuProps';
+import { SettingsModalPosition } from './SettingsModalConstants';
+import { SettingsModalProps } from './SettingsModalProps';
 
-import styles from './SettingsMenu.module.css';
+import styles from './SettingsModal.module.css';
 
-export default function SettingsMenu({
+export default function SettingsModal({
   className,
   items = [],
-  position = SettingsMenuPosition.LEFT,
-}: SettingsMenuProps): JSX.Element {
+  position = SettingsModalPosition.LEFT,
+}: SettingsModalProps): JSX.Element {
   const [openerWrapperId] = useState(crypto.randomUUID());
   const [visible, setVisible] = useState(false);
 

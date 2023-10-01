@@ -40,6 +40,7 @@
   --ft-box-shadow-1: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   --ft-box-shadow-2: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
   --ft-box-shadow-3: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  --ft-box-shadow-4: 0 2px 16px 0 rgba(0, 0, 0, 0.6);
 
   --ft-max-z-index: 2147483647;
   --ft-transition-duration: 0.2s;
