@@ -1,20 +1,20 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SettingsMenu > should render properly 1`] = `
+exports[`SettingsModal > should render properly 1`] = `
 <div>
   <div
-    class="_settings_menu_241598 _close_241598 _left_241598"
+    class="_settings_menu_21fdeb _close_21fdeb _left_21fdeb"
     id="crypto-mock-random-UUID-1234"
   >
     <ul
-      class="_menu_241598"
+      class="_menu_21fdeb"
     />
     <button
-      class="_opener_241598"
+      class="_opener_21fdeb"
     >
       <svg
         aria-hidden="true"
-        class="_icon_2be8fc _primary_2be8fc _opener_icon_241598"
+        class="_icon_2be8fc _primary_2be8fc _opener_icon_21fdeb"
         fill="currentColor"
         viewBox="0 0 4 15"
         xmlns="http://www.w3.org/2000/svg"
@@ -28,14 +28,14 @@ exports[`SettingsMenu > should render properly 1`] = `
 </div>
 `;
 
-exports[`SettingsMenu > should render with items 1`] = `
+exports[`SettingsModal > should render with items 1`] = `
 <div>
   <div
-    class="_settings_menu_241598 _close_241598 _left_241598"
+    class="_settings_menu_21fdeb _close_21fdeb _left_21fdeb"
     id="crypto-mock-random-UUID-1234"
   >
     <ul
-      class="_menu_241598"
+      class="_menu_21fdeb"
     >
       <li>
         <span>
@@ -54,11 +54,11 @@ exports[`SettingsMenu > should render with items 1`] = `
       </li>
     </ul>
     <button
-      class="_opener_241598"
+      class="_opener_21fdeb"
     >
       <svg
         aria-hidden="true"
-        class="_icon_2be8fc _primary_2be8fc _opener_icon_241598"
+        class="_icon_2be8fc _primary_2be8fc _opener_icon_21fdeb"
         fill="currentColor"
         viewBox="0 0 4 15"
         xmlns="http://www.w3.org/2000/svg"

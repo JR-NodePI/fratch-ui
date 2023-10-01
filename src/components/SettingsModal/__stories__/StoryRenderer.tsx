@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom';
 
-import SettingsMenu from '../SettingsMenu';
-import { SettingsMenuProps } from '../SettingsMenuProps';
+import SettingsModal from '../SettingsModal';
+import { SettingsModalProps } from '../SettingsModalProps';
 
 const inlineStyles: React.CSSProperties = {
   position: 'fixed',
@@ -15,10 +15,10 @@ const inlineStyles: React.CSSProperties = {
   border: '1px solid var(--ft-color-grey-1)',
 };
 
-export default function StoryRenderer(props: SettingsMenuProps): JSX.Element {
+export default function StoryRenderer(props: SettingsModalProps): JSX.Element {
   return createPortal(
     <div style={inlineStyles}>
-      <SettingsMenu {...props} />
+      <SettingsModal {...props} />
     </div>,
     document.body
   );

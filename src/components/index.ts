@@ -12,9 +12,9 @@ export * as Icons from './Icons/Icons';
 // -- Modal
 export { default as Modal } from './Modal/Modal';
 export * as ModalConstants from './Modal/ModalConstants';
-// -- SettingsMenu
-export { default as SettingsMenu } from './SettingsMenu/SettingsMenu';
-export * as SettingsMenuConstants from './SettingsMenu/SettingsMenuConstants';
+// -- SettingsModal
+export { default as SettingsModal } from './SettingsModal/SettingsModal';
+export * as SettingsModalConstants from './SettingsModal/SettingsModalConstants';
 // -- Spinner
 export { default as Spinner } from './Spinner/Spinner';
 export * as SpinnerConstants from './Spinner/SpinnerConstants';

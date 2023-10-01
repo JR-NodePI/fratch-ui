@@ -70,9 +70,9 @@ exports[`index > should have a list of components 1`] = `
       "INFO": "info",
     },
   },
-  "SettingsMenu": [Function],
-  "SettingsMenuConstants": {
-    "SettingsMenuPosition": {
+  "SettingsModal": [Function],
+  "SettingsModalConstants": {
+    "SettingsModalPosition": {
       "LEFT": "left",
       "RIGHT": "right",
     },
