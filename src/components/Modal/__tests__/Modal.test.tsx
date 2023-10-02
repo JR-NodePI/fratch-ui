@@ -1,12 +1,16 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import debounce from 'lodash/debounce';
 import { describe, expect, it, vi } from 'vitest';
 
-import Modal from './Modal';
-import { ModalTypes } from './ModalConstants';
-import { type ModalProps } from './ModalProps';
+import Modal from '../Modal';
+import { ModalTypes } from '../ModalConstants';
+import { type ModalProps } from '../ModalProps';
 
-vi.mock('lodash', () => ({ debounce: (fn: () => void): typeof fn => fn }));
+vi.mock('lodash/debounce', async requireActual => {
+  const module = (await requireActual()) as { default: typeof debounce };
+  return { default: vi.fn(fn => module.default(fn, 10)) };
+});
 
 describe('Modal', () => {
   const modalId = 'crypto-mock-random-UUID-1234';
@@ -26,7 +30,7 @@ describe('Modal', () => {
   });
 
   afterEach(() => {
-    vi.resetAllMocks();
+    vi.clearAllMocks();
   });
 
   it('should render properly', () => {
@@ -68,6 +72,9 @@ describe('Modal', () => {
 
     expect(onOpen).toHaveBeenCalledTimes(1);
     expect(onOpen).toHaveBeenCalledWith();
+
+    expect(debounce).toHaveBeenCalledTimes(1);
+    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
   });
 
   it('should perform onClose with accept for type CONFIRM', async () => {
@@ -81,8 +88,14 @@ describe('Modal', () => {
     const closeButton = screen.getByRole('button', { name: /OK/i });
     await userEvent.click(closeButton);
 
-    expect(onClose).toHaveBeenCalledTimes(1);
-    expect(onClose).toHaveBeenCalledWith('accept');
+    await waitFor(() => {
+      expect(onClose).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith('accept');
+    });
+
+    expect(debounce).toHaveBeenCalledTimes(2);
+    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
+    expect(debounce).toHaveBeenNthCalledWith(2, expect.any(Function), 500);
   });
 
   it('should perform onClose with cancel for type CONFIRM', async () => {
@@ -96,8 +109,14 @@ describe('Modal', () => {
     const closeButton = screen.getByRole('button', { name: /Cancel/i });
     await userEvent.click(closeButton);
 
-    expect(onClose).toHaveBeenCalledTimes(1);
-    expect(onClose).toHaveBeenCalledWith('cancel');
+    await waitFor(() => {
+      expect(onClose).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith('cancel');
+    });
+
+    expect(debounce).toHaveBeenCalledTimes(2);
+    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
+    expect(debounce).toHaveBeenNthCalledWith(2, expect.any(Function), 500);
   });
 
   it('should perform onClose from closer button', async () => {
@@ -110,8 +129,14 @@ describe('Modal', () => {
     const closeButton = screen.getByRole('button', { name: /Close/i });
     await userEvent.click(closeButton);
 
-    expect(onClose).toHaveBeenCalledTimes(1);
-    expect(onClose).toHaveBeenCalledWith('close');
+    await waitFor(() => {
+      expect(onClose).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith('close');
+    });
+
+    expect(debounce).toHaveBeenCalledTimes(2);
+    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
+    expect(debounce).toHaveBeenNthCalledWith(2, expect.any(Function), 500);
 
     expect(baseElement).toMatchSnapshot();
   });
@@ -123,11 +148,17 @@ describe('Modal', () => {
       onClose,
     });
 
-    const overflow = screen.getByLabelText('Close');
+    const overflow = screen.getByLabelText('Close modal');
     await userEvent.click(overflow);
 
-    expect(onClose).toHaveBeenCalledTimes(1);
-    expect(onClose).toHaveBeenCalledWith('close');
+    await waitFor(() => {
+      expect(onClose).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith('close');
+    });
+
+    expect(debounce).toHaveBeenCalledTimes(2);
+    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
+    expect(debounce).toHaveBeenNthCalledWith(2, expect.any(Function), 500);
 
     expect(baseElement).toMatchSnapshot();
   });

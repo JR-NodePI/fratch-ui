@@ -2,6 +2,8 @@ import { ReactNode } from 'react';
 
 import { ModalCloseTypes, ModalTypes } from './ModalConstants';
 
+export type ModalType = (typeof ModalTypes)[keyof typeof ModalTypes];
+
 export type ModalCloseType =
   (typeof ModalCloseTypes)[keyof typeof ModalCloseTypes];
 
@@ -12,6 +14,14 @@ export type ModalProps = {
   onClose?: (type: ModalCloseType) => void;
   onOpen?: () => void;
   title?: ReactNode;
-  type?: (typeof ModalTypes)[keyof typeof ModalTypes];
+  type?: ModalTypes;
   visible?: boolean;
+};
+
+export type ShowModalProps = Omit<ModalProps, 'type' | 'visible'>;
+
+export type ModalContextProps = {
+  showModalAccept: (props: ShowModalProps) => void;
+  showModalConfirm: (props: ShowModalProps) => void;
+  showModalInfo: (props: ShowModalProps) => void;
 };

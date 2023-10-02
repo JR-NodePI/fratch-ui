@@ -57,7 +57,6 @@ exports[`index > should have a list of components 1`] = `
     "IconVerticalDots": [Function],
     "IconWarning": [Function],
   },
-  "Modal": [Function],
   "ModalConstants": {
     "ModalCloseTypes": {
       "ACCEPT": "accept",
@@ -70,6 +69,7 @@ exports[`index > should have a list of components 1`] = `
       "INFO": "info",
     },
   },
+  "ModalProvider": [Function],
   "SettingsModal": [Function],
   "SettingsModalConstants": {
     "SettingsModalPosition": {

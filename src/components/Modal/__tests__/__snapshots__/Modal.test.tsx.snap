@@ -16,8 +16,8 @@ exports[`Modal > should render as visible 1`] = `
 <body>
   <div />
   <div
-    aria-label="Close"
-    class="_modal_overflow_f57fcc _open_f57fcc"
+    aria-label="Close modal"
+    class="_modal_overflow_f57fcc"
   >
     <section
       class="_modal_f57fcc _info_f57fcc"
@@ -71,8 +71,8 @@ exports[`Modal > should render for type ACCEPT 1`] = `
 <body>
   <div />
   <div
-    aria-label="Close"
-    class="_modal_overflow_f57fcc _open_f57fcc"
+    aria-label="Close modal"
+    class="_modal_overflow_f57fcc"
   >
     <section
       class="_modal_f57fcc _accept_f57fcc"
@@ -129,7 +129,7 @@ exports[`Modal > should render for type CONFIRM with custom button labels 1`] = 
   <div />
   <div
     aria-label=""
-    class="_modal_overflow_f57fcc _open_f57fcc"
+    class="_modal_overflow_f57fcc"
   >
     <section
       class="_modal_f57fcc _confirm_f57fcc"

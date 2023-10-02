@@ -1,36 +1,114 @@
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 
 import { Button } from '../..';
-import Modal from '../Modal';
-import { ModalTypes } from '../ModalConstants';
-import { type ModalProps } from '../ModalProps';
+import ModalContext from '../ModalContext';
+import { ModalCloseType } from '../ModalProps';
+import ModalProvider from '../ModalProvider';
 
-function StoryRenderer({ visible, type, ...props }: ModalProps): JSX.Element {
-  const [currentVisible, setVisible] = useState(visible);
-  useEffect(() => {
-    setVisible(visible);
-  }, [visible]);
+type ModalDisplayButtonsProps = {
+  acceptButtonLabel?: string;
+  cancelButtonLabel?: string;
+  onAcceptOpen?: () => void;
+  onAcceptClose?: (type: ModalCloseType) => void;
+  onConfirmOpen?: () => void;
+  onConfirmClose?: (type: ModalCloseType) => void;
+  onInfoClose?: (type: ModalCloseType) => void;
+  onInfoOpen?: () => void;
+};
 
-  const buttonAcceptType = type === ModalTypes.CONFIRM ? 'tertiary' : 'primary';
+function ModalDisplayButtons({
+  acceptButtonLabel,
+  cancelButtonLabel,
+  onAcceptOpen,
+  onAcceptClose,
+  onConfirmOpen,
+  onConfirmClose,
+  onInfoClose,
+  onInfoOpen,
+}: ModalDisplayButtonsProps): JSX.Element {
+  const { showModalAccept, showModalConfirm, showModalInfo } =
+    useContext(ModalContext);
 
   return (
     <>
       <Button
-        onClick={(): void => setVisible(true)}
-        type={buttonAcceptType}
+        onClick={(): void =>
+          showModalAccept({
+            title: 'Accept modal title',
+            children: <>Accept modal content</>,
+            onClose: onAcceptClose,
+            onOpen: onAcceptOpen,
+            acceptButtonLabel,
+            cancelButtonLabel,
+          })
+        }
+        size="small"
+        type="primary"
+      >
+        Show accept modal
+      </Button>
+      <br />
+      <br />
+      <Button
+        onClick={(): void =>
+          showModalConfirm({
+            title: 'Confirm modal title',
+            children: <>Confirm modal content</>,
+            onClose: onConfirmClose,
+            onOpen: onConfirmOpen,
+            acceptButtonLabel,
+            cancelButtonLabel,
+          })
+        }
+        size="small"
+        type="tertiary"
+      >
+        Show confirm modal
+      </Button>
+      <br />
+      <br />
+      <Button
+        onClick={(): void =>
+          showModalInfo({
+            title: 'Info modal title',
+            children: <>Info modal content</>,
+            onClose: onInfoClose,
+            onOpen: onInfoOpen,
+            acceptButtonLabel,
+            cancelButtonLabel,
+          })
+        }
         size="small"
       >
-        Open modal
+        Show info modal
       </Button>
-      <Modal
-        {...props}
-        visible={currentVisible}
-        type={type}
-        onClose={(): void => {
-          setVisible(false);
-        }}
-      />
     </>
+  );
+}
+
+function StoryRenderer({
+  acceptButtonLabel,
+  cancelButtonLabel,
+  onAcceptOpen,
+  onAcceptClose,
+  onConfirmOpen,
+  onConfirmClose,
+  onInfoClose,
+  onInfoOpen,
+}: ModalDisplayButtonsProps): JSX.Element {
+  return (
+    <ModalProvider>
+      <ModalDisplayButtons
+        acceptButtonLabel={acceptButtonLabel}
+        cancelButtonLabel={cancelButtonLabel}
+        onAcceptOpen={onAcceptOpen}
+        onAcceptClose={onAcceptClose}
+        onConfirmOpen={onConfirmOpen}
+        onConfirmClose={onConfirmClose}
+        onInfoClose={onInfoClose}
+        onInfoOpen={onInfoOpen}
+      />
+    </ModalProvider>
   );
 }
 

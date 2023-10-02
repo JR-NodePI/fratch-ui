@@ -10,8 +10,8 @@ export { default as Header } from './Header/Header';
 // -- Icons
 export * as Icons from './Icons/Icons';
 // -- Modal
-export { default as Modal } from './Modal/Modal';
 export * as ModalConstants from './Modal/ModalConstants';
+export { default as ModalProvider } from './Modal/ModalProvider';
 // -- SettingsModal
 export { default as SettingsModal } from './SettingsModal/SettingsModal';
 export * as SettingsModalConstants from './SettingsModal/SettingsModalConstants';
