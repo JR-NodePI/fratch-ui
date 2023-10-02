@@ -58,7 +58,7 @@ describe('Modal', () => {
     act(() => {
       triggerShowModalAccept({
         title: 'Accept modal title',
-        children: <>Accept modal content</>,
+        content: <>Accept modal content</>,
       });
     });
 
@@ -71,7 +71,7 @@ describe('Modal', () => {
     act(() => {
       triggerShowModalConfirm({
         title: 'Confirm modal title',
-        children: <>Confirm modal content</>,
+        content: <>Confirm modal content</>,
       });
     });
 
@@ -84,7 +84,7 @@ describe('Modal', () => {
     act(() => {
       triggerShowModalInfo({
         title: 'Info modal title',
-        children: <>Info modal content</>,
+        content: <>Info modal content</>,
       });
     });
 
@@ -100,7 +100,7 @@ describe('Modal', () => {
     act(() => {
       triggerShowModalAccept({
         title: 'Accept modal title',
-        children: <>Accept modal content</>,
+        content: <>Accept modal content</>,
         onClose,
         onOpen,
       });

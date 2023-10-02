@@ -18,7 +18,10 @@ export type ModalProps = {
   visible?: boolean;
 };
 
-export type ShowModalProps = Omit<ModalProps, 'type' | 'visible'>;
+export type ShowModalProps = Omit<
+  ModalProps,
+  'children' | 'type' | 'visible'
+> & { content: ReactNode };
 
 export type ModalContextProps = {
   showModalAccept: (props: ShowModalProps) => void;

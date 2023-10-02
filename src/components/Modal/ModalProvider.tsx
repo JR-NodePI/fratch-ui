@@ -27,12 +27,15 @@ function ModalProvider({ children }: { children: ReactNode }): JSX.Element {
           return state;
         }
 
+        const handleClose = (type: ModalCloseType): void => {
+          setModalProps(defaultModalProps);
+          props.onClose?.(type);
+        };
+
         return {
           ...props,
-          onClose: (type: ModalCloseType): void => {
-            setModalProps(defaultModalProps);
-            props.onClose?.(type);
-          },
+          children: props.content,
+          onClose: handleClose,
           type,
           visible: !state.visible,
         };
