@@ -26,7 +26,7 @@ const inlineStyles: React.CSSProperties = {
   height: '80%',
   backgroundColor: 'var(--ft-color-background)',
   border: '1px solid var(--ft-color-grey-1)',
-  padding: '20px',
+  padding: '0 20px',
 };
 
 function ModalDisplayButtons({
@@ -65,6 +65,32 @@ function ModalDisplayButtons({
           </Button>,
         ]}
       />
+
+      <SettingsModal
+        items={[
+          <Button
+            onClick={(): void =>
+              showModalConfirm({
+                title: 'Confirm modal title',
+                content: <>Confirm modal content</>,
+                onClose: onConfirmClose,
+                onOpen: onConfirmOpen,
+                acceptButtonLabel,
+                cancelButtonLabel,
+              })
+            }
+            size="small"
+            type="tertiary"
+          >
+            Show confirm modal
+          </Button>,
+        ]}
+      />
+
+      <br />
+      <br />
+      <br />
+      <br />
       <Button
         onClick={(): void =>
           showModalAccept({
