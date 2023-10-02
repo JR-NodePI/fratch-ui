@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { debounce } from 'lodash';
 
 import { c } from '../../helpers/classNameHelpers';
+import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
 import { IconVerticalDots } from '../Icons/Icons';
 import { SettingsModalPosition } from './SettingsModalConstants';
 import { SettingsModalProps } from './SettingsModalProps';
@@ -19,7 +20,10 @@ export default function SettingsModal({
 
   useEffect(() => {
     const handleClick = debounce((event: MouseEvent): void => {
-      if (!event.defaultPrevented) {
+      if (
+        !event.defaultPrevented &&
+        !isAscendantEvenTargetByID(event, openerWrapperId)
+      ) {
         setVisible(false);
       }
     }, 100);
@@ -31,8 +35,7 @@ export default function SettingsModal({
     };
   }, [openerWrapperId]);
 
-  const handleOpenerClick = (event: React.MouseEvent): void => {
-    event.preventDefault();
+  const handleOpenerClick = (): void => {
     setVisible(!visible);
   };
 
@@ -45,7 +48,6 @@ export default function SettingsModal({
         styles[position]
       )}
       id={openerWrapperId}
-      onClick={(event): void => event.preventDefault()}
     >
       <ul className={c(styles.menu)}>
         {items.map((item, index) => (
