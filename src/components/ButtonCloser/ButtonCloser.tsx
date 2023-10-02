@@ -9,14 +9,10 @@ export default function ButtonCloser({
   onClick,
   title,
 }: ButtonCloserProps): JSX.Element {
-  const handleClick = (): void => {
-    onClick?.();
-  };
-
   return (
     <button
       className={c(styles.button_closer, className)}
-      onClick={handleClick}
+      onClick={onClick}
       title={title}
     >
       <IconClose className={c(styles.icon)} />

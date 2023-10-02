@@ -61,19 +61,23 @@ function Modal({
     }
   }, [open, visible]);
 
-  const handleAccept = (): void => {
+  const handleAccept = (event: React.MouseEvent): void => {
+    event.preventDefault();
     close(ModalCloseTypes.ACCEPT);
   };
 
-  const handleCancel = (): void => {
+  const handleCancel = (event: React.MouseEvent): void => {
+    event.preventDefault();
     close(ModalCloseTypes.CANCEL);
   };
 
-  const handleOverflow = (): void => {
+  const handleOverflow = (event: React.MouseEvent): void => {
+    event.preventDefault();
     close(ModalCloseTypes.CLOSE);
   };
 
   const handleOverflowClose = (event: React.MouseEvent): void => {
+    event.preventDefault();
     if (!isAscendantEvenTargetByID(event.nativeEvent, id)) {
       close(ModalCloseTypes.CLOSE);
     }
