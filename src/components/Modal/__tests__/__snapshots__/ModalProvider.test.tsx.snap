@@ -1,0 +1,188 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Modal > should render a confirm Modal 1`] = `
+<body>
+  <div>
+    <p>
+      Mock contents
+    </p>
+  </div>
+  <div
+    aria-label=""
+    class="_modal_overflow_f57fcc"
+  >
+    <section
+      class="_modal_f57fcc _confirm_f57fcc"
+      id="crypto-mock-random-UUID-1234"
+    >
+      <header
+        class="_header_f57fcc"
+      >
+        <h5
+          class="_title_f57fcc"
+        >
+          Confirm modal title
+        </h5>
+      </header>
+      <div
+        class="_content_f57fcc"
+      >
+        Confirm modal content
+      </div>
+      <footer
+        class="_footer_f57fcc"
+      >
+        <button
+          class="_button_2a1efe _default_2a1efe _small_2a1efe _button_f57fcc"
+        >
+          <span>
+            Cancel
+          </span>
+        </button>
+        <button
+          class="_button_2a1efe _tertiary_2a1efe _small_2a1efe _button_f57fcc"
+        >
+          <span>
+            OK
+          </span>
+        </button>
+      </footer>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`Modal > should render a info Modal 1`] = `
+<body>
+  <div>
+    <p>
+      Mock contents
+    </p>
+  </div>
+  <div
+    aria-label="Close modal"
+    class="_modal_overflow_f57fcc"
+  >
+    <section
+      class="_modal_f57fcc _info_f57fcc"
+      id="crypto-mock-random-UUID-1234"
+    >
+      <header
+        class="_header_f57fcc"
+      >
+        <h5
+          class="_title_f57fcc"
+        >
+          Info modal title
+        </h5>
+      </header>
+      <button
+        class="_button_closer_8d9a3f _button_closer_f57fcc"
+        title="Close"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_2be8fc _primary_2be8fc _icon_8d9a3f"
+          fill="none"
+          viewBox="-1 -1 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+        <i>
+          Close
+        </i>
+      </button>
+      <div
+        class="_content_f57fcc"
+      >
+        Info modal content
+      </div>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`Modal > should render an accept Modal 1`] = `
+<body>
+  <div>
+    <p>
+      Mock contents
+    </p>
+  </div>
+  <div
+    aria-label="Close modal"
+    class="_modal_overflow_f57fcc"
+  >
+    <section
+      class="_modal_f57fcc _accept_f57fcc"
+      id="crypto-mock-random-UUID-1234"
+    >
+      <header
+        class="_header_f57fcc"
+      >
+        <h5
+          class="_title_f57fcc"
+        >
+          Accept modal title
+        </h5>
+      </header>
+      <button
+        class="_button_closer_8d9a3f _button_closer_f57fcc"
+        title="Close"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_2be8fc _primary_2be8fc _icon_8d9a3f"
+          fill="none"
+          viewBox="-1 -1 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+        <i>
+          Close
+        </i>
+      </button>
+      <div
+        class="_content_f57fcc"
+      >
+        Accept modal content
+      </div>
+      <footer
+        class="_footer_f57fcc"
+      >
+        <button
+          class="_button_2a1efe _primary_2a1efe _small_2a1efe _button_f57fcc"
+        >
+          <span>
+            Accept
+          </span>
+        </button>
+      </footer>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`Modal > should render properly 1`] = `
+<body>
+  <div>
+    <p>
+      Mock contents
+    </p>
+  </div>
+</body>
+`;

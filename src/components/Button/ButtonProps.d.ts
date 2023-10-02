@@ -1,11 +1,12 @@
-import { IconPlus as Icon } from '../Icons/Icons';
+import type { IconPlus as Icon } from '../Icons/Icons';
+import type Spinner from '../Spinner/Spinner';
 import { ButtonSize, ButtonType } from './ButtonConstants';
 
 export interface ButtonProps {
   children?: string;
   className?: string;
   disabled?: boolean;
-  Icon?: typeof Icon;
+  Icon?: typeof Icon | typeof Spinner;
   isRound?: boolean;
   label?: string;
   onClick?: () => void;

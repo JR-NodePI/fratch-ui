@@ -1,14 +1,14 @@
 import { useCallback, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 
 import { c } from '../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
 import Button from '../Button/Button';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
 import { ModalCloseTypes, ModalTypes } from './ModalConstants';
-import { type ModalProps } from './ModalProps';
+import type { ModalCloseType, ModalProps } from './ModalProps';
 
 import styles from './Modal.module.css';
 
@@ -26,16 +26,23 @@ function Modal({
   const [cssClassStatus, setCssClassStatus] = useState<string>('');
   const [mounted, setMounted] = useState<boolean>(false);
 
-  const close = useCallback((): void => {
-    setCssClassStatus(() => {
-      debounce(() => {
-        setCssClassStatus('');
-        setMounted(false);
-      }, 500)();
+  const close = useCallback(
+    (type?: ModalCloseType): void => {
+      setCssClassStatus(() => {
+        debounce(() => {
+          setCssClassStatus('');
+          setMounted(false);
 
-      return styles.close;
-    });
-  }, []);
+          if (type && onClose) {
+            onClose(type);
+          }
+        }, 500)();
+
+        return styles.close;
+      });
+    },
+    [onClose]
+  );
 
   const open = useCallback((): void => {
     setMounted(() => {
@@ -49,28 +56,26 @@ function Modal({
   }, [onOpen]);
 
   useEffect(() => {
-    visible ? open() : close();
-  }, [close, open, visible]);
+    if (visible) {
+      open();
+    }
+  }, [open, visible]);
 
   const handleAccept = (): void => {
-    close();
-    onClose?.(ModalCloseTypes.ACCEPT);
+    close(ModalCloseTypes.ACCEPT);
   };
 
   const handleCancel = (): void => {
-    close();
-    onClose?.(ModalCloseTypes.CANCEL);
+    close(ModalCloseTypes.CANCEL);
   };
 
   const handleOverflow = (): void => {
-    close();
-    onClose?.(ModalCloseTypes.CLOSE);
+    close(ModalCloseTypes.CLOSE);
   };
 
   const handleOverflowClose = (event: React.MouseEvent): void => {
     if (!isAscendantEvenTargetByID(event.nativeEvent, id)) {
-      close();
-      onClose?.(ModalCloseTypes.CLOSE);
+      close(ModalCloseTypes.CLOSE);
     }
   };
 
@@ -87,7 +92,7 @@ function Modal({
     <div
       className={c(styles.modal_overflow, cssClassStatus)}
       onClick={hasCloser ? handleOverflowClose : undefined}
-      aria-label={hasCloser ? 'Close' : ''}
+      aria-label={hasCloser ? 'Close modal' : ''}
     >
       <section id={id} className={c(styles.modal, styles[type])}>
         {hasHeader && (

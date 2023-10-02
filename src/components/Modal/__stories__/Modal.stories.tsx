@@ -6,8 +6,12 @@ const meta = {
   title: 'Components/Modal',
   component: StoryRenderer,
   argTypes: {
-    onClose: { action: 'onClose', table: { disable: true } },
-    onOpen: { action: 'onOpen', table: { disable: true } },
+    onAcceptOpen: { action: 'onAcceptOpen', table: { disable: true } },
+    onAcceptClose: { action: 'onAcceptClose', table: { disable: true } },
+    onConfirmOpen: { action: 'onConfirmOpen', table: { disable: true } },
+    onConfirmClose: { action: 'onConfirmClose', table: { disable: true } },
+    onInfoOpen: { action: 'onInfoOpen', table: { disable: true } },
+    onInfoClose: { action: 'onInfoClose', table: { disable: true } },
   },
 } satisfies Meta<typeof StoryRenderer>;
 
@@ -17,9 +21,7 @@ type Story = StoryObj<typeof StoryRenderer>;
 
 export const _Modal: Story = {
   args: {
-    type: 'info',
-    visible: false,
-    title: 'This is the title',
-    children: 'This is the content',
+    acceptButtonLabel: 'Custom accept label',
+    cancelButtonLabel: 'Custom cancel label',
   },
 };
