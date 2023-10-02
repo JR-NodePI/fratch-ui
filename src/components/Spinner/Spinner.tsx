@@ -9,6 +9,7 @@ const Spinner = ({
   inverted,
   label,
   type = SpinnerType.PRIMARY,
+  className,
 }: SpinnerProps): JSX.Element => {
   return (
     <div
@@ -16,7 +17,8 @@ const Spinner = ({
         styles.spinner_container,
         cover ? styles.cover : '',
         inverted ? styles.inverted : '',
-        styles[type]
+        styles[type],
+        className
       )}
     >
       <svg className={c(styles.spinner)} viewBox="0 0 50 50">

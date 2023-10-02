@@ -5,4 +5,5 @@ export type SpinnerProps = {
   inverted?: boolean;
   label?: string;
   type?: (typeof SpinnerType)[keyof typeof SpinnerType];
+  className?: string;
 };
