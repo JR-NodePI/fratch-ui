@@ -2,16 +2,16 @@ import { act } from 'react-dom/test-utils';
 
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import debounce from 'lodash/debounce';
+import { debounce } from 'lodash';
 import { describe, expect, it, vi } from 'vitest';
 
 import { type ShowModalProps } from '../ModalProps';
 import ModalProvider from '../ModalProvider';
 import useModal from '../useModal';
 
-vi.mock('lodash/debounce', async requireActual => {
-  const module = (await requireActual()) as { default: typeof debounce };
-  return { default: vi.fn(fn => module.default(fn, 10)) };
+vi.mock('lodash', async requireActual => {
+  const module = (await requireActual()) as { debounce: typeof debounce };
+  return { debounce: vi.fn(fn => module.debounce(fn, 10)) };
 });
 
 describe('Modal', () => {

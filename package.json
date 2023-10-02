@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
@@ -21,6 +21,12 @@
   "private": false,
   "main": "components/index.js",
   "type": "module",
+  "dependencies": {
+    "lodash": "4.17.21",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@storybook/addon-essentials": "7.4.0",
     "@storybook/addon-interactions": "7.4.0",
@@ -43,11 +49,7 @@
     "eslint-plugin-storybook": "^0.6.13",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
-    "lodash": "^4.17.21",
     "prettier": "^3.0.0",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "simple-update-notifier": "^2.0.0",
     "storybook": "7.4.0",
     "typescript-plugin-css-modules": "^5.0.1",
