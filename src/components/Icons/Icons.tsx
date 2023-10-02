@@ -6,6 +6,7 @@ export { default as IconDownload } from './Icons/IconDownload';
 export { default as IconEdit } from './Icons/IconEdit';
 export { default as IconError } from './Icons/IconError';
 export { default as IconExport } from './Icons/IconExport';
+export { default as IconGit } from './Icons/IconGit';
 export { default as IconImport } from './Icons/IconImport';
 export { default as IconInfo } from './Icons/IconInfo';
 export { default as IconLight } from './Icons/IconLight';

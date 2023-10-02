@@ -45,6 +45,7 @@ exports[`index > should have a list of components 1`] = `
     "IconEdit": [Function],
     "IconError": [Function],
     "IconExport": [Function],
+    "IconGit": [Function],
     "IconImport": [Function],
     "IconInfo": [Function],
     "IconLight": [Function],
