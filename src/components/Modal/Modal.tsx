@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
-import debounce from 'lodash/debounce';
+import { debounce } from 'lodash';
 
 import { c } from '../../helpers/classNameHelpers';
 import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
