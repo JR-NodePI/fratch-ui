@@ -124,5 +124,6 @@ exports[`index > should have a list of components 1`] = `
     "displayName": "ToasterListContext",
   },
   "ToasterProvider": [Function],
+  "useModal": [Function],
 }
 `;

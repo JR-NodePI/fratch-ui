@@ -12,6 +12,7 @@ export * as Icons from './Icons/Icons';
 // -- Modal
 export * as ModalConstants from './Modal/ModalConstants';
 export { default as ModalProvider } from './Modal/ModalProvider';
+export { default as useModal } from './Modal/useModal';
 // -- SettingsModal
 export { default as SettingsModal } from './SettingsModal/SettingsModal';
 export * as SettingsModalConstants from './SettingsModal/SettingsModalConstants';
