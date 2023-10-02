@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { act } from 'react-dom/test-utils';
 
 import { render, screen, waitFor } from '@testing-library/react';
@@ -6,9 +5,9 @@ import userEvent from '@testing-library/user-event';
 import debounce from 'lodash/debounce';
 import { describe, expect, it, vi } from 'vitest';
 
-import ModalContext from '../ModalContext';
 import { type ShowModalProps } from '../ModalProps';
 import ModalProvider from '../ModalProvider';
+import useModal from '../useModal';
 
 vi.mock('lodash/debounce', async requireActual => {
   const module = (await requireActual()) as { default: typeof debounce };
@@ -23,8 +22,7 @@ describe('Modal', () => {
   let triggerShowModalInfo: (props: ShowModalProps) => void;
 
   const MockComponent = (): JSX.Element => {
-    const { showModalAccept, showModalConfirm, showModalInfo } =
-      useContext(ModalContext);
+    const { showModalAccept, showModalConfirm, showModalInfo } = useModal();
 
     triggerShowModalAccept = showModalAccept;
     triggerShowModalConfirm = showModalConfirm;
