@@ -59,7 +59,7 @@ describe('SettingsModal', () => {
     expect(settingsMenu?.classList).toMatchInlineSnapshot(`
       DOMTokenList {
         "0": "_settings_menu_21fdeb",
-        "1": "_close_21fdeb",
+        "1": "_open_21fdeb",
         "2": "_left_21fdeb",
       }
     `);

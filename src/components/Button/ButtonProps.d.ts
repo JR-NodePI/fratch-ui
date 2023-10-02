@@ -9,7 +9,7 @@ export interface ButtonProps {
   Icon?: typeof Icon | typeof Spinner;
   isRound?: boolean;
   label?: string;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent) => void;
   size?: (typeof ButtonSize)[keyof typeof ButtonSize];
   stretch?: boolean;
   type?: (typeof ButtonType)[keyof typeof ButtonType];

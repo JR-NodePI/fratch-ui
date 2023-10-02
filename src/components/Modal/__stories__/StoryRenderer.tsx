@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { Button } from '../..';
+import { Button, SettingsModal } from '../..';
 import ModalContext from '../ModalContext';
 import { ModalCloseType } from '../ModalProps';
 import ModalProvider from '../ModalProvider';
@@ -14,6 +14,19 @@ type ModalDisplayButtonsProps = {
   onConfirmClose?: (type: ModalCloseType) => void;
   onInfoClose?: (type: ModalCloseType) => void;
   onInfoOpen?: () => void;
+};
+
+const inlineStyles: React.CSSProperties = {
+  position: 'fixed',
+  zIndex: 999999,
+  top: '10%',
+  left: '20%',
+  boxShadow: 'border-box',
+  width: '60%',
+  height: '80%',
+  backgroundColor: 'var(--ft-color-background)',
+  border: '1px solid var(--ft-color-grey-1)',
+  padding: '20px',
 };
 
 function ModalDisplayButtons({
@@ -30,7 +43,28 @@ function ModalDisplayButtons({
     useContext(ModalContext);
 
   return (
-    <>
+    <div style={inlineStyles}>
+      <SettingsModal
+        position="right"
+        items={[
+          <Button
+            onClick={(): void =>
+              showModalAccept({
+                title: 'Accept modal title',
+                content: <>Accept modal content</>,
+                onClose: onAcceptClose,
+                onOpen: onAcceptOpen,
+                acceptButtonLabel,
+                cancelButtonLabel,
+              })
+            }
+            size="small"
+            type="primary"
+          >
+            Show accept modal
+          </Button>,
+        ]}
+      />
       <Button
         onClick={(): void =>
           showModalAccept({
@@ -82,7 +116,7 @@ function ModalDisplayButtons({
       >
         Show info modal
       </Button>
-    </>
+    </div>
   );
 }
 

@@ -26,11 +26,17 @@ describe('ButtonCloser', () => {
 
     setup({ title: 'mock-test-button', onClick: mockOnClick });
 
-    await userEvent.click(
-      screen.getByRole('button', { name: /mock-test-button/i })
-    );
+    const buttonElement = screen.getByRole('button', {
+      name: /mock-test-button/i,
+    });
+    await userEvent.click(buttonElement);
 
     expect(mockOnClick).toHaveBeenCalledTimes(1);
-    expect(mockOnClick).toHaveBeenCalledWith();
+    expect(mockOnClick).toHaveBeenCalledWith(
+      expect.objectContaining({
+        type: 'click',
+        target: buttonElement,
+      })
+    );
   });
 });
