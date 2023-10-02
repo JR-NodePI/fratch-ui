@@ -35,7 +35,7 @@ function ModalDisplayButtons({
         onClick={(): void =>
           showModalAccept({
             title: 'Accept modal title',
-            children: <>Accept modal content</>,
+            content: <>Accept modal content</>,
             onClose: onAcceptClose,
             onOpen: onAcceptOpen,
             acceptButtonLabel,
@@ -53,7 +53,7 @@ function ModalDisplayButtons({
         onClick={(): void =>
           showModalConfirm({
             title: 'Confirm modal title',
-            children: <>Confirm modal content</>,
+            content: <>Confirm modal content</>,
             onClose: onConfirmClose,
             onOpen: onConfirmOpen,
             acceptButtonLabel,
@@ -71,7 +71,7 @@ function ModalDisplayButtons({
         onClick={(): void =>
           showModalInfo({
             title: 'Info modal title',
-            children: <>Info modal content</>,
+            content: <>Info modal content</>,
             onClose: onInfoClose,
             onOpen: onInfoOpen,
             acceptButtonLabel,
