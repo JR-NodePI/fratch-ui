@@ -14,9 +14,15 @@ export default function SettingsModal({
   className,
   items = [],
   position = SettingsModalPosition.LEFT,
+  visible,
+  onClose,
 }: SettingsModalProps): JSX.Element {
   const [openerWrapperId] = useState(crypto.randomUUID());
-  const [visible, setVisible] = useState(false);
+  const [innerVisible, setInnerVisible] = useState(visible);
+
+  useEffect(() => {
+    setInnerVisible(visible);
+  }, [visible]);
 
   useEffect(() => {
     const handleClick = debounce((event: MouseEvent): void => {
@@ -27,7 +33,8 @@ export default function SettingsModal({
         return;
       }
 
-      setVisible(false);
+      setInnerVisible(false);
+      onClose?.();
     }, 100);
 
     window.document.body.addEventListener('click', handleClick, true);
@@ -35,10 +42,10 @@ export default function SettingsModal({
     return () => {
       window.document.body.removeEventListener('click', handleClick);
     };
-  }, [openerWrapperId]);
+  }, [openerWrapperId, onClose]);
 
   const handleOpenerClick = (): void => {
-    setVisible(!visible);
+    setInnerVisible(!innerVisible);
   };
 
   return (
@@ -46,7 +53,7 @@ export default function SettingsModal({
       className={c(
         className,
         styles.settings_menu,
-        visible ? styles.open : styles.close,
+        innerVisible ? styles.open : styles.close,
         styles[position]
       )}
       id={openerWrapperId}
