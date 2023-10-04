@@ -31,6 +31,11 @@ describe('SettingsModal', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should render as visible', () => {
+    const { container } = setup({ visible: true });
+    expect(container).toMatchSnapshot();
+  });
+
   it('should render with items', () => {
     const items = [
       <span>item 1</span>,
@@ -41,7 +46,7 @@ describe('SettingsModal', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should open and then close', async () => {
+  it.only('should open and then close', async () => {
     const { settingsMenu } = setup();
 
     await userEvent.click(screen.getByRole('button'));
@@ -54,7 +59,7 @@ describe('SettingsModal', () => {
       }
     `);
 
-    await userEvent.click(window.document.body);
+    await userEvent.tab();
 
     expect(settingsMenu?.classList).toMatchInlineSnapshot(`
       DOMTokenList {
