@@ -35,9 +35,9 @@
   background-color: var(--ft-color-grey-4);
   box-shadow: var(--ft-box-shadow-2);
   transition:
-    height 300ms ease-in-out,
-    opacity 300ms ease-in-out,
-    transform 300ms ease-in-out;
+    height var(--toaster-timeout-to-close) ease-in-out,
+    opacity var(--toaster-timeout-to-close) ease-in-out,
+    transform var(--toaster-timeout-to-close) ease-in-out;
   transform: translateY(48px);
   overflow: hidden;
   opacity: 0;

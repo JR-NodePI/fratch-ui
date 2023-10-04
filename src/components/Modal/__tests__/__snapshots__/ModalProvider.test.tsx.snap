@@ -10,6 +10,7 @@ exports[`Modal > should render a confirm Modal 1`] = `
   <div
     aria-label=""
     class="_modal_overflow_f57fcc"
+    style="--modal-timeout-to-close: 500ms; --modal-timeout-to-open: 200ms; --modal-max-width: 600px; --modal-confirm-max-width: 460px;"
   >
     <section
       class="_modal_f57fcc _confirm_f57fcc"
@@ -62,6 +63,7 @@ exports[`Modal > should render a info Modal 1`] = `
   <div
     aria-label="Close modal"
     class="_modal_overflow_f57fcc"
+    style="--modal-timeout-to-close: 500ms; --modal-timeout-to-open: 200ms; --modal-max-width: 600px; --modal-confirm-max-width: 460px;"
   >
     <section
       class="_modal_f57fcc _info_f57fcc"
@@ -119,6 +121,7 @@ exports[`Modal > should render an accept Modal 1`] = `
   <div
     aria-label="Close modal"
     class="_modal_overflow_f57fcc"
+    style="--modal-timeout-to-close: 500ms; --modal-timeout-to-open: 200ms; --modal-max-width: 600px; --modal-confirm-max-width: 460px;"
   >
     <section
       class="_modal_f57fcc _accept_f57fcc"

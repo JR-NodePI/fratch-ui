@@ -5,6 +5,7 @@ import { describe, expect, it, vi } from 'vitest';
 import MockComponent from '../../../__mocks__/MockComponent';
 import * as Icons from '../../Icons/Icons';
 import { IconProps } from '../../Icons/Icons/IconProps';
+import { TOASTER_TIMEOUT_TO_SHOW_CLOSE_BUTTON } from '../ToasterConstants';
 import ToasterItem from '../ToasterItem';
 import { Toaster, ToasterItemProps } from '../ToasterProps';
 
@@ -106,7 +107,7 @@ describe('ToasterItem', () => {
   it('should render when is stoppable with duration is greater than 2999 ms', async () => {
     const toaster: Toaster = {
       ...initialToaster,
-      duration: 3000,
+      duration: TOASTER_TIMEOUT_TO_SHOW_CLOSE_BUTTON,
       stoppable: true,
     };
     const { container } = setup({ ...initialProps, toaster });
@@ -119,7 +120,7 @@ describe('ToasterItem', () => {
   it('should render when is stoppable but duration is 2999 ms', async () => {
     const toaster: Toaster = {
       ...initialToaster,
-      duration: 2999,
+      duration: TOASTER_TIMEOUT_TO_SHOW_CLOSE_BUTTON - 1,
       stoppable: true,
     };
     const { container } = setup({ ...initialProps, toaster });

@@ -5,6 +5,10 @@ import userEvent from '@testing-library/user-event';
 import { debounce } from 'lodash';
 import { describe, expect, it, vi } from 'vitest';
 
+import {
+  MODAL_TIMEOUT_TO_CLOSE,
+  MODAL_TIMEOUT_TO_OPEN,
+} from '../ModalConstants';
 import { type ShowModalProps } from '../ModalProps';
 import ModalProvider from '../ModalProvider';
 import useModal from '../useModal';
@@ -117,7 +121,15 @@ describe('Modal', () => {
     });
 
     expect(debounce).toHaveBeenCalledTimes(2);
-    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
-    expect(debounce).toHaveBeenNthCalledWith(2, expect.any(Function), 500);
+    expect(debounce).toHaveBeenNthCalledWith(
+      1,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_OPEN
+    );
+    expect(debounce).toHaveBeenNthCalledWith(
+      2,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_CLOSE
+    );
   });
 });
