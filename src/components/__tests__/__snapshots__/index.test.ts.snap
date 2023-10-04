@@ -59,6 +59,10 @@ exports[`index > should have a list of components 1`] = `
     "IconWarning": [Function],
   },
   "ModalConstants": {
+    "MODAL_CONFIRM_MAX_WIDTH": 460,
+    "MODAL_MAX_WIDTH": 600,
+    "MODAL_TIMEOUT_TO_CLOSE": 500,
+    "MODAL_TIMEOUT_TO_OPEN": 200,
     "ModalCloseTypes": {
       "ACCEPT": "accept",
       "CANCEL": "cancel",
@@ -77,6 +81,7 @@ exports[`index > should have a list of components 1`] = `
       "LEFT": "left",
       "RIGHT": "right",
     },
+    "TIMEOUT_TO_CLOSE": 100,
   },
   "Spinner": [Function],
   "SpinnerConstants": {
@@ -92,6 +97,8 @@ exports[`index > should have a list of components 1`] = `
   },
   "TabsMenu": [Function],
   "ToasterConstants": {
+    "TOASTER_TIMEOUT_TO_CLOSE": 300,
+    "TOASTER_TIMEOUT_TO_SHOW_CLOSE_BUTTON": 3000,
     "ToasterType": {
       "ERROR": "error",
       "INFO": "info",

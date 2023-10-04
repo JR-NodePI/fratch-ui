@@ -12,7 +12,7 @@
   overflow: auto;
   flex-direction: column;
   pointer-events: all;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity var(--modal-timeout-to-close) ease-in-out;
   z-index: 9999999;
   opacity: 0;
 }
@@ -39,11 +39,11 @@
   background-color: var(--ft-color-background);
   border-radius: var(--ft-button-default-border-radius);
   box-shadow: var(--ft-box-shadow-2);
-  max-width: 600px;
+  max-width: var(--modal-max-width);
   width: 100%;
   transition:
-    opacity 0.2s ease-in-out,
-    transform 0.2s ease-in-out;
+    opacity var(--modal-timeout-to-open) ease-in-out,
+    transform var(--modal-timeout-to-open) ease-in-out;
   opacity: 0;
   transform: translateY(-32px);
   outline: solid 1px var(--ft-modal-border-color);
@@ -56,7 +56,7 @@
   opacity: 0;
 }
 .modal.confirm {
-  max-width: 460px;
+  max-width: var(--modal-confirm-max-width);
 }
 .modal .header {
   margin: 0;

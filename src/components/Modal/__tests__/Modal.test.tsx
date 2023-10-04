@@ -4,7 +4,11 @@ import { debounce } from 'lodash';
 import { describe, expect, it, vi } from 'vitest';
 
 import Modal from '../Modal';
-import { ModalTypes } from '../ModalConstants';
+import {
+  MODAL_TIMEOUT_TO_CLOSE,
+  MODAL_TIMEOUT_TO_OPEN,
+  ModalTypes,
+} from '../ModalConstants';
 import { type ModalProps } from '../ModalProps';
 
 vi.mock('lodash', async requireActual => {
@@ -74,7 +78,11 @@ describe('Modal', () => {
     expect(onOpen).toHaveBeenCalledWith();
 
     expect(debounce).toHaveBeenCalledTimes(1);
-    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
+    expect(debounce).toHaveBeenNthCalledWith(
+      1,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_OPEN
+    );
   });
 
   it('should perform onClose with accept for type CONFIRM', async () => {
@@ -94,8 +102,16 @@ describe('Modal', () => {
     });
 
     expect(debounce).toHaveBeenCalledTimes(2);
-    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
-    expect(debounce).toHaveBeenNthCalledWith(2, expect.any(Function), 500);
+    expect(debounce).toHaveBeenNthCalledWith(
+      1,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_OPEN
+    );
+    expect(debounce).toHaveBeenNthCalledWith(
+      2,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_CLOSE
+    );
   });
 
   it('should perform onClose with cancel for type CONFIRM', async () => {
@@ -115,8 +131,16 @@ describe('Modal', () => {
     });
 
     expect(debounce).toHaveBeenCalledTimes(2);
-    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
-    expect(debounce).toHaveBeenNthCalledWith(2, expect.any(Function), 500);
+    expect(debounce).toHaveBeenNthCalledWith(
+      1,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_OPEN
+    );
+    expect(debounce).toHaveBeenNthCalledWith(
+      2,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_CLOSE
+    );
   });
 
   it('should perform onClose from closer button', async () => {
@@ -135,8 +159,16 @@ describe('Modal', () => {
     });
 
     expect(debounce).toHaveBeenCalledTimes(2);
-    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
-    expect(debounce).toHaveBeenNthCalledWith(2, expect.any(Function), 500);
+    expect(debounce).toHaveBeenNthCalledWith(
+      1,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_OPEN
+    );
+    expect(debounce).toHaveBeenNthCalledWith(
+      2,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_CLOSE
+    );
 
     expect(baseElement).toMatchSnapshot();
   });
@@ -157,8 +189,16 @@ describe('Modal', () => {
     });
 
     expect(debounce).toHaveBeenCalledTimes(2);
-    expect(debounce).toHaveBeenNthCalledWith(1, expect.any(Function), 100);
-    expect(debounce).toHaveBeenNthCalledWith(2, expect.any(Function), 500);
+    expect(debounce).toHaveBeenNthCalledWith(
+      1,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_OPEN
+    );
+    expect(debounce).toHaveBeenNthCalledWith(
+      2,
+      expect.any(Function),
+      MODAL_TIMEOUT_TO_CLOSE
+    );
 
     expect(baseElement).toMatchSnapshot();
   });

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { c } from '../../helpers/classNameHelpers';
+import { setStyleProperties } from '../../helpers/setStyleProperties';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
 import {
   IconError,
@@ -9,7 +10,11 @@ import {
   IconSuccess,
   IconWarning,
 } from '../Icons/Icons';
-import { ToasterType } from './ToasterConstants';
+import {
+  TOASTER_TIMEOUT_TO_CLOSE,
+  TOASTER_TIMEOUT_TO_SHOW_CLOSE_BUTTON,
+  ToasterType,
+} from './ToasterConstants';
 import { nlToNodes } from './ToasterFormatHelpers';
 import { ToasterItemProps } from './ToasterProps';
 
@@ -51,7 +56,7 @@ export default function ToasterItem({
       setCssClassStatus(styles.close);
       timeoutId = setTimeout(() => {
         onClose(id);
-      }, 300);
+      }, TOASTER_TIMEOUT_TO_CLOSE);
     }
     return () => {
       clearTimeout(timeoutId);
@@ -80,19 +85,19 @@ export default function ToasterItem({
   };
 
   const handleRef = (node: HTMLDivElement | null): void => {
-    if (!node) {
-      return;
-    }
+    if (node == null) return;
 
-    const itemRect = node?.getBoundingClientRect();
+    const itemRect = node.getBoundingClientRect();
 
-    if (itemRect) {
-      node.style.setProperty('height', `${itemRect.height}px`);
-    }
+    setStyleProperties({
+      height: `${itemRect.height}px`,
+      '--toaster-timeout-to-close': `${TOASTER_TIMEOUT_TO_CLOSE}ms`,
+    })(node);
   };
 
   const finalMessage = nlToBr && message ? nlToNodes(message) : message;
-  const toMuchDuration = !duration || duration >= 3000;
+  const toMuchDuration =
+    !duration || duration >= TOASTER_TIMEOUT_TO_SHOW_CLOSE_BUTTON;
 
   return (
     <div

@@ -5,9 +5,17 @@ import { debounce } from 'lodash';
 
 import { c } from '../../helpers/classNameHelpers';
 import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
+import { setStyleProperties } from '../../helpers/setStyleProperties';
 import Button from '../Button/Button';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
-import { ModalCloseTypes, ModalTypes } from './ModalConstants';
+import {
+  MODAL_CONFIRM_MAX_WIDTH,
+  MODAL_MAX_WIDTH,
+  MODAL_TIMEOUT_TO_CLOSE,
+  MODAL_TIMEOUT_TO_OPEN,
+  ModalCloseTypes,
+  ModalTypes,
+} from './ModalConstants';
 import type { ModalCloseType, ModalProps } from './ModalProps';
 
 import styles from './Modal.module.css';
@@ -36,7 +44,7 @@ function Modal({
           if (type && onClose) {
             onClose(type);
           }
-        }, 500)();
+        }, MODAL_TIMEOUT_TO_CLOSE)();
 
         return styles.close;
       });
@@ -48,7 +56,7 @@ function Modal({
     setMounted(() => {
       debounce(() => {
         setCssClassStatus(styles.open);
-      }, 100)();
+      }, MODAL_TIMEOUT_TO_OPEN)();
 
       onOpen?.();
       return true;
@@ -94,6 +102,12 @@ function Modal({
 
   return createPortal(
     <div
+      ref={setStyleProperties({
+        '--modal-timeout-to-close': `${MODAL_TIMEOUT_TO_CLOSE}ms`,
+        '--modal-timeout-to-open': `${MODAL_TIMEOUT_TO_OPEN}ms`,
+        '--modal-max-width': `${MODAL_MAX_WIDTH}px`,
+        '--modal-confirm-max-width': `${MODAL_CONFIRM_MAX_WIDTH}px`,
+      })}
       className={c(styles.modal_overflow, cssClassStatus)}
       onClick={hasCloser ? handleOverflowClose : undefined}
       aria-label={hasCloser ? 'Close modal' : ''}

@@ -5,7 +5,10 @@ import { debounce } from 'lodash';
 import { c } from '../../helpers/classNameHelpers';
 import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
 import { IconVerticalDots } from '../Icons/Icons';
-import { SettingsModalPosition } from './SettingsModalConstants';
+import {
+  SettingsModalPosition,
+  TIMEOUT_TO_CLOSE,
+} from './SettingsModalConstants';
 import { SettingsModalProps } from './SettingsModalProps';
 
 import styles from './SettingsModal.module.css';
@@ -35,7 +38,7 @@ export default function SettingsModal({
 
       setInnerVisible(false);
       onClose?.();
-    }, 100);
+    }, TIMEOUT_TO_CLOSE);
 
     window.document.body.addEventListener('click', handleClick, true);
 

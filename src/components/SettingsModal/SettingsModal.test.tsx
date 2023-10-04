@@ -1,9 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it, Mock, vi } from 'vitest';
 
+import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
 import SettingsModal from './SettingsModal';
+import { TIMEOUT_TO_CLOSE } from './SettingsModalConstants';
 import { SettingsModalProps } from './SettingsModalProps';
+
+vi.mock('../../helpers/htmlSelectorsHelpers');
+
+const timeout = (time: number): Promise<void> =>
+  new Promise(resolve => setTimeout(resolve, time));
 
 describe('SettingsModal', () => {
   const settingsMenuId = 'crypto-mock-random-UUID-1234';
@@ -20,6 +27,7 @@ describe('SettingsModal', () => {
 
   beforeEach(() => {
     vi.spyOn(crypto, 'randomUUID').mockReturnValue(settingsMenuId);
+    (hasClosestElement as Mock).mockReturnValue(true);
   });
 
   afterEach(() => {
@@ -46,7 +54,8 @@ describe('SettingsModal', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it.only('should open and then close', async () => {
+  it('should open and then close', async () => {
+    (hasClosestElement as Mock).mockReturnValue(false);
     const { settingsMenu } = setup();
 
     await userEvent.click(screen.getByRole('button'));
@@ -60,11 +69,12 @@ describe('SettingsModal', () => {
     `);
 
     await userEvent.tab();
+    await timeout(TIMEOUT_TO_CLOSE);
 
     expect(settingsMenu?.classList).toMatchInlineSnapshot(`
       DOMTokenList {
         "0": "_settings_menu_21fdeb",
-        "1": "_open_21fdeb",
+        "1": "_close_21fdeb",
         "2": "_left_21fdeb",
       }
     `);
