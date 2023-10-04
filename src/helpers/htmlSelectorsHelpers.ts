@@ -1,8 +1,8 @@
-export const isAscendantEvenTargetByID = (
+export const hasClosestElement = (
   event: MouseEvent,
-  id: string
+  closestElementId: string
 ): boolean => {
   const element = event.target as HTMLElement | null;
-  const parent = element?.closest?.(`[id="${id}"]`);
-  return parent?.id === id;
+  const parent = element?.closest?.(`[id="${closestElementId}"]`);
+  return parent?.id === closestElementId;
 };

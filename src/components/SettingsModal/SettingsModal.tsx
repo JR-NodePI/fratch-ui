@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { debounce } from 'lodash';
 
 import { c } from '../../helpers/classNameHelpers';
-import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
+import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
 import { IconVerticalDots } from '../Icons/Icons';
 import { SettingsModalPosition } from './SettingsModalConstants';
 import { SettingsModalProps } from './SettingsModalProps';
@@ -20,12 +20,14 @@ export default function SettingsModal({
 
   useEffect(() => {
     const handleClick = debounce((event: MouseEvent): void => {
-      if (
-        !event.defaultPrevented &&
-        !isAscendantEvenTargetByID(event, openerWrapperId)
-      ) {
-        setVisible(false);
+      if (event.defaultPrevented) {
+        return;
       }
+      if (hasClosestElement(event, openerWrapperId)) {
+        return;
+      }
+
+      setVisible(false);
     }, 100);
 
     window.document.body.addEventListener('click', handleClick, true);

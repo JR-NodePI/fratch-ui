@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import { isEqual } from 'lodash';
 
 import { c } from '../../../helpers/classNameHelpers';
-import { isAscendantEvenTargetByID } from '../../../helpers/htmlSelectorsHelpers';
+import { hasClosestElement } from '../../../helpers/htmlSelectorsHelpers';
 import { IconArrowDown } from '../../Icons/Icons';
 import InputText from '../InputText/InputText';
 import SelectOptionsList from './SelectOptionsList';
@@ -52,7 +52,7 @@ const useHideOnClickedOutside = ({
   // hide options list when clicked outside
   useEffect(() => {
     const handleDocumentClick = (event: MouseEvent): void => {
-      if (!isAscendantEvenTargetByID(event, uid)) {
+      if (!hasClosestElement(event, uid)) {
         setVisible(false);
       }
     };

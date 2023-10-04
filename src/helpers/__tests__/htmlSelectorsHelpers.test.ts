@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { isAscendantEvenTargetByID } from '../htmlSelectorsHelpers';
+import { hasClosestElement } from '../htmlSelectorsHelpers';
 
 describe('htmlSelectorsHelpers', () => {
   describe('isAscendantEvenTargetByID', () => {
@@ -32,12 +32,12 @@ describe('htmlSelectorsHelpers', () => {
     });
 
     it('should return false when the child element have not identified ascendant element', () => {
-      const result = isAscendantEvenTargetByID(childEvent, 'invalidID');
+      const result = hasClosestElement(childEvent, 'invalidID');
       expect(result).toBe(false);
     });
 
     it('should return true when the child element have the identified ascendant element', () => {
-      const result = isAscendantEvenTargetByID(childEvent, ascendantID);
+      const result = hasClosestElement(childEvent, ascendantID);
       expect(result).toBe(true);
     });
   });

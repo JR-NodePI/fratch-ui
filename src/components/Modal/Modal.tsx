@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import { debounce } from 'lodash';
 
 import { c } from '../../helpers/classNameHelpers';
-import { isAscendantEvenTargetByID } from '../../helpers/htmlSelectorsHelpers';
+import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
 import Button from '../Button/Button';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
 import { ModalCloseTypes, ModalTypes } from './ModalConstants';
@@ -78,7 +78,7 @@ function Modal({
 
   const handleOverflowClose = (event: React.MouseEvent): void => {
     event.preventDefault();
-    if (!isAscendantEvenTargetByID(event.nativeEvent, id)) {
+    if (!hasClosestElement(event.nativeEvent, id)) {
       close(ModalCloseTypes.CLOSE);
     }
   };
