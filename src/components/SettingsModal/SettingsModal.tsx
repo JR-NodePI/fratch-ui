@@ -6,8 +6,8 @@ import { c } from '../../helpers/classNameHelpers';
 import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
 import { IconVerticalDots } from '../Icons/Icons';
 import {
+  SETTINGS_MODAL_TIMEOUT_TO_CLOSE,
   SettingsModalPosition,
-  TIMEOUT_TO_CLOSE,
 } from './SettingsModalConstants';
 import { SettingsModalProps } from './SettingsModalProps';
 
@@ -38,7 +38,7 @@ export default function SettingsModal({
 
       setInnerVisible(false);
       onClose?.();
-    }, TIMEOUT_TO_CLOSE);
+    }, SETTINGS_MODAL_TIMEOUT_TO_CLOSE);
 
     window.document.body.addEventListener('click', handleClick, true);
 

@@ -4,7 +4,7 @@ import { describe, expect, it, Mock, vi } from 'vitest';
 
 import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
 import SettingsModal from './SettingsModal';
-import { TIMEOUT_TO_CLOSE } from './SettingsModalConstants';
+import { SETTINGS_MODAL_TIMEOUT_TO_CLOSE } from './SettingsModalConstants';
 import { SettingsModalProps } from './SettingsModalProps';
 
 vi.mock('../../helpers/htmlSelectorsHelpers');
@@ -69,7 +69,7 @@ describe('SettingsModal', () => {
     `);
 
     await userEvent.tab();
-    await timeout(TIMEOUT_TO_CLOSE);
+    await timeout(SETTINGS_MODAL_TIMEOUT_TO_CLOSE);
 
     expect(settingsMenu?.classList).toMatchInlineSnapshot(`
       DOMTokenList {

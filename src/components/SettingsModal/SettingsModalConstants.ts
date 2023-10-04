@@ -3,4 +3,4 @@ export const SettingsModalPosition = {
   RIGHT: 'right',
 } as const;
 
-export const TIMEOUT_TO_CLOSE = 100;
+export const SETTINGS_MODAL_TIMEOUT_TO_CLOSE = 100;

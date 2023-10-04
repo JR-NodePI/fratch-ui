@@ -77,11 +77,11 @@ exports[`index > should have a list of components 1`] = `
   "ModalProvider": [Function],
   "SettingsModal": [Function],
   "SettingsModalConstants": {
+    "SETTINGS_MODAL_TIMEOUT_TO_CLOSE": 100,
     "SettingsModalPosition": {
       "LEFT": "left",
       "RIGHT": "right",
     },
-    "TIMEOUT_TO_CLOSE": 100,
   },
   "Spinner": [Function],
   "SpinnerConstants": {
