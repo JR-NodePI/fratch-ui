@@ -55,7 +55,7 @@ const buildComponent = (file): ReturnType<typeof build> => {
 };
 
 const combineCssFiles = (): void => {
-  const cssMainFilesPattern = `${outDir}/*_styles.css`;
+  const cssMainFilesPattern = `${outDir}/styles/*_styles.css`;
   const cssFilesPattern = `${outDir}/components/**/*.css`;
   const cssMainFiles = glob.sync(cssMainFilesPattern);
   const cssFiles = glob.sync(cssFilesPattern, {
@@ -63,9 +63,15 @@ const combineCssFiles = (): void => {
   });
   const cssImports = [...cssMainFiles, ...cssFiles].map(
     file =>
-      `@import url(./${path.relative(outDir, file).replace(/\\/gi, '/')});`
+      `@import url(${path
+        .relative(`${outDir}/styles`, file)
+        .replace(/\\/gi, '/')});`
   );
-  fs.writeFileSync(`${outDir}/styles.css`, cssImports.join('\n'), 'utf-8');
+  fs.writeFileSync(
+    `${outDir}/styles/styles.css`,
+    cssImports.join('\n'),
+    'utf-8'
+  );
 };
 
 const buildComponentsOnCloseBundle = (): PluginOption => ({
@@ -110,7 +116,7 @@ export default defineConfig({
       output: {
         assetFileNames: assetInfo => {
           if (assetInfo.name.endsWith('.css')) {
-            return `[hash]_${assetInfo.name}`;
+            return `styles/[hash]_${assetInfo.name}`;
           } else if (assetInfo.name.endsWith('.woff2')) {
             return `@fratch-ui-fonts/${assetInfo.name}`;
           } else {

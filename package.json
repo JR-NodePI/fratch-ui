@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.5.9",
+  "version": "1.5.10",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
@@ -19,7 +19,7 @@
   "author": "JorgeRojo <jorge.rojodiseno@gmail.com>",
   "license": "MIT",
   "private": false,
-  "main": "components/index.js",
+  "main": "components/index.ts",
   "type": "module",
   "dependencies": {
     "lodash": "4.17.21",
@@ -62,7 +62,7 @@
     "lint": "eslint --max-warnings=0 . --ext .ts,.tsx  --fix",
     "typecheck": "tsc --noEmit -p tsconfig.json --composite false",
     "start": "storybook dev -p 6006",
-    "build": "rm -rf ./dist && tsc && vite build --config vite.build.config.ts",
+    "build": "tsc && vite build --config vite.build.config.ts",
     "storybook:build": "storybook build",
     "storybook:preview": "yarn storybook:build && vite preview --outDir ./storybook-static/ --open /",
     "dist:files": "cp -f ./package.json ./dist/package.json && cp -f ./README.md ./dist/README.md  && cp -f ./LICENSE ./dist/LICENSE.md",
