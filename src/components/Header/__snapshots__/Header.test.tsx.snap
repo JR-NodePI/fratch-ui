@@ -5,7 +5,12 @@ exports[`Header > should render properly 1`] = `
   <div
     class="_header_63c2ea"
   >
-    <h1 />
+    <h1>
+      <img
+        class="_icon_63c2ea _left_63c2ea"
+        src="/src/assets/logo.png"
+      />
+    </h1>
   </div>
 </div>
 `;
@@ -18,22 +23,7 @@ exports[`Header > should render with iconPosition right 1`] = `
     <h1>
       <img
         class="_icon_63c2ea _right_63c2ea"
-        src="icon.png"
-      />
-    </h1>
-  </div>
-</div>
-`;
-
-exports[`Header > should render with iconSrc 1`] = `
-<div>
-  <div
-    class="_header_63c2ea"
-  >
-    <h1>
-      <img
-        class="_icon_63c2ea _left_63c2ea"
-        src="icon.png"
+        src="/src/assets/logo.png"
       />
     </h1>
   </div>
@@ -46,6 +36,11 @@ exports[`Header > should render with title 1`] = `
     class="_header_63c2ea"
   >
     <h1>
+      <img
+        alt="mock title"
+        class="_icon_63c2ea _left_63c2ea"
+        src="/src/assets/logo.png"
+      />
       mock title
     </h1>
   </div>

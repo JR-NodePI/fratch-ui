@@ -13,18 +13,13 @@ describe('Header', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render with iconSrc', () => {
-    const { container } = setup({ iconSrc: 'icon.png' });
-    expect(container).toMatchSnapshot();
-  });
-
   it('should render with title', () => {
     const { container } = setup({ title: 'mock title' });
     expect(container).toMatchSnapshot();
   });
 
   it('should render with iconPosition right', () => {
-    const { container } = setup({ iconSrc: 'icon.png', iconPosition: 'right' });
+    const { container } = setup({ iconPosition: 'right' });
     expect(container).toMatchSnapshot();
   });
 });
