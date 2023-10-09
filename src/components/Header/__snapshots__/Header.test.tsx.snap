@@ -8,6 +8,7 @@ exports[`Header > should render properly 1`] = `
     <h1>
       <span
         class="_icon_63c2ea _left_63c2ea"
+        style="background-image: url(undefined);"
       />
     </h1>
   </div>
@@ -22,6 +23,22 @@ exports[`Header > should render with iconPosition right 1`] = `
     <h1>
       <span
         class="_icon_63c2ea _right_63c2ea"
+        style="background-image: url(undefined);"
+      />
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`Header > should render with imgLogo 1`] = `
+<div>
+  <div
+    class="_header_63c2ea"
+  >
+    <h1>
+      <span
+        class="_icon_63c2ea _left_63c2ea"
+        style="background-image: url(mock-imgLogo);"
       />
     </h1>
   </div>
@@ -36,6 +53,7 @@ exports[`Header > should render with title 1`] = `
     <h1>
       <span
         class="_icon_63c2ea _left_63c2ea"
+        style="background-image: url(undefined);"
       />
       mock title
     </h1>
