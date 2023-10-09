@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { Button, SettingsModal } from '../..';
+import { Button, SettingsModal } from '../../../components';
 import ModalContext from '../ModalContext';
 import { ModalCloseType } from '../ModalProps';
 import ModalProvider from '../ModalProvider';

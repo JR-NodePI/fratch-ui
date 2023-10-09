@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button, ColorSchemeSwitcher } from '../..';
+import { Button, ColorSchemeSwitcher } from '../../../components';
 import { InputCheck } from '../../Form';
 import SettingsModal from '../SettingsModal';
 import StoryRenderer from './StoryRenderer';
