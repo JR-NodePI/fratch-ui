@@ -2,7 +2,7 @@ import { useRef } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '../../..';
+import { Button } from '../../../../components';
 import Select from '../Select';
 
 const FocusFromButton = (): JSX.Element => {

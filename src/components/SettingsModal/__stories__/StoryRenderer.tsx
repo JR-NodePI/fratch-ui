@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 
-import { Button } from '../..';
+import { Button } from '../../../components';
 import SettingsModal from '../SettingsModal';
 import { SettingsModalProps } from '../SettingsModalProps';
 

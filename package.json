@@ -1,12 +1,13 @@
 {
   "name": "fratch-ui",
-  "version": "1.5.20",
+  "version": "1.5.21",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
   },
   "modules": [
-    "dist/**/*"
+    "dist/components.js",
+    "dist/helpers.js"
   ],
   "description": "React UI kit where each component can be used as a stand-alone module",
   "keywords": [
