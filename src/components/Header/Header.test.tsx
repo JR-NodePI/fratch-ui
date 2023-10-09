@@ -22,4 +22,9 @@ describe('Header', () => {
     const { container } = setup({ iconPosition: 'right' });
     expect(container).toMatchSnapshot();
   });
+
+  it('should render with imgLogo', () => {
+    const { container } = setup({ imgLogo: 'mock-imgLogo' });
+    expect(container).toMatchSnapshot();
+  });
 });

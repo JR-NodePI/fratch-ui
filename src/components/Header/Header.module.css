@@ -20,7 +20,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  background-image: url('../../assets/logo.png');
+  background-image: url('../../assets/logo.png?url');
   background-size: cover;
   margin: 0 6px;
   top: 50%;
