@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { c } from '../../../helpers/classNameHelpers';
+import { c } from '../../../helpers';
 import { type SwitcherProps } from './SwitcherProps';
 
 import styles from './Switcher.module.css';

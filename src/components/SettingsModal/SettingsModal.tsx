@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { debounce } from 'lodash';
 
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
 import { IconVerticalDots } from '../Icons';
 import {

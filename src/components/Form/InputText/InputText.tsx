@@ -1,6 +1,6 @@
 import { forwardRef, useEffect, useRef } from 'react';
 
-import { c } from '../../../helpers/classNameHelpers';
+import { c } from '../../../helpers';
 import { IconClose } from '../../Icons';
 import { type InputTextProps } from './InputTextProps';
 

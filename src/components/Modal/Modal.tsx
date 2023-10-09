@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 
 import { debounce } from 'lodash';
 
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import { setStyleProperties } from '../../helpers/componentPropertiesHelpers';
 import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
 import Button from '../Button/Button';

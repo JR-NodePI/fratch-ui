@@ -1,4 +1,4 @@
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import { ButtonSize, ButtonType } from './ButtonConstants';
 import type { ButtonProps } from './ButtonProps';
 

@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import Switcher from '../Form/Switcher/Switcher';
 import { IconDark, IconLight } from '../Icons';
 import { ColorSchemeSwitcherProps } from './ColorScheme';

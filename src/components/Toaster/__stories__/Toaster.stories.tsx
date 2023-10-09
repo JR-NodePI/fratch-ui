@@ -2,8 +2,8 @@ import { useContext, useState } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { c } from '../../../helpers/classNameHelpers';
-import { Button, ToasterListContext } from '../../../components';
+import { c } from '../../../helpers';
+import { Button, ToasterListContext } from '../..';
 import type { Toaster } from '../ToasterProps';
 import ToasterProvider from '../ToasterProvider';
 

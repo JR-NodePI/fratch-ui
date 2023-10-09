@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import ToasterItem from './ToasterItem';
 import ToasterListContext from './ToasterListContext';
 import type { Toaster, ToasterProviderProps } from './ToasterProps';

@@ -1,7 +1,7 @@
 import { CSSProperties, useState } from 'react';
 
 import { Button } from '../../components';
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import { AVAILABLE_COLOR_LIST } from '../../helpers/colorConstants';
 import { getContrastColor, getRandomColor } from '../../helpers/colorHelpers';
 

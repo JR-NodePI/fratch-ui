@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { c } from '../../../helpers/classNameHelpers';
+import { c } from '../../../helpers';
 import {
   EventTargetWithDatasetIndex,
   SelectOptionsListProps,

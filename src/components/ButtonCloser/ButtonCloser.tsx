@@ -1,4 +1,4 @@
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import { IconClose } from '../Icons';
 import { type ButtonCloserProps } from './ButtonCloserProps';
 

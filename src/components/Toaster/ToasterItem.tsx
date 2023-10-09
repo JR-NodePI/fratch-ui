@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import { setStyleProperties } from '../../helpers/componentPropertiesHelpers';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
 import {
