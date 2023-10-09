@@ -1,4 +1,3 @@
-import iconImg from '../../assets/logo.png';
 import { c } from '../../helpers/classNameHelpers';
 import { ICON_POSITION } from './HeaderConstants';
 import { HeaderProps } from './HeaderProps';
@@ -12,11 +11,7 @@ function Header({
   return (
     <div className={c(styles.header)}>
       <h1>
-        <img
-          className={c(styles.icon, styles[iconPosition])}
-          src={iconImg}
-          alt={title}
-        />
+        <span className={c(styles.icon, styles[iconPosition])} />
         {title}
       </h1>
     </div>
