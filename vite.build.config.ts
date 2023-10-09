@@ -7,6 +7,11 @@ import dts from 'vite-plugin-dts';
 
 const srcDir = './src';
 const outDir = './dist';
+const fontsDir = 'fonts';
+const stylesDir = 'styles';
+const assetsDir = 'assets';
+const componentsDir = 'components';
+const stylesFileName = 'styles.css';
 
 const excludes = [
   './**/*.{stories,test,d}.{tsx,ts}',
@@ -55,21 +60,31 @@ const buildComponent = (file): ReturnType<typeof build> => {
 };
 
 const combineCssFiles = (): void => {
-  const cssMainFilesPattern = `${outDir}/styles/*_styles.css`;
-  const cssFilesPattern = `${outDir}/components/**/*.css`;
+  const cssMainFilesPattern = `${outDir}/${stylesDir}/*_${stylesFileName}`;
+  const cssFilesPattern = `${outDir}/${componentsDir}/**/*.css`;
   const cssMainFiles = glob.sync(cssMainFilesPattern);
   const cssFiles = glob.sync(cssFilesPattern, {
     ignore: cssMainFilesPattern,
   });
+  const currentContents = fs
+    .readFileSync(`${outDir}/${stylesDir}/${stylesFileName}`, 'utf-8')
+    .replace(
+      new RegExp(`(url\\()(.*)${fontsDir}/`, 'g'),
+      `$1${path.relative(
+        `${outDir}/${stylesDir}/`,
+        path.resolve(`${outDir}/${fontsDir}/`)
+      )}`
+    );
+
   const cssImports = [...cssMainFiles, ...cssFiles].map(
     file =>
       `@import url(${path
-        .relative(`${outDir}/styles`, file)
+        .relative(`${outDir}/${stylesDir}`, file)
         .replace(/\\/gi, '/')});`
   );
   fs.writeFileSync(
-    `${outDir}/styles/styles.css`,
-    cssImports.join('\n'),
+    `${outDir}/${stylesDir}/${stylesFileName}`,
+    `${currentContents}\n${cssImports.join('\n')}`,
     'utf-8'
   );
 };
@@ -112,15 +127,15 @@ export default defineConfig({
     minify: false,
     sourcemap: false,
     rollupOptions: {
-      input: 'src/styles/styles.css',
+      input: `${srcDir}/${stylesDir}/${stylesFileName}`,
       output: {
         assetFileNames: assetInfo => {
-          if (assetInfo.name.endsWith('.css')) {
-            return `styles/[hash]_${assetInfo.name}`;
-          } else if (assetInfo.name.endsWith('.woff2')) {
-            return `@fratch-ui-fonts/${assetInfo.name}`;
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return `${stylesDir}/${stylesFileName}`;
+          } else if (/\.(woff|woff2|eot|ttf)$/.test(assetInfo.name)) {
+            return `${fontsDir}/${assetInfo.name}`;
           } else {
-            return `assets/${assetInfo.name}`;
+            return `${assetsDir}/${assetInfo.name}`;
           }
         },
       },
