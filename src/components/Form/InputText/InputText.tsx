@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useRef } from 'react';
 
 import { c } from '../../../helpers/classNameHelpers';
-import { IconClose } from '../../Icons/Icons';
+import { IconClose } from '../../Icons';
 import { type InputTextProps } from './InputTextProps';
 
 import styles from './InputText.module.css';

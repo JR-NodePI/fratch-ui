@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { IconCheck } from '../../../Icons/Icons';
+import { IconCheck } from '../../../Icons';
 import Select from '../Select';
 
 type TesOptionValue = { opt: string; prop: string };

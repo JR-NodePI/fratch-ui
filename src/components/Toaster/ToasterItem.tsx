@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { c } from '../../helpers/classNameHelpers';
-import { setStyleProperties } from '../../helpers/setStyleProperties';
+import { setStyleProperties } from '../../helpers/componentPropertiesHelpers';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
 import {
   IconError,
@@ -9,7 +9,7 @@ import {
   IconPin,
   IconSuccess,
   IconWarning,
-} from '../Icons/Icons';
+} from '../Icons';
 import {
   TOASTER_TIMEOUT_TO_CLOSE,
   TOASTER_TIMEOUT_TO_SHOW_CLOSE_BUTTON,

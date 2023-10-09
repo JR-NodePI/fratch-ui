@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 
-import { IconCheck } from '../../Icons/Icons';
+import { IconCheck } from '../../Icons';
 import TabsMenu from '../TabsMenu';
 import { type TabsMenuProps } from '../TabsMenuProps';
 

@@ -1,4 +1,4 @@
-import type { IconPlus as Icon } from '../Icons/Icons';
+import type { IconPlus as Icon } from '../Icons';
 import type Spinner from '../Spinner/Spinner';
 import { ButtonSize, ButtonType } from './ButtonConstants';
 

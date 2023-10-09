@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
-import * as icons from '../Icons';
+import * as icons from '..';
 
 describe('Icons', () => {
   describe('should render properly', () => {

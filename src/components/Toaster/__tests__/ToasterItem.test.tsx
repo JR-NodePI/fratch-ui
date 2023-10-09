@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 
 import MockComponent from '../../../__mocks__/MockComponent';
-import * as Icons from '../../Icons/Icons';
+import * as Icons from '../../Icons';
 import { IconProps } from '../../Icons/Icons/IconProps';
 import { TOASTER_TIMEOUT_TO_SHOW_CLOSE_BUTTON } from '../ToasterConstants';
 import ToasterItem from '../ToasterItem';

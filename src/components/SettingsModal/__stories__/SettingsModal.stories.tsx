@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button, ColorSchemeSwitcher } from '../..';
-import { InputCheck } from '../../Form/Form';
+import { InputCheck } from '../../Form';
 import SettingsModal from '../SettingsModal';
 import StoryRenderer from './StoryRenderer';
 
