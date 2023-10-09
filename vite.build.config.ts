@@ -7,18 +7,32 @@ import dts from 'vite-plugin-dts';
 
 const srcDir = './src';
 const outDir = './dist';
-const fontsDir = 'fonts';
-const stylesDir = 'styles';
-const assetsDir = 'assets';
-const componentsDir = 'components';
+const stylesDirName = 'styles';
+const assetsDirName = 'assets';
 const stylesFileName = 'styles.css';
 
 const excludes = [
   './**/*.{stories,test,d}.{tsx,ts}',
-  './**/__tests__*',
-  './**/__stories__*',
-  './**/__mocks__*',
+  './**/__tests__/*.*',
+  './**/__mocks__/*.*',
+  './**/__stories__/*.*',
 ];
+const external = [
+  'lodash',
+  'react',
+  'react-dom',
+  'react/jsx-runtime',
+  // all local imports except image and css file formats
+  new RegExp('(?!.*\\.(png|jpg|jpeg|gif|svg|webp|css)$)(\\./[./\\w]+)$'),
+];
+
+const assetFileNames = (assetInfo): string => {
+  if (/\.(css)$/.test(assetInfo.name)) {
+    return `[hash]_${stylesFileName}`;
+  } else {
+    return `${assetsDirName}/[hash]_${assetInfo.name}`;
+  }
+};
 
 const buildComponent = (file): ReturnType<typeof build> => {
   const fileName = path
@@ -31,6 +45,7 @@ const buildComponent = (file): ReturnType<typeof build> => {
     publicDir: false,
     plugins: [react()],
     build: {
+      assetsDir: `${outDir}/${assetsDirName}`,
       outDir: moduleOutDir,
       emptyOutDir: false,
       minify: false,
@@ -41,50 +56,38 @@ const buildComponent = (file): ReturnType<typeof build> => {
         formats: ['es', 'cjs'],
       },
       rollupOptions: {
-        external: [
-          'lodash',
-          'react',
-          'react-dom',
-          'react/jsx-runtime',
-          new RegExp('\\./[./\\w]+$'),
-        ],
-        output: {
-          assetFileNames: assetInfo => {
-            if (assetInfo.name.endsWith('.css')) return `${fileName}.css`;
-            return assetInfo.name;
-          },
-        },
+        external: external,
+        output: { assetFileNames },
       },
     },
   });
 };
 
 const combineCssFiles = (): void => {
-  const cssMainFilesPattern = `${outDir}/${stylesDir}/*_${stylesFileName}`;
-  const cssFilesPattern = `${outDir}/${componentsDir}/**/*.css`;
-  const cssMainFiles = glob.sync(cssMainFilesPattern);
-  const cssFiles = glob.sync(cssFilesPattern, {
-    ignore: cssMainFilesPattern,
-  });
-  const currentContents = fs
-    .readFileSync(`${outDir}/${stylesDir}/${stylesFileName}`, 'utf-8')
-    .replace(
-      new RegExp(`(url\\()(.*)${fontsDir}/`, 'g'),
-      `$1${path.relative(
-        `${outDir}/${stylesDir}/`,
-        path.resolve(`${outDir}/${fontsDir}/`)
-      )}`
-    );
+  const cssFiles = glob
+    .sync(`${outDir}/**/*.css`)
+    .sort((a, b) => (a.split('/').length > b.split('/').length ? 1 : -1));
 
-  const cssImports = [...cssMainFiles, ...cssFiles].map(
-    file =>
-      `@import url(${path
-        .relative(`${outDir}/${stylesDir}`, file)
-        .replace(/\\/gi, '/')});`
-  );
+  const cssContents = cssFiles.map(file => {
+    const content = fs
+      .readFileSync(path.resolve(file), 'utf-8')
+      .replace(
+        new RegExp(`(url\\().*${assetsDirName}/`, 'g'),
+        `$1${path.relative(
+          `${outDir}/${stylesDirName}/`,
+          `${outDir}/${assetsDirName}/`
+        )}/`
+      );
+
+    fs.unlinkSync(file);
+
+    return `\n/*****--- ${file} ---*****/\n${content}`;
+  });
+
+  fs.mkdirSync(`${outDir}/${stylesDirName}`, { recursive: true });
   fs.writeFileSync(
-    `${outDir}/${stylesDir}/${stylesFileName}`,
-    `${currentContents}\n${cssImports.join('\n')}`,
+    `${outDir}/${stylesDirName}/${stylesFileName}`,
+    `${cssContents.join('\n')}`,
     'utf-8'
   );
 };
@@ -121,24 +124,16 @@ export default defineConfig({
       },
     }),
   ],
+
   build: {
     outDir,
-    emptyOutDir: false,
+    emptyOutDir: true,
     minify: false,
     sourcemap: false,
     rollupOptions: {
-      input: `${srcDir}/${stylesDir}/${stylesFileName}`,
-      output: {
-        assetFileNames: assetInfo => {
-          if (/\.(css)$/.test(assetInfo.name)) {
-            return `${stylesDir}/${stylesFileName}`;
-          } else if (/\.(woff|woff2|eot|ttf)$/.test(assetInfo.name)) {
-            return `${fontsDir}/${assetInfo.name}`;
-          } else {
-            return `${assetsDir}/${assetInfo.name}`;
-          }
-        },
-      },
+      external: external,
+      input: `${srcDir}/${stylesDirName}/${stylesFileName}`,
+      output: { assetFileNames },
     },
   },
 });

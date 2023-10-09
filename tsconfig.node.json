@@ -6,5 +6,8 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
   },
-  "include": ["vite.build.config.ts", "coverage/**/*.json", ],
+  "include": [
+    "vite.build.config.ts",
+    "coverage/**/*.json"
+  ],
 }
