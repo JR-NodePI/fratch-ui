@@ -15,8 +15,6 @@ jobs:
       - run: rm -f ./yarn.lock
       - run: yarn install --disable-pnp
       - run: yarn test
-      - run: yarn build
-      - run: yarn dist
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
