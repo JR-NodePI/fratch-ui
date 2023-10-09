@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 
 import { c } from '../../helpers/classNameHelpers';
 import Switcher from '../Form/Switcher/Switcher';
-import { IconDark, IconLight } from '../Icons/Icons';
+import { IconDark, IconLight } from '../Icons';
 import { ColorSchemeSwitcherProps } from './ColorScheme';
 import { COLOR_SCHEMES } from './colorSchemeConstants';
 import useColorScheme from './useColorScheme';

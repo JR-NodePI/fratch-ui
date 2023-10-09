@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 
-import { IconCheck as Icon } from '../Icons/Icons';
+import { IconCheck as Icon } from '../Icons';
 
 export type Tab = {
   active?: boolean;

@@ -1,5 +1,5 @@
 import { c } from '../../helpers/classNameHelpers';
-import { IconClose } from '../Icons/Icons';
+import { IconClose } from '../Icons';
 import { type ButtonCloserProps } from './ButtonCloserProps';
 
 import styles from './ButtonCloser.module.css';

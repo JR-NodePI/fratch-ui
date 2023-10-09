@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useRef, useState } from 'react';
 
-import { c } from '../../../helpers/classNameHelpers';
-import { Icons } from '../../index';
+import { c } from '../../../helpers';
+import { IconCheck } from '../../Icons';
 import { InputCheckPosition } from './InputCheckConstants';
 import type { InputCheckProps } from './InputCheckProps';
 
@@ -47,7 +47,7 @@ const InputCheck = forwardRef<HTMLInputElement, InputCheckProps>(
           disabled={disabled}
           onChange={handleOnChange}
         />
-        <Icons.IconCheck className={c(styles.icon_check)} />
+        <IconCheck className={c(styles.icon_check)} />
         <span>{label}</span>
       </label>
     );

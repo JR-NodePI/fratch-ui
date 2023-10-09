@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { IconPlus as Icon } from '../../Icons/Icons';
+import { IconPlus as Icon } from '../../Icons';
 
 export type SwitcherProps = {
   value?: boolean;

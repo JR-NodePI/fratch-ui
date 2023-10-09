@@ -4,7 +4,7 @@ import { debounce } from 'lodash';
 
 import { c } from '../../helpers/classNameHelpers';
 import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
-import { IconVerticalDots } from '../Icons/Icons';
+import { IconVerticalDots } from '../Icons';
 import {
   SETTINGS_MODAL_TIMEOUT_TO_CLOSE,
   SettingsModalPosition,

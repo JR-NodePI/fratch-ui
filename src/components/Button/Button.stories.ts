@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import * as Icons from '../Icons/Icons';
+import * as Icons from '../Icons';
 import Spinner from '../Spinner/Spinner';
 import Button from './Button';
 import { ButtonSize, ButtonType } from './ButtonConstants';

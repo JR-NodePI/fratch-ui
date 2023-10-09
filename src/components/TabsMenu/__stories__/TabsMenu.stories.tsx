@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { IconCheck, IconInfo } from '../../Icons/Icons';
+import { IconCheck, IconInfo } from '../../Icons';
 import IconSuccess from '../../Icons/Icons/IconSuccess';
 import TabsMenu from '../TabsMenu';
 

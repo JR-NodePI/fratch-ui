@@ -1,4 +1,6 @@
-import { CSSProperties } from 'react';
+import { type CSSProperties } from 'react';
+
+import { AVAILABLE_COLOR_LIST } from './colorConstants';
 
 export const hexToRgb = (
   hex: string | CSSProperties['color']
@@ -24,3 +26,14 @@ export const getContrastColor = (
     ? 'var(--ft-color-darkest)'
     : 'var(--ft-color-lightest)';
 };
+
+export function getRandomColor(
+  excludedColors?: CSSProperties['color'][]
+): CSSProperties['color'] {
+  const colors = AVAILABLE_COLOR_LIST.filter(
+    color => !(excludedColors ?? []).includes(color)
+  );
+  const indexColor = Math.floor(Math.random() * colors.length);
+  const color = colors[indexColor];
+  return color;
+}

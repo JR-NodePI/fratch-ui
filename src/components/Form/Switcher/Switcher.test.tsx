@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
-import { IconCheck } from '../../Icons/Icons';
+import { IconCheck } from '../../Icons';
 import Switcher from './Switcher';
 import { type SwitcherProps } from './SwitcherProps';
 

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { IconCheck, IconClose } from '../../Icons/Icons';
-import * as Icons from '../../Icons/Icons';
+import { IconCheck, IconClose } from '../../Icons';
+import * as Icons from '../../Icons';
 import Switcher from './Switcher';
 
 const IconOptions = { Default: undefined, ...Icons };

@@ -1,6 +1,6 @@
 import { c } from '../../../helpers/classNameHelpers';
+import * as Icons from '..';
 import type { IconContainerProps } from '../components/IconContainerProps';
-import * as Icons from '../Icons';
 
 import styles from './IconList.module.css';
 

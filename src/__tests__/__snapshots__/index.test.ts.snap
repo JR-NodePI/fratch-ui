@@ -1,0 +1,143 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`index > should have a list of components 1`] = `
+{
+  "components": {
+    "Button": [Function],
+    "ButtonConstants": {
+      "ButtonSize": {
+        "LARGE": "large",
+        "MEDIUM": "medium",
+        "SMALL": "small",
+        "SMALLER": "smaller",
+      },
+      "ButtonType": {
+        "DEFAULT": "default",
+        "PRIMARY": "primary",
+        "SECONDARY": "secondary",
+        "TERTIARY": "tertiary",
+      },
+    },
+    "ColorSchemeProvider": [Function],
+    "ColorSchemeSwitcher": [Function],
+    "DragAndDropSorter": {
+      "default": [Function],
+    },
+    "Header": [Function],
+    "IconArrowDown": [Function],
+    "IconCheck": [Function],
+    "IconClose": [Function],
+    "IconDark": [Function],
+    "IconDownload": [Function],
+    "IconEdit": [Function],
+    "IconError": [Function],
+    "IconExport": [Function],
+    "IconGit": [Function],
+    "IconImport": [Function],
+    "IconInfo": [Function],
+    "IconLight": [Function],
+    "IconPause": [Function],
+    "IconPin": [Function],
+    "IconPlay": [Function],
+    "IconPlus": [Function],
+    "IconSuccess": [Function],
+    "IconUpload": [Function],
+    "IconVerticalDots": [Function],
+    "IconWarning": [Function],
+    "InputCheck": {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    },
+    "InputText": {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    },
+    "LeftLabeledField": [Function],
+    "ModalConstants": {
+      "MODAL_CONFIRM_MAX_WIDTH": 460,
+      "MODAL_MAX_WIDTH": 600,
+      "MODAL_TIMEOUT_TO_CLOSE": 500,
+      "MODAL_TIMEOUT_TO_OPEN": 200,
+      "ModalCloseTypes": {
+        "ACCEPT": "accept",
+        "CANCEL": "cancel",
+        "CLOSE": "close",
+      },
+      "ModalTypes": {
+        "ACCEPT": "accept",
+        "CONFIRM": "confirm",
+        "INFO": "info",
+      },
+    },
+    "ModalProvider": [Function],
+    "Select": [Function],
+    "SettingsModal": [Function],
+    "SettingsModalConstants": {
+      "SETTINGS_MODAL_TIMEOUT_TO_CLOSE": 100,
+      "SettingsModalPosition": {
+        "LEFT": "left",
+        "RIGHT": "right",
+      },
+    },
+    "Spinner": [Function],
+    "SpinnerConstants": {
+      "SpinnerType": {
+        "BLUE": "blue",
+        "GREEN": "green",
+        "PRIMARY": "primary",
+        "RED": "red",
+        "SECONDARY": "secondary",
+        "TERTIARY": "tertiary",
+        "YELLOW": "yellow",
+      },
+    },
+    "Switcher": [Function],
+    "TabsMenu": [Function],
+    "ToasterConstants": {
+      "TOASTER_TIMEOUT_TO_CLOSE": 300,
+      "TOASTER_TIMEOUT_TO_SHOW_CLOSE_BUTTON": 3000,
+      "ToasterType": {
+        "ERROR": "error",
+        "INFO": "info",
+        "SUCCESS": "success",
+        "WARNING": "warning",
+      },
+    },
+    "ToasterListContext": {
+      "$$typeof": Symbol(react.context),
+      "Consumer": {
+        "$$typeof": Symbol(react.context),
+        "_context": [Circular],
+      },
+      "Provider": {
+        "$$typeof": Symbol(react.provider),
+        "_context": [Circular],
+      },
+      "_currentRenderer": null,
+      "_currentRenderer2": null,
+      "_currentValue": {
+        "addToaster": [Function],
+        "toasters": [],
+      },
+      "_currentValue2": {
+        "addToaster": [Function],
+        "toasters": [],
+      },
+      "_defaultValue": null,
+      "_globalName": null,
+      "_threadCount": 0,
+      "displayName": "ToasterListContext",
+    },
+    "ToasterProvider": [Function],
+    "useModal": [Function],
+  },
+  "helpers": {
+    "c": [Function],
+    "getContrastColor": [Function],
+    "getRandomColor": [Function],
+    "hasClosestElement": [Function],
+    "hexToRgb": [Function],
+    "setStyleProperties": [Function],
+  },
+}
+`;

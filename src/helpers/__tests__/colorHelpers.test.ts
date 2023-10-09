@@ -1,6 +1,9 @@
+import { type CSSProperties } from 'react';
+
 import { describe, expect, it } from 'vitest';
 
-import { getContrastColor, hexToRgb } from '../colorHelpers';
+import { AVAILABLE_COLOR_LIST } from '../colorConstants';
+import { getContrastColor, getRandomColor, hexToRgb } from '../colorHelpers';
 
 describe('colorHelpers', () => {
   describe('hexToRgb', () => {
@@ -39,6 +42,21 @@ describe('colorHelpers', () => {
     it('should return var(--ft-color-lightest) from a dark CSS color', () => {
       const result = getContrastColor('#006aff');
       expect(result).toBe('var(--ft-color-lightest)');
+    });
+  });
+
+  describe('getRandomColor', () => {
+    it('should go over the list of available color sorting randomly', () => {
+      let usedColors: CSSProperties['color'][];
+
+      AVAILABLE_COLOR_LIST.forEach(() => {
+        const randomColor = getRandomColor(usedColors);
+
+        expect(AVAILABLE_COLOR_LIST).toContain(randomColor);
+        expect(usedColors ?? []).not.toContain(randomColor);
+
+        usedColors = [...(usedColors ?? []), randomColor];
+      });
     });
   });
 });

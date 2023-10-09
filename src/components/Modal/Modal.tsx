@@ -4,8 +4,8 @@ import { createPortal } from 'react-dom';
 import { debounce } from 'lodash';
 
 import { c } from '../../helpers/classNameHelpers';
+import { setStyleProperties } from '../../helpers/componentPropertiesHelpers';
 import { hasClosestElement } from '../../helpers/htmlSelectorsHelpers';
-import { setStyleProperties } from '../../helpers/setStyleProperties';
 import Button from '../Button/Button';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
 import {

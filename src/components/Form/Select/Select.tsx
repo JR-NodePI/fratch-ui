@@ -5,7 +5,7 @@ import { isEqual } from 'lodash';
 
 import { c } from '../../../helpers/classNameHelpers';
 import { hasClosestElement } from '../../../helpers/htmlSelectorsHelpers';
-import { IconArrowDown } from '../../Icons/Icons';
+import { IconArrowDown } from '../../Icons';
 import InputText from '../InputText/InputText';
 import SelectOptionsList from './SelectOptionsList';
 import { type SelectOption, type SelectProps } from './SelectProps';

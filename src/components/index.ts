@@ -4,11 +4,11 @@ export * as ButtonConstants from './Button/ButtonConstants';
 // -- DragAndDropSorter
 export * as DragAndDropSorter from './DragAndDropSorter/DragAndDropSorter';
 // -- Form
-export * as Form from './Form/Form';
+export * from './Form';
 // -- Header
 export { default as Header } from './Header/Header';
 // -- Icons
-export * as Icons from './Icons/Icons';
+export * from './Icons';
 // -- Modal
 export * as ModalConstants from './Modal/ModalConstants';
 export { default as ModalProvider } from './Modal/ModalProvider';
