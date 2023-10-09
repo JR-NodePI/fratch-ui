@@ -1,4 +1,4 @@
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import { SpinnerType } from './SpinnerConstants';
 import { type SpinnerProps } from './SpinnerProps';
 

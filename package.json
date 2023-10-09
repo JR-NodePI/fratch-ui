@@ -1,14 +1,10 @@
 {
   "name": "fratch-ui",
-  "version": "1.5.21",
+  "version": "1.5.22",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
   },
-  "modules": [
-    "dist/components.js",
-    "dist/helpers.js"
-  ],
   "description": "React UI kit where each component can be used as a stand-alone module",
   "keywords": [
     "ui-components",
@@ -24,6 +20,7 @@
   "license": "MIT",
   "private": false,
   "type": "module",
+  "main": "./components/index.js",
   "dependencies": {
     "lodash": "4.17.21",
     "prop-types": "^15.8.1",
@@ -68,15 +65,10 @@
     "build": "tsc && vite build --config vite.build.config.ts",
     "storybook:build": "storybook build",
     "storybook:preview": "yarn storybook:build && vite preview --outDir ./storybook-static/ --open /",
-    "dist:publish": "yarn publish --non-interactive --disable-pnp --ignore-scripts",
-    "dist": "yarn build && yarn pack",
+    "dist:publish": "yarn publish ./dist/ --non-interactive --disable-pnp --ignore-scripts",
+    "dist": "yarn build && cp ./package.json ./dist/package.json && yarn pack --cwd ./dist/",
     "test": "vitest --run --config ./vitest.config.ts",
     "test:cover": "yarn test run --coverage",
     "prepare": "husky install"
-  },
-  "files": [
-    "README.md",
-    "LICENSE",
-    "dist/**/*"
-  ]
+  }
 }

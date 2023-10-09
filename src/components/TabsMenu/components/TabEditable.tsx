@@ -1,6 +1,6 @@
 import { type FocusEvent, type KeyboardEvent, useState } from 'react';
 
-import { c } from '../../../helpers/classNameHelpers';
+import { c } from '../../../helpers';
 import { IconEdit } from '../../Icons';
 import { TabEditableProps } from './TabEditableProps';
 

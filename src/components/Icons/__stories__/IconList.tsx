@@ -1,4 +1,4 @@
-import { c } from '../../../helpers/classNameHelpers';
+import { c } from '../../../helpers';
 import * as Icons from '..';
 import type { IconContainerProps } from '../components/IconContainerProps';
 

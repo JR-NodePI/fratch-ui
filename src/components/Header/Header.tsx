@@ -1,4 +1,4 @@
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import { ICON_POSITION } from './HeaderConstants';
 import { HeaderProps } from './HeaderProps';
 

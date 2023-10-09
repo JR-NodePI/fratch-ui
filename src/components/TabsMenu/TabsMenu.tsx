@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { isEqual } from 'lodash';
 
-import { c } from '../../helpers/classNameHelpers';
+import { c } from '../../helpers';
 import ButtonCloser from '../ButtonCloser/ButtonCloser';
 import { IconPlus } from '../Icons';
 import TabEditable from './components/TabEditable';

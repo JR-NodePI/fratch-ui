@@ -1,4 +1,4 @@
-import { c } from '../../../helpers/classNameHelpers';
+import { c } from '../../../helpers';
 import { LeftLabeledFieldProps } from './LeftLabeledFieldProps';
 
 import styles from './LeftLabeledField.module.css';

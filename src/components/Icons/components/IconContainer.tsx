@@ -1,4 +1,4 @@
-import { c } from '../../../helpers/classNameHelpers';
+import { c } from '../../../helpers';
 import { IconType } from './IconConstants';
 import { IconContainerProps } from './IconContainerProps';
 

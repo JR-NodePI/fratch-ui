@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`index > should have a list of index 1`] = `
+{
+  "c": [Function],
+  "getContrastColor": [Function],
+  "getRandomColor": [Function],
+  "hasClosestElement": [Function],
+  "hexToRgb": [Function],
+  "setStyleProperties": [Function],
+}
+`;

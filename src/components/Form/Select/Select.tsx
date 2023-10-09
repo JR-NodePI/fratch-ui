@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 
 import { isEqual } from 'lodash';
 
-import { c } from '../../../helpers/classNameHelpers';
+import { c } from '../../../helpers';
 import { hasClosestElement } from '../../../helpers/htmlSelectorsHelpers';
 import { IconArrowDown } from '../../Icons';
 import InputText from '../InputText/InputText';
