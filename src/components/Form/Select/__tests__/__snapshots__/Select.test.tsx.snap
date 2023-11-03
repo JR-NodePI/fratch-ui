@@ -15,7 +15,7 @@ exports[`Select > should perform onClean and clean filtered options 1`] = `
             class="_input_text_300ab4 _trigger_bae547"
           >
             <input
-              class="_input_300ab4"
+              class="_input_300ab4 _cleanable_300ab4"
               id="mock-test-id"
               name="mock-test-id"
               placeholder="Select an option"
@@ -125,7 +125,7 @@ exports[`Select > should render a filtered list of options 1`] = `
             class="_input_text_300ab4 _trigger_bae547"
           >
             <input
-              class="_input_300ab4"
+              class="_input_300ab4 _cleanable_300ab4"
               id="mock-test-id"
               name="mock-test-id"
               placeholder="Select an option"
@@ -214,7 +214,7 @@ exports[`Select > should render as disabled 1`] = `
           class="_input_text_300ab4 _trigger_bae547"
         >
           <input
-            class="_input_300ab4"
+            class="_input_300ab4 _cleanable_300ab4"
             disabled=""
             id="mock-test-id"
             name="mock-test-id"
@@ -281,7 +281,7 @@ exports[`Select > should render as visible on trigger click 1`] = `
             class="_input_text_300ab4 _trigger_bae547"
           >
             <input
-              class="_input_300ab4"
+              class="_input_300ab4 _cleanable_300ab4"
               id="mock-test-id"
               name="mock-test-id"
               placeholder="Select an option"
@@ -391,7 +391,7 @@ exports[`Select > should render properly 1`] = `
             class="_input_text_300ab4 _trigger_bae547"
           >
             <input
-              class="_input_300ab4"
+              class="_input_300ab4 _cleanable_300ab4"
               id="mock-test-id"
               name="mock-test-id"
               placeholder="Select an option"
@@ -489,7 +489,7 @@ exports[`Select > should render properly 1`] = `
 exports[`Select > should render the options list displayer by ref 1`] = `
 {
   "current": <input
-    class="_input_300ab4"
+    class="_input_300ab4 _cleanable_300ab4"
     id="mock-test-id"
     name="mock-test-id"
     placeholder="Select an option"

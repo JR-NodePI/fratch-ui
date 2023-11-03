@@ -6,7 +6,7 @@ exports[`InputText > should be cleanable, perform onClean and onChange 1`] = `
     class="_input_text_300ab4"
   >
     <input
-      class="_input_300ab4"
+      class="_input_300ab4 _cleanable_300ab4"
       type="text"
     />
     <button
