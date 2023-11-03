@@ -134,5 +134,4 @@ dist
 /storybook-static
 *.tgz
 .DS_Store
-.npmrc
 /target

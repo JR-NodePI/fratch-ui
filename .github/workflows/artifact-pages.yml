@@ -35,8 +35,7 @@ jobs:
       - name: Build artifacts
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-      - run: rm -f ./yarn.lock
+          node-version: '16.16.0'
       - run: yarn install
       - run: yarn storybook:build
       - run: yarn test:cover

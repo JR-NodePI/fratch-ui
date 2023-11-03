@@ -19,6 +19,9 @@
   border-radius: var(--ft-form-item-border-radius);
   background-color: transparent;
 }
+.input_text .input.cleanable {
+  padding-right: calc(var(--ft-form-item-padding-x) * 3);
+}
 .input_text .input:focus {
   outline: var(--ft-select-list-item-bg-color-active) solid 2px;
 }
@@ -42,7 +45,7 @@
   right: 0;
   border: none;
   margin: 0;
-  padding: var(--ft-form-item-padding-y) var(--ft-form-item-padding-x);
+  padding: var(--ft-form-item-padding-y) 0;
   border-left: none;
   transition: background-color 0.2s ease-out;
   display: flex;
@@ -52,6 +55,7 @@
   height: 100%;
   line-height: 100%;
   right: 0;
+  width: calc(var(--ft-form-item-padding-x) * 3);
 }
 .input_text .cleaner > i {
   display: none;

@@ -56,7 +56,7 @@ const InputText = forwardRef<HTMLInputElement, InputTextProps>(
         <input
           id={id}
           name={id}
-          className={c(styles.input)}
+          className={c(styles.input, cleanable ? styles.cleanable : '')}
           disabled={disabled}
           onBlur={onBlur}
           onChange={onChange}
