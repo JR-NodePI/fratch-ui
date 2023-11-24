@@ -16,6 +16,7 @@ export { default as IconPin } from './Icons/IconPin';
 export { default as IconPlay } from './Icons/IconPlay';
 export { default as IconPlus } from './Icons/IconPlus';
 export { default as IconSuccess } from './Icons/IconSuccess';
+export { default as IconTerminal } from './Icons/IconTerminal';
 export { default as IconUpload } from './Icons/IconUpload';
 export { default as IconVerticalDots } from './Icons/IconVerticalDots';
 export { default as IconVSCode } from './Icons/IconVSCode';
