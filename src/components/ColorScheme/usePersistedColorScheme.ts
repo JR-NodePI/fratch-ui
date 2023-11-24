@@ -14,8 +14,8 @@ export default function usePersistedColorScheme(
     storedData === COLOR_SCHEMES.DARK
       ? COLOR_SCHEMES.DARK
       : storedData === COLOR_SCHEMES.LIGHT
-      ? COLOR_SCHEMES.LIGHT
-      : defaultColorScheme
+        ? COLOR_SCHEMES.LIGHT
+        : defaultColorScheme
   );
 
   const setColorScheme = useCallback((newColorScheme: ColorScheme): void => {
