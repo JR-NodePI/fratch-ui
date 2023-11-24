@@ -367,6 +367,26 @@ exports[`Icons > should render properly > IconSuccess 1`] = `
 </div>
 `;
 
+exports[`Icons > should render properly > IconTerminal 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    class="_icon_2be8fc _primary_2be8fc"
+    fill="none"
+    viewBox="0 0 20 18"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="m5 5 4 4-4 4m5 0h5M2 1h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;
+
 exports[`Icons > should render properly > IconUpload 1`] = `
 <div>
   <svg
