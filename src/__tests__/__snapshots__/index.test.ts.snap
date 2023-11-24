@@ -31,6 +31,7 @@ exports[`index > should have a list of index 1`] = `
   "IconEdit": [Function],
   "IconError": [Function],
   "IconExport": [Function],
+  "IconFolder": [Function],
   "IconGit": [Function],
   "IconImport": [Function],
   "IconInfo": [Function],
@@ -41,6 +42,7 @@ exports[`index > should have a list of index 1`] = `
   "IconPlus": [Function],
   "IconSuccess": [Function],
   "IconUpload": [Function],
+  "IconVSCode": [Function],
   "IconVerticalDots": [Function],
   "IconWarning": [Function],
   "InputCheck": {
