@@ -28,6 +28,7 @@ export const Default: Story = {
     searchable: true,
     disabled: false,
     placeholder: 'Select an option...',
+    title: 'Title of a select...',
     value: { opt: 'opt-3', prop: 'prop-3' },
     options: Array.from(Array(25).keys()).map(i => ({
       label: `Option ${i + 1} label`,

@@ -195,6 +195,7 @@ function Select<T>({
   options,
   placeholder = '',
   searchable = false,
+  title,
   triggerElementRef,
   value,
 }: SelectProps<T>): JSX.Element {
@@ -326,7 +327,7 @@ function Select<T>({
         <div>
           <InputText
             id={id}
-            title={selectedLabel}
+            title={title || selectedLabel}
             ref={triggerRef}
             className={c(styles.trigger)}
             cleanerClassName={c(styles.cleaner)}

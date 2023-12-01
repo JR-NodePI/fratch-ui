@@ -3,6 +3,7 @@ export type SelectOption<T> = {
   labelElement?: React.ReactNode;
   value: T;
   visible?: boolean;
+  title?: string;
 };
 
 export interface SelectProps<T> {
@@ -16,6 +17,7 @@ export interface SelectProps<T> {
   options: SelectOption<T>[];
   placeholder?: string;
   searchable?: boolean;
+  title?: string;
   triggerElementRef?: React.RefObject<HTMLInputElement>;
   value?: T;
 }
