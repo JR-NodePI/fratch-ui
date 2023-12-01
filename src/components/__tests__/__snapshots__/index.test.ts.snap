@@ -40,6 +40,7 @@ exports[`index > should have a list of index 1`] = `
   "IconPin": [Function],
   "IconPlay": [Function],
   "IconPlus": [Function],
+  "IconSortVertical": [Function],
   "IconSuccess": [Function],
   "IconTerminal": [Function],
   "IconUpload": [Function],
