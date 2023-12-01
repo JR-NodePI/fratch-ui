@@ -9,6 +9,7 @@ import type {
 import styles from './DragAndDropSorter.module.css';
 
 export default function DragAndDropSorter<T>({
+  draggable = true,
   items,
   onChange,
 }: DragAndDropSorterProps<T>): JSX.Element {
@@ -119,7 +120,7 @@ export default function DragAndDropSorter<T>({
       {draggableItems.map(({ id, children }) => (
         <div
           className={c(styles.draggable)}
-          draggable
+          draggable={items.length > 1 && draggable}
           id={id}
           key={id}
           onDragEnd={handleDragEnd}

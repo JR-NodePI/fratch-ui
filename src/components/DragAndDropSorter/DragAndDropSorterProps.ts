@@ -13,6 +13,7 @@ export type InternalDraggableItem<T> = DraggableItem<T> &
   };
 
 export interface DragAndDropSorterProps<T> {
+  draggable?: boolean;
   items: DraggableItem<T>[];
   onChange?: (items: SortedDraggableItem<T>[]) => void;
 }
