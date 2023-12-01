@@ -7,6 +7,8 @@
 }
 .draggable {
   transition: opacity 0.2s ease-in-out;
+}
+.draggable[draggable='true'] {
   cursor: move;
 }
 .dragging {
