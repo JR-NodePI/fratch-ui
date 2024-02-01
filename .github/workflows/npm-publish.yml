@@ -10,8 +10,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '20.10.0'
+          node-version: '20.11.0'
           registry-url: https://registry.npmjs.org/
+      - run: npm install -g npm@10.4 --silent
+      - run: npm install -g yarn@1.22 --silent
       - run: yarn install --disable-pnp
       - run: yarn test
       - run: yarn dist

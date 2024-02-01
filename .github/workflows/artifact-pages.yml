@@ -35,7 +35,9 @@ jobs:
       - name: Build artifacts
         uses: actions/setup-node@v3
         with:
-          node-version: '20.10.0'
+          node-version: '20.11.0'
+      - run: npm install -g npm@10.4 --silent
+      - run: npm install -g yarn@1.22 --silent
       - run: yarn install
       - run: yarn storybook:build
       - run: yarn test:cover
@@ -44,12 +46,13 @@ jobs:
       - run: mv -f ./storybook-static ./pages/storybook
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: './pages'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
