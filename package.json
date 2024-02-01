@@ -1,6 +1,6 @@
 {
   "name": "fratch-ui",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/JorgeRojo/fratch-ui.git"
@@ -21,6 +21,11 @@
   "private": false,
   "type": "module",
   "main": "./components/index.js",
+  "engines": {
+    "node": ">=20.11.0",
+    "npm": ">=10.4.0",
+    "yarn": ">=1.22.21"
+  },
   "dependencies": {
     "lodash": "4.17.21",
     "prop-types": "^15.8.1",
