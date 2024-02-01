@@ -17,6 +17,7 @@ jobs:
           node-version: '20.11.0'
       - run: npm install -g npm@10.4 --silent
       - run: npm install -g yarn@1.22 --silent
+      - run: rm yarn.lock
       - run: yarn install
       - name: 'Test cover'
         run: yarn test:cover

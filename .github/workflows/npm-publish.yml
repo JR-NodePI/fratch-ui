@@ -14,6 +14,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install -g npm@10.4 --silent
       - run: npm install -g yarn@1.22 --silent
+      - run: rm yarn.lock
       - run: yarn install --disable-pnp
       - run: yarn test
       - run: yarn dist
